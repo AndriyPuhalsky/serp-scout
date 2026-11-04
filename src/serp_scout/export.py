@@ -27,7 +27,7 @@ HISTORY_COLUMNS = ["keyword", "url", "run_date", "position"]
 def _write_csv(path: Path, columns: list[str], rows: list[list]) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.writer(fh)
+        writer = csv.writer(fh, lineterminator="\n")  # LF, щоб git не скаржився на CRLF
         writer.writerow(columns)
         writer.writerows(rows)
     return path

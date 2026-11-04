@@ -70,3 +70,10 @@ def test_summary_text_lines(conn) -> None:
 
 def test_export_empty_db(conn, settings) -> None:
     assert export_all(conn, settings.paths.export_dir) == []
+
+
+def test_csv_uses_lf_line_endings(conn, settings) -> None:
+    _seed(conn)
+    for path in export_all(conn, settings.paths.export_dir):
+        if path.suffix == ".csv":
+            assert b"\r" not in path.read_bytes(), path.name

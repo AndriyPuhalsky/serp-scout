@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import random
 from typing import Annotated
 
 import typer
@@ -15,6 +16,7 @@ from serp_scout.costs import summarize
 from serp_scout.export import export_all
 from serp_scout.pipeline import RunSummary, run_pipeline
 from serp_scout.site_build import write_report
+from serp_scout.urlnorm import normalize_url
 
 app = typer.Typer(
     help="serp-scout — топ-10 Google (mobile, Канада) → SQLite → розмітка LLM → звіт.",
@@ -116,10 +118,49 @@ def build_site(demo: DemoOption = False) -> None:
     console.print(f"report.json → {path}")
 
 
+def _label_rows(
+    conn, run_date: str, *, url: str | None, relevant_only: bool, sample: int | None, seed: int, limit: int
+) -> list[dict]:
+    """Рядки останньої розмітки снапшота як словники; фільтр за URL, випадкова вибірка, ліміт."""
+    query = (
+        "SELECT * FROM v_latest WHERE run_date = ? GROUP BY url_id ORDER BY relevant DESC, confidence DESC"
+    )
+    rows = []
+    for r in conn.execute(query, (run_date,)).fetchall():
+        if url and r["url"] != normalize_url(url):
+            continue
+        if relevant_only and not r["relevant"]:
+            continue
+        contact = json.loads(r["contact_json"]) if r["contact_json"] else None
+        rows.append(
+            {
+                "url": r["url"], "domain": r["domain"], "keyword": r["keyword"], "title": r["title"],
+                "snippet": r["snippet"], "site_type": r["site_type"],
+                "relevant": bool(r["relevant"]) if r["relevant"] is not None else None,
+                "confidence": r["confidence"], "reason": r["reason"],
+                "brands": json.loads(r["brands_json"] or "[]"), "contact": contact,
+                "placement_signals": json.loads(r["placement_signals_json"] or "[]"),
+                "needs_review": bool(r["needs_review"]) if r["needs_review"] is not None else None,
+                "model": r["model"], "method": r["method"], "labeled_at": r["labeled_at"],
+            }
+        )  # fmt: skip
+    if sample is not None:
+        labeled = [r for r in rows if r["site_type"]]
+        rows = random.Random(seed).sample(labeled, min(sample, len(labeled)))
+        return rows
+    return rows[:limit]
+
+
 @app.command()
 def labels(
     limit: Annotated[int, typer.Option("--limit", help="Скільки рядків показати")] = 30,
     relevant_only: Annotated[bool, typer.Option("--relevant", help="Лише релевантні для розміщення")] = False,
+    url: Annotated[str | None, typer.Option("--url", help="Показати розмітку одного URL")] = None,
+    sample: Annotated[
+        int | None, typer.Option("--sample", help="Випадкова вибірка N розмічених URL (для судді)")
+    ] = None,
+    seed: Annotated[int, typer.Option("--seed", help="Зерно випадковості для --sample")] = 42,
+    as_json: Annotated[bool, typer.Option("--json", help="Вивести JSON замість таблиці")] = False,
     demo: DemoOption = False,
 ) -> None:
     """Показати останню розмітку URL (тип, релевантність, впевненість, бренди, контакт)."""
@@ -130,31 +171,31 @@ def labels(
     if run_date is None:
         console.print("[yellow]Розмітки ще немає.[/]")
         raise typer.Exit(code=1)
-    rows = conn.execute(
-        "SELECT * FROM v_latest WHERE run_date = ? GROUP BY url_id ORDER BY relevant DESC, confidence DESC",
-        (run_date,),
-    ).fetchall()
-    table = Table(title=f"Розмітка за {run_date}")
+    rows = _label_rows(
+        conn, run_date, url=url, relevant_only=relevant_only, sample=sample, seed=seed, limit=limit
+    )
+    if url and not rows:
+        console.print(f"[yellow]URL не знайдено в останньому снапшоті: {url}[/]")
+        raise typer.Exit(code=1)
+    if as_json:
+        typer.echo(json.dumps(rows, ensure_ascii=False, indent=1))
+        return
+    table = Table(
+        title=f"Розмітка за {run_date}" + (f" · вибірка {len(rows)} (seed {seed})" if sample else "")
+    )
     for col in ("Домен", "Тип", "Рел.", "Впевн.", "Бренди", "Контакт", "Чому"):
         table.add_column(col, overflow="fold")
-    shown = 0
     for r in rows:
-        if relevant_only and not r["relevant"]:
-            continue
-        brands = ", ".join(json.loads(r["brands_json"] or "[]")[:4])
-        contact = json.loads(r["contact_json"] or "{}")
+        contact = r["contact"] or {}
         table.add_row(
             r["domain"],
             r["site_type"] or "—",
             "так" if r["relevant"] else "ні",
             f"{(r['confidence'] or 0):.2f}",
-            brands or "—",
+            ", ".join(r["brands"][:4]) or "—",
             contact.get("email") or contact.get("contact_page") or "—",
             (r["reason"] or "")[:90],
         )
-        shown += 1
-        if shown >= limit:
-            break
     console.print(table)
 
 

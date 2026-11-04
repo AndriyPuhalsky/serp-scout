@@ -247,3 +247,24 @@ def test_llm_exception_for_one_url_is_partial(settings, monkeypatch: pytest.Monk
     errors = json.loads(run["errors_json"])
     assert run["status"] == "partial" and errors[0]["stage"] == "llm"
     assert _counts(settings)[2] == N_URLS - 1
+
+
+def test_cli_labels_sample_and_url(settings) -> None:
+    pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04")
+    runner = CliRunner()
+    first = runner.invoke(app, ["labels", "--sample", "5", "--seed", "7", "--json"])
+    assert first.exit_code == 0, first.output
+    rows = json.loads(first.output)
+    assert len(rows) == 5 and all(r["site_type"] for r in rows)
+    assert {"url", "site_type", "relevant", "confidence", "reason", "brands", "contact"} <= set(rows[0])
+    again = runner.invoke(app, ["labels", "--sample", "5", "--seed", "7", "--json"])
+    assert [r["url"] for r in json.loads(again.output)] == [r["url"] for r in rows]  # детерміновано
+    other = runner.invoke(app, ["labels", "--sample", "5", "--seed", "8", "--json"])
+    assert {r["url"] for r in json.loads(other.output)} != {r["url"] for r in rows}
+    one = runner.invoke(app, ["labels", "--url", FIRST_URL, "--json"])
+    assert one.exit_code == 0 and json.loads(one.output)[0]["url"] == FIRST_URL
+    assert len(json.loads(one.output)) == 1
+    missing = runner.invoke(app, ["labels", "--url", "https://nope.example/none"])
+    assert missing.exit_code == 1
+    table = runner.invoke(app, ["labels", "--sample", "3"])
+    assert table.exit_code == 0 and "вибірка 3" in table.output
