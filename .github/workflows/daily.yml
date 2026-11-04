@@ -98,14 +98,22 @@ jobs:
           fi
 
       # Основний прогін: SerpApi → fetch → LLM. Ключі — лише з Secrets; бюджет LLM — Variable (типово $3).
-      # --limit підставляється тільки коли введено в workflow_dispatch.
+      # --limit підставляється тільки коли введено в workflow_dispatch; значення йде через env, а не в текст команди
+      # (захист від ін'єкції в shell), і має бути цілим числом.
       - name: Прогін serp-scout run
         if: steps.guard.outputs.skip != 'true'
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LLM_BUDGET_USD: ${{ vars.LLM_BUDGET_USD || '3' }}
-        run: uv run serp-scout run ${{ inputs.limit && format('--limit {0}', inputs.limit) || '' }}
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          ARGS=()
+          if [ -n "${LIMIT:-}" ]; then
+            [[ "$LIMIT" =~ ^[0-9]+$ ]] || { echo "limit має бути цілим числом, отримано: $LIMIT" >&2; exit 1; }
+            ARGS+=(--limit "$LIMIT")
+          fi
+          uv run serp-scout run "${ARGS[@]}"
 
       # CSV/JSON у data/export — дамп прогону для здачі й джерело цифр для Telegram.
       - name: Експорт CSV/JSON
@@ -162,6 +170,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          WORKFLOW: ${{ github.workflow }}
         run: |
-          TEXT="❌ ${{ github.workflow }}: прогін за $(date -u +%F) впав"$'\n'"Run: $RUN_URL"
+          TEXT="❌ $WORKFLOW: прогін за $(date -u +%F) впав"$'\n'"Run: $RUN_URL"
           python3 tools/notify_telegram.py --status fail --text "$TEXT"
