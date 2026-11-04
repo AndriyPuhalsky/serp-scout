@@ -14,9 +14,9 @@ from serp_scout.brands import BrandLexicon
 from serp_scout.config import Settings, mask_secrets
 from serp_scout.costs import append_cost
 from serp_scout.export import export_all
-from serp_scout.extract import extract_page
+from serp_scout.extract import extract_page, truncate
 from serp_scout.fetch import FetchResult, PageFetcher
-from serp_scout.labeler import BudgetExceeded, Labeler, LabelInput
+from serp_scout.labeler import FAILED_LABEL_REASON, BudgetExceeded, Labeler, LabelInput
 from serp_scout.providers.fixture import FixtureProvider
 from serp_scout.providers.serpapi import SerpApiProvider
 from serp_scout.runinfo import RunSummary, git_sha, record_error, today_utc
@@ -96,7 +96,8 @@ def _stage_pages(
             )
             pages_dir.mkdir(parents=True, exist_ok=True)
             text_path = pages_dir / f"{r['url_id']}.txt"
-            text_path.write_text(page.text, encoding="utf-8")
+            # На диск — повний текст (бренди шукаємо по всьому), у промпт піде усічений
+            text_path.write_text(page.full_text or page.text, encoding="utf-8")
             store.upsert_page(
                 conn,
                 r["url_id"],
@@ -153,11 +154,13 @@ def _stage_labels(
         page = store.get_page(conn, r["url_id"])
         if page is None or not page["text_hash"]:
             continue
-        if not relabel and store.get_label(conn, r["url_id"], version, page["text_hash"]) is not None:
+        cached = store.get_label(conn, r["url_id"], version, page["text_hash"])
+        if not relabel and cached is not None and cached["reason"] != FAILED_LABEL_REASON:
             summary.labels_cached += 1
             continue
         text_path = settings.paths.data_dir / (page["text_path"] or "")
-        text = text_path.read_text(encoding="utf-8") if page["text_path"] and text_path.exists() else ""
+        full_text = text_path.read_text(encoding="utf-8") if page["text_path"] and text_path.exists() else ""
+        text = truncate(full_text, settings.fetch.text_head_chars, settings.fetch.text_tail_chars)
         inp = LabelInput(
             url=r["url"],
             domain=r["domain"],
@@ -179,7 +182,7 @@ def _stage_labels(
             record_error(summary, "llm", r["url"], exc)
             continue
         label = result.label
-        brands = lexicon.merge([b.normalized or b.name for b in label.brands_mentioned], text)
+        brands = lexicon.merge([b.normalized or b.name for b in label.brands_mentioned], full_text)
         store.upsert_label(
             conn,
             r["url_id"],
@@ -227,12 +230,14 @@ def run_pipeline(
     run_date: str | None = None,
     relabel: bool = False,
     no_llm: bool = False,
+    skip_serp: bool = False,
     refetch: bool = False,
     progress: Progress | None = None,
 ) -> RunSummary:
     """Повний прогін; завжди закриває рядок `runs` і повертає підсумок.
 
-    `limit=0` — лише SERP (без сторінок і LLM, для зняття фікстур); `no_llm` — сторінки без розмітки.
+    `limit=0` — лише SERP (без сторінок і LLM, для зняття фікстур); `no_llm` — сторінки без розмітки;
+    `skip_serp` — без звернення до SerpApi, на наявному снапшоті дня (перерозмітка).
     """
     progress = progress or (lambda _msg: None)
     run_date = run_date or today_utc()
@@ -247,8 +252,13 @@ def run_pipeline(
     )
     budget_stop = False
     try:
-        _stage_serp(settings, conn, summary, offline, progress)
+        if skip_serp:
+            progress(f"SERP пропущено (--skip-serp): беру наявний снапшот за {run_date}")
+        else:
+            _stage_serp(settings, conn, summary, offline, progress)
         rows = store.snapshot_urls(conn, run_date)
+        if skip_serp and not rows:
+            raise RuntimeError(f"немає снапшота за {run_date} — запустіть без --skip-serp")
         summary.urls_total = len(rows)
         if limit is not None:
             rows = rows[: max(0, limit)]
@@ -261,7 +271,7 @@ def run_pipeline(
         record_error(summary, "pipeline", "run", exc)
     if budget_stop:
         summary.status = "budget_exceeded"
-    elif summary.serp_calls == 0 and settings.keywords:
+    elif summary.serp_calls == 0 and settings.keywords and not (skip_serp and summary.urls_total):
         summary.status = "failed"
     elif summary.errors:
         summary.status = "partial"

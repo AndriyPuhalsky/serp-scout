@@ -16,6 +16,7 @@ from pydantic import ValidationError
 
 from serp_scout.config import LlmSettings
 from serp_scout.label_schema import (
+    FAILED_LABEL_REASON,
     SYSTEM_PROMPT,
     BrandMention,
     BudgetExceeded,
@@ -30,6 +31,7 @@ from serp_scout.label_schema import (
 from serp_scout.urlnorm import url_key
 
 __all__ = [
+    "FAILED_LABEL_REASON",
     "SYSTEM_PROMPT",
     "BrandMention",
     "BudgetExceeded",
@@ -165,32 +167,43 @@ class Labeler:
 
     # --- живий виклик ------------------------------------------------------------------------
 
-    def _call(self, inp: LabelInput) -> LabelResult:
-        self.check_budget()
+    def _parse_once(self, inp: LabelInput, max_tokens: int) -> tuple[PageLabel | None, int, int, str]:
+        """Один виклик `parse()`: (мітка або None, вхідні, вихідні токени, причина збою)."""
         s = self.settings
         try:
             response = self._client.messages.parse(
                 model=s.model,
-                max_tokens=s.max_tokens,
+                max_tokens=max_tokens,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": build_user_message(inp)}],
                 output_format=PageLabel,
                 output_config={"effort": "low"},
             )
         except ValidationError as exc:
-            # Відповідь не за схемою (зокрема текст відмови) — розмітка за замовчуванням
-            label = default_label(f"Модель повернула відповідь не за схемою: {str(exc)[:120]}")
-            return LabelResult(label, s.model, 0, 0, 0.0, True)
-        usage = response.usage
-        in_tok, out_tok = int(usage.input_tokens), int(usage.output_tokens)
+            # SDK валідує JSON до повернення відповіді: обрізаний/невалідний JSON — без usage
+            return None, 0, 0, f"не за схемою або обрізано: {str(exc)[:80]}"
+        in_tok, out_tok = int(response.usage.input_tokens), int(response.usage.output_tokens)
+        self.spent_usd += self.cost_of(in_tok, out_tok)
+        if response.stop_reason == "refusal":
+            return None, in_tok, out_tok, "refusal"
+        if response.parsed_output is None:
+            return None, in_tok, out_tok, "порожня відповідь"
+        return response.parsed_output, in_tok, out_tok, ""
+
+    def _call(self, inp: LabelInput) -> LabelResult:
+        """Живий виклик з одним повтором (max_tokens × 2) при збої розбору; інакше — failed-мітка."""
+        self.check_budget()
+        s = self.settings
+        label, in_tok, out_tok, note = self._parse_once(inp, s.max_tokens)
+        if label is None:
+            self.check_budget()
+            label, in2, out2, note = self._parse_once(inp, s.max_tokens * 2)
+            in_tok, out_tok = in_tok + in2, out_tok + out2
         cost = self.cost_of(in_tok, out_tok)
-        self.spent_usd += cost
-        if response.stop_reason == "refusal" or response.parsed_output is None:
-            label = default_label(
-                "Модель відмовилась класифікувати сторінку (refusal) — потрібна ручна перевірка."
-            )
-            return LabelResult(label, s.model, in_tok, out_tok, cost, True)
-        label: PageLabel = response.parsed_output
+        if label is None:
+            failed = default_label(FAILED_LABEL_REASON + (f" ({note})" if note else ""))
+            failed.reason = FAILED_LABEL_REASON  # рівно ця причина — ознака «не кеш»
+            return LabelResult(failed, s.model, in_tok, out_tok, cost, True, failed=True)
         label.confidence = min(1.0, max(0.0, label.confidence))
         return LabelResult(label, s.model, in_tok, out_tok, cost, needs_review_for(label))
 

@@ -64,6 +64,9 @@ def run(
     ] = False,
     refetch: Annotated[bool, typer.Option("--refetch", help="Перезавантажити сторінки, що вже є")] = False,
     no_llm: Annotated[bool, typer.Option("--no-llm", help="Без розмітки LLM (лише SERP і сторінки)")] = False,
+    skip_serp: Annotated[
+        bool, typer.Option("--skip-serp", help="Без SerpApi: перерозмітка на наявному снапшоті дня")
+    ] = False,
 ) -> None:
     """Повний прогін: SERP → сховище → сторінки → розмітка → експорт → report.json.
 
@@ -79,6 +82,7 @@ def run(
         relabel=relabel,
         refetch=refetch,
         no_llm=no_llm,
+        skip_serp=skip_serp,
         progress=lambda msg: console.print(f"[dim]{msg}[/]"),
     )
     print_summary(summary)

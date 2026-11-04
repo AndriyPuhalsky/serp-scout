@@ -46,6 +46,7 @@ class ExtractedPage:
     text_len: int
     emails: list[str] = field(default_factory=list)
     contact_links: list[dict[str, str]] = field(default_factory=list)
+    full_text: str = ""  # повний текст — для детермінованого пошуку брендів і збереження на диск
 
 
 def html_to_text(html: str) -> str:
@@ -138,5 +139,10 @@ def extract_page(
         links = []
     text = truncate(full_text, head, tail)
     return ExtractedPage(
-        text=text, text_hash=text_hash(text), text_len=len(full_text), emails=emails, contact_links=links
+        text=text,
+        text_hash=text_hash(text),
+        text_len=len(full_text),
+        emails=emails,
+        contact_links=links,
+        full_text=full_text,
     )

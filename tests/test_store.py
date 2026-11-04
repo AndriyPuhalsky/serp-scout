@@ -91,3 +91,27 @@ def test_runs_lifecycle(conn) -> None:
     row = conn.execute("SELECT * FROM runs WHERE id = ?", (run_id,)).fetchone()
     assert row["status"] == "partial" and row["serp_calls"] == 9 and row["finished_at"]
     assert '"stage": "serp"' in row["errors_json"]
+
+
+def test_google_redirects_unwrap_to_target() -> None:
+    target = "https://www.casino.ca/best/?b=1"
+    goto = "https://www.google.ca/goto?url=https%3A%2F%2Fwww.casino.ca%2Fbest%2F%3Fb%3D1%26utm_source%3Dg&x=1"
+    assert normalize_url(goto) == target
+    assert normalize_url("https://www.google.com/url?q=https://www.casino.ca/best/?b=1&sa=U") == target
+    assert normalize_url("https://google.co.uk/url?url=https://www.casino.ca/best/?b=1") == target
+    assert domain_of(goto) == "casino.ca" and url_key(goto) == url_key(target)
+    # звичайні сторінки Google і редиректи без цілі — без змін
+    assert normalize_url("https://www.google.ca/search?q=casino") == "https://www.google.ca/search?q=casino"
+    assert normalize_url("https://www.google.ca/goto?x=1") == "https://www.google.ca/goto?x=1"
+    assert normalize_url("https://notgoogle.ca/goto?url=https://a.ca/").startswith(
+        "https://notgoogle.ca/goto?url="
+    )
+
+
+def test_google_redirect_and_direct_url_share_one_urls_row(conn) -> None:
+    store.upsert_snapshot(conn, "2026-11-04", 1, [SerpHit(1, "https://www.casino.ca/", "t", "s")])
+    store.upsert_snapshot(
+        conn, "2026-11-04", 2, [SerpHit(1, "https://www.google.ca/goto?url=https://www.casino.ca/", "t", "s")]
+    )
+    assert store.count(conn, "urls") == 1
+    assert conn.execute("SELECT domain FROM urls").fetchone()["domain"] == "casino.ca"

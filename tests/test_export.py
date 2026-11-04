@@ -77,3 +77,12 @@ def test_csv_uses_lf_line_endings(conn, settings) -> None:
     for path in export_all(conn, settings.paths.export_dir):
         if path.suffix == ".csv":
             assert b"\r" not in path.read_bytes(), path.name
+
+
+def test_labels_csv_has_review_and_method_columns(conn, settings) -> None:
+    _seed(conn)
+    paths = {p.name: p for p in export_all(conn, settings.paths.export_dir)}
+    with paths["labels.csv"].open(encoding="utf-8") as fh:
+        row = next(csv.DictReader(fh))
+    assert row["needs_review"] == "0" and row["method"] == "httpx"
+    assert "placement_signals" in row and "model" in row

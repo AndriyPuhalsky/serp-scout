@@ -239,9 +239,16 @@ class TestGuardSecrets:
         assert run_hook("guard_secrets.py", bash_payload(proj, "git status"), proj).decision is None
         assert run_hook("guard_secrets.py", bash_payload(proj, "git -C . status"), proj).decision is None
 
-    @pytest.mark.parametrize("command", ["git -C . commit -m x", "git -c user.name=t commit -m x",
-                                         "/usr/bin/git commit -m x", "command git commit -m x",
-                                         "uv run pytest -q && git --no-pager commit -m x"])
+    @pytest.mark.parametrize(
+        "command",
+        [
+            "git -C . commit -m x",
+            "git -c user.name=t commit -m x",
+            "/usr/bin/git commit -m x",
+            "command git commit -m x",
+            "uv run pytest -q && git --no-pager commit -m x",
+        ],
+    )
     def test_git_commit_variants_are_recognized(self, proj, command):
         subprocess.run(["git", "init", "-q"], cwd=proj, check=True)
         write(proj, "notes.md", f"ключ: {ANTHROPIC_KEY}\n")

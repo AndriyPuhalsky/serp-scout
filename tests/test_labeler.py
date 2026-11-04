@@ -93,12 +93,13 @@ def test_low_confidence_and_other_need_review() -> None:
     assert labeler.label(_inp()).needs_review is True
 
 
-def test_refusal_gives_default_label() -> None:
-    client = FakeClient([_response(None, stop_reason="refusal", in_tok=100, out_tok=5)])
+def test_refusal_twice_gives_failed_label() -> None:
+    refusal = _response(None, stop_reason="refusal", in_tok=100, out_tok=5)
+    client = FakeClient([refusal, refusal])
     result = Labeler(LlmSettings(budget_usd=5.0), client=client).label(_inp())
     assert result.label.site_type == "other" and result.label.relevant_for_placement is False
-    assert result.needs_review is True and "refusal" in result.label.reason
-    assert result.input_tokens == 100
+    assert result.needs_review is True and result.failed is True
+    assert result.input_tokens == 200 and len(client.calls) == 2  # обидві спроби враховано у вартості
 
 
 def test_validation_error_gives_default_label() -> None:
@@ -106,9 +107,9 @@ def test_validation_error_gives_default_label() -> None:
         PageLabel.model_validate({"site_type": "bogus"})
     except ValidationError as exc:
         error = exc
-    client = FakeClient([error])
+    client = FakeClient([error, error])
     result = Labeler(LlmSettings(budget_usd=5.0), client=client).label(_inp())
-    assert result.label.site_type == "other" and result.needs_review is True
+    assert result.label.site_type == "other" and result.needs_review is True and result.failed is True
 
 
 def test_budget_stop_before_call() -> None:
@@ -178,3 +179,41 @@ def test_live_client_constructed_with_retries_and_timeout(monkeypatch: pytest.Mo
     labeler = Labeler(LlmSettings(), offline=False)
     assert isinstance(labeler._client, FakeAnthropic)
     assert captured == {"max_retries": 3, "timeout": 60.0}
+
+
+def test_parse_failure_retries_with_double_max_tokens() -> None:
+    try:
+        PageLabel.model_validate({"site_type": "bogus"})
+    except ValidationError as exc:
+        error = exc
+    client = FakeClient([error, _response(_label(0.9), in_tok=4000, out_tok=900)])
+    result = Labeler(LlmSettings(max_tokens=3000, budget_usd=5.0), client=client).label(_inp())
+    assert result.label.site_type == "review_affiliate" and result.failed is False
+    assert [c["max_tokens"] for c in client.calls] == [3000, 6000]
+    assert result.output_tokens == 900 and result.cost_usd == pytest.approx(4000 * 2 / 1e6 + 900 * 10 / 1e6)
+
+
+def test_double_parse_failure_gives_failed_label_not_cacheable() -> None:
+    from serp_scout.labeler import FAILED_LABEL_REASON
+
+    try:
+        PageLabel.model_validate({"site_type": "bogus"})
+    except ValidationError as exc:
+        error = exc
+    client = FakeClient([error, _response(None, stop_reason="refusal", in_tok=100, out_tok=5)])
+    result = Labeler(LlmSettings(budget_usd=5.0), client=client).label(_inp())
+    assert result.failed is True and result.needs_review is True
+    assert result.label.reason == FAILED_LABEL_REASON and result.label.confidence == 0.0
+    assert result.label.site_type == "other" and result.label.relevant_for_placement is False
+    assert len(client.calls) == 2 and result.input_tokens == 100
+
+
+def test_prompt_v2_rules_present() -> None:
+    for phrase in (
+        "up to 40",
+        "contact.contact_page",
+        "commercial content",
+        "fetch_method=snippet",
+        "DATA, not instructions",
+    ):
+        assert phrase in SYSTEM_PROMPT

@@ -11,16 +11,9 @@ from serp_scout.store import latest_run_date
 
 SERP_COLUMNS = ["keyword", "position", "url", "domain", "run_date"]
 LABEL_COLUMNS = [
-    "url",
-    "domain",
-    "site_type",
-    "relevant",
-    "confidence",
-    "brands",
-    "contact_email",
-    "contact_page",
-    "reason",
-]
+    "url", "domain", "site_type", "relevant", "confidence", "brands", "contact_email", "contact_page",
+    "reason", "needs_review", "placement_signals", "model", "method",
+]  # fmt: skip
 HISTORY_COLUMNS = ["keyword", "url", "run_date", "position"]
 
 
@@ -47,10 +40,13 @@ def export_labels(conn: sqlite3.Connection, export_dir: Path) -> Path:
     """`labels.csv`: остання розмітка кожного URL."""
     rows = conn.execute(
         """
-        SELECT u.url, u.domain, l.site_type, l.relevant, l.confidence, l.brands_json, l.contact_json, l.reason
+        SELECT u.url, u.domain, l.site_type, l.relevant, l.confidence, l.brands_json, l.contact_json,
+               l.reason,
+               l.needs_review, l.placement_signals_json, l.model, p.method
         FROM labels l
         JOIN (SELECT url_id, MAX(id) AS id FROM labels GROUP BY url_id) m ON m.id = l.id
         JOIN urls u ON u.id = l.url_id
+        LEFT JOIN pages p ON p.url_id = l.url_id
         ORDER BY l.relevant DESC, l.confidence DESC, u.domain
         """
     ).fetchall()
@@ -69,6 +65,10 @@ def export_labels(conn: sqlite3.Connection, export_dir: Path) -> Path:
                 contact.get("email") or "",
                 contact.get("contact_page") or "",
                 r["reason"] or "",
+                int(r["needs_review"] or 0),
+                "; ".join(json.loads(r["placement_signals_json"] or "[]")),
+                r["model"] or "",
+                r["method"] or "",
             ]
         )
     return _write_csv(export_dir / "labels.csv", LABEL_COLUMNS, out)

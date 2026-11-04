@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import tldextract
@@ -14,9 +15,25 @@ _TRACKING_PREFIXES = ("utm_",)
 _TRACKING_KEYS = {"gclid", "fbclid", "msclkid", "yclid", "mc_cid", "mc_eid", "ref_src"}
 
 
-def normalize_url(url: str) -> str:
-    """Прибирає фрагмент, utm_*/клік-ідентифікатори, зводить схему й хост до нижнього регістру."""
+_GOOGLE_HOST_RE = re.compile(r"(^|\.)google\.[a-z.]{2,6}$")
+_GOOGLE_REDIRECT_PATHS = {"/goto", "/url"}
+
+
+def unwrap_google_redirect(url: str) -> str:
+    """`google.*/goto?url=…`, `google.*/url?q=…`, `google.*/url?url=…` → цільова адреса (інакше як є)."""
     parts = urlsplit(url.strip())
+    if not _GOOGLE_HOST_RE.search(parts.netloc.lower()) or parts.path not in _GOOGLE_REDIRECT_PATHS:
+        return url
+    params = dict(parse_qsl(parts.query, keep_blank_values=True))
+    target = (params.get("url") or params.get("q") or "").strip()
+    if target.startswith(("http://", "https://")):
+        return unwrap_google_redirect(target)
+    return url
+
+
+def normalize_url(url: str) -> str:
+    """Розгортає редирект Google, прибирає фрагмент і utm_*/клік-ідентифікатори, хост — у нижній регістр."""
+    parts = urlsplit(unwrap_google_redirect(url))
     scheme = (parts.scheme or "https").lower()
     host = parts.netloc.lower()
     if host.endswith(":80") and scheme == "http":
@@ -33,7 +50,8 @@ def normalize_url(url: str) -> str:
 
 
 def domain_of(url: str) -> str:
-    """Хост без `www.`; піддомени зберігаються (`en.wikipedia.org`, `apps.apple.com`)."""
+    """Хост без `www.`; піддомени зберігаються (`en.wikipedia.org`); для редиректу Google — цільовий хост."""
+    url = unwrap_google_redirect(url)
     ext = _extract(url)
     labels = [ext.subdomain, ext.domain, ext.suffix]
     fqdn = ".".join(part for part in labels if part).lower()

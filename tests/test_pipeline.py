@@ -268,3 +268,74 @@ def test_cli_labels_sample_and_url(settings) -> None:
     assert missing.exit_code == 1
     table = runner.invoke(app, ["labels", "--sample", "3"])
     assert table.exit_code == 0 and "вибірка 3" in table.output
+
+
+def test_failed_label_is_not_cached(settings, monkeypatch: pytest.MonkeyPatch) -> None:
+    from serp_scout.labeler import FAILED_LABEL_REASON, LabelResult, default_label
+
+    original = Labeler.label
+    state = {"fail": True}
+
+    def flaky(self, inp):
+        if inp.url == FIRST_URL and state["fail"]:
+            return LabelResult(
+                default_label(FAILED_LABEL_REASON), "claude-sonnet-5-5", 10, 2, 0.0001, True, failed=True
+            )
+        return original(self, inp)
+
+    monkeypatch.setattr(Labeler, "label", flaky)
+    first = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04")
+    assert first.labels_new == N_URLS and first.status == "ok"
+    conn = store.connect(settings.paths.db)
+    row = conn.execute(
+        "SELECT reason, needs_review FROM labels l JOIN urls u ON u.id = l.url_id WHERE u.url = ?",
+        (FIRST_URL,),
+    ).fetchone()
+    assert row["reason"] == FAILED_LABEL_REASON and row["needs_review"] == 1
+    conn.close()
+    state["fail"] = False
+    second = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04")
+    assert second.labels_new == 1 and second.labels_cached == N_URLS - 1  # лише збійна мітка перероблена
+
+
+def test_new_prompt_version_relabels_from_cached_text(settings) -> None:
+    first = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04")
+    assert first.pages_fetched == N_URLS
+    current = settings.llm.prompt_version
+    settings.llm.prompt_version = "v-next"
+    second = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04")
+    assert second.pages_fetched == 0 and second.labels_new == N_URLS and second.labels_cached == 0
+    conn = store.connect(settings.paths.db)
+    versions = {r["prompt_version"] for r in conn.execute("SELECT DISTINCT prompt_version FROM labels")}
+    assert versions == {current, "v-next"} and store.count(conn, "labels") == 2 * N_URLS
+
+
+def test_skip_serp_reuses_snapshot(settings) -> None:
+    missing = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04", skip_serp=True)
+    assert missing.status == "failed" and missing.errors[0]["stage"] == "pipeline"
+    pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04", limit=0)
+    relabel = pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04", skip_serp=True)
+    assert relabel.status == "ok" and relabel.serp_calls == 0
+    assert relabel.urls_total == N_URLS and relabel.labels_new == N_URLS
+
+
+def test_brands_found_in_full_text_beyond_prompt_window(settings, tmp_path: Path, monkeypatch) -> None:
+    """Бренд із середини довгої сторінки (поза 9k+3k промпту) потрапляє в brands_json через лексикон."""
+    import shutil
+
+    from serp_scout.urlnorm import url_key
+
+    fixtures = tmp_path / "fx"
+    shutil.copytree(FIXTURES / "serp", fixtures / "serp")
+    (fixtures / "pages").mkdir()
+    hidden = "x" * 10_000 + " Grand Mondial casino review " + "y" * 10_000
+    (fixtures / "pages" / f"{url_key(FIRST_URL)}.httpx.txt").write_text(hidden, encoding="utf-8")
+    monkeypatch.setattr(settings.paths, "fixtures_dir", fixtures)
+    pipeline.run_pipeline(settings, offline=True, run_date="2026-11-04", limit=1)
+    conn = store.connect(settings.paths.db)
+    row = conn.execute(
+        "SELECT l.brands_json, p.text_len FROM labels l JOIN pages p ON p.url_id = l.url_id "
+        "JOIN urls u ON u.id = l.url_id WHERE u.url = ?",
+        (FIRST_URL,),
+    ).fetchone()
+    assert "Grand Mondial" in json.loads(row["brands_json"]) and row["text_len"] > 12_000
