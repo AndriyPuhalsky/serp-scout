@@ -1,0 +1,84 @@
+{
+ "url": "https://www.timescolonist.com/spotlight/best-ontario-online-casinos-8642952",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:17+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7327,
+  "output_tokens": 741,
+  "cost_usd": 0.022064
+ },
+ "label": {
+  "site_type": "news_media",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це спонсорована стаття «Best online casinos in Ontario» на сайті газети Times Colonist, оплачена спонсором Lean Back Player, тож розміщення тут продаються. На сайті є сторінки Sponsored, Advertise та Sponsorships.",
+  "brands_mentioned": [
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "Slots Magic",
+    "normalized": "Slots Magic",
+    "context": ""
+   },
+   {
+    "name": "Royal Vegas",
+    "normalized": "Royal Vegas",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "DreamVegas",
+    "normalized": "DreamVegas",
+    "context": ""
+   },
+   {
+    "name": "Sports Interaction",
+    "normalized": "Sports Interaction",
+    "context": ""
+   },
+   {
+    "name": "GGPoker",
+    "normalized": "GGPoker",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": "dobee@timescolonist.com",
+   "contact_page": "https://www.timescolonist.com/other/contact-us",
+   "telegram": null,
+   "other": "Advertise: https://thetcedge.com/; Sponsorships PDF: https://www.vmcdn.ca/files/victoriatimescolonist/files/tcsponsorship.pdf",
+   "form": false
+  },
+  "placement_signals": [
+   "This sponsored content has been paid for by our sponsor, Lean Back Player",
+   "Sponsored page link",
+   "Advertise link (thetcedge.com)",
+   "Sponsorships PDF (tcsponsorship)",
+   "/spotlight/ section"
+  ]
+ }
+}

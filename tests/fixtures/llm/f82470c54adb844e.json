@@ -1,0 +1,68 @@
+{
+ "url": "https://www.casivo.ca/fast-payout-casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:09+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7073,
+  "output_tokens": 570,
+  "cost_usd": 0.019846000000000003
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афілійованим рейтингом казино з швидкими виплатами для Канади з бонусами та посиланнями на огляди окремих казино. Це типовий review-сайт, де можна купити розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "ComeOn",
+    "normalized": "ComeOn",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Wazamba",
+    "normalized": "Wazamba",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Casino Days",
+    "normalized": "Casino Days",
+    "context": ""
+   },
+   {
+    "name": "GreatWin",
+    "normalized": "GreatWin",
+    "context": ""
+   },
+   {
+    "name": "Barz",
+    "normalized": "Barz",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": "noah@casivo.ca",
+   "contact_page": "https://www.casivo.ca/contact/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

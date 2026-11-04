@@ -1,0 +1,33 @@
+{
+ "url": "https://www.spincasino.com/ca/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:19+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 2907,
+  "output_tokens": 242,
+  "cost_usd": 0.008234
+ },
+ "label": {
+  "site_type": "casino_operator",
+  "relevant_for_placement": false,
+  "confidence": 0.5,
+  "reason": "Це власний сайт казино Spin Casino (канадська сторінка з вітальним бонусом і реальними іграми), а не стороння площадка для розміщення. Наявний лише сніпет, тому впевненість обмежена.",
+  "brands_mentioned": [
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

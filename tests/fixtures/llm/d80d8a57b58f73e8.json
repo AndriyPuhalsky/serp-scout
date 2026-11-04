@@ -1,0 +1,45 @@
+{
+ "url": "https://www.allfreechips.com/no-deposit-casinos",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:49+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7020,
+  "output_tokens": 377,
+  "cost_usd": 0.01781
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Сторінка — афілійований каталог бонусів без депозиту з таблицею казино та порадами щодо вейджера; оператори самі розміщують свої пропозиції, тож розміщення можливе. Є контактна форма та email підтримки.",
+  "brands_mentioned": [
+   {
+    "name": "Magicianbet",
+    "normalized": "Magicianbet",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "FanDuel",
+    "normalized": "FanDuel",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": "support@allfreechips.com",
+   "contact_page": "https://www.allfreechips.com/contact-us",
+   "telegram": null,
+   "other": "dmca@allfreechips.com",
+   "form": false
+  },
+  "placement_signals": [
+   "operator-maintained listings: casino enters and keeps offers current itself"
+  ]
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "url": "https://www.betiton.com/en-on/casino/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:27+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7283,
+  "output_tokens": 441,
+  "cost_usd": 0.018976
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Онтаріо та розкриттям партнерських комісій. Казино подані як партнери, тож тут цілком реально купити або домовитися про розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "Tooniebet",
+    "normalized": "Tooniebet",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "SlotsMagic",
+    "normalized": "SlotsMagic",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.betiton.com/en-on/contact-us/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "affiliate partners",
+   "Betiton may earn a commission when you register through our links",
+   "affiliate disclosure"
+  ]
+ }
+}

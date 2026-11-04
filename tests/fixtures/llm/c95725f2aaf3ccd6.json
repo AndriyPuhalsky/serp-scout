@@ -1,0 +1,83 @@
+{
+ "url": "https://www.google.ca/goto?url=CAESdQHrOzAVP-zIWa6tWnam7oJGzT0X5lM7aYylwucgkDujuFfYAcb3JdX5jGe8hTRx43E-KCpxZZHynzTr7otpyLLBsH4vOGcrZmpvWskGApmIqFE3bNdgZEqwqNWhMl0nFAai4eBAtPmWd3b7xzGmepPnNZ6MEg",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:32+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7736,
+  "output_tokens": 812,
+  "cost_usd": 0.023592000000000002
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Це афілійована сторінка Casinomeister з рейтингом найкращих канадських онлайн-казино, оцінками, бонусами та партнерськими посиланнями, тож розміщення тут доречне. Є розкриття афілійованих зв'язків і посилання на Contact у футері.",
+  "brands_mentioned": [
+   {
+    "name": "Thrill Casino",
+    "normalized": "Thrill Casino",
+    "context": ""
+   },
+   {
+    "name": "Aerobet Casino",
+    "normalized": "Aerobet Casino",
+    "context": ""
+   },
+   {
+    "name": "BiggerZ Casino",
+    "normalized": "BiggerZ Casino",
+    "context": ""
+   },
+   {
+    "name": "GoKong Casino",
+    "normalized": "GoKong Casino",
+    "context": ""
+   },
+   {
+    "name": "Slotoro Casino",
+    "normalized": "Slotoro Casino",
+    "context": ""
+   },
+   {
+    "name": "Jackpotter Casino",
+    "normalized": "Jackpotter Casino",
+    "context": ""
+   },
+   {
+    "name": "BetPRIMEIRO",
+    "normalized": "BetPRIMEIRO",
+    "context": ""
+   },
+   {
+    "name": "BeonBet Casino",
+    "normalized": "BeonBet Casino",
+    "context": ""
+   },
+   {
+    "name": "SlotsGem Casino",
+    "normalized": "SlotsGem Casino",
+    "context": ""
+   },
+   {
+    "name": "Spinrise Casino",
+    "normalized": "Spinrise Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання Contact та About us (URL не вказано)",
+   "form": false
+  },
+  "placement_signals": [
+   "Affiliate Disclosure",
+   "affiliate links",
+   "Visit / Terms Apply",
+   "Contact"
+  ]
+ }
+}

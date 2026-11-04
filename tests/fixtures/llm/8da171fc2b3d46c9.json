@@ -1,0 +1,43 @@
+{
+ "url": "https://www.casinocanada.me/fast-payout-casinos-canada/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:44+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 4732,
+  "output_tokens": 365,
+  "cost_usd": 0.013114
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афілійованим рейтингом казино зі швидкими виплатами в Канаді з бонусами та порівнянням способів оплати. Це типовий майданчик для розміщення казино-брендів.",
+  "brands_mentioned": [
+   {
+    "name": "Rizk",
+    "normalized": "Rizk",
+    "context": ""
+   },
+   {
+    "name": "Wildz",
+    "normalized": "Wildz",
+    "context": ""
+   },
+   {
+    "name": "Genesis Casino",
+    "normalized": "Genesis Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": "info@casinocanada.me",
+   "contact_page": "https://www.casinocanada.me/about-us/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "url": "https://www.google.ca/goto?url=CAESmwEB6zswFStdeBR6ljsc-RU2QKTKWfsBmiWtqxCfCQWDDRUuQ4ZxOvPf4TVR6_Y1s3ss5rcvPwuaXEvxnA_3j8Lf_epGKKVKCAUkZ5-T_crV3mYrmEYbUFA3WvwJr_5nzU0DR25mayJOYNCjS3I3tXMjAT0uVLi2nKdVfc7I8rEXgWTE3e9Ztx5C72S6vhbE2Tde2pbTn2qnwXGpRg",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:23+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 5455,
+  "output_tokens": 634,
+  "cost_usd": 0.01725
+ },
+ "label": {
+  "site_type": "news_media",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Це сторінка локального медіа Durham Post зі статтею «найкращі казино Канади», поданою зовнішнім автором (independent contributor) — по суті спонсорований матеріал, що просуває мережу Casino Rewards. Сайт має сторінки для реклами, тож розміщення купити можна.",
+  "brands_mentioned": [
+   {
+    "name": "Yukon Gold",
+    "normalized": "Yukon Gold",
+    "context": ""
+   },
+   {
+    "name": "Luxury Casino",
+    "normalized": "Luxury Casino",
+    "context": ""
+   },
+   {
+    "name": "Zodiac Casino",
+    "normalized": "Zodiac Casino",
+    "context": ""
+   },
+   {
+    "name": "Golden Tiger Casino",
+    "normalized": "Golden Tiger Casino",
+    "context": ""
+   },
+   {
+    "name": "Captain Cooks",
+    "normalized": "Captain Cooks",
+    "context": ""
+   },
+   {
+    "name": "Casino Classic",
+    "normalized": "Casino Classic",
+    "context": ""
+   },
+   {
+    "name": "Grand Mondial",
+    "normalized": "Grand Mondial",
+    "context": ""
+   },
+   {
+    "name": "Casino Rewards",
+    "normalized": "Casino Rewards",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": "editor@durhampost.ca",
+   "contact_page": "https://durhampost.ca/advertize",
+   "telegram": null,
+   "other": "https://durhampost.ca/shop (Advertise on Durhampost.ca)",
+   "form": false
+  },
+  "placement_signals": [
+   "article submitted by an independent contributor",
+   "Advertise on Durhampost.ca",
+   "durhampost.ca/advertize"
+  ]
+ }
+}

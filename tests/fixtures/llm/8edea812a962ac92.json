@@ -1,0 +1,68 @@
+{
+ "url": "https://www.realmoneycasinoonline.ca/fastest-withdrawal-online-casino/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:42+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6925,
+  "output_tokens": 589,
+  "cost_usd": 0.01974
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афілійованим оглядом казино з швидкими виплатами в Канаді: рейтинги, таблиця термінів виведення, посилання на огляди й бонуси. Це типовий майданчик для купівлі розміщення казино.",
+  "brands_mentioned": [
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Yukon Gold",
+    "normalized": "Yukon Gold",
+    "context": ""
+   },
+   {
+    "name": "Golden Star Casino",
+    "normalized": "Golden Star Casino",
+    "context": ""
+   },
+   {
+    "name": "Gaming Club Casino",
+    "normalized": "Gaming Club Casino",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "Luxury Casino",
+    "normalized": "Luxury Casino",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Casino Moons",
+    "normalized": "Casino Moons",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.realmoneycasinoonline.ca/contact/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

@@ -1,0 +1,4 @@
+# Netlify: статичний сайт-звіт без збірки; дані вже лежать у site/data/report.json.
+[build]
+  publish = "site"
+  command = ""

@@ -1,0 +1,61 @@
+{
+ "url": "https://www.livescore.com/en-ca/online-casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:33+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6775,
+  "output_tokens": 559,
+  "cost_usd": 0.01914
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка LiveScore — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та порівнянням операторів. Є посилання на рекламну сторінку, тож розміщення, ймовірно, можна купити.",
+  "brands_mentioned": [
+   {
+    "name": "Lucky Vibe Casino",
+    "normalized": "Lucky Vibe Casino",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "7Bit Casino",
+    "normalized": "7Bit Casino",
+    "context": ""
+   },
+   {
+    "name": "Robocat Casino",
+    "normalized": "Robocat Casino",
+    "context": ""
+   },
+   {
+    "name": "Roobet",
+    "normalized": "Roobet",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.livescore.com/en/contact",
+   "telegram": null,
+   "other": "Рекламна сторінка: https://livescoregroup.com/advertise/",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise: https://livescoregroup.com/advertise/",
+   "афілійований формат «best casinos» з бонусами операторів"
+  ]
+ }
+}

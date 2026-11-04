@@ -1,0 +1,117 @@
+Casinos
+Casinos must fulfill specific obligations as required by the Proceeds of Crime (Money Laundering) and Terrorist Financing Act (PCMLTFA) and associated Regulations, to help combat money laundering and terrorist activity financing in Canada. For the purpose of the PCMLTFA, a casino is a government, organization, board or operator in Canada that is authorized to do business in Canada and that conducts and manages:
+- a lottery scheme, located at a fixed place of business that includes games of roulette or card games; or
+- games operated on or through a slot machine or similar electronic gaming device, located at a fixed place of business, where there are more than 50 machines or similar devices in the establishment. This could include a place of business such as a restaurant that has these electronic gaming machines; or
+- a lottery scheme accessible to the public through the Internet or other digital network. This does not include offering online bingo or the sale of lottery tickets.
+A registered charity authorized to carry on business in a casino for a period of two consecutive days or less, under the supervision of the casino, is not considered to be a casino.
+The PCMLTFA refers to the term 'conduct and manage' to identify the entity legally responsible for the gaming activities at a casino. This is in line with the Criminal Code terminology that sets out who can oversee, carry out or license out the gaming activities (lottery schemes). The entities that conduct and manage lottery schemes, as authorized under the Criminal Code, must do so in line with the provincial legislation on gaming.
+In Canada, the provincial and territorial governments delegate the legal responsibility as to who can conduct and manage gaming activities (lottery scheme) at a casino. The entity that is delegated this responsibility by the province or territory is then responsible for meeting the obligations of the PCMLTFA and associated Regulations for that casino.
+In some cases, the entity that conducts and manages a casino is not necessarily the same entity that operates the casino activities on a day-to-day basis. For example, if a provincial government has delegated the responsibility to conduct and manage the lottery scheme to a provincial lottery corporation who then delegates their reporting under the PCMLTFA to another entity, the provincial lottery corporation remains the reporting entity responsible for ensuring compliance with the PCMLTFA and associated Regulations. In other words, the legal entity responsible for the casino, as per the PCMLTFA, may choose to delegate the reporting to another entity but they remain responsible for meeting these obligations.
+Casinos are responsible for the following requirements under the PCMLTFA and associated Regulations.
+Summary of requirements for casinos
+Compliance program
+Casinos must implement a compliance program. A strong compliance program will form the basis of meeting all your regulatory requirements.
+Know your client
+Casinos must verify the identity of persons and entities for certain activities and transactions, and carry out other customer due diligence activities, as described below:
+When to verify the identity of persons and entities
+Methods to verify the identity of persons and entities
+Casinos must verify the identity of persons and entities using the methods prescribed by the PCMLTFA and associated Regulations.
+Business relationship requirements
+Casinos enter into a business relationship with a client when they open an account for the client or the second time they are required to verify the identity of that client.
+Ongoing monitoring requirements
+Casinos have ongoing monitoring requirements when they enter into a business relationship with a client.
+Beneficial ownership requirements
+Casinos must obtain and take reasonable measures to confirm the accuracy of beneficial ownership information for entities.
+Third party determination requirements
+Casinos have third party determination requirements when they are required to submit certain reports and keep certain records.
+Politically exposed persons (PEP) and heads of international organizations (HIO) requirements
+Casinos are required to take reasonable measures to make PEP and HIO determinations for certain activities or transactions. If a casino determines that a person is a PEP or a HIO then they have additional related requirements.
+Transaction reporting
+Casinos must submit the following reports to FINTRAC:
+Suspicious Transaction Reports
+Listed Person or Entity Property Reports
+Large Cash Transaction Reports
+- Reporting large cash transactions to FINTRAC Added on October 23, 2023
+Large Virtual Currency Transaction Reports
+- Reporting large virtual currency transactions to FINTRAC Updated on May 17, 2024
+Electronic Funds Transfer Reports
+- Reporting electronic funds transfers to FINTRAC Added on June 24, 2024
+Casino Disbursement Reports
+- Reporting casino disbursements to FINTRAC Added on June 24, 2024
+24-hour rule
+Casinos have 24-hour rule requirements for:
+- Casino Disbursement Reports
+- Large Cash Transaction Reports
+- Large Virtual Currency Transaction Reports
+- incoming and outgoing Electronic Funds Transfer Reports
+- Reporting transactions to FINTRAC: The 24-hour rule Updated on October 23, 2023
+Sanctions evasion
+- Report suspected sanctions evasion Added on June 25, 2024
+Record keeping
+Casinos must keep certain records, including records related to accounts, transactions and client identification.
+Travel rule
+Casinos have travel rule requirements related to electronic funds transfers or virtual currency transfers.
+Ministerial directives
+Ministerial directive requirements apply to all reporting entity sectors.
+Penalties for non-compliance
+FINTRAC has the legislative authority to issue administrative monetary penalties (AMPs) to reporting entities that are found to be non-compliant with the PCMLTFA and associated Regulations. For more information, see Penalties for non-compliance.
+Glossary
+The FINTRAC Guidance glossary includes terminology defined in the PCMLTFA and associated Regulations, as well as terms used throughout the guidance. For more information, see FINTRAC's Guidance Glossary.
+Definitions
+- Accountant
+- A chartered accountant, a certified general accountant, a certified management accountant or, if applicable, a chartered professional accountant. (comptable) Reference:
+Proceeds of Crime (Money Laundering) and Terrorist Financing Regulations (PCMLTFR), SOR/2002-184, s. 1(2).
+- Accounting firm
+- An entity that is engaged in the business of providing accounting services to the public and has at least one partner, employee or administrator that is an accountant. (cabinet d'expertise comptable) Reference:
+PCMLTFR, SOR/2002-184, s. 1(2).
+- Acquirer
+- An entity that connects a private automated banking machine to a payment card network, as defined in section 3 of the Payment Card Networks Act, to facilitate transactions. (acquéreur) Reference:
+Payment Card Networks Act
+- Act
+- The Proceeds of Crime (Money Laundering) and Terrorist Financing Act (PCMLTFA). (la Loi) Reference:
+Proceeds of Crime (Money Laundering) and Terrorist Financing Administrative Monetary Penalties Regulations (PCMLTFAMPR), SOR/2007-292, s. 1, Proceeds of Crime (Money Laundering) and Terrorist Financing Registration Regulations (PCMLTFRR), SOR/2007-121, s. 1, PCMLTFR, SOR/2002-184, s. 1(2), and Proceeds of Crime (Money Laundering) and Terrorist Financing Suspicious Transaction Reporting Regulations (PCMLTFSTRR), SOR/2001-317, s. 1(2).
+- Administrative monetary penalties (AMPs)
+- Civil penalties that may be issued to reporting entities by FINTRAC for non-compliance with the PCMLTFA and associated Regulations. (pénalité administrative pécuniaire [PAP])
+- Affiliate
+- An entity is affiliated with another entity if one of them is wholly owned by the other, if both are wholly owned by the same entity or if their financial statements are consolidated. (entité du même groupe) Reference:
+PCMLTFR, SOR/2002-184, s. 4.
+- Annuity
+- Has the same meaning as in subsection 248(1) of the Income Tax Act. (rente) Reference:
+PCMLTFR, SOR/2002-184, s. 1(2).
+- Armoured cars
+- Persons or entities that are engaged in the business of transporting currency, money orders, traveller’s cheques or other similar negotiable instruments. (Véhicules blindés)
+- As soon as practicable
+- A time period that falls in-between immediately and as soon as possible, within which a suspicious transaction report (STR) must be submitted to FINTRAC. The completion and submission of the STR should take priority over other tasks. In this context, the report must be completed promptly, taking into account the facts and circumstances of the situation. While some delay is permitted, it must have a reasonable explanation. (aussitôt que possible)
+- Attempted transaction
+- Occurs when an individual or entity starts to conduct a transaction that is not completed. For example, a client or a potential client walks away
+[...]
+identify a person or entity (client). (vérifier l'identité)
+- Very large corporation or trust
+- A corporation or trust that has minimum net assets of $75 million CAD on its last audited balance sheet. The corporation's shares or units have to be traded on a Canadian stock exchange or on a stock exchange designated under subsection 262(1) of the Income Tax Act. The corporation or trust also has to operate in a country that is a member of the Financial Action Task Force (FATF). (personne morale ou fiducie dont l'actif est très important)
+- Violation
+- A contravention of the Act or the regulations that is designated as a violation by regulations made under subsection 73.1(1). (violation) Reference:
+PCMLTFA, S.C. 2000, c 17, s. 2(1).
+- Virtual currency
+- Means: 
+  - (a) a digital representation of value that can be used for payment or investment purposes that is not a fiat currency and that can be readily exchanged for funds or for another virtual currency that can be readily exchanged for funds; or
+  - (b) a private key of a cryptographic system that enables a person or entity to have access to a digital representation of value referred to in paragraph (a).
+(monnaie virtuelle) Reference:
+PCMLTFR, SOR/2002-184, s. 1(2) and PCMLTFSTRR, SOR/2001-317, s. 1(2).
+- Virtual currency exchange transaction
+- An exchange, at the request of another person or entity, of virtual currency for funds, funds for virtual currency or one virtual currency for another. (opération de change en monnaie virtuelle) Reference:
+PCMLTFR, SOR/2002-184, s. 1(2).
+- Virtual currency exchange transaction ticket
+- A record respecting a virtual currency exchange transaction—including an entry in a transaction register—that sets out: 
+  - (a) the date of the transaction;
+  - (b) in the case of a transaction of $1,000 or more, the name and address of the person or entity that requests the exchange, the nature of their principal business or their occupation and, in the case of a person, their date of birth;
+  - (c) the type and amount of each type of funds and each of the virtual currencies involved in the payment made and received by the person or entity that requests the exchange;
+  - (d) the method by which the payment is made and received;
+  - (e) the exchange rates used and their source;
+  - (f) the number of every account that is affected by the transaction, the type of account and the name of each account holder;
+  - (g) every reference number that is connected to the transaction and has a function equivalent to that of an account number; and
+  - (h) every transaction identifier, including the sending and receiving addresses.
+(fiche d'opération de change en monnaie virtuelle) Reference:
+PCMLTFR, SOR/2002-184, s. 1(2).
+- Working days
+- In respect of an electronic funds transfer (EFT) report or a large virtual currency transaction report, a working day is a day between and including Monday to Friday. It excludes Saturday, Sunday, and a public holiday. (jour ouvrable)
+- Date Modified:

@@ -1,0 +1,40 @@
+{
+ "url": "https://www.niagarafallstourism.com/play/casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:46+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 3257,
+  "output_tokens": 404,
+  "cost_usd": 0.010554000000000001
+ },
+ "label": {
+  "site_type": "other",
+  "relevant_for_placement": false,
+  "confidence": 0.8,
+  "reason": "Це туристичний сайт Niagara Falls Tourism зі сторінкою про фізичні казино (Casino Niagara, Fallsview), а не огляд онлайн-казино чи рейтинг. Придбати розміщення онлайн-казино тут не можна, хоча є медіа-кіт для туристичної індустрії.",
+  "brands_mentioned": [
+   {
+    "name": "Casino Niagara",
+    "normalized": "Casino Niagara",
+    "context": ""
+   },
+   {
+    "name": "Niagara Fallsview Casino Resort",
+    "normalized": "Niagara Fallsview Casino Resort",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.niagarafallstourism.com/contact",
+   "telegram": null,
+   "other": "Media contact: https://www.niagarafallstourism.com/media-kit/contact",
+   "form": false
+  },
+  "placement_signals": [
+   "Media Kit & Resources"
+  ]
+ }
+}

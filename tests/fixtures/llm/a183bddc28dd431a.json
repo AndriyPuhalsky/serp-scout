@@ -1,0 +1,133 @@
+{
+ "url": "https://www.slotozilla.com/ca/free-spins/150-free-spins",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:54+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6895,
+  "output_tokens": 1124,
+  "cost_usd": 0.02503
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.95,
+  "reason": "Це афілейт-сторінка з оглядами та рейтингами казино й порівнянням бонусів на 150 безкоштовних спінів для Канади. У футері є посилання «Partnership» і «Contact Us», тож розміщення, імовірно, можливе.",
+  "brands_mentioned": [
+   {
+    "name": "Slotman Casino",
+    "normalized": "Slotman Casino",
+    "context": ""
+   },
+   {
+    "name": "Casino Midas",
+    "normalized": "Casino Midas",
+    "context": ""
+   },
+   {
+    "name": "Grand Mondial",
+    "normalized": "Grand Mondial",
+    "context": ""
+   },
+   {
+    "name": "Hell Spin",
+    "normalized": "Hell Spin",
+    "context": ""
+   },
+   {
+    "name": "Oxi Casino",
+    "normalized": "Oxi Casino",
+    "context": ""
+   },
+   {
+    "name": "DuxCasino",
+    "normalized": "DuxCasino",
+    "context": ""
+   },
+   {
+    "name": "Wild Tokyo",
+    "normalized": "Wild Tokyo",
+    "context": ""
+   },
+   {
+    "name": "National Casino",
+    "normalized": "National Casino",
+    "context": ""
+   },
+   {
+    "name": "FortuneJack",
+    "normalized": "FortuneJack",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Lucky Nugget",
+    "normalized": "Lucky Nugget",
+    "context": ""
+   },
+   {
+    "name": "Gaming Club",
+    "normalized": "Gaming Club",
+    "context": ""
+   },
+   {
+    "name": "Jonny Jackpot",
+    "normalized": "Jonny Jackpot",
+    "context": ""
+   },
+   {
+    "name": "Captain Cooks",
+    "normalized": "Captain Cooks",
+    "context": ""
+   },
+   {
+    "name": "Yukon Gold",
+    "normalized": "Yukon Gold",
+    "context": ""
+   },
+   {
+    "name": "FastPay Casino",
+    "normalized": "FastPay Casino",
+    "context": ""
+   },
+   {
+    "name": "Spin City",
+    "normalized": "Spin City",
+    "context": ""
+   },
+   {
+    "name": "Verde Casino",
+    "normalized": "Verde Casino",
+    "context": ""
+   },
+   {
+    "name": "OnlyWin Casino",
+    "normalized": "OnlyWin Casino",
+    "context": ""
+   },
+   {
+    "name": "FS Casino",
+    "normalized": "FS Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання Contact Us і Partnership (URL не вказано)",
+   "form": false
+  },
+  "placement_signals": [
+   "Partnership",
+   "Contact Us",
+   "Exclusive Casino Bonuses",
+   "Top casino reviews"
+  ]
+ }
+}

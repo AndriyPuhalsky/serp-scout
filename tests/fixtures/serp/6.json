@@ -1,0 +1,44 @@
+{
+ "search_metadata": {
+  "id": "6aeac7dc136b1afe75db1be9",
+  "status": "Success",
+  "created_at": "2026-11-04 05:51:24 UTC",
+  "processed_at": "2026-11-04 05:51:24 UTC",
+  "total_time_taken": 0.35
+ },
+ "search_parameters": {
+  "engine": "google",
+  "q": "interac casino",
+  "location_requested": "Canada",
+  "location_used": "Canada",
+  "google_domain": "google.ca",
+  "hl": "en",
+  "gl": "ca",
+  "device": "mobile"
+ },
+ "search_information": {
+  "query_displayed": "interac casino"
+ },
+ "organic_results": [
+  {
+   "position": 1,
+   "title": "Online Casino Bonuses Canada 2026 | Interac Casino Sites (CAD)",
+   "link": "https://www.oddsjet.com/en-ca/casino-bonuses",
+   "displayed_link": "https://www.oddsjet.com",
+   "snippet": "OddsJet has welcome bonuses & free spin offers from the top Interac online casinos, so that players in Canada can start playing live dealer or online ...",
+   "source": "OddsJet"
+  },
+  {
+   "position": 2,
+   "title": "Best Casino Sites That Accept Interac - The Kingdom Life Center Inc",
+   "link": "https://theklcinc.com/2024/08/12/best-casino-sites-that-accept-interac/",
+   "displayed_link": "https://theklcinc.com",
+   "snippet": "No matter what type of slot or table game you prefer to play, best casino sites that accept interac and that is why it is important to know ...",
+   "date": "Aug 12, 2024",
+   "source": "theklcinc.com"
+  }
+ ],
+ "dmca_messages": {
+  "note": "Google прибрав частину результатів за DMCA (у сирій відповіді є dmca_messages)"
+ }
+}

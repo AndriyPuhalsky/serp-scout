@@ -1,0 +1,151 @@
+{
+ "url": "https://www.covers.com/casino/canada",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:51:51+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7771,
+  "output_tokens": 969,
+  "cost_usd": 0.025232
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка Covers.com — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та категоріями, тому це review_affiliate і підходить для розміщення. Є сторінка контактів, але email на сторінці не знайдено.",
+  "brands_mentioned": [
+   {
+    "name": "WinBerry Casino",
+    "normalized": "WinBerry Casino",
+    "context": ""
+   },
+   {
+    "name": "Boho Casino",
+    "normalized": "Boho Casino",
+    "context": ""
+   },
+   {
+    "name": "Vegas Now",
+    "normalized": "Vegas Now",
+    "context": ""
+   },
+   {
+    "name": "Rainbet",
+    "normalized": "Rainbet",
+    "context": ""
+   },
+   {
+    "name": "LetsLucky",
+    "normalized": "LetsLucky",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Stake",
+    "normalized": "Stake",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "Sports Interaction",
+    "normalized": "Sports Interaction",
+    "context": ""
+   },
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "ComeOn",
+    "normalized": "ComeOn",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
+    "context": ""
+   },
+   {
+    "name": "PowerPlay",
+    "normalized": "PowerPlay",
+    "context": ""
+   },
+   {
+    "name": "Rolling Slots",
+    "normalized": "Rolling Slots",
+    "context": ""
+   },
+   {
+    "name": "North Casino",
+    "normalized": "North Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.covers.com/contact",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "партнерські огляди та рейтинг казино",
+   "партнерство (BetMGM responsible gaming partnership у новинах)"
+  ]
+ }
+}

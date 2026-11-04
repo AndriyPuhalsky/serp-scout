@@ -1,0 +1,137 @@
+{
+ "url": "https://www.casino.com/ca/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:39+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7836,
+  "output_tokens": 1089,
+  "cost_usd": 0.026562
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афілійованим рейтингом «найкращих казино Канади» з бонусами та посиланнями «Play Now», а також розкриттям партнерських комісій. Є посилання «Get Listed», що вказує на можливість платного розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "PowerPlay",
+    "normalized": "PowerPlay",
+    "context": ""
+   },
+   {
+    "name": "Tooniebet",
+    "normalized": "Tooniebet",
+    "context": ""
+   },
+   {
+    "name": "Casino Days",
+    "normalized": "Casino Days",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Royal Vegas",
+    "normalized": "Royal Vegas",
+    "context": ""
+   },
+   {
+    "name": "SpinAway Casino",
+    "normalized": "SpinAway Casino",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "NorthStar Bets",
+    "normalized": "NorthStar Bets",
+    "context": ""
+   },
+   {
+    "name": "Sia Casino",
+    "normalized": "Sia Casino",
+    "context": ""
+   },
+   {
+    "name": "Royal Ace Casino",
+    "normalized": "Royal Ace Casino",
+    "context": ""
+   },
+   {
+    "name": "Captain Jack Casino",
+    "normalized": "Captain Jack Casino",
+    "context": ""
+   },
+   {
+    "name": "21 Dukes Casino",
+    "normalized": "21 Dukes Casino",
+    "context": ""
+   },
+   {
+    "name": "Stake",
+    "normalized": "Stake",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "theScore Bet",
+    "normalized": "theScore Bet",
+    "context": ""
+   },
+   {
+    "name": "PokerStars",
+    "normalized": "PokerStars",
+    "context": ""
+   },
+   {
+    "name": "Lucky Spins",
+    "normalized": "Lucky Spins",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання «Get Listed» (URL не вказано)",
+   "form": false
+  },
+  "placement_signals": [
+   "Get Listed",
+   "Affiliate Disclosure: partner with trusted online casinos",
+   "affiliate links and commissions from partner casinos"
+  ]
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "url": "https://nowtoronto.com/lifestyle/best-online-casinos-canada/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:32+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7832,
+  "output_tokens": 695,
+  "cost_usd": 0.022614000000000002
+ },
+ "label": {
+  "site_type": "news_media",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Це гостьовий (guest post) рейтинг «best online casinos Canada» на новинному сайті Now Toronto з афілійованими посиланнями та CTA на казино, що явно є платним розміщенням. Сайт має меню ADVERTISE, а схожі матеріали позначені як «Sponsored content».",
+  "brands_mentioned": [
+   {
+    "name": "Casino Infinity",
+    "normalized": "Casino Infinity",
+    "context": ""
+   },
+   {
+    "name": "Crownplay",
+    "normalized": "Crownplay",
+    "context": ""
+   },
+   {
+    "name": "Lucky7even",
+    "normalized": "Lucky7even",
+    "context": ""
+   },
+   {
+    "name": "Neospin",
+    "normalized": "Neospin",
+    "context": ""
+   },
+   {
+    "name": "Spinch",
+    "normalized": "Spinch",
+    "context": ""
+   },
+   {
+    "name": "Kingmaker",
+    "normalized": "Kingmaker",
+    "context": ""
+   },
+   {
+    "name": "Qbet",
+    "normalized": "Qbet",
+    "context": ""
+   },
+   {
+    "name": "Skycrown",
+    "normalized": "Skycrown",
+    "context": ""
+   },
+   {
+    "name": "Roosterbet",
+    "normalized": "Roosterbet",
+    "context": ""
+   },
+   {
+    "name": "SlotsPalace",
+    "normalized": "SlotsPalace",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У меню сайту є розділи ADVERTISE і CONTACT, але URL не вказані",
+   "form": false
+  },
+  "placement_signals": [
+   "GUEST POST",
+   "SPONSORED CONTENT",
+   "ADVERTISE",
+   "Heads up about our links!",
+   "affiliate CTA links (>>Grab C$750 and 200 FS)"
+  ]
+ }
+}

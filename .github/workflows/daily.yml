@@ -1,0 +1,167 @@
+# Щоденний прогін serp-scout: топ-10 Google → SQLite → LLM-розмітка → експорт → сайт → коміт → Telegram.
+# Специфікація: docs/02_АРХІТЕКТУРА.md «Щоденний прогін і публікація», .claude/skills/daily-automation/SKILL.md.
+name: Щоденний прогін
+
+on:
+  schedule:
+    # Cron у GitHub Actions — лише UTC. 09:00 Київ = 06:00 UTC (зима, EET) або 07:00 UTC (літо, EEST);
+    # беремо обидва, зайвий запуск зупинить сторож «снапшот за сьогодні вже є».
+    - cron: "0 6 * * *"
+    - cron: "0 7 * * *"
+    # Запасний запуск 10:30 Київ — якщо ранковий впав (квота SerpApi, збій мережі), добираємо вдруге.
+    - cron: "30 7 * * *"
+    - cron: "30 8 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Пропустити сторож і прогнати навіть якщо снапшот за сьогодні вже є"
+        type: boolean
+        default: false
+      limit:
+        description: "Обмежити кількість URL до LLM (--limit N); порожнє — без обмеження"
+        type: string
+        default: ""
+
+# Два прогони одночасно не мають права писати в одну БД і пушити в main; другий чекає, а не скасовує перший.
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+# Коміт даних від github-actions[bot] потребує права на запис у репозиторій; більше нічого не даємо.
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    # 10 ключів + ≤100 URL + LLM — звичайно 5–10 хв; 30 хв — стоп-кран від зависання.
+    timeout-minutes: 30
+    env:
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+    steps:
+      # Повна історія (fetch-depth: 0) потрібна для `git pull --rebase` у tools/commit_push.sh.
+      - name: Клонувати репозиторій
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # uv з кешем залежностей — встановлення за секунди, Python береться з .python-version.
+      - name: Встановити uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      # --frozen: рівно ті версії, що в uv.lock; без несподіваних оновлень у CI.
+      - name: Встановити залежності
+        run: uv sync --frozen
+
+      # Сторож: чотири cron-запуски на день — повторний прогін не має палити квоту SerpApi і бюджет LLM.
+      # Пропускаємо, якщо в data/serp.sqlite вже є runs.status = 'ok' за сьогодню UTC-дату.
+      # Відсутня БД/таблиця (перший прогін) → skip=false. inputs.force=true → завжди skip=false.
+      - name: Сторож «снапшот за сьогодні є?»
+        id: guard
+        env:
+          FORCE: ${{ inputs.force }}
+        run: |
+          TODAY="$(date -u +%F)"
+          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+          if [ "$FORCE" = "true" ]; then
+            echo "force=true — сторож пропущено, прогін примусовий"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          SKIP="$(uv run python - "$TODAY" <<'PY'
+          import sqlite3, sys
+          from pathlib import Path
+
+          today = sys.argv[1]
+          db = Path("data/serp.sqlite")
+          skip = False
+          if db.exists():
+              try:
+                  con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+                  row = con.execute(
+                      "SELECT 1 FROM runs WHERE run_date = ? AND status = 'ok' LIMIT 1", (today,)
+                  ).fetchone()
+                  skip = row is not None
+              except sqlite3.Error as exc:  # немає таблиці runs або БД пошкоджена — прогін усе одно робимо
+                  print(f"сторож: {exc}", file=sys.stderr)
+          print("true" if skip else "false")
+          PY
+          )"
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+          if [ "$SKIP" = "true" ]; then
+            echo "Снапшот за $TODAY зі статусом ok уже є — прогін пропущено"
+          else
+            echo "Снапшоту ok за $TODAY немає — запускаємо прогін"
+          fi
+
+      # Основний прогін: SerpApi → fetch → LLM. Ключі — лише з Secrets; бюджет LLM — Variable (типово $3).
+      # --limit підставляється тільки коли введено в workflow_dispatch.
+      - name: Прогін serp-scout run
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_BUDGET_USD: ${{ vars.LLM_BUDGET_USD || '3' }}
+        run: uv run serp-scout run ${{ inputs.limit && format('--limit {0}', inputs.limit) || '' }}
+
+      # CSV/JSON у data/export — дамп прогону для здачі й джерело цифр для Telegram.
+      - name: Експорт CSV/JSON
+        if: steps.guard.outputs.skip != 'true'
+        run: uv run serp-scout export
+
+      # site/data/report.json — єдине джерело даних для статичного сайту на Netlify.
+      - name: Зібрати дані сайту
+        if: steps.guard.outputs.skip != 'true'
+        run: uv run serp-scout build-site
+
+      # Битий JSON зламає сайт у менеджера — краще впасти тут і не комітити.
+      - name: Перевірити site/data/report.json
+        if: steps.guard.outputs.skip != 'true'
+        run: python3 -c "import json; json.load(open('site/data/report.json')); print('report.json валідний')"
+
+      # Сирі відповіді SerpApi і тексти сторінок не в git (.gitignore data/raw/) — зберігаємо артефактом на 7 днів для розбору.
+      - name: Зберегти сирі дані артефактом
+        if: steps.guard.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ steps.guard.outputs.today }}
+          path: data/raw/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # Коміт і push БД, експорту й даних сайту від github-actions[bot]; push у main запускає деплой Netlify.
+      - name: Закомітити й запушити дані
+        if: steps.guard.outputs.skip != 'true'
+        run: bash tools/commit_push.sh
+
+      # ✅ Успіх: дата, підсумок із data/export/summary.txt (якщо є), посилання на сайт і на цей run.
+      - name: Telegram ✅
+        if: success() && steps.guard.outputs.skip != 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          TODAY: ${{ steps.guard.outputs.today }}
+        run: |
+          TEXT="✅ serp-scout: прогін за $TODAY завершено"
+          if [ -s data/export/summary.txt ]; then
+            TEXT="$TEXT"$'\n'"$(cat data/export/summary.txt)"
+          fi
+          if [ -n "$SITE_URL" ]; then
+            TEXT="$TEXT"$'\n'"Сайт: $SITE_URL"
+          fi
+          TEXT="$TEXT"$'\n'"Run: $RUN_URL"
+          python3 tools/notify_telegram.py --status ok --text "$TEXT"
+
+      # ❌ Збій будь-якого кроку: назва workflow і посилання на лог; деталі — gh run view <id> --log-failed.
+      - name: Telegram ❌
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          TEXT="❌ ${{ github.workflow }}: прогін за $(date -u +%F) впав"$'\n'"Run: $RUN_URL"
+          python3 tools/notify_telegram.py --status fail --text "$TEXT"

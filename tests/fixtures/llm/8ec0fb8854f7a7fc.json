@@ -1,0 +1,36 @@
+{
+ "url": "https://powerplay.com/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:39+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 4218,
+  "output_tokens": 269,
+  "cost_usd": 0.011126
+ },
+ "label": {
+  "site_type": "casino_operator",
+  "relevant_for_placement": false,
+  "confidence": 0.95,
+  "reason": "Це офіційний сайт казино та букмекера PowerPlay з реєстрацією, бонусами та іграми, тобто сайт оператора, а не майданчик для купівлі розміщень. Хоча є посилання на Affiliates, це власна партнерська програма бренду.",
+  "brands_mentioned": [
+   {
+    "name": "PowerPlay",
+    "normalized": "PowerPlay",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "Affiliates",
+   "Official Partner"
+  ]
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "url": "https://bojoko.ca/casino/bonus/no-deposit/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:08+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0
+ },
+ "label": {
+  "site_type": "other",
+  "relevant_for_placement": false,
+  "confidence": 0.0,
+  "reason": "Модель повернула відповідь не за схемою: 1 validation error for PageLabel\n  Invalid JSON: EOF while parsing a string at line 1 column 2740 [type=json_invalid, in",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

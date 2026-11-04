@@ -1,0 +1,157 @@
+{
+ "url": "https://www.rotowire.com/ca/casinos",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:51:59+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7217,
+  "output_tokens": 1088,
+  "cost_usd": 0.025314000000000003
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.95,
+  "reason": "Сторінка RotoWire — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та партнерськими посиланнями (заявлено комісію). Є сторінка Advertise, тому розміщення ймовірно можна купити.",
+  "brands_mentioned": [
+   {
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
+    "context": ""
+   },
+   {
+    "name": "SlotRave",
+    "normalized": "SlotRave",
+    "context": ""
+   },
+   {
+    "name": "SlotsGem",
+    "normalized": "SlotsGem",
+    "context": ""
+   },
+   {
+    "name": "IWild",
+    "normalized": "IWild",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "HellSpin",
+    "normalized": "HellSpin",
+    "context": ""
+   },
+   {
+    "name": "BetRepublic",
+    "normalized": "BetRepublic",
+    "context": ""
+   },
+   {
+    "name": "Bet99",
+    "normalized": "Bet99",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Kingmaker",
+    "normalized": "Kingmaker",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "Caesars",
+    "normalized": "Caesars",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Zodiac Casino",
+    "normalized": "Zodiac Casino",
+    "context": ""
+   },
+   {
+    "name": "Captain Cooks",
+    "normalized": "Captain Cooks",
+    "context": ""
+   },
+   {
+    "name": "Yukon Gold",
+    "normalized": "Yukon Gold",
+    "context": ""
+   },
+   {
+    "name": "Quatro Casino",
+    "normalized": "Quatro Casino",
+    "context": ""
+   },
+   {
+    "name": "Hard Rock Bet",
+    "normalized": "Hard Rock Bet",
+    "context": ""
+   },
+   {
+    "name": "Lucky Days",
+    "normalized": "Lucky Days",
+    "context": ""
+   },
+   {
+    "name": "Wildz",
+    "normalized": "Wildz",
+    "context": ""
+   },
+   {
+    "name": "Grand Mondial",
+    "normalized": "Grand Mondial",
+    "context": ""
+   },
+   {
+    "name": "Luxury Casino",
+    "normalized": "Luxury Casino",
+    "context": ""
+   },
+   {
+    "name": "theScore Bet",
+    "normalized": "theScore Bet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.rotowire.com/contact.php",
+   "telegram": null,
+   "other": "https://www.rotowire.com/advertise/ (Advertise)",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise page link",
+   "RotoWire earns a commission when you sign up through some links",
+   "affiliate links marked with *"
+  ]
+ }
+}

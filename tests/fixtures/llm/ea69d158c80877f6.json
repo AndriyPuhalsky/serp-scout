@@ -1,0 +1,27 @@
+{
+ "url": "https://pubmed.ncbi.nlm.nih.gov/11071670/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:12+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 2928,
+  "output_tokens": 178,
+  "cost_usd": 0.007636
+ },
+ "label": {
+  "site_type": "encyclopedia",
+  "relevant_for_placement": false,
+  "confidence": 0.45,
+  "reason": "Це сторінка PubMed з медичним дослідженням дефібриляції в казино, а не огляд казино чи рекламний матеріал. Це довідкове наукове джерело, розміщення тут неможливе; доступний лише сніпет.",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

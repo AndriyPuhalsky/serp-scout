@@ -1,0 +1,113 @@
+{
+ "url": "https://www.sportsbookreview.com/casino/canada/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:23+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 4223,
+  "output_tokens": 867,
+  "cost_usd": 0.017116
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це сторінка з рейтингом «найкращих онлайн-казино Канади» з оглядами та бонусами, типовий афіліатний ресурс. Тут цілком можливе платне розміщення казино-бренду.",
+  "brands_mentioned": [
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "Slots Palace",
+    "normalized": "Slots Palace",
+    "context": ""
+   },
+   {
+    "name": "22Bet",
+    "normalized": "22Bet",
+    "context": ""
+   },
+   {
+    "name": "North Casino",
+    "normalized": "North Casino",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Rainbet",
+    "normalized": "Rainbet",
+    "context": ""
+   },
+   {
+    "name": "Sports Interaction",
+    "normalized": "Sports Interaction",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Monsterwin",
+    "normalized": "Monsterwin",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "SlotsMagic",
+    "normalized": "SlotsMagic",
+    "context": ""
+   },
+   {
+    "name": "Roobet",
+    "normalized": "Roobet",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Cashed Casino",
+    "normalized": "Cashed Casino",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "Stake",
+    "normalized": "Stake",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.sportsbookreview.com/contact-us/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "url": "https://www.oddsjet.com/en-ca/casino-bonuses",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:06+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6884,
+  "output_tokens": 918,
+  "cost_usd": 0.022948000000000003
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афіліатним оглядом бонусів Interac-казино для Канади з добіркою брендів (SIA, Betway, Casumo, Jackpot City тощо) та партнерськими пропозиціями. Це типовий майданчик для розміщення казино-брендів, хоча прямих сигналів продажу розміщень на сторінці немає.",
+  "brands_mentioned": [
+   {
+    "name": "SIA",
+    "normalized": "SIA",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Spin Palace",
+    "normalized": "Spin Palace",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "Royal Vegas",
+    "normalized": "Royal Vegas",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Betsafe",
+    "normalized": "Betsafe",
+    "context": ""
+   },
+   {
+    "name": "Betsson",
+    "normalized": "Betsson",
+    "context": ""
+   },
+   {
+    "name": "BetVictor",
+    "normalized": "BetVictor",
+    "context": ""
+   },
+   {
+    "name": "Sports Interaction",
+    "normalized": "Sports Interaction",
+    "context": ""
+   },
+   {
+    "name": "Unibet",
+    "normalized": "Unibet",
+    "context": ""
+   },
+   {
+    "name": "1XBet",
+    "normalized": "1XBet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "Лише сторінка About: https://www.oddsjet.com/en-ca/about",
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

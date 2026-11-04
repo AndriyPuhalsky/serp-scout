@@ -1,0 +1,83 @@
+{
+ "url": "https://www.bonus.com/ca/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:29+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7643,
+  "output_tokens": 732,
+  "cost_usd": 0.022606
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Сторінка є афілійованим гайдом з рейтингом казино Альберти, оглядами та кнопками «VISIT NOW», а також зі статтями про легальність по провінціях. Це типовий review/affiliate-майданчик, де можливе розміщення казино-брендів.",
+  "brands_mentioned": [
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "Golden Nugget",
+    "normalized": "Golden Nugget",
+    "context": ""
+   },
+   {
+    "name": "BetRivers",
+    "normalized": "BetRivers",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Hollywood Casino",
+    "normalized": "Hollywood Casino",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "SlotsMagic",
+    "normalized": "SlotsMagic",
+    "context": ""
+   },
+   {
+    "name": "theScore Bet",
+    "normalized": "theScore Bet",
+    "context": ""
+   },
+   {
+    "name": "PointsBet",
+    "normalized": "PointsBet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "FAQ: How does Bonus.com make money?",
+   "партнерські кнопки VISIT NOW",
+   "BONUS-офери в рейтингу",
+   "розділ Editorial Policy / How We Rank"
+  ]
+ }
+}

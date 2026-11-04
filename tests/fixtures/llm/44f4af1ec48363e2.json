@@ -1,0 +1,33 @@
+{
+ "url": "https://www.partycasino.com/en-ca/blog/free-spins/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:47+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 4365,
+  "output_tokens": 245,
+  "cost_usd": 0.011179999999999999
+ },
+ "label": {
+  "site_type": "casino_operator",
+  "relevant_for_placement": false,
+  "confidence": 0.95,
+  "reason": "Це сторінка блогу самого оператора PartyCasino з умовами бонусу 100 free spins для канадців. Це власний сайт казино, а не стороннього видавця, тому купити розміщення тут неможливо.",
+  "brands_mentioned": [
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.partycasino.com/en-ca/mobileportal/contact",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

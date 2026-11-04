@@ -1,0 +1,27 @@
+{
+ "url": "https://www.nodepositbonus.cc/no-deposit-bonus-canada/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T06:00:09+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 2905,
+  "output_tokens": 183,
+  "cost_usd": 0.00764
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.5,
+  "reason": "За заголовком і сніпетом сторінка порівнює бонуси без депозиту та фріспіни для гравців з Канади, тож це схоже на афіліатний сайт із бонусами. Доступний лише сніпет, тому впевненість обмежена.",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

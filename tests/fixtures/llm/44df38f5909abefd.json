@@ -1,0 +1,83 @@
+{
+ "url": "https://gamblizard.ca/no-deposit-bonuses/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:01+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7297,
+  "output_tokens": 817,
+  "cost_usd": 0.022764
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з добіркою бонусів без депозиту для Канади, з промокодами, партнерськими посиланнями та рейтингами казино. На сайті є сторінка «Advertise with us», тож розміщення, імовірно, продаються.",
+  "brands_mentioned": [
+   {
+    "name": "BitKingz",
+    "normalized": "BitKingz",
+    "context": ""
+   },
+   {
+    "name": "Ice Casino",
+    "normalized": "Ice Casino",
+    "context": ""
+   },
+   {
+    "name": "Rainbet",
+    "normalized": "Rainbet",
+    "context": ""
+   },
+   {
+    "name": "Casea Casino",
+    "normalized": "Casea Casino",
+    "context": ""
+   },
+   {
+    "name": "Spirit Casino",
+    "normalized": "Spirit Casino",
+    "context": ""
+   },
+   {
+    "name": "Winberry",
+    "normalized": "Winberry",
+    "context": ""
+   },
+   {
+    "name": "Intellectbet",
+    "normalized": "Intellectbet",
+    "context": ""
+   },
+   {
+    "name": "SpinEmpire",
+    "normalized": "SpinEmpire",
+    "context": ""
+   },
+   {
+    "name": "Slot Owl Casino",
+    "normalized": "Slot Owl Casino",
+    "context": ""
+   },
+   {
+    "name": "Iris Casino",
+    "normalized": "Iris Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://gamblizard.ca/contact-us/",
+   "telegram": null,
+   "other": "Рекламна сторінка: https://gamblizard.ca/advertise-with-us/",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise with us page",
+   "exclusive bonuses via our link",
+   "promo code GAMBLIZARD",
+   "Follow our link to claim your exclusive no deposit bonus"
+  ]
+ }
+}

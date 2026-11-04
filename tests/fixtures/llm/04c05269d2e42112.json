@@ -1,0 +1,112 @@
+{
+ "url": "https://www.casino.ca/no-deposit/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:04+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7528,
+  "output_tokens": 920,
+  "cost_usd": 0.024256
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка є афілійованим порівнянням бонусів без депозиту з рейтингами казино, промокодами та партнерськими посиланнями («This website contains affiliate links»). Це типовий майданчик для розміщення казино-брендів.",
+  "brands_mentioned": [
+   {
+    "name": "Mirax Casino",
+    "normalized": "Mirax Casino",
+    "context": ""
+   },
+   {
+    "name": "Lemon Casino",
+    "normalized": "Lemon Casino",
+    "context": ""
+   },
+   {
+    "name": "Slotrave",
+    "normalized": "Slotrave",
+    "context": ""
+   },
+   {
+    "name": "Cristal Poker Casino",
+    "normalized": "Cristal Poker Casino",
+    "context": ""
+   },
+   {
+    "name": "KatsuBet",
+    "normalized": "KatsuBet",
+    "context": ""
+   },
+   {
+    "name": "SlotsGem",
+    "normalized": "SlotsGem",
+    "context": ""
+   },
+   {
+    "name": "Bluffbet",
+    "normalized": "Bluffbet",
+    "context": ""
+   },
+   {
+    "name": "Impressario Casino",
+    "normalized": "Impressario Casino",
+    "context": ""
+   },
+   {
+    "name": "7Bit Casino",
+    "normalized": "7Bit Casino",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "Royal Vegas",
+    "normalized": "Royal Vegas",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "JustCasino",
+    "normalized": "JustCasino",
+    "context": ""
+   },
+   {
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "Поштова адреса: One Dundas Street West, Toronto, M5G 1Z3; у футері є посилання «Contact us»",
+   "form": false
+  },
+  "placement_signals": [
+   "This website contains affiliate links",
+   "Claim bonus",
+   "We are 100% independent"
+  ]
+ }
+}

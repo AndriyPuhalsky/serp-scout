@@ -1,0 +1,27 @@
+{
+ "url": "https://casinocanada.io/fast-payout-casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:44+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6567,
+  "output_tokens": 199,
+  "cost_usd": 0.015124
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Сторінка є афілійованим оглядом із топ-5 казино зі швидкими виплатами для канадських гравців, з порадами щодо вибору та FAQ. Це типовий review/affiliate-сайт, де можливе розміщення казино-бренду.",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": "https://casinocanada.io/contact-us/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

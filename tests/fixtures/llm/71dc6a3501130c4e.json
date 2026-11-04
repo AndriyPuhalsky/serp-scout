@@ -1,0 +1,78 @@
+{
+ "url": "https://www.onlinegambling.ca/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:09+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7351,
+  "output_tokens": 682,
+  "cost_usd": 0.021522
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Це афілійована сторінка з рейтингом і оглядами казино для Канади, з порівнянням бонусів та оцінками. Типовий review_affiliate-сайт, де можна купувати розміщення, але прямих сигналів продажу реклами на сторінці немає.",
+  "brands_mentioned": [
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "JustCasino",
+    "normalized": "JustCasino",
+    "context": ""
+   },
+   {
+    "name": "BetOnRed",
+    "normalized": "BetOnRed",
+    "context": ""
+   },
+   {
+    "name": "Starda Casino",
+    "normalized": "Starda Casino",
+    "context": ""
+   },
+   {
+    "name": "Wildz",
+    "normalized": "Wildz",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "Є сторінка About us: https://www.onlinegambling.ca/about.php; виявлені email належать казино, а не сайту",
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

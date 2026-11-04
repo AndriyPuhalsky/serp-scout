@@ -1,0 +1,62 @@
+{
+ "url": "https://casinobonusca.com/free-spins/100-spins-no-deposit/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:12+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7384,
+  "output_tokens": 560,
+  "cost_usd": 0.020368
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.95,
+  "reason": "Сторінка є афілійованим переліком бонусів із 100 безкоштовними спінами з партнерськими промокодами та посиланнями «Claim now» на казино. На сайті є сторінка «Advertise With Us», тож розміщення, імовірно, можна купити.",
+  "brands_mentioned": [
+   {
+    "name": "CipherWins",
+    "normalized": "CipherWins",
+    "context": ""
+   },
+   {
+    "name": "HotLoot",
+    "normalized": "HotLoot",
+    "context": ""
+   },
+   {
+    "name": "Mirax",
+    "normalized": "Mirax",
+    "context": ""
+   },
+   {
+    "name": "OnlyWin",
+    "normalized": "OnlyWin",
+    "context": ""
+   },
+   {
+    "name": "Stupid Casino",
+    "normalized": "Stupid Casino",
+    "context": ""
+   },
+   {
+    "name": "Vincispin",
+    "normalized": "Vincispin",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://casinobonusca.com/contact/",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise With Us",
+   "https://casinobonusca.com/advertise-with-us/",
+   "affiliate links with exclusive bonus codes"
+  ]
+ }
+}

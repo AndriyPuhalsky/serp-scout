@@ -1,0 +1,27 @@
+# Секрети — лише локально і в GitHub Secrets
+.env
+.env.*
+!.env.example
+
+# Особисте: журнал подій, локальні налаштування Claude Code, маркери хуків
+ЖУРНАЛ_ПОДІЙ.md
+.claude/settings.local.json
+.claude/.state/
+
+# Текст завдання замовника (не наш, не публікуємо)
+*.pdf
+
+# Сирі відповіді SerpApi і сторінки щоденних прогонів (артефакт Actions, не git)
+data/raw/
+
+# Python, node, система
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+.DS_Store
+
+# Офлайн-демо (make demo) — тека повністю відтворюється з фікстур за ~2 с; report.demo.json лишаємо в git для ?data= на Netlify
+data/demo/

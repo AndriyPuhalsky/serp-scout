@@ -1,0 +1,98 @@
+{
+ "url": "https://casinocanada.com/casino-bonuses/50-free-spins/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:53+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7031,
+  "output_tokens": 873,
+  "cost_usd": 0.022792
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афіліатна сторінка з рейтингом казино з 50 безкоштовними спінами без депозиту, з методологією оцінки та кнопками «Claim». Є розкриття реклами та посилання «Advertisement» у футері, тож розміщення ймовірно можливе.",
+  "brands_mentioned": [
+   {
+    "name": "Boo Casino",
+    "normalized": "Boo Casino",
+    "context": ""
+   },
+   {
+    "name": "Interwetten Casino",
+    "normalized": "Interwetten Casino",
+    "context": ""
+   },
+   {
+    "name": "Energy Casino",
+    "normalized": "Energy Casino",
+    "context": ""
+   },
+   {
+    "name": "ICE Casino",
+    "normalized": "ICE Casino",
+    "context": ""
+   },
+   {
+    "name": "BetPrimeiro Casino",
+    "normalized": "BetPrimeiro Casino",
+    "context": ""
+   },
+   {
+    "name": "Katsubet",
+    "normalized": "Katsubet",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "All Slots Casino",
+    "normalized": "All Slots Casino",
+    "context": ""
+   },
+   {
+    "name": "Playfina",
+    "normalized": "Playfina",
+    "context": ""
+   },
+   {
+    "name": "PickWin Casino",
+    "normalized": "PickWin Casino",
+    "context": ""
+   },
+   {
+    "name": "CasinOK",
+    "normalized": "CasinOK",
+    "context": ""
+   },
+   {
+    "name": "Thrill Casino",
+    "normalized": "Thrill Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання «Advertisement» та «About us», URL не вказано",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertisement (посилання у футері)",
+   "Ad Disclosure",
+   "Featured on",
+   "Claim (партнерські кнопки)"
+  ]
+ }
+}

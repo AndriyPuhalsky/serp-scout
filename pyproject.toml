@@ -1,0 +1,44 @@
+[project]
+name = "serp-scout"
+version = "0.1.0"
+description = "MVP парсинга SEO-видачі: топ-10 Google (mobile, Канада) за 10 ключами → SQLite → LLM-розмітка → сайт-звіт"
+authors = [
+    { name = "Andriy Puhalskyi", email = "andriy.puhalsky@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=2.4.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.2",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "tenacity>=9.2.1",
+    "tldextract>=5.4.0",
+    "trafilatura>=2.3.1",
+    "typer>=0.27.3",
+]
+
+[project.scripts]
+serp-scout = "serp_scout.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.9.24,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.3",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

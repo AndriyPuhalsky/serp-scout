@@ -1,0 +1,58 @@
+{
+ "url": "https://canastillasplasticascolombia.com/best-real-money-online-casinos-in-canada-leading-15-in-202-2/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T06:00:02+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 6565,
+  "output_tokens": 507,
+  "cost_usd": 0.0182
+ },
+ "label": {
+  "site_type": "other",
+  "relevant_for_placement": false,
+  "confidence": 0.7,
+  "reason": "Сторінка на неспецифічному іспаномовному домені (canastillasplasticascolombia.com) з автогенерованим спамним текстом про казино; схоже на зламаний/PBN-сайт без ознак легітимного продажу розміщень. Немає чітких сигналів реклами чи контактів для розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "Neospin",
+    "normalized": "Neospin",
+    "context": ""
+   },
+   {
+    "name": "Wildz",
+    "normalized": "Wildz",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "Fresh Casino",
+    "normalized": "Fresh Casino",
+    "context": ""
+   },
+   {
+    "name": "Mostbet",
+    "normalized": "Mostbet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://canastillasplasticascolombia.com/#contacto",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

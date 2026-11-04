@@ -1,0 +1,33 @@
+{
+ "url": "https://www.jackpotcity.ca/ontario/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:58+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 2911,
+  "output_tokens": 251,
+  "cost_usd": 0.008331999999999999
+ },
+ "label": {
+  "site_type": "casino_operator",
+  "relevant_for_placement": false,
+  "confidence": 0.5,
+  "reason": "Це власна сторінка казино Jackpot City для гри на реальні гроші в Онтаріо з реєстрацією та промоакціями, тобто сайт оператора, де купувати розміщення не можна. Доступний лише сніпет, тому впевненість обмежена.",
+  "brands_mentioned": [
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

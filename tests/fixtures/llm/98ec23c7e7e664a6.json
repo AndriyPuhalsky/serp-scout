@@ -1,0 +1,108 @@
+{
+ "url": "https://www.bonus.ca/no-deposit-bonus",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:57:07+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7179,
+  "output_tokens": 898,
+  "cost_usd": 0.023337999999999998
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілейтна сторінка з рейтингом казино та порівнянням no deposit бонусів для Канади, з партнерськими кнопками та розкриттям реклами. Тут цілком реально купити розміщення казино.",
+  "brands_mentioned": [
+   {
+    "name": "Galactic Wins",
+    "normalized": "Galactic Wins",
+    "context": ""
+   },
+   {
+    "name": "Boo Casino",
+    "normalized": "Boo Casino",
+    "context": ""
+   },
+   {
+    "name": "Barz Casino",
+    "normalized": "Barz Casino",
+    "context": ""
+   },
+   {
+    "name": "SpinStation",
+    "normalized": "SpinStation",
+    "context": ""
+   },
+   {
+    "name": "Casimba Casino",
+    "normalized": "Casimba Casino",
+    "context": ""
+   },
+   {
+    "name": "Temple Nile Casino",
+    "normalized": "Temple Nile Casino",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "King Billy",
+    "normalized": "King Billy",
+    "context": ""
+   },
+   {
+    "name": "Bitstarz",
+    "normalized": "Bitstarz",
+    "context": ""
+   },
+   {
+    "name": "Rollino Casino",
+    "normalized": "Rollino Casino",
+    "context": ""
+   },
+   {
+    "name": "Casino Rocket",
+    "normalized": "Casino Rocket",
+    "context": ""
+   },
+   {
+    "name": "SpinYoo",
+    "normalized": "SpinYoo",
+    "context": ""
+   },
+   {
+    "name": "PlayZee",
+    "normalized": "PlayZee",
+    "context": ""
+   },
+   {
+    "name": "Videoslots",
+    "normalized": "Videoslots",
+    "context": ""
+   },
+   {
+    "name": "Betsafe",
+    "normalized": "Betsafe",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.bonus.ca/about-us/contact-us",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "Affiliate Disclosure",
+   "Ad Disclosure",
+   "BonusFinder partner casino list",
+   "green claim buttons"
+  ]
+ }
+}

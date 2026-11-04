@@ -1,0 +1,40 @@
+# Налаштування пайплайну (не секрети). Секрети — лише в .env / GitHub Secrets.
+serp:
+  provider: serpapi          # serpapi | fixture
+  engine: google
+  location: Canada
+  gl: ca
+  hl: en
+  device: mobile
+  num: 10
+  google_domain: google.ca
+
+fetch:
+  user_agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1"
+  timeout_s: 15
+  retries: 2
+  max_bytes: 2000000
+  concurrency: 4
+  per_domain_delay_s: 1.0
+  reader_fallback: "https://r.jina.ai/"   # фолбек на 403/503/капчу/порожній текст
+  text_head_chars: 9000
+  text_tail_chars: 3000
+
+llm:
+  model: claude-sonnet-5-5
+  prompt_version: v1
+  max_tokens: 1200
+  price_input_per_mtok_usd: 2.0
+  price_output_per_mtok_usd: 10.0
+  budget_usd_default: 3.0         # перекривається змінною LLM_BUDGET_USD
+
+links:
+  max_hops: 10
+  affiliate_patterns: ["/go/", "/visit/", "/play/", "/out/", "/link/", "?ref=", "?aff", "affid", "btag", "clickid", "redirect"]
+
+paths:
+  db: data/serp.sqlite
+  raw_dir: data/raw
+  export_dir: data/export
+  costs: data/costs.jsonl
+  report: site/data/report.json

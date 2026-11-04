@@ -1,0 +1,126 @@
+{
+ "url": "https://www.rotowire.com/ca/casinos/ontario",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:26+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7560,
+  "output_tokens": 1041,
+  "cost_usd": 0.02553
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Онтаріо, оглядами операторів і розкриттям комісійної винагороди за реєстрації. Є посилання на сторінку Advertise, тож розміщення, імовірно, можна придбати.",
+  "brands_mentioned": [
+   {
+    "name": "Casino Days",
+    "normalized": "Casino Days",
+    "context": ""
+   },
+   {
+    "name": "Horseshoe Online Casino",
+    "normalized": "Horseshoe Online Casino",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "Caesars Palace Online Casino",
+    "normalized": "Caesars Palace Online Casino",
+    "context": ""
+   },
+   {
+    "name": "Bally Bet",
+    "normalized": "Bally Bet",
+    "context": ""
+   },
+   {
+    "name": "FanDuel",
+    "normalized": "FanDuel",
+    "context": ""
+   },
+   {
+    "name": "Golden Nugget Online Casino",
+    "normalized": "Golden Nugget Online Casino",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "Stardust Casino",
+    "normalized": "Stardust Casino",
+    "context": ""
+   },
+   {
+    "name": "Casino Time",
+    "normalized": "Casino Time",
+    "context": ""
+   },
+   {
+    "name": "PointsBet",
+    "normalized": "PointsBet",
+    "context": ""
+   },
+   {
+    "name": "Lucky Days",
+    "normalized": "Lucky Days",
+    "context": ""
+   },
+   {
+    "name": "Bet99",
+    "normalized": "Bet99",
+    "context": ""
+   },
+   {
+    "name": "theScore Bet",
+    "normalized": "theScore Bet",
+    "context": ""
+   },
+   {
+    "name": "Hard Rock Bet",
+    "normalized": "Hard Rock Bet",
+    "context": ""
+   },
+   {
+    "name": "DAZN Bet",
+    "normalized": "DAZN Bet",
+    "context": ""
+   },
+   {
+    "name": "Fanatics Casino",
+    "normalized": "Fanatics Casino",
+    "context": ""
+   },
+   {
+    "name": "Caesars",
+    "normalized": "Caesars",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://www.rotowire.com/contact.php",
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": [
+   "RotoWire earns a commission when you sign up through some links",
+   "Advertise page link: https://www.rotowire.com/advertise/"
+  ]
+ }
+}

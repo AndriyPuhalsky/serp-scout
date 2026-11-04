@@ -1,0 +1,88 @@
+{
+ "url": "https://www.slotozilla.com/ca/no-deposit-bonus/100-free-chip",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:20+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7322,
+  "output_tokens": 762,
+  "cost_usd": 0.022264
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з оглядом бонусів без депозиту та добіркою казино з кнопками «GET BONUS». У футері є розділи «Contact Us» та «Partnership», що вказує на можливість купівлі розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "National Casino",
+    "normalized": "National Casino",
+    "context": ""
+   },
+   {
+    "name": "Voodoo Dreams",
+    "normalized": "Voodoo Dreams",
+    "context": ""
+   },
+   {
+    "name": "Hot.Bet",
+    "normalized": "Hot.Bet",
+    "context": ""
+   },
+   {
+    "name": "Verde Casino",
+    "normalized": "Verde Casino",
+    "context": ""
+   },
+   {
+    "name": "Ice Casino",
+    "normalized": "Ice Casino",
+    "context": ""
+   },
+   {
+    "name": "Vulkan Vegas",
+    "normalized": "Vulkan Vegas",
+    "context": ""
+   },
+   {
+    "name": "Slots Heaven",
+    "normalized": "Slots Heaven",
+    "context": ""
+   },
+   {
+    "name": "Spin City",
+    "normalized": "Spin City",
+    "context": ""
+   },
+   {
+    "name": "OnlyWin Casino",
+    "normalized": "OnlyWin Casino",
+    "context": ""
+   },
+   {
+    "name": "Fastpay",
+    "normalized": "Fastpay",
+    "context": ""
+   },
+   {
+    "name": "FS Casino",
+    "normalized": "FS Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання Contact Us і Partnership (URL не вказано)",
+   "form": false
+  },
+  "placement_signals": [
+   "Partnership",
+   "Contact Us",
+   "GET BONUS",
+   "Top Casino Portal Sites 2026"
+  ]
+ }
+}

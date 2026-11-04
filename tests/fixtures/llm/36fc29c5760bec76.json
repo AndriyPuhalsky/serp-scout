@@ -1,0 +1,94 @@
+{
+ "url": "https://casinocanada.com/casino-bonuses/free-spins/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:16+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 8498,
+  "output_tokens": 819,
+  "cost_usd": 0.025186
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Це афіліатна сторінка з добіркою бонусів free spins no deposit для Канади, з трекінговими кнопками Claim, рекламним розкриттям (Ad Disclosure) та рейтингом казино. У футері є посилання «Advertisement», що вказує на продаж розміщень.",
+  "brands_mentioned": [
+   {
+    "name": "LevelUP Casino",
+    "normalized": "LevelUP Casino",
+    "context": ""
+   },
+   {
+    "name": "Spinaconda Casino",
+    "normalized": "Spinaconda Casino",
+    "context": ""
+   },
+   {
+    "name": "Lemon Casino",
+    "normalized": "Lemon Casino",
+    "context": ""
+   },
+   {
+    "name": "Gamblezen Casino",
+    "normalized": "Gamblezen Casino",
+    "context": ""
+   },
+   {
+    "name": "BonanzaGame Casino",
+    "normalized": "BonanzaGame Casino",
+    "context": ""
+   },
+   {
+    "name": "Melbet Casino",
+    "normalized": "Melbet Casino",
+    "context": ""
+   },
+   {
+    "name": "Lucky7even",
+    "normalized": "Lucky7even",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "All Slots Casino",
+    "normalized": "All Slots Casino",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "Lucky Days",
+    "normalized": "Lucky Days",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання «Advertisement» та «About us», але URL не визначено",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertisement (футер)",
+   "Ad Disclosure",
+   "Exclusive bonus",
+   "Get Bonus / Claim affiliate buttons",
+   "Featured on"
+  ]
+ }
+}

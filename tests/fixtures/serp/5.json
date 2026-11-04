@@ -1,0 +1,96 @@
+{
+ "search_metadata": {
+  "id": "6aeac7db88f29128be0752c7",
+  "status": "Success",
+  "created_at": "2026-11-04 05:51:23 UTC",
+  "processed_at": "2026-11-04 05:51:23 UTC",
+  "total_time_taken": 0.39
+ },
+ "search_parameters": {
+  "engine": "google",
+  "q": "new online casinos canada",
+  "location_requested": "Canada",
+  "location_used": "Canada",
+  "google_domain": "google.ca",
+  "hl": "en",
+  "gl": "ca",
+  "device": "mobile"
+ },
+ "search_information": {
+  "query_displayed": "new online casinos canada"
+ },
+ "organic_results": [
+  {
+   "position": 1,
+   "title": "Casino",
+   "link": "https://en.wikipedia.org/wiki/Casino",
+   "displayed_link": "https://en.wikipedia.org",
+   "snippet": "A casino is a facility for gambling. Casinos are often built near or combined with hotels, resorts, restaurants, retail shopping, cruise ships, ...",
+   "source": "Wikipedia"
+  },
+  {
+   "position": 2,
+   "title": "Niagara Falls Casinos",
+   "link": "https://www.niagarafallstourism.com/play/casinos/",
+   "displayed_link": "https://www.niagarafallstourism.com",
+   "snippet": "Casino Niagara features two floors of gaming with 1,500 slot machines, 45 gaming tables, weekly live Niagara entertainment and three different venues for dining",
+   "source": "Niagara Falls Tourism"
+  },
+  {
+   "position": 3,
+   "title": "Casinos of Winnipeg",
+   "link": "https://www.casinosofwinnipeg.com/",
+   "displayed_link": "https://www.casinosofwinnipeg.com",
+   "snippet": "Your moment awaits at the Casinos of Winnipeg! Find a variety of quality gaming, dining and entertainment experiences at Club Regent Casino and McPhillips ...",
+   "source": "Casinos of Winnipeg"
+  },
+  {
+   "position": 4,
+   "title": "Casinos - fintrac/canafe - Canada.ca",
+   "link": "https://fintrac-canafe.canada.ca/re-ed/casinos-eng",
+   "displayed_link": "https://fintrac-canafe.canada.ca",
+   "snippet": "a casino is a government, organization, board or operator in Canada that is authorized to do business in Canada",
+   "source": "fintrac/canafe"
+  },
+  {
+   "position": 5,
+   "title": "THE 10 BEST Panama City Casinos (2026)",
+   "link": "https://www.tripadvisor.ca/Attractions-g294480-Activities-c53-Panama_City_Panama_Province.html",
+   "displayed_link": "https://www.tripadvisor.ca",
+   "snippet": "Top Panama City Casinos: See reviews and photos of casinos & gambling attractions in Panama City, Panama on Tripadvisor.",
+   "source": "Tripadvisor"
+  },
+  {
+   "position": 6,
+   "title": "Nothing Else Comes Close - Seneca Resorts & Casinos - Western New York",
+   "link": "https://senecacasinos.com/",
+   "displayed_link": "https://senecacasinos.com",
+   "snippet": "The Seneca Gaming Corporation was established by the Seneca Nation of Indians in 2002 to develop, operate, and finance the Nation's gaming facilities.",
+   "source": "Seneca Resorts & Casinos"
+  },
+  {
+   "position": 7,
+   "title": "Société des casinos du Québec inc. v. Association des cadres de la Société des casinos du Québec",
+   "link": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20398/index.do",
+   "displayed_link": "https://decisions.scc-csc.ca",
+   "snippet": "The Association des cadres de la Société des casinos du Québec (“Association”) represents certain first‐level managers working at four casinos run by the Socié ...",
+   "source": "Cour suprême du Canada"
+  },
+  {
+   "position": 8,
+   "title": "Outcomes of rapid defibrillation by security officers after cardiac arrest in casinos",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/11071670/",
+   "displayed_link": "https://pubmed.ncbi.nlm.nih.gov",
+   "snippet": "We studied a prospective series of cases of sudden cardiac arrest in casinos. Casino security officers were instructed in the use of automated external ...",
+   "source": "National Institutes of Health (NIH) | (.gov)"
+  },
+  {
+   "position": 9,
+   "title": "Las Vegas Hotels, Casinos & Resorts",
+   "link": "https://www.visitlasvegas.com/hotels-casinos/",
+   "displayed_link": "https://www.visitlasvegas.com",
+   "snippet": "Looking for resorts, casinos or hotels in Las Vegas? Use our lists and articles to find the perfect place to stay or read about how to choose the best fit.",
+   "source": "visitlasvegas.com"
+  }
+ ]
+}

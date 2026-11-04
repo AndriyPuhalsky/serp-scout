@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>serp-scout — куди йти з розміщенням</title>
+  <meta name="description" content="Щоденний звіт serp-scout: топ-10 Google (mobile, Канада) за ключами казино-ніші — релевантні сайти для розміщення, бренди й контакти.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%231f6f4a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    // Тема до першого кадру (без блимання): збережена або системна. Клас js — для reveal лише з JS.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "dark" && t !== "light") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#placements-section">До таблиці розміщення</a>
+
+  <header class="masthead wrap">
+    <div class="masthead-row">
+      <div>
+        <h1>serp-scout — куди йти з розміщенням</h1>
+        <p class="lede">Топ-10 Google (mobile, Канада) за <span id="lede-keywords">ключами</span> казино-ніші: які сайти підходять для розміщення бренду і кому там писати.</p>
+      </div>
+      <button id="theme-toggle" class="theme" type="button" aria-label="Перемкнути тему" title="Тема">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <p class="dateline">
+      Останній прогін <time id="run-date" class="mono">—</time>,
+      статус <span id="run-status" class="status">—</span>,
+      вартість <span id="run-cost" class="mono">—</span>.
+    </p>
+    <div id="run-errors"></div>
+  </header>
+
+  <section id="empty" class="wrap empty" hidden>
+    <h2>Даних поки немає</h2>
+    <p>Звіт читає <code>site/data/report.json</code>, а його ще не згенеровано. Зберіть його з кореня репозиторію:</p>
+    <pre><code>make demo &amp;&amp; make site</code></pre>
+    <p>Потім <code>make serve</code> і відкрийте сторінку знову. Для перегляду на тестових даних додайте до адреси <code>?data=tests/fixtures/report.sample.json</code>.</p>
+    <details id="empty-tech" class="muted tech" hidden>
+      <summary>Технічні деталі</summary>
+      <p id="empty-detail" class="mono"></p>
+    </details>
+  </section>
+
+  <main id="report" class="wrap" hidden>
+    <section class="kpi-section" aria-labelledby="kpi-title">
+      <h2 id="kpi-title" class="sr-only">Підсумок</h2>
+      <div id="kpi" class="kpi"></div>
+    </section>
+
+    <section id="placements-section" class="reveal" aria-labelledby="placements-title">
+      <h2 id="placements-title">Куди йти з розміщенням</h2>
+      <p class="section-lede">Релевантні сторінки з топ-10 — оглядачі, рейтинги, спонсорські добірки. Домен відкриває сторінку, контакт — лист або сторінку зв'язку, «чому» — пояснення моделі.</p>
+
+      <form id="filters" class="filters" autocomplete="off">
+        <label>кластер
+          <select id="f-cluster" name="cluster"><option value="">усі кластери</option></select>
+        </label>
+        <label>ключ
+          <select id="f-keyword" name="keyword"><option value="">усі ключі</option></select>
+        </label>
+        <label>тип сторінки
+          <select id="f-type" name="type"><option value="">усі типи</option></select>
+        </label>
+        <label>бренд
+          <select id="f-brand" name="brand"><option value="">усі бренди</option></select>
+        </label>
+        <label>пошук по домену
+          <input id="f-query" name="query" type="search" placeholder="casino" spellcheck="false">
+        </label>
+        <label class="check">
+          <input id="f-relevant" name="relevant" type="checkbox" checked> лише релевантні
+        </label>
+      </form>
+
+      <div class="table-bar">
+        <p id="results-count" class="muted" aria-live="polite">—</p>
+        <div id="active-filters" class="active-filters" aria-label="Активні фільтри"></div>
+        <button id="f-reset" type="button" class="link-btn" hidden>Скинути фільтри</button>
+      </div>
+
+      <details class="kw-legend">
+        <summary id="kw-summary">Ключі</summary>
+        <ol id="kw-list" class="kw-list"></ol>
+      </details>
+
+      <div class="sheet">
+        <table id="placements">
+          <caption class="sr-only">Сторінки топ-10 з розміткою для розміщення</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-key="domain" aria-sort="none"><button type="button" class="sort">Домен</button></th>
+              <th scope="col" data-key="site_type" aria-sort="none"><button type="button" class="sort">Тип</button></th>
+              <th scope="col" data-key="relevance" aria-sort="none"><button type="button" class="sort">Релевантність</button></th>
+              <th scope="col">Бренди</th>
+              <th scope="col">Контакт</th>
+              <th scope="col" data-key="best_position" aria-sort="ascending"><button type="button" class="sort">Позиції</button></th>
+              <th scope="col">Чому</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">← прокрутіть таблицю →</p>
+      <p class="muted footnote">Спарклайн — історія позиції за датами прогонів, 1 угорі; остання точка підсвічена. Сортування за «Позиції» — за кращою позицією серед ключів.</p>
+    </section>
+
+    <section class="reveal" aria-labelledby="brands-title">
+      <h2 id="brands-title">Бренди в топ-10</h2>
+      <p id="brands-note" class="section-lede"></p>
+      <ol id="brands-bars" class="bars"></ol>
+    </section>
+
+    <section class="reveal" aria-labelledby="history-title">
+      <h2 id="history-title">Історія позицій</h2>
+      <p id="history-note" class="section-lede"></p>
+      <div class="sheet">
+        <table id="history" class="history">
+          <caption class="sr-only">Позиції релевантних URL за датами прогонів</caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">← прокрутіть таблицю →</p>
+    </section>
+
+    <section class="reveal" aria-labelledby="method-title">
+      <h2 id="method-title">Методика і вартість</h2>
+      <div id="method" class="prose"></div>
+    </section>
+
+    <section class="reveal" aria-labelledby="runs-title">
+      <h2 id="runs-title">Прогони</h2>
+      <div class="sheet">
+        <table id="runs" class="runs">
+          <caption class="sr-only">Прогони пайплайну</caption>
+          <thead>
+            <tr>
+              <th scope="col">Дата</th>
+              <th scope="col">Статус</th>
+              <th scope="col" class="num">SERP-запитів</th>
+              <th scope="col" class="num">URL</th>
+              <th scope="col" class="num">Нових URL</th>
+              <th scope="col" class="num">Нових розміток</th>
+              <th scope="col" class="num">Вартість</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">← прокрутіть таблицю →</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Згенеровано <time id="generated-at" class="mono">—</time>. Джерело даних: <span id="data-source" class="mono">./data/report.json</span>.</p>
+    <p class="muted">serp-scout — тестове завдання «MVP парсинга SEO-видачі». Текст сторінок із видачі тут показано як дані.</p>
+  </footer>
+
+  <script type="module" src="./js/main.mjs"></script>
+</body>
+</html>

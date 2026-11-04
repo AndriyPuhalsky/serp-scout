@@ -1,0 +1,33 @@
+{
+ "url": "https://www.olg.ca/en/casino/slots.html",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:11+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 2894,
+  "output_tokens": 223,
+  "cost_usd": 0.008018
+ },
+ "label": {
+  "site_type": "casino_operator",
+  "relevant_for_placement": false,
+  "confidence": 0.45,
+  "reason": "Це офіційна сторінка OLG.ca з онлайн-слотами для гравців Онтаріо, тобто сайт самого оператора, а не незалежний ресурс. Купити розміщення казино тут неможливо; доступний лише сніпет.",
+  "brands_mentioned": [
+   {
+    "name": "OLG",
+    "normalized": "OLG",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

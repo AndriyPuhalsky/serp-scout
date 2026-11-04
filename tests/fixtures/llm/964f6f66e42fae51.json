@@ -1,0 +1,27 @@
+{
+ "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20398/index.do",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:37+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7476,
+  "output_tokens": 177,
+  "cost_usd": 0.016722
+ },
+ "label": {
+  "site_type": "regulator_gov",
+  "relevant_for_placement": false,
+  "confidence": 0.95,
+  "reason": "Це рішення Верховного суду Канади щодо свободи об'єднань менеджерів Société des casinos du Québec, тобто трудове та конституційне право, а не огляд казино. Розмістити тут рекламу казино неможливо.",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

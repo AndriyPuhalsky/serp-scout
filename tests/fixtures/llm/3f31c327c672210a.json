@@ -1,0 +1,53 @@
+{
+ "url": "https://www.sportsgamblingpodcast.com/2026/09/11/best-no-deposit-bonus-casinos-canada-free-spins-promo-codes-for-canadians/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:56:33+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7646,
+  "output_tokens": 485,
+  "cost_usd": 0.020142
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.8,
+  "reason": "Сторінка є афілійованим списком «найкращих казино» з no deposit бонусами для Канади, з промокодами та кнопками «CLAIM BONUS» — це типове місце для розміщення казино. У футері є посилання Advertise та Contact, що вказує на продаж реклами.",
+  "brands_mentioned": [
+   {
+    "name": "Bitstarz",
+    "normalized": "Bitstarz",
+    "context": ""
+   },
+   {
+    "name": "7Bit Casino",
+    "normalized": "7Bit Casino",
+    "context": ""
+   },
+   {
+    "name": "MIRAX Casino",
+    "normalized": "MIRAX Casino",
+    "context": ""
+   },
+   {
+    "name": "KatsuBet",
+    "normalized": "KatsuBet",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є пункти меню Advertise і Contact, але URL не вказано",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise (footer link)",
+   "Contact (footer link)",
+   "CLAIM BONUS affiliate buttons",
+   "Casino ranking/shortlist"
+  ]
+ }
+}

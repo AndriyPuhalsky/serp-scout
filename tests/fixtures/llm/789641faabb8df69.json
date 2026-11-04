@@ -1,0 +1,82 @@
+{
+ "url": "https://www.casino.com/ca/fastest-payout-casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:56+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7049,
+  "output_tokens": 732,
+  "cost_usd": 0.021418
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.9,
+  "reason": "Сторінка — афілійований рейтинг казино з швидкими виплатами для Канади з партнерськими посиланнями «Play Now» і відгуками. Футер має розділ «Get Listed», тож розміщення бренду тут реально купити.",
+  "brands_mentioned": [
+   {
+    "name": "Tooniebet",
+    "normalized": "Tooniebet",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Mafia Casino",
+    "normalized": "Mafia Casino",
+    "context": ""
+   },
+   {
+    "name": "Galactic Wins",
+    "normalized": "Galactic Wins",
+    "context": ""
+   },
+   {
+    "name": "Royal Game",
+    "normalized": "Royal Game",
+    "context": ""
+   },
+   {
+    "name": "Onlywin Casino",
+    "normalized": "Onlywin Casino",
+    "context": ""
+   },
+   {
+    "name": "Lucky Spins",
+    "normalized": "Lucky Spins",
+    "context": ""
+   },
+   {
+    "name": "Winspirit Casino",
+    "normalized": "Winspirit Casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання «Get Listed» (URL не вказано)",
+   "form": false
+  },
+  "placement_signals": [
+   "Get Listed",
+   "This website contains affiliate links and may receive commissions from partner casinos",
+   "Our Ranking Methodology"
+  ]
+ }
+}

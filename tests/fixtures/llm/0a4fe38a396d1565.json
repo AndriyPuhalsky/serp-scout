@@ -1,0 +1,27 @@
+{
+ "url": "https://www.visitlasvegas.com/hotels-casinos/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:59:41+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 3930,
+  "output_tokens": 178,
+  "cost_usd": 0.009640000000000001
+ },
+ "label": {
+  "site_type": "other",
+  "relevant_for_placement": false,
+  "confidence": 0.9,
+  "reason": "Це офіційний туристичний сайт Лас-Вегаса (LVCVA) зі сторінкою про готелі та курорти, а не огляд онлайн-казино для Канади. Продажу розміщень немає, тож сторінка нерелевантна.",
+  "brands_mentioned": [],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": null,
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

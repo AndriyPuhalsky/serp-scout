@@ -1,0 +1,118 @@
+{
+ "url": "https://www.google.ca/goto?url=CAESWQHrOzAVkrzLZd611doqD8h4-1iITqk2gD9OSR1x3WEA0xbWzqh6JMdHs-63AeZdGZZCs3O3vTxuNDBBxhqY_osb3po7h-PomqNaOMlN7Js0ygGNw7PEboVf",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:55:39+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 8273,
+  "output_tokens": 877,
+  "cost_usd": 0.025316
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з рейтингом і оглядами 120+ канадських онлайн-казино (Casino.ca) з бонусами та кнопками «Visit casino». Тип ідеально підходить для купівлі розміщення, хоча явних сигналів продажу на сторінці немає.",
+  "brands_mentioned": [
+   {
+    "name": "Vegas Now",
+    "normalized": "Vegas Now",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Spin Palace",
+    "normalized": "Spin Palace",
+    "context": ""
+   },
+   {
+    "name": "Betsio",
+    "normalized": "Betsio",
+    "context": ""
+   },
+   {
+    "name": "The Clubhouse Casino",
+    "normalized": "The Clubhouse Casino",
+    "context": ""
+   },
+   {
+    "name": "Gizbo",
+    "normalized": "Gizbo",
+    "context": ""
+   },
+   {
+    "name": "OnlyWin",
+    "normalized": "OnlyWin",
+    "context": ""
+   },
+   {
+    "name": "Pistolo",
+    "normalized": "Pistolo",
+    "context": ""
+   },
+   {
+    "name": "All Slots Casino",
+    "normalized": "All Slots Casino",
+    "context": ""
+   },
+   {
+    "name": "BetPlays",
+    "normalized": "BetPlays",
+    "context": ""
+   },
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "Roobet",
+    "normalized": "Roobet",
+    "context": ""
+   },
+   {
+    "name": "BetVictor",
+    "normalized": "BetVictor",
+    "context": ""
+   },
+   {
+    "name": "Bovada",
+    "normalized": "Bovada",
+    "context": ""
+   },
+   {
+    "name": "Bodog",
+    "normalized": "Bodog",
+    "context": ""
+   },
+   {
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": null,
+   "telegram": null,
+   "other": "У футері є посилання «Contact us» та поштова адреса: One Dundas Street West, Toronto, M5G 1Z3",
+   "form": false
+  },
+  "placement_signals": []
+ }
+}

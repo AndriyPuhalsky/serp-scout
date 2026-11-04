@@ -1,0 +1,88 @@
+{
+ "url": "https://gamblizard.ca/free-spins/",
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "labeled_at": "2026-11-04T05:58:47+00:00",
+ "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "usage": {
+  "input_tokens": 7323,
+  "output_tokens": 838,
+  "cost_usd": 0.023025999999999998
+ },
+ "label": {
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.95,
+  "reason": "Це афілійована сторінка з добіркою бонусів free spins no deposit для Канади з оглядами казино, промокодами та трекінговими посиланнями. На сайті є сторінка «Advertise with us», тож розміщення, імовірно, продаються.",
+  "brands_mentioned": [
+   {
+    "name": "Rainbet",
+    "normalized": "Rainbet",
+    "context": ""
+   },
+   {
+    "name": "Casea Casino",
+    "normalized": "Casea Casino",
+    "context": ""
+   },
+   {
+    "name": "Spirit Casino",
+    "normalized": "Spirit Casino",
+    "context": ""
+   },
+   {
+    "name": "Winberry",
+    "normalized": "Winberry",
+    "context": ""
+   },
+   {
+    "name": "Intellectbet",
+    "normalized": "Intellectbet",
+    "context": ""
+   },
+   {
+    "name": "SpinEmpire",
+    "normalized": "SpinEmpire",
+    "context": ""
+   },
+   {
+    "name": "Slot Owl Casino",
+    "normalized": "Slot Owl Casino",
+    "context": ""
+   },
+   {
+    "name": "Iris Casino",
+    "normalized": "Iris Casino",
+    "context": ""
+   },
+   {
+    "name": "Only Win Casino",
+    "normalized": "Only Win Casino",
+    "context": ""
+   },
+   {
+    "name": "Ice Casino",
+    "normalized": "Ice Casino",
+    "context": ""
+   },
+   {
+    "name": "BitKingz",
+    "normalized": "BitKingz",
+    "context": ""
+   }
+  ],
+  "contact": {
+   "email": null,
+   "contact_page": "https://gamblizard.ca/contact-us/",
+   "telegram": null,
+   "other": "Рекламна сторінка: https://gamblizard.ca/advertise-with-us/",
+   "form": false
+  },
+  "placement_signals": [
+   "Advertise with us",
+   "exclusive bonuses",
+   "tracking link",
+   "promo code GAMBLIZARD"
+  ]
+ }
+}
