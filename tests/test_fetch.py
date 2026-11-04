@@ -106,3 +106,16 @@ def test_fetch_settings_defaults_match_spec() -> None:
     s = FetchSettings()
     assert s.timeout_s == 15 and s.retries == 2 and s.max_bytes == 2_000_000 and s.concurrency == 4
     assert pytest.approx(s.per_domain_delay_s) == 1.0
+
+
+@respx.mock
+def test_google_goto_redirect_keeps_final_url_even_when_blocked() -> None:
+    goto = "https://www.google.ca/goto?url=CAESabc"
+    target = "https://durhampost.ca/top-online-casino-sites/"
+    respx.get(goto).mock(return_value=httpx.Response(302, headers={"Location": target}))
+    respx.get(target).mock(return_value=httpx.Response(403, text="forbidden"))
+    respx.get("https://r.jina.ai/" + goto).mock(return_value=httpx.Response(200, text="Reader text. " * 60))
+    fetcher, _ = _fetcher()
+    result = fetcher.fetch(goto, "t", "s")
+    assert result.method == "reader"
+    assert result.final_url == target

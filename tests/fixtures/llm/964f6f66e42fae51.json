@@ -1,26 +1,26 @@
 {
  "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20398/index.do",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:37+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:09+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7476,
-  "output_tokens": 177,
-  "cost_usd": 0.016722
+  "input_tokens": 7824,
+  "output_tokens": 179,
+  "cost_usd": 0.01744
  },
  "label": {
   "site_type": "regulator_gov",
   "relevant_for_placement": false,
-  "confidence": 0.95,
-  "reason": "Це рішення Верховного суду Канади щодо свободи об'єднань менеджерів Société des casinos du Québec, тобто трудове та конституційне право, а не огляд казино. Розмістити тут рекламу казино неможливо.",
+  "confidence": 0.97,
+  "reason": "Це рішення Верховного суду Канади щодо свободи об'єднань менеджерів Société des casinos du Québec, а не огляд чи рейтинг казино. Урядовий/судовий ресурс, розміщення реклами неможливе.",
   "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

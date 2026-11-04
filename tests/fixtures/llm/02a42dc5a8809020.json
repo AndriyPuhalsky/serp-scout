@@ -1,20 +1,25 @@
 {
  "url": "https://www.onlinecasino.ca/banking/fastest-cashouts/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:01+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:48+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7594,
-  "output_tokens": 573,
-  "cost_usd": 0.020918
+  "input_tokens": 7942,
+  "output_tokens": 497,
+  "cost_usd": 0.02085
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Сторінка — афілійований рейтинг казино зі швидкими виплатами з оглядами, бонусами та порівнянням, тобто типовий review_affiliate, де можливе розміщення бренду. Є сторінка контактів, але явних закликів купити розміщення немає.",
+  "confidence": 0.85,
+  "reason": "Сторінка — афілійований рейтинг казино зі швидкими виплатами з таблицею бонусів, швидкістю виплат і оглядами. Це типовий review_affiliate, де можна купити розміщення.",
   "brands_mentioned": [
+   {
+    "name": "Wildz",
+    "normalized": "Wildz",
+    "context": ""
+   },
    {
     "name": "MafiaCasino",
     "normalized": "MafiaCasino",
@@ -26,13 +31,8 @@
     "context": ""
    },
    {
-    "name": "JustCasino",
-    "normalized": "JustCasino",
-    "context": ""
-   },
-   {
-    "name": "Realz Casino",
-    "normalized": "Realz Casino",
+    "name": "Realz",
+    "normalized": "Realz",
     "context": ""
    },
    {
@@ -46,18 +46,13 @@
     "context": ""
    },
    {
-    "name": "Wildz",
-    "normalized": "Wildz",
+    "name": "JustCasino",
+    "normalized": "JustCasino",
     "context": ""
    },
    {
     "name": "Therospin",
     "normalized": "Therospin",
-    "context": ""
-   },
-   {
-    "name": "JackpotCity",
-    "normalized": "JackpotCity",
     "context": ""
    }
   ],
@@ -65,8 +60,8 @@
    "email": null,
    "contact_page": "https://www.onlinecasino.ca/contact-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

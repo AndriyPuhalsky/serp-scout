@@ -111,8 +111,10 @@ def _stage_pages(
                     "emails_json": json.dumps(page.emails),
                     "contact_links_json": json.dumps(page.contact_links),
                     "error": res.error,
+                    "final_url": res.final_url,
                 },
             )
+            store.apply_final_url(conn, r["url_id"], res.final_url)
             summary.pages_fetched += 1
             if res.method == "snippet":
                 summary.pages_failed += 1

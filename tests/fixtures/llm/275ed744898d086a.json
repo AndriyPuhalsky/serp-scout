@@ -1,19 +1,19 @@
 {
  "url": "https://www.rotowire.com/ca/casinos",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:51:59+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:24:50+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7217,
-  "output_tokens": 1088,
-  "cost_usd": 0.025314000000000003
+  "input_tokens": 7565,
+  "output_tokens": 1542,
+  "cost_usd": 0.03055
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.95,
-  "reason": "Сторінка RotoWire — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та партнерськими посиланнями (заявлено комісію). Є сторінка Advertise, тому розміщення ймовірно можна купити.",
+  "confidence": 0.93,
+  "reason": "Сторінка RotoWire — комерційний рейтинг найкращих онлайн-казино Канади з партнерськими посиланнями та розкриттям комісії. Є посилання на сторінку Advertise, тож розміщення ймовірно продаються.",
   "brands_mentioned": [
    {
     "name": "Lucky Ones",
@@ -76,6 +76,16 @@
     "context": ""
    },
    {
+    "name": "Bally",
+    "normalized": "Bally",
+    "context": ""
+   },
+   {
+    "name": "Golden Nugget",
+    "normalized": "Golden Nugget",
+    "context": ""
+   },
+   {
     "name": "Caesars",
     "normalized": "Caesars",
     "context": ""
@@ -86,33 +96,18 @@
     "context": ""
    },
    {
+    "name": "Pinnacle",
+    "normalized": "Pinnacle",
+    "context": ""
+   },
+   {
     "name": "PlayOJO",
     "normalized": "PlayOJO",
     "context": ""
    },
    {
-    "name": "Zodiac Casino",
-    "normalized": "Zodiac Casino",
-    "context": ""
-   },
-   {
-    "name": "Captain Cooks",
-    "normalized": "Captain Cooks",
-    "context": ""
-   },
-   {
-    "name": "Yukon Gold",
-    "normalized": "Yukon Gold",
-    "context": ""
-   },
-   {
-    "name": "Quatro Casino",
-    "normalized": "Quatro Casino",
-    "context": ""
-   },
-   {
-    "name": "Hard Rock Bet",
-    "normalized": "Hard Rock Bet",
+    "name": "SlotsMagic",
+    "normalized": "SlotsMagic",
     "context": ""
    },
    {
@@ -126,13 +121,68 @@
     "context": ""
    },
    {
+    "name": "SpinAway",
+    "normalized": "SpinAway",
+    "context": ""
+   },
+   {
+    "name": "Blackjack Ballroom",
+    "normalized": "Blackjack Ballroom",
+    "context": ""
+   },
+   {
+    "name": "Casino Action",
+    "normalized": "Casino Action",
+    "context": ""
+   },
+   {
+    "name": "Casino Classic",
+    "normalized": "Casino Classic",
+    "context": ""
+   },
+   {
     "name": "Grand Mondial",
     "normalized": "Grand Mondial",
     "context": ""
    },
    {
+    "name": "Golden Tiger",
+    "normalized": "Golden Tiger",
+    "context": ""
+   },
+   {
     "name": "Luxury Casino",
     "normalized": "Luxury Casino",
+    "context": ""
+   },
+   {
+    "name": "Quatro",
+    "normalized": "Quatro",
+    "context": ""
+   },
+   {
+    "name": "Yukon Gold",
+    "normalized": "Yukon Gold",
+    "context": ""
+   },
+   {
+    "name": "Captain Cooks",
+    "normalized": "Captain Cooks",
+    "context": ""
+   },
+   {
+    "name": "Zodiac Casino",
+    "normalized": "Zodiac Casino",
+    "context": ""
+   },
+   {
+    "name": "Grand Hotel",
+    "normalized": "Grand Hotel",
+    "context": ""
+   },
+   {
+    "name": "UK Casino Club",
+    "normalized": "UK Casino Club",
     "context": ""
    },
    {
@@ -143,15 +193,15 @@
   ],
   "contact": {
    "email": null,
-   "contact_page": "https://www.rotowire.com/contact.php",
+   "contact_page": "https://www.rotowire.com/advertise/",
    "telegram": null,
-   "other": "https://www.rotowire.com/advertise/ (Advertise)",
-   "form": false
+   "form": false,
+   "other": "https://www.rotowire.com/contact.php (Contact Us)"
   },
   "placement_signals": [
-   "Advertise page link",
-   "RotoWire earns a commission when you sign up through some links",
-   "affiliate links marked with *"
+   "Advertise",
+   "RotoWire earns a commission",
+   "affiliate links"
   ]
  }
 }

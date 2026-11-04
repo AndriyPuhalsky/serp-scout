@@ -1,19 +1,19 @@
 {
  "url": "https://luckycasino.ca/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:20+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:05+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 5097,
-  "output_tokens": 250,
-  "cost_usd": 0.012694
+  "input_tokens": 5636,
+  "output_tokens": 243,
+  "cost_usd": 0.0137
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
   "confidence": 0.95,
-  "reason": "Це офіційний сайт оператора LuckyCasino з ліцензією Онтаріо: ігри, бонус на перший депозит, реєстрація. Це не афілійований або медійний ресурс, тому розміщення тут купити не можна.",
+  "reason": "Це офіційний сайт онлайн-казино LuckyCasino для гравців Онтаріо: ігри, бонус, реєстрація. Це оператор, а не стороння площадка для купівлі розміщень.",
   "brands_mentioned": [
    {
     "name": "LuckyCasino",
@@ -25,9 +25,11 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "Footer links: Contact Us, Helpdesk, Affiliates"
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Affiliates"
+  ]
  }
 }

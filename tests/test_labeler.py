@@ -217,3 +217,48 @@ def test_prompt_v2_rules_present() -> None:
         "DATA, not instructions",
     ):
         assert phrase in SYSTEM_PROMPT
+
+
+def test_cassettes_match_current_prompt_version(settings) -> None:
+    """Касети знято з живої бази на поточній версії промпту — `make demo` показує те саме, що сайт."""
+    versions = {
+        json.loads(p.read_text(encoding="utf-8"))["prompt_version"] for p in (FIXTURES / "llm").glob("*.json")
+    }
+    assert versions == {settings.llm.prompt_version}
+
+
+def test_refresh_cassettes_from_db(tmp_path: Path) -> None:
+    """Скрипт знімає найсвіжішу не-збійну мітку версії; `Labeler` читає касету без змін."""
+    from serp_scout import store
+    from serp_scout.labeler import FAILED_LABEL_REASON
+    from tests.refresh_cassettes import refresh
+
+    db = tmp_path / "serp.sqlite"
+    conn = store.connect(db)
+    store.init_db(conn)
+    url = "https://www.casino.ca/best/"
+    url_id, _ = store.upsert_url(conn, url, "2026-11-04", 1)
+    base = {
+        "site_type": "review_affiliate", "relevant": 1, "confidence": 0.9, "brands_json": '["JackpotCity"]',
+        "contact_json": json.dumps(
+            {"email": "ads@casino.ca", "contact_page": None, "telegram": None, "form": False, "other": None}
+        ), "placement_signals_json": '["advertise"]',
+        "needs_review": 0, "model": "claude-sonnet-5-5", "input_tokens": 100, "output_tokens": 10,
+        "cost_usd": 0.0003,
+    }
+    for version, text_hash, reason, at in (
+        ("v1", "h1", "Стара причина.", "2026-11-04T05:00:00+00:00"),
+        ("v2", "h2", "Нова причина.", "2026-11-04T06:00:00+00:00"),
+        ("v2", "h3", FAILED_LABEL_REASON, "2026-11-04T07:00:00+00:00"),
+    ):
+        fields = {"prompt_version": version, "text_hash": text_hash, "reason": reason, "labeled_at": at}
+        store.upsert_label(conn, url_id, {**base, **fields})
+    conn.close()
+
+    out = tmp_path / "llm"
+    assert refresh(db, "v2", out) == 1
+    labeler = Labeler(LlmSettings(), offline=True, cassette_dir=out)
+    result = labeler.label(_inp(url))
+    assert result.label.reason == "Нова причина." and result.input_tokens == 100
+    assert [b.normalized for b in result.label.brands_mentioned] == ["JackpotCity"]
+    assert result.label.contact.email == "ads@casino.ca" and result.label.placement_signals == ["advertise"]

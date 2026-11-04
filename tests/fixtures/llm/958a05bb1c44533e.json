@@ -1,43 +1,23 @@
 {
  "url": "https://theklcinc.com/2024/08/12/best-casino-sites-that-accept-interac/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:50+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:43+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 3794,
-  "output_tokens": 438,
-  "cost_usd": 0.011968
+  "input_tokens": 4142,
+  "output_tokens": 193,
+  "cost_usd": 0.01021
  },
  "label": {
   "site_type": "other",
   "relevant_for_placement": false,
   "confidence": 0.8,
-  "reason": "Це сторінка церковного сайту із безглуздим автогенерованим SEO-спамом про казино з Interac, без реальних оглядів чи рейтингів. Немає ознак продажу розміщень, тому для розміщення не підходить.",
+  "reason": "Це сторінка церковного сайту із SEO-спамом (безглуздий згенерований текст про казино Interac) без реального рейтингу чи бонусної таблиці. Ознак продажу розміщень немає, тому для розміщення не підходить.",
   "brands_mentioned": [
-   {
-    "name": "Coolbet",
-    "normalized": "Coolbet",
-    "context": ""
-   },
-   {
-    "name": "OJO",
-    "normalized": "OJO",
-    "context": ""
-   },
    {
     "name": "PokerStars",
     "normalized": "PokerStars",
-    "context": ""
-   },
-   {
-    "name": "EnergyWin",
-    "normalized": "EnergyWin",
-    "context": ""
-   },
-   {
-    "name": "Uzu Casino",
-    "normalized": "Uzu Casino",
     "context": ""
    }
   ],
@@ -45,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "Меню містить пункт Contact Us без URL"
   },
   "placement_signals": []
  }

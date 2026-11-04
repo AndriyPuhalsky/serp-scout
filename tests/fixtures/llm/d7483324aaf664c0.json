@@ -1,23 +1,23 @@
 {
  "url": "https://www.slotozilla.com/ca/no-deposit-bonus/100-free-chip",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:20+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:45+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7322,
-  "output_tokens": 762,
-  "cost_usd": 0.022264
+  "input_tokens": 7670,
+  "output_tokens": 490,
+  "cost_usd": 0.02024
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афілійована сторінка з оглядом бонусів без депозиту та добіркою казино з кнопками «GET BONUS». У футері є розділи «Contact Us» та «Partnership», що вказує на можливість купівлі розміщення.",
+  "confidence": 0.9,
+  "reason": "Сторінка — афілійована добірка бонусів без депозиту з кнопками GET BONUS і таблицею казино з оглядами. У футері є посилання Partnership і Contact Us, тож розміщення ймовірно можливе.",
   "brands_mentioned": [
    {
-    "name": "National Casino",
-    "normalized": "National Casino",
+    "name": "National",
+    "normalized": "National",
     "context": ""
    },
    {
@@ -31,13 +31,13 @@
     "context": ""
    },
    {
-    "name": "Verde Casino",
-    "normalized": "Verde Casino",
+    "name": "Verde",
+    "normalized": "Verde",
     "context": ""
    },
    {
-    "name": "Ice Casino",
-    "normalized": "Ice Casino",
+    "name": "Ice",
+    "normalized": "Ice",
     "context": ""
    },
    {
@@ -49,40 +49,19 @@
     "name": "Slots Heaven",
     "normalized": "Slots Heaven",
     "context": ""
-   },
-   {
-    "name": "Spin City",
-    "normalized": "Spin City",
-    "context": ""
-   },
-   {
-    "name": "OnlyWin Casino",
-    "normalized": "OnlyWin Casino",
-    "context": ""
-   },
-   {
-    "name": "Fastpay",
-    "normalized": "Fastpay",
-    "context": ""
-   },
-   {
-    "name": "FS Casino",
-    "normalized": "FS Casino",
-    "context": ""
    }
   ],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання Contact Us і Partnership (URL не вказано)",
-   "form": false
+   "form": false,
+   "other": "Footer links: Partnership, Contact Us"
   },
   "placement_signals": [
    "Partnership",
    "Contact Us",
-   "GET BONUS",
-   "Top Casino Portal Sites 2026"
+   "GET BONUS affiliate CTA buttons"
   ]
  }
 }

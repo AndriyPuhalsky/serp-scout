@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>serp-scout — презентація для замовника</title>
+  <meta name="description" content="Що робить serp-scout і як ним користуватись: щоденний топ-10 Google (mobile, Канада) за ключами казино-ніші, релевантні сайти для розміщення, бренди, контакти.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%231f6f4a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./presentation.css">
+  <script>
+    // Тема до першого кадру (без блимання): збережена або системна. Клас js — режим слайдів лише з JS.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "dark" && t !== "light") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <script type="module" src="./presentation.js"></script>
+</head>
+<body>
+<main id="deck" class="p-deck" aria-label="Презентація serp-scout">
+
+<!-- 1. Титул -->
+<section class="slide p-title" id="1" aria-label="Титул">
+  <div class="p-inner">
+    <p class="p-kicker">Презентація для афіліат-команди · прогін 2026-11-04</p>
+    <h1 class="p-h1">serp-scout — куди йти з розміщенням</h1>
+    <p class="p-lede">Щоранку робот переглядає топ-10 Google у Канаді за вашими ключами і каже, на яких сайтах можна розмістити бренд, хто там уже стоїть і кому писати.</p>
+    <dl class="p-links">
+      <div><dt>Звіт для менеджера</dt><dd><a href="https://serp-scout.netlify.app">serp-scout.netlify.app</a></dd></div>
+      <div><dt>Методичка, 15–20 хв</dt><dd><a href="https://serp-scout.netlify.app/guide/">serp-scout.netlify.app/guide</a></dd></div>
+      <div><dt>Код і дані</dt><dd><a href="https://github.com/AndriyPuhalsky/serp-scout">github.com/AndriyPuhalsky/serp-scout</a></dd></div>
+    </dl>
+    <p class="p-hint p-deck-only">Гортайте стрілками ← → або пробілом.</p>
+  </div>
+</section>
+
+<!-- 2. Задача -->
+<section class="slide" id="2" aria-labelledby="h2">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h2">Що ви замовили</h2>
+    <p class="p-lede">Афіліат-команда шукає в Google сайти, де можна розмістити казино-бренди. Руками це довго і щодня застаріває. Потрібен прототип, який робить це сам.</p>
+    <ol class="p-steps">
+      <li><strong>Щодня</strong> брати топ-10 Google — мобільна видача, Канада — за 10 ключами (5 груп: Грошові, Рейтинги, Платіжки, Бездеп/фріспіни, Грошові (провінція)).</li>
+      <li><strong>Зберігати</strong> ключ, позицію, адресу сторінки, домен і дату.</li>
+      <li><strong>Для кожної сторінки</strong> вирішити: чи можна тут розмістити бренд (оглядач чи рейтинг — так; Вікіпедія чи сайт самого казино — ні), які бренди вже згадано, кому писати.</li>
+      <li><strong>Повторний запуск</strong> не створює дублів, а дописує історію позицій.</li>
+    </ol>
+    <p class="p-src">Джерело: <code>docs/01_ЗАВДАННЯ_І_КРИТЕРІЇ.md</code>, розділ «Що просять».</p>
+  </div>
+</section>
+
+<!-- 3. Як це працює -->
+<section class="slide" id="3" aria-labelledby="h3">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h3">Як це працює</h2>
+    <p class="p-lede p-lede-sm">Один прогін — шість кроків, без участі людини.</p>
+    <svg class="p-flow" viewBox="0 0 1120 96" role="img" aria-labelledby="flow-t">
+      <title id="flow-t">Конвеєр: SerpApi, SQLite, завантаження сторінки, Claude Sonnet 5.5, CSV і JSON, сайт-звіт і Telegram</title>
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="p-flow-head"/></marker></defs>
+      <g class="p-flow-node"><rect x="1" y="16" width="158" height="64" rx="6"/><text x="80" y="54">SerpApi</text></g>
+      <g class="p-flow-node"><rect x="193" y="16" width="158" height="64" rx="6"/><text x="272" y="54">SQLite</text></g>
+      <g class="p-flow-node"><rect x="385" y="16" width="158" height="64" rx="6"/><text x="464" y="46">Сторінка</text><text x="464" y="66" class="p-flow-sub">httpx · Jina · сніпет</text></g>
+      <g class="p-flow-node p-flow-key"><rect x="577" y="16" width="158" height="64" rx="6"/><text x="656" y="46">Claude</text><text x="656" y="66" class="p-flow-sub">Sonnet 5.5</text></g>
+      <g class="p-flow-node"><rect x="769" y="16" width="158" height="64" rx="6"/><text x="848" y="54">CSV / JSON</text></g>
+      <g class="p-flow-node"><rect x="961" y="16" width="158" height="64" rx="6"/><text x="1040" y="46">Звіт</text><text x="1040" y="66" class="p-flow-sub">+ Telegram</text></g>
+      <g class="p-flow-arrow"><line x1="161" y1="48" x2="190" y2="48" marker-end="url(#arr)"/><line x1="353" y1="48" x2="382" y2="48" marker-end="url(#arr)"/><line x1="545" y1="48" x2="574" y2="48" marker-end="url(#arr)"/><line x1="737" y1="48" x2="766" y2="48" marker-end="url(#arr)"/><line x1="929" y1="48" x2="958" y2="48" marker-end="url(#arr)"/></g>
+    </svg>
+    <ol class="p-flow-list">
+      <li><b>SerpApi</b><span>Топ-10 Google: мобільна видача, Канада. 10 запитів — по одному на ключ.</span></li>
+      <li><b>SQLite</b><span>Знімок дня: ключ, позиція, URL, домен, дата. Повтор того ж дня не дублює.</span></li>
+      <li><b>Завантаження сторінки</b><span>Спершу напряму; якщо сайт закрився — через Jina Reader; якщо й так ні — сніпет із Google.</span></li>
+      <li><b>Claude Sonnet 5.5</b><span>Читає сторінку і заповнює чітку форму: тип сайту, чи можна розміститись, бренди, контакт, причина українською.</span></li>
+      <li><b>CSV / JSON</b><span>Таблиці для Excel і дані для сайту. Нові сторінки розмічаються, старі беруться з кешу.</span></li>
+      <li><b>Звіт + Telegram</b><span>Сайт для менеджера оновлюється сам; короткий підсумок приходить у Telegram.</span></li>
+    </ol>
+    <p class="p-note">Сьогодні сторінки отримано так: напряму — <span class="p-num">40</span>, через Jina Reader — <span class="p-num">27</span>, лише за сніпетом — <span class="p-num">10</span> із <span class="p-num">77</span>.</p>
+    <p class="p-src">Джерело: <code>docs/02_АРХІТЕКТУРА.md</code>, README «Інструменти і чому»; спосіб завантаження — поле <code>method</code> у <code>site/data/report.json</code>, прогін 2026-11-04.</p>
+  </div>
+</section>
+
+<!-- 4. KPI -->
+<section class="slide" id="4" aria-labelledby="h4">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h4">Що знайдено 2026-11-04</h2>
+    <div class="p-kpis">
+      <div class="p-kpi"><span class="p-kpi-n">10</span><span class="p-kpi-l">ключів</span></div>
+      <div class="p-kpi"><span class="p-kpi-n">90</span><span class="p-kpi-l">позицій у видачі</span></div>
+      <div class="p-kpi"><span class="p-kpi-n">77</span><span class="p-kpi-l">унікальних сторінок</span></div>
+      <div class="p-kpi p-kpi-key"><span class="p-kpi-n">54</span><span class="p-kpi-l">підходять для розміщення (70,1 %)</span></div>
+      <div class="p-kpi"><span class="p-kpi-n">303</span><span class="p-kpi-l">різних брендів згадано</span></div>
+      <div class="p-kpi"><span class="p-kpi-n">36</span><span class="p-kpi-l">сторінок з email або сторінкою контакту</span></div>
+      <div class="p-kpi"><span class="p-kpi-n">15</span><span class="p-kpi-l">варто перевірити очима</span></div>
+    </div>
+    <h3 class="p-h3">Які сайти в топ-10, сторінок за типом</h3>
+    <ul class="p-bars" aria-label="Кількість сторінок за типом сайту">
+<li class="p-bar"><span class="p-bar-label">оглядач / афіліат</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="100.0%" height="14" rx="3"><title>оглядач / афіліат: 52 URL</title></rect></svg><span class="p-bar-val">52</span><span class="p-bar-note">з них підходять для розміщення: 52</span></li>
+<li class="p-bar"><span class="p-bar-label">оператор казино</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="25.0%" height="14" rx="3"><title>оператор казино: 13 URL</title></rect></svg><span class="p-bar-val">13</span></li>
+<li class="p-bar"><span class="p-bar-label">інше</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="11.5%" height="14" rx="3"><title>інше: 6 URL</title></rect></svg><span class="p-bar-val">6</span></li>
+<li class="p-bar"><span class="p-bar-label">медіа</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="3.8%" height="14" rx="3"><title>медіа: 2 URL</title></rect></svg><span class="p-bar-val">2</span><span class="p-bar-note">з них підходять для розміщення: 2</span></li>
+<li class="p-bar"><span class="p-bar-label">енциклопедія</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="3.8%" height="14" rx="3"><title>енциклопедія: 2 URL</title></rect></svg><span class="p-bar-val">2</span></li>
+<li class="p-bar"><span class="p-bar-label">регулятор</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="3.8%" height="14" rx="3"><title>регулятор: 2 URL</title></rect></svg><span class="p-bar-val">2</span></li>
+    </ul>
+    <p class="p-src">Джерело: <code>site/data/report.json</code>, прогін 2026-11-04 (<code>kpi</code>, тип — поле <code>site_type</code> у <code>rows</code>); позиції — рядки <code>data/export/serp_2026-11-04.csv</code>.</p>
+  </div>
+</section>
+
+<!-- 5. Приклад -->
+<section class="slide" id="5" aria-labelledby="h5">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h5">Як виглядає одна знахідка</h2>
+    <p class="p-lede p-lede-sm">Реальний рядок зі звіту. Менеджер бачить усе, щоб написати листа вже сьогодні.</p>
+    <div class="p-example">
+      <article class="p-card">
+        <header class="p-card-head">
+          <h3 class="p-card-domain"><a href="https://bojoko.ca/casino/bonus/no-deposit/" rel="noopener">bojoko.ca</a></h3>
+          <span class="p-chip p-chip-type">оглядач / афіліат</span>
+          <span class="p-rel"><span class="p-dot" aria-hidden="true"></span>підходить · впевненість <span class="p-num">93 %</span></span>
+        </header>
+        <dl class="p-card-grid">
+          <div><dt>Позиція</dt><dd><span class="p-num">#2</span> за «free spins no deposit canada»</dd></div>
+          <div><dt>Контакт</dt><dd><a href="mailto:partners@bojoko.com">partners@bojoko.com</a><br><a href="https://bojoko.ca/about-us/#list-casino" rel="noopener" class="p-small">сторінка для партнерів</a></dd></div>
+          <div class="p-card-wide"><dt>Бренди на сторінці (<span class="p-num">25</span>)</dt><dd class="p-chips"><span class="p-chip">SpinYoo</span><span class="p-chip">Bonanza Game</span><span class="p-chip">Boo</span><span class="p-chip">Stakemania</span><span class="p-chip">Goldex</span><span class="p-chip p-chip-more">+20</span></dd></div>
+          <div class="p-card-wide"><dt>Чому</dt><dd>Сторінка є афілійованим рейтингом казино з no-deposit бонусами, з партнерськими бонус-кодами та посиланнями на огляди. Є партнерський email і сторінка «List your casino», тож розміщення можливе.</dd></div>
+        </dl>
+      </article>
+      <aside class="p-aside">
+        <h3 class="p-h3">Що модель побачила на сторінці</h3>
+        <ul class="p-signals"><li>List your casino</li><li>partners@bojoko.com</li><li>Play here affiliate links</li></ul>
+        <p>Ці фрази — ознаки, що сайт продає місця. Вони збережені поруч із рішенням, тож його легко перевірити.</p>
+      </aside>
+    </div>
+    <p class="p-src">Джерело: <code>site/data/report.json</code>, прогін 2026-11-04: рядок <code>https://bojoko.ca/casino/bonus/no-deposit/</code> (поля <code>site_type</code>, <code>confidence</code>, <code>brands</code>, <code>contact</code>, <code>reason</code>, <code>placement_signals</code>, <code>positions</code>).</p>
+  </div>
+</section>
+
+<!-- 6. Бренди -->
+<section class="slide" id="6" aria-labelledby="h6">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h6">Хто з конкурентів уже в топ-10</h2>
+    <p class="p-lede p-lede-sm">Кількість сторінок у видачі, де згадано бренд. JackpotCity — на <span class="p-num">24</span> сторінках із <span class="p-num">77</span>.</p>
+    <ul class="p-bars p-bars-brands" aria-label="Топ-10 брендів за кількістю сторінок">
+<li class="p-bar"><span class="p-bar-label">JackpotCity</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="100.0%" height="14" rx="3"><title>JackpotCity: 24 сторінок</title></rect></svg><span class="p-bar-val">24</span></li>
+<li class="p-bar"><span class="p-bar-label">Spin Casino</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="75.0%" height="14" rx="3"><title>Spin Casino: 18 сторінок</title></rect></svg><span class="p-bar-val">18</span></li>
+<li class="p-bar"><span class="p-bar-label">PlayOJO</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="58.3%" height="14" rx="3"><title>PlayOJO: 14 сторінок</title></rect></svg><span class="p-bar-val">14</span></li>
+<li class="p-bar"><span class="p-bar-label">Casumo</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="41.7%" height="14" rx="3"><title>Casumo: 10 сторінок</title></rect></svg><span class="p-bar-val">10</span></li>
+<li class="p-bar"><span class="p-bar-label">BetMGM</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="41.7%" height="14" rx="3"><title>BetMGM: 10 сторінок</title></rect></svg><span class="p-bar-val">10</span></li>
+<li class="p-bar"><span class="p-bar-label">bet365</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="41.7%" height="14" rx="3"><title>bet365: 10 сторінок</title></rect></svg><span class="p-bar-val">10</span></li>
+<li class="p-bar"><span class="p-bar-label">888casino</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="41.7%" height="14" rx="3"><title>888casino: 10 сторінок</title></rect></svg><span class="p-bar-val">10</span></li>
+<li class="p-bar"><span class="p-bar-label">LeoVegas</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="41.7%" height="14" rx="3"><title>LeoVegas: 10 сторінок</title></rect></svg><span class="p-bar-val">10</span></li>
+<li class="p-bar"><span class="p-bar-label">Ruby Fortune</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="37.5%" height="14" rx="3"><title>Ruby Fortune: 9 сторінок</title></rect></svg><span class="p-bar-val">9</span></li>
+<li class="p-bar"><span class="p-bar-label">Betway</span><svg class="p-bar-svg" width="100%" height="14" aria-hidden="true" focusable="false"><rect x="0" y="0" width="37.5%" height="14" rx="3"><title>Betway: 9 сторінок</title></rect></svg><span class="p-bar-val">9</span></li>
+    </ul>
+    <p class="p-src">Джерело: <code>site/data/report.json</code>, прогін 2026-11-04 (<code>brands_top</code>, перші 10). Бренд рахується один раз на сторінку, без урахування регістру.</p>
+  </div>
+</section>
+
+<!-- 7. Звіт -->
+<section class="slide" id="7" aria-labelledby="h7">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h7">Звіт для менеджера</h2>
+    <div class="p-two">
+      <ul class="p-list">
+        <li><b>Шапка</b> — дата прогону, статус, вартість: одразу видно, чи дані свіжі.</li>
+        <li><b>Підсумок</b> — скільки сторінок, скільки підходять, брендів, контактів.</li>
+        <li><b>«Куди йти з розміщенням»</b> — таблиця сайтів з фільтрами: група ключів, ключ, тип сайту, бренд, пошук по домену.</li>
+        <li><b>«Чому»</b> — пояснення рішення українською і фрази-ознаки зі сторінки.</li>
+        <li><b>Контакт</b> — email відкриває лист одним кліком, або посилання на сторінку для рекламодавців.</li>
+        <li><b>Позиції по ключах</b> з маленьким графіком: вище — краще, остання точка — сьогодні.</li>
+        <li><b>«Бренди в топ-10»</b> та історія позицій по днях.</li>
+      </ul>
+      <div class="p-shots">
+        <figure><img src="../guide/img/03-filter.png" alt="Таблиця «Куди йти з розміщенням» з увімкненим фільтром: лише релевантні сайти" loading="lazy" width="1280" height="900"><figcaption>Фільтр «лише релевантні»</figcaption></figure>
+        <figure><img src="../guide/img/05-reason.png" alt="Відкрите пояснення «чому»: причина українською, сигнали розміщення, впевненість" loading="lazy" width="1280" height="900"><figcaption>Пояснення «чому»</figcaption></figure>
+        <figure><img src="../guide/img/06-contact.png" alt="Колонка контакту: email-посилання і сторінка для рекламодавців" loading="lazy" width="1280" height="900"><figcaption>Контакт</figcaption></figure>
+        <figure><img src="../guide/img/07-positions.png" alt="Позиції сайту по ключах і спарклайн історії позицій" loading="lazy" width="1280" height="900"><figcaption>Позиції по ключах</figcaption></figure>
+      </div>
+    </div>
+    <p class="p-src">Живий звіт: <a href="https://serp-scout.netlify.app">serp-scout.netlify.app</a>; скріншоти — з методички <code>site/guide/img/</code>.</p>
+  </div>
+</section>
+
+<!-- 8. Автоматизація -->
+<section class="slide" id="8" aria-labelledby="h8">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h8">Щоранку — само</h2>
+    <ol class="p-timeline">
+      <li><span class="p-time">09:00</span><b>GitHub Actions запускає прогін</b><span>за Києвом; запасний запуск о 10:30, якщо ранковий не вдався. Якщо знімок за сьогодні вже є — повтор пропускається і не витрачає гроші.</span></li>
+      <li><span class="p-time">далі</span><b>Видача, сторінки, розмітка</b><span>Нові сторінки читає Claude, відомі беруться з кешу.</span></li>
+      <li><span class="p-time">далі</span><b>Дані комітяться в репозиторій</b><span>База, CSV і дані сайту — від імені бота.</span></li>
+      <li><span class="p-time">далі</span><b>Netlify оновлює звіт</b><span>Та сама адреса, нові цифри.</span></li>
+      <li><span class="p-time">далі</span><b>Підсумок у Telegram</b><span>✅ або ❌ з коротким зведенням і посиланням на звіт.</span></li>
+    </ol>
+    <div class="p-rule">
+      <p><b>Той самий день</b> — знімок дня перезаписується, дублів немає.</p>
+      <p><b>Наступний день</b> — нова точка в історії позицій кожного сайту.</p>
+    </div>
+    <p class="p-src">Джерело: README «Як запустити», <code>docs/06_RUNBOOK.md</code>, <code>.github/workflows/daily.yml</code>.</p>
+  </div>
+</section>
+
+<!-- 9. Надійність -->
+<section class="slide" id="9" aria-labelledby="h9">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h9">Що буде, якщо щось зламається</h2>
+    <dl class="p-faq">
+      <div><dt>Google або сайт відповів помилкою</dt><dd>Повторні спроби з паузою, що зростає; на кожен запит — таймаут.</dd></div>
+      <div><dt>Одна сторінка не відкрилась</dt><dd>Прогін не падає: сторінка розмічається за сніпетом з низькою впевненістю, а помилки потрапляють у статус «частково» з переліком. Сьогодні так розмічено <span class="p-num">10</span> сторінок.</dd></div>
+      <div><dt>Запуск двічі</dt><dd>Дублів немає: знімок дня перезаписується, розмітка береться з кешу.</dd></div>
+      <div><dt>Модель витрачає забагато</dt><dd>Стоп за бюджетом: ліміт на прогін задає <code>LLM_BUDGET_USD</code>.</dd></div>
+      <div><dt>Ключі доступу</dt><dd>Лише в <code>.env</code> і GitHub Secrets (<code>SERPAPI_KEY</code>, <code>ANTHROPIC_API_KEY</code>, Telegram), у логах маскуються.</dd></div>
+      <div><dt>Чи це перевірено</dt><dd>Автотести працюють без інтернету і ключів; <code>make demo</code> проганяє весь шлях на записаних даних.</dd></div>
+    </dl>
+    <p class="p-src">Джерело: README «Надійність і перевірка», <code>docs/02_АРХІТЕКТУРА.md</code>; кількість сторінок за сніпетом — поле <code>method</code> у <code>site/data/report.json</code>, прогін 2026-11-04.</p>
+  </div>
+</section>
+
+<!-- 10. Якість -->
+<section class="slide" id="10" aria-labelledby="h10">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h10">Наскільки можна вірити розмітці</h2>
+    <div class="p-two p-two-hero">
+      <div class="p-hero">
+        <span class="p-hero-n">18 / 20</span>
+        <span class="p-hero-l">збіг із незалежним суддею на 20 випадкових сторінках (перша версія промпту)</span>
+      </div>
+      <div>
+        <p>Обидві розбіжності мали одну причину: відповідь моделі обрізалась на довгих сторінках. На 18 нормально розібраних сторінках рішення «підходить / ні» і тип сайту збіглись повністю.</p>
+        <h3 class="p-h3">Що виправила версія 2</h3>
+        <ul class="p-list p-list-tight">
+          <li>Більше місця на відповідь і автоматичний повтор, якщо відповідь не розібралась.</li>
+          <li>Перелічувати всі бренди з рейтингів, а не лише верх списку (на v1 повнота брендів була ≈ 50 %).</li>
+          <li>Сторінка для рекламодавців важливіша за загальний «Contact Us».</li>
+          <li>Рейтинги казино на медіа-сайтах — теж місце для розміщення.</li>
+        </ul>
+        <p class="p-note">Після перерозмітки всіх <span class="p-num">77</span> сторінок на v2 — збоїв розбору <span class="p-num">0</span>.</p>
+      </div>
+    </div>
+    <p class="p-src">Джерело: <code>docs/03_РОЗМІТКА_LLM.md</code>, розділ «Перевірки» (перевірка 2026-11-04, seed 42); збої розбору — <code>reason</code> «збій розмітки» у <code>site/data/report.json</code>, прогін 2026-11-04.</p>
+  </div>
+</section>
+
+<!-- 11. Вартість -->
+<section class="slide" id="11" aria-labelledby="h11">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h11">Скільки це коштує</h2>
+    <div class="p-two">
+      <div>
+        <table class="p-table">
+          <caption>Живі прогони 2026-11-04</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">Що робили</th><th scope="col" class="p-num">URL</th><th scope="col" class="p-num">Розмічено</th><th scope="col" class="p-num">Вартість</th></tr></thead>
+          <tbody>
+<tr><td class="p-num">1</td><td>перевірка на 5 URL (<code>--limit 5</code>)</td><td class="p-num">77</td><td class="p-num">5</td><td class="p-num">$0.10</td></tr>
+<tr><td class="p-num">2</td><td>повний прогін, решта 72 URL</td><td class="p-num">77</td><td class="p-num">72</td><td class="p-num">$1.24</td></tr>
+<tr><td class="p-num">3</td><td>повтор без нових URL (кеш)</td><td class="p-num">77</td><td class="p-num">0</td><td class="p-num">$0.00</td></tr>
+<tr><td class="p-num">4</td><td>перерозмітка всіх URL на промпті v2</td><td class="p-num">77</td><td class="p-num">77</td><td class="p-num">$1.40</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row" colspan="4">Разом за день</th><td class="p-num">$2.74</td></tr></tfoot>
+        </table>
+      </div>
+      <div class="p-cost">
+        <p><span class="p-big">$1.35</span> перший повний прогін усіх 77 сторінок — це ≈ $0.0175 за сторінку.</p>
+        <p><span class="p-big">$0.17–0.35</span> оцінка звичайного дня: розмічаються лише нові сторінки (10–20 на день). Якщо видача не змінилась — $0.</p>
+        <p><span class="p-big">$0</span> решта: SerpApi на безкоштовному тарифі (250 запитів на місяць, нам треба 10 на день), GitHub Actions, Netlify, Telegram.</p>
+      </div>
+    </div>
+    <p class="p-src">Джерело: <code>site/data/report.json</code> (<code>runs</code>, <code>kpi.cost_total_usd</code>); ціна за сторінку і оцінка дня — <code>docs/10_ВАРТІСТЬ.md</code>, README «Вартість одного прогону».</p>
+  </div>
+</section>
+
+<!-- 12. Не зроблено -->
+<section class="slide" id="12" aria-labelledby="h12">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h12">Що свідомо не робили</h2>
+    <dl class="p-faq">
+      <div><dt>Скрейпінг Google напряму</dt><dd>Капчі й блокування. SerpApi дає ту саму видачу легально і безкоштовно.</dd></div>
+      <div><dt>Браузер для «важких» сайтів і платні обхідники Cloudflare</dt><dd>Платно і повільно. Закриті сайти розмічаються за сніпетом і позначаються «перевірити очима».</dd></div>
+      <div><dt>Куди насправді ведуть партнерські посилання</dt><dd>Відклали, щоб вчасно здати обов'язкове; заготовка в коді є.</dd></div>
+      <div><dt>Google Sheets</dt><dd>База — один файл у репозиторії, з неї ж CSV для Excel і сайт. Sheets — у планах.</dd></div>
+      <div><dt>Пакетна обробка Anthropic (Batches)</dt><dd>Дешевше, але відповідь приходить годинами; щоденний звіт потрібен зранку.</dd></div>
+      <div><dt>Акаунти, ролі, алерти на зміну позицій</dt><dd>Для прототипу на одну команду це зайве.</dd></div>
+    </dl>
+    <p class="p-src">Джерело: README «Що свідомо не зроблено»; <code>docs/04_РІШЕННЯ.md</code> Р-003, Р-010, Р-011, Р-023.</p>
+  </div>
+</section>
+
+<!-- 13. Далі -->
+<section class="slide" id="13" aria-labelledby="h13">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h13">Що можна додати далі</h2>
+    <ul class="p-list p-list-big">
+      <li>Сповіщення в Telegram, коли новий підходящий сайт входить у топ-3.</li>
+      <li>Прохід партнерських посилань: на який бренд насправді веде кнопка «Play».</li>
+      <li>Обхід Cloudflare для закритих сайтів.</li>
+      <li>Сильніша модель (Opus) для сторінок, які зараз позначені «перевірити очима».</li>
+      <li>Вивантаження в Google Sheets.</li>
+      <li>Більше ключів і провінцій.</li>
+    </ul>
+    <p class="p-src">Джерело: README «Що далі».</p>
+  </div>
+</section>
+
+<!-- 14. Як почати -->
+<section class="slide" id="14" aria-labelledby="h14">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h14">Як почати користуватись</h2>
+    <ol class="p-start">
+      <li><b>Відкрийте звіт</b><a href="https://serp-scout.netlify.app">serp-scout.netlify.app</a><span>Перевірте дату в шапці — вона має бути сьогоднішньою.</span></li>
+      <li><b>Пройдіть методичку</b><a href="https://serp-scout.netlify.app/guide/">serp-scout.netlify.app/guide</a><span>15–20 хвилин: фільтри, «чому», контакти, бренди, вивантаження в Excel.</span></li>
+      <li><b>Щоранку</b><span class="p-start-plain">Telegram і звіт</span><span>Дивіться підсумок у Telegram, нові сайти — у звіті.</span></li>
+    </ol>
+    <div class="p-tech">
+      <p>Для технічної команди: запуск без ключів на записаних даних.</p>
+      <pre><code>git clone https://github.com/AndriyPuhalsky/serp-scout &amp;&amp; cd serp-scout
+make install &amp;&amp; make demo</code></pre>
+    </div>
+    <p class="p-src">Джерело: README «Як запустити».</p>
+  </div>
+</section>
+
+<!-- 15. Як будувалось -->
+<section class="slide" id="15" aria-labelledby="h15">
+  <div class="p-inner">
+    <h2 class="p-h2" id="h15">Як це будувалось</h2>
+    <p class="p-lede p-lede-sm">Код писав Claude Code як команда ролей із чіткими зонами відповідальності; людина приймала рішення.</p>
+    <div class="p-three">
+      <div><h3 class="p-h3">Виконавці</h3><p>Конвеєр даних, сайт-звіт, автоматизація — кожен пише лише у своїй теці.</p></div>
+      <div><h3 class="p-h3">Аудитори</h3><p>Суддя розмітки, перевірка надійності, оцінювач здачі — лише звітують, нічого не правлять.</p></div>
+      <div><h3 class="p-h3">Запобіжники</h3><p>Автоматичні перевірки після кожної правки: тести, жодних ключів у файлах, згенеровані дані руками не правляться.</p></div>
+    </div>
+    <p class="p-note">Кожне рішення записане з причиною в <code>docs/04_РІШЕННЯ.md</code>.</p>
+    <p class="p-src">Джерело: <code>docs/08_КАРТА_ХАРНЕСУ.md</code>, тека <code>.claude/</code> у репозиторії.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="p-nav" aria-label="Навігація слайдами">
+  <button type="button" class="p-btn p-deck-only" data-go="prev" aria-label="Попередній слайд">←</button>
+  <span class="p-count p-deck-only" aria-live="polite"><span id="p-cur">1</span> / <span id="p-total">15</span></span>
+  <button type="button" class="p-btn p-deck-only" data-go="next" aria-label="Наступний слайд">→</button>
+  <button type="button" id="theme-toggle" class="p-btn" aria-label="Перемкнути тему" title="Тема">
+    <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</nav>
+</body>
+</html>

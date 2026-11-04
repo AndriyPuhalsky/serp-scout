@@ -1,19 +1,19 @@
 {
  "url": "https://www.partycasino.com/en-ca/games/instantcasino/slots",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:28+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:22+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 3222,
-  "output_tokens": 222,
-  "cost_usd": 0.008664
+  "input_tokens": 3718,
+  "output_tokens": 201,
+  "cost_usd": 0.00945
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
-  "confidence": 0.9,
-  "reason": "Це власний сайт оператора PartyCasino зі слотами, реєстрацією та входом. Це не сторонній ресурс, тому купівля розміщення тут неможлива.",
+  "confidence": 0.95,
+  "reason": "Це власний сайт оператора PartyCasino зі сторінкою ігрових автоматів для гри та реєстрації. Сторінка не є сторонньою площадкою для розміщення реклами.",
   "brands_mentioned": [
    {
     "name": "Party Casino",
@@ -25,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

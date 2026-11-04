@@ -1,19 +1,19 @@
 {
  "url": "https://ca.888casino.com/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:08+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:02+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 5515,
-  "output_tokens": 220,
-  "cost_usd": 0.01323
+  "input_tokens": 5876,
+  "output_tokens": 180,
+  "cost_usd": 0.01355
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
-  "confidence": 0.95,
-  "reason": "Це офіційний сайт оператора 888casino для канадських гравців: ігри, реєстрація та бонуси оператора. Це не стороннє медіа чи афілійований огляд, тому розмістити там рекламу казино неможливо.",
+  "confidence": 0.97,
+  "reason": "Це офіційний сайт казино 888casino для канадських гравців з реєстрацією, іграми та бонусами оператора. Розміщення стороннього бренду тут неможливе.",
   "brands_mentioned": [
    {
     "name": "888casino",
@@ -25,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "Footer link: Affiliates (own affiliate programme, no href)"
   },
   "placement_signals": []
  }

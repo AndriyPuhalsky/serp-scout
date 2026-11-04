@@ -17,7 +17,7 @@ from typing import Any
 from serp_scout.config import Keyword
 from serp_scout.providers.base import SerpHit
 from serp_scout.schema import SCHEMA_SQL
-from serp_scout.urlnorm import domain_of, normalize_url
+from serp_scout.urlnorm import domain_of, is_google_host, normalize_url
 
 
 def now_iso() -> str:
@@ -37,6 +37,10 @@ def connect(db_path: Path) -> sqlite3.Connection:
 def init_db(conn: sqlite3.Connection) -> None:
     """Створює таблиці, індекси й представлення, якщо їх ще немає."""
     conn.executescript(SCHEMA_SQL)
+    # Міграція старих БД: колонка pages.final_url з'явилась пізніше за схему
+    cols = {r["name"] for r in conn.execute("PRAGMA table_info(pages)")}
+    if "final_url" not in cols:
+        conn.execute("ALTER TABLE pages ADD COLUMN final_url TEXT")
     conn.commit()
 
 
@@ -125,6 +129,7 @@ def upsert_page(conn: sqlite3.Connection, url_id: int, fields: dict[str, Any]) -
         "emails_json",
         "contact_links_json",
         "error",
+        "final_url",
     ]
     values = [fields.get(c) for c in cols]
     assignments = ", ".join(f"{c} = excluded.{c}" for c in cols)
@@ -134,6 +139,30 @@ def upsert_page(conn: sqlite3.Connection, url_id: int, fields: dict[str, Any]) -
             f"ON CONFLICT(url_id) DO UPDATE SET {assignments}",
             [url_id, *values],
         )
+
+
+def apply_final_url(conn: sqlite3.Connection, url_id: int, final_url: str | None) -> bool:
+    """Для URL-редиректу Google (`domain` = google.*) пише кінцеву адресу і домен кінцевого сайту.
+
+    Ключ `urls.url` (а отже `url_key`, касети, історія позицій) не змінюється. Повертає True,
+    якщо домен оновлено.
+    """
+    if not final_url:
+        return False
+    row = conn.execute("SELECT domain FROM urls WHERE id = ?", (url_id,)).fetchone()
+    new_domain = domain_of(final_url)
+    if row is None or not is_google_host(row["domain"]) or is_google_host(new_domain):
+        return False
+    with conn:
+        conn.execute("UPDATE urls SET domain = ? WHERE id = ?", (new_domain, url_id))
+        conn.execute("UPDATE pages SET final_url = ? WHERE url_id = ?", (final_url, url_id))
+    return True
+
+
+def google_redirect_urls(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    """URL, чий домен досі google.* (нерозгорнутий `goto`): `id`, `url`."""
+    rows = conn.execute("SELECT id, url, domain FROM urls ORDER BY id").fetchall()
+    return [r for r in rows if is_google_host(r["domain"])]
 
 
 def get_label(

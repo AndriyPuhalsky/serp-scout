@@ -1,19 +1,19 @@
 {
  "url": "https://www.casivo.ca/fast-payout-casinos/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:09+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:45+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7073,
-  "output_tokens": 570,
-  "cost_usd": 0.019846000000000003
+  "input_tokens": 7421,
+  "output_tokens": 540,
+  "cost_usd": 0.02024
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка є афілійованим рейтингом казино з швидкими виплатами для Канади з бонусами та посиланнями на огляди окремих казино. Це типовий review-сайт, де можна купити розміщення.",
+  "reason": "Сторінка є афілійованим рейтингом казино з швидкими виплатами з бонусами, таблицями та посиланнями на огляди. Це типовий review_affiliate-сайт, де можливе розміщення казино.",
   "brands_mentioned": [
    {
     "name": "LeoVegas",
@@ -60,8 +60,8 @@
    "email": "noah@casivo.ca",
    "contact_page": "https://www.casivo.ca/contact/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

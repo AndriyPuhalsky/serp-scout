@@ -1,28 +1,33 @@
 {
  "url": "https://www.covers.com/casino/canada",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:51:51+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:24:42+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7771,
-  "output_tokens": 969,
-  "cost_usd": 0.025232
+  "input_tokens": 8143,
+  "output_tokens": 1698,
+  "cost_usd": 0.03327
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка Covers.com — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та категоріями, тому це review_affiliate і підходить для розміщення. Є сторінка контактів, але email на сторінці не знайдено.",
+  "reason": "Сторінка Covers.com — комерційний рейтинг «найкращих онлайн-казино Канади» з бонусами, оглядами та CTA, тобто афілійований огляд-рейтинг, де можливе розміщення казино. Є сторінка контактів.",
   "brands_mentioned": [
    {
-    "name": "WinBerry Casino",
-    "normalized": "WinBerry Casino",
+    "name": "WinBerry",
+    "normalized": "WinBerry",
     "context": ""
    },
    {
-    "name": "Boho Casino",
-    "normalized": "Boho Casino",
+    "name": "Boho",
+    "normalized": "Boho",
+    "context": ""
+   },
+   {
+    "name": "Wagibet",
+    "normalized": "Wagibet",
     "context": ""
    },
    {
@@ -31,8 +36,8 @@
     "context": ""
    },
    {
-    "name": "Rainbet",
-    "normalized": "Rainbet",
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
     "context": ""
    },
    {
@@ -41,8 +46,13 @@
     "context": ""
    },
    {
-    "name": "JackpotCity",
-    "normalized": "JackpotCity",
+    "name": "PowerPlay",
+    "normalized": "PowerPlay",
+    "context": ""
+   },
+   {
+    "name": "MyEmpire",
+    "normalized": "MyEmpire",
     "context": ""
    },
    {
@@ -51,78 +61,18 @@
     "context": ""
    },
    {
-    "name": "LeoVegas",
-    "normalized": "LeoVegas",
+    "name": "Therospin",
+    "normalized": "Therospin",
     "context": ""
    },
    {
-    "name": "Betway",
-    "normalized": "Betway",
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
     "context": ""
    },
    {
-    "name": "888casino",
-    "normalized": "888casino",
-    "context": ""
-   },
-   {
-    "name": "bet365",
-    "normalized": "bet365",
-    "context": ""
-   },
-   {
-    "name": "Spin Casino",
-    "normalized": "Spin Casino",
-    "context": ""
-   },
-   {
-    "name": "PlayOJO",
-    "normalized": "PlayOJO",
-    "context": ""
-   },
-   {
-    "name": "Casumo",
-    "normalized": "Casumo",
-    "context": ""
-   },
-   {
-    "name": "Tonybet",
-    "normalized": "Tonybet",
-    "context": ""
-   },
-   {
-    "name": "Sports Interaction",
-    "normalized": "Sports Interaction",
-    "context": ""
-   },
-   {
-    "name": "Party Casino",
-    "normalized": "Party Casino",
-    "context": ""
-   },
-   {
-    "name": "Ruby Fortune",
-    "normalized": "Ruby Fortune",
-    "context": ""
-   },
-   {
-    "name": "ComeOn",
-    "normalized": "ComeOn",
-    "context": ""
-   },
-   {
-    "name": "DraftKings",
-    "normalized": "DraftKings",
-    "context": ""
-   },
-   {
-    "name": "Lucky Ones",
-    "normalized": "Lucky Ones",
-    "context": ""
-   },
-   {
-    "name": "PowerPlay",
-    "normalized": "PowerPlay",
+    "name": "Rainbet",
+    "normalized": "Rainbet",
     "context": ""
    },
    {
@@ -131,8 +81,163 @@
     "context": ""
    },
    {
+    "name": "Sports Interaction",
+    "normalized": "Sports Interaction",
+    "context": ""
+   },
+   {
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "National",
+    "normalized": "National",
+    "context": ""
+   },
+   {
+    "name": "WestAce",
+    "normalized": "WestAce",
+    "context": ""
+   },
+   {
+    "name": "Casoola",
+    "normalized": "Casoola",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "Betico",
+    "normalized": "Betico",
+    "context": ""
+   },
+   {
+    "name": "SlotsGem",
+    "normalized": "SlotsGem",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "Posido",
+    "normalized": "Posido",
+    "context": ""
+   },
+   {
+    "name": "Frumzi",
+    "normalized": "Frumzi",
+    "context": ""
+   },
+   {
+    "name": "AmunRa",
+    "normalized": "AmunRa",
+    "context": ""
+   },
+   {
+    "name": "Robocat",
+    "normalized": "Robocat",
+    "context": ""
+   },
+   {
+    "name": "Legiano",
+    "normalized": "Legiano",
+    "context": ""
+   },
+   {
+    "name": "Kingmaker",
+    "normalized": "Kingmaker",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Wheelz",
+    "normalized": "Wheelz",
+    "context": ""
+   },
+   {
+    "name": "Wazamba",
+    "normalized": "Wazamba",
+    "context": ""
+   },
+   {
     "name": "North Casino",
     "normalized": "North Casino",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "FatPanda",
+    "normalized": "FatPanda",
+    "context": ""
+   },
+   {
+    "name": "SpinYoo",
+    "normalized": "SpinYoo",
+    "context": ""
+   },
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "PlayOJO",
+    "normalized": "PlayOJO",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "Caesars",
+    "normalized": "Caesars",
+    "context": ""
+   },
+   {
+    "name": "FanDuel",
+    "normalized": "FanDuel",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "Bet99",
+    "normalized": "Bet99",
     "context": ""
    }
   ],
@@ -140,12 +245,9 @@
    "email": null,
    "contact_page": "https://www.covers.com/contact",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
-  "placement_signals": [
-   "партнерські огляди та рейтинг казино",
-   "партнерство (BetMGM responsible gaming partnership у новинах)"
-  ]
+  "placement_signals": []
  }
 }

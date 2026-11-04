@@ -1,19 +1,19 @@
 {
  "url": "https://www.oddsjet.com/en-ca/casino-bonuses",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:06+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:00+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 6884,
-  "output_tokens": 918,
-  "cost_usd": 0.022948000000000003
+  "input_tokens": 7232,
+  "output_tokens": 503,
+  "cost_usd": 0.01949
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка є афіліатним оглядом бонусів Interac-казино для Канади з добіркою брендів (SIA, Betway, Casumo, Jackpot City тощо) та партнерськими пропозиціями. Це типовий майданчик для розміщення казино-брендів, хоча прямих сигналів продажу розміщень на сторінці немає.",
+  "reason": "Сторінка є афіліатною добіркою бонусів Interac-казино для Канади з оферами та CTA-блоками. Це типовий review/affiliate-сайт, де можливе розміщення казино-брендів.",
   "brands_mentioned": [
    {
     "name": "SIA",
@@ -61,21 +61,6 @@
     "context": ""
    },
    {
-    "name": "Betsafe",
-    "normalized": "Betsafe",
-    "context": ""
-   },
-   {
-    "name": "Betsson",
-    "normalized": "Betsson",
-    "context": ""
-   },
-   {
-    "name": "BetVictor",
-    "normalized": "BetVictor",
-    "context": ""
-   },
-   {
     "name": "Sports Interaction",
     "normalized": "Sports Interaction",
     "context": ""
@@ -84,19 +69,14 @@
     "name": "Unibet",
     "normalized": "Unibet",
     "context": ""
-   },
-   {
-    "name": "1XBet",
-    "normalized": "1XBet",
-    "context": ""
    }
   ],
   "contact": {
    "email": null,
-   "contact_page": null,
+   "contact_page": "https://www.oddsjet.com/en-ca/about",
    "telegram": null,
-   "other": "Лише сторінка About: https://www.oddsjet.com/en-ca/about",
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

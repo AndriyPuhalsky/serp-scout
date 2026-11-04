@@ -1,19 +1,19 @@
 {
  "url": "https://canastillasplasticascolombia.com/best-real-money-online-casinos-in-canada-leading-15-in-202-2/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T06:00:02+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:29:17+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 6565,
-  "output_tokens": 507,
-  "cost_usd": 0.0182
+  "input_tokens": 6913,
+  "output_tokens": 436,
+  "cost_usd": 0.01819
  },
  "label": {
   "site_type": "other",
   "relevant_for_placement": false,
-  "confidence": 0.7,
-  "reason": "Сторінка на неспецифічному іспаномовному домені (canastillasplasticascolombia.com) з автогенерованим спамним текстом про казино; схоже на зламаний/PBN-сайт без ознак легітимного продажу розміщень. Немає чітких сигналів реклами чи контактів для розміщення.",
+  "confidence": 0.8,
+  "reason": "Це спамна сторінка зі згенерованим текстом на нерелевантному колумбійському домені (canastillasplasticascolombia.com), яка імітує огляд казино. Немає явних рейтингових таблиць, ознак продажу розміщень чи справжньої редакційної цінності.",
   "brands_mentioned": [
    {
     "name": "Neospin",
@@ -31,18 +31,23 @@
     "context": ""
    },
    {
+    "name": "Fresh",
+    "normalized": "Fresh",
+    "context": ""
+   },
+   {
     "name": "PlayOJO",
     "normalized": "PlayOJO",
     "context": ""
    },
    {
-    "name": "Fresh Casino",
-    "normalized": "Fresh Casino",
+    "name": "Slots Magic",
+    "normalized": "Slots Magic",
     "context": ""
    },
    {
-    "name": "Mostbet",
-    "normalized": "Mostbet",
+    "name": "Casino Infinity",
+    "normalized": "Casino Infinity",
     "context": ""
    }
   ],
@@ -50,8 +55,8 @@
    "email": null,
    "contact_page": "https://canastillasplasticascolombia.com/#contacto",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

@@ -1,38 +1,29 @@
 {
  "url": "https://senecacasinos.com/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:05+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:41+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 4030,
-  "output_tokens": 399,
-  "cost_usd": 0.012049999999999998
+  "input_tokens": 4378,
+  "output_tokens": 229,
+  "cost_usd": 0.01105
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
   "confidence": 0.95,
-  "reason": "Це офіційний сайт корпорації Seneca Resorts & Casinos (штат Нью-Йорк) з курортами, розвагами та вакансіями, а не огляд чи афілійований ресурс. Розміщення казино-бренду тут купити неможливо; згадка «Media Buys/Insertion Orders» стосується лише власних рекламних закупівель оператора.",
-  "brands_mentioned": [
-   {
-    "name": "Seneca Resorts & Casinos",
-    "normalized": "Seneca Resorts & Casinos",
-    "context": ""
-   },
-   {
-    "name": "iPlaySeneca",
-    "normalized": "iPlaySeneca",
-    "context": ""
-   }
-  ],
+  "reason": "Це офіційний сайт Seneca Resorts & Casinos (фізичні казино у штаті Нью-Йорк), а не афілійований огляд чи медіа. Розміщення казино-брендів тут купити не можна.",
+  "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "Телефон 1-877-8-SENECA; адреса: 310 Fourth Street, Niagara Falls, NY 14303",
-   "form": false
+   "form": false,
+   "other": "Phone 1-877-8-SENECA; link \"Contact Us\"; \"Media Buys/Insertion Orders\""
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Media Buys/Insertion Orders"
+  ]
  }
 }

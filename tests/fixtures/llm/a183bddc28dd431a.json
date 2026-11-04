@@ -1,23 +1,23 @@
 {
  "url": "https://www.slotozilla.com/ca/free-spins/150-free-spins",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:54+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:23+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 6895,
-  "output_tokens": 1124,
-  "cost_usd": 0.02503
+  "input_tokens": 7239,
+  "output_tokens": 907,
+  "cost_usd": 0.02355
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.95,
-  "reason": "Це афілейт-сторінка з оглядами та рейтингами казино й порівнянням бонусів на 150 безкоштовних спінів для Канади. У футері є посилання «Partnership» і «Contact Us», тож розміщення, імовірно, можливе.",
+  "confidence": 0.9,
+  "reason": "Сторінка — афілійована добірка казино з 150 безкоштовними спінами для Канади з таблицями бонусів і кнопками Claim. У футері є посилання Partnership та Contact Us, що вказує на можливість розміщення.",
   "brands_mentioned": [
    {
-    "name": "Slotman Casino",
-    "normalized": "Slotman Casino",
+    "name": "Slotman",
+    "normalized": "Slotman",
     "context": ""
    },
    {
@@ -36,8 +36,8 @@
     "context": ""
    },
    {
-    "name": "Oxi Casino",
-    "normalized": "Oxi Casino",
+    "name": "Oxi",
+    "normalized": "Oxi",
     "context": ""
    },
    {
@@ -51,8 +51,8 @@
     "context": ""
    },
    {
-    "name": "National Casino",
-    "normalized": "National Casino",
+    "name": "National",
+    "normalized": "National",
     "context": ""
    },
    {
@@ -91,28 +91,8 @@
     "context": ""
    },
    {
-    "name": "FastPay Casino",
-    "normalized": "FastPay Casino",
-    "context": ""
-   },
-   {
-    "name": "Spin City",
-    "normalized": "Spin City",
-    "context": ""
-   },
-   {
-    "name": "Verde Casino",
-    "normalized": "Verde Casino",
-    "context": ""
-   },
-   {
-    "name": "OnlyWin Casino",
-    "normalized": "OnlyWin Casino",
-    "context": ""
-   },
-   {
-    "name": "FS Casino",
-    "normalized": "FS Casino",
+    "name": "FastPay",
+    "normalized": "FastPay",
     "context": ""
    }
   ],
@@ -120,14 +100,14 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання Contact Us і Partnership (URL не вказано)",
-   "form": false
+   "form": false,
+   "other": "Footer links: Partnership, Contact Us"
   },
   "placement_signals": [
    "Partnership",
    "Contact Us",
-   "Exclusive Casino Bonuses",
-   "Top casino reviews"
+   "affiliate CTA Claim buttons",
+   "Exclusive Casino Bonuses"
   ]
  }
 }

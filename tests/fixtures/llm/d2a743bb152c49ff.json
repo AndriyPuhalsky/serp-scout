@@ -1,19 +1,19 @@
 {
  "url": "https://www.gambling.com/ca/online-casinos",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:16+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:05+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7017,
-  "output_tokens": 686,
-  "cost_usd": 0.020894
+  "input_tokens": 7365,
+  "output_tokens": 628,
+  "cost_usd": 0.02101
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.85,
-  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Канади: огляди, порівняння бонусів і кнопки «Play Now». Така сторінка підходить для купівлі розміщення казино-бренду.",
+  "confidence": 0.9,
+  "reason": "Це афілейт-сторінка з рейтингом найкращих онлайн-казино Канади з таблицями бонусів, відгуками та кнопками «Play Now». Сайт комерційно просуває казино, тому розміщення тут релевантне.",
   "brands_mentioned": [
    {
     "name": "JustCasino",
@@ -41,8 +41,8 @@
     "context": ""
    },
    {
-    "name": "Nine Casino",
-    "normalized": "Nine Casino",
+    "name": "Nine",
+    "normalized": "Nine",
     "context": ""
    },
    {
@@ -64,15 +64,93 @@
     "name": "Vegas Now",
     "normalized": "Vegas Now",
     "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "Lucky Spins",
+    "normalized": "Lucky Spins",
+    "context": ""
+   },
+   {
+    "name": "Party Casino",
+    "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "Spin Casino",
+    "normalized": "Spin Casino",
+    "context": ""
+   },
+   {
+    "name": "Stake",
+    "normalized": "Stake",
+    "context": ""
+   },
+   {
+    "name": "Lucky Ones",
+    "normalized": "Lucky Ones",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Luxury Casino",
+    "normalized": "Luxury Casino",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Zodiac Casino",
+    "normalized": "Zodiac Casino",
+    "context": ""
+   },
+   {
+    "name": "FanDuel",
+    "normalized": "FanDuel",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Lucky Days",
+    "normalized": "Lucky Days",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
    }
   ],
   "contact": {
    "email": null,
    "contact_page": "https://www.gdcgroup.com/contact",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Play Now affiliate CTA buttons",
+   "T&C Apply operator offers"
+  ]
  }
 }

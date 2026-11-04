@@ -1,4 +1,4 @@
-"""CLI serp-scout (typer): run · export · build-site · labels · stats."""
+"""CLI serp-scout (typer): run · export · build-site · resolve-redirects · labels · stats."""
 
 from __future__ import annotations
 
@@ -120,6 +120,29 @@ def build_site(demo: DemoOption = False) -> None:
     store.init_db(conn)
     path = write_report(conn, settings.keywords, settings.paths.report)
     console.print(f"report.json → {path}")
+
+
+@app.command("resolve-redirects")
+def resolve_redirects(demo: DemoOption = False) -> None:
+    """Розгорнути `google.*/goto` живим HTTP (без LLM): кінцевий URL і домен сайту в БД."""
+    import httpx
+
+    from serp_scout.fetch import resolve_final_url
+
+    settings = load_settings(demo=demo)
+    conn = store.connect(settings.paths.db)
+    store.init_db(conn)
+    rows = store.google_redirect_urls(conn)
+    if not rows:
+        console.print("Нерозгорнутих редиректів Google немає.")
+        return
+    headers = {"User-Agent": settings.fetch.user_agent}
+    with httpx.Client(timeout=15.0, follow_redirects=True, headers=headers) as client:
+        for r in rows:
+            final = resolve_final_url(client, r["url"])
+            ok = store.apply_final_url(conn, r["id"], final)
+            mark = "[green]→[/]" if ok else "[yellow]без змін[/]"
+            console.print(f"{r['id']}: {mark} {final or 'збій мережі'}")
 
 
 def _label_rows(

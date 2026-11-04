@@ -1,48 +1,48 @@
 {
  "url": "https://www.casinomeister.com/online-casinos/countries/ca/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:26+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:10+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7633,
-  "output_tokens": 870,
-  "cost_usd": 0.023966
+  "input_tokens": 7981,
+  "output_tokens": 640,
+  "cost_usd": 0.02236
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Сторінка є афілійованим рейтингом і оглядом казино для гравців з Канади з оцінками, бонусами та партнерськими посиланнями (Affiliate Disclosure). Це типовий майданчик для купівлі розміщення казино-бренду.",
+  "confidence": 0.85,
+  "reason": "Сторінка — афіліатний рейтинг канадських онлайн-казино з оцінками, бонусами, кнопками «Visit» та Affiliate Disclosure. Контактів для реклами на сторінці немає, лише посилання Contact у футері без href.",
   "brands_mentioned": [
    {
-    "name": "Thrill Casino",
-    "normalized": "Thrill Casino",
+    "name": "Thrill",
+    "normalized": "Thrill",
     "context": ""
    },
    {
-    "name": "Aerobet Casino",
-    "normalized": "Aerobet Casino",
+    "name": "Aerobet",
+    "normalized": "Aerobet",
     "context": ""
    },
    {
-    "name": "BiggerZ Casino",
-    "normalized": "BiggerZ Casino",
+    "name": "BiggerZ",
+    "normalized": "BiggerZ",
     "context": ""
    },
    {
-    "name": "GoKong Casino",
-    "normalized": "GoKong Casino",
+    "name": "GoKong",
+    "normalized": "GoKong",
     "context": ""
    },
    {
-    "name": "Slotoro Casino",
-    "normalized": "Slotoro Casino",
+    "name": "Slotoro",
+    "normalized": "Slotoro",
     "context": ""
    },
    {
-    "name": "Jackpotter Casino",
-    "normalized": "Jackpotter Casino",
+    "name": "Jackpotter",
+    "normalized": "Jackpotter",
     "context": ""
    },
    {
@@ -51,23 +51,33 @@
     "context": ""
    },
    {
-    "name": "BeonBet Casino",
-    "normalized": "BeonBet Casino",
+    "name": "BeonBet",
+    "normalized": "BeonBet",
     "context": ""
    },
    {
-    "name": "SlotsGem Casino",
-    "normalized": "SlotsGem Casino",
+    "name": "SlotsGem",
+    "normalized": "SlotsGem",
     "context": ""
    },
    {
-    "name": "Spinrise Casino",
-    "normalized": "Spinrise Casino",
+    "name": "Spinrise",
+    "normalized": "Spinrise",
+    "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
     "context": ""
    },
    {
     "name": "JackpotCity",
     "normalized": "JackpotCity",
+    "context": ""
+   },
+   {
+    "name": "Casumo",
+    "normalized": "Casumo",
     "context": ""
    }
   ],
@@ -75,13 +85,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання Contact, але URL не вказано",
-   "form": false
+   "form": false,
+   "other": "Посилання «Contact» у футері сайту"
   },
   "placement_signals": [
    "Affiliate Disclosure",
-   "Our content contains affiliate links",
-   "Visit / Terms Apply offers"
+   "affiliate links",
+   "commission if you sign up"
   ]
  }
 }

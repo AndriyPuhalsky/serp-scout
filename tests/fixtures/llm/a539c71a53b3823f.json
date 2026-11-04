@@ -1,19 +1,19 @@
 {
  "url": "https://esports.gg/ca/guides/betting/online-casinos/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:58+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:35+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7567,
-  "output_tokens": 591,
-  "cost_usd": 0.021044
+  "input_tokens": 7915,
+  "output_tokens": 452,
+  "cost_usd": 0.02035
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.85,
-  "reason": "Сторінка є афілійованим рейтингом «найкращих онлайн-казино Канади» з оглядами, бонусами та CTA-кнопками, тож на ній цілком реально купити розміщення. Хоча домен є кіберспортивним медіа, конкретна сторінка працює як комерційний огляд казино.",
+  "reason": "Сторінка на кіберспортивному медіа — комерційний рейтинг казино Канади з афілейт-кнопками «Claim» та бонусами, тож це review_affiliate, де можливе розміщення. Прямих сигналів продажу розміщень немає, але є посилання Contact Us.",
   "brands_mentioned": [
    {
     "name": "Neonstake",
@@ -45,14 +45,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання «Contact Us», але URL не наведено",
-   "form": false
+   "form": false,
+   "other": "Contact Us (посилання в футері, href не виявлено)"
   },
   "placement_signals": [
-   "Claim ... bonus CTA кнопки (афілійні посилання)",
-   "Contact Us",
-   "Methodology",
-   "Best Online Casinos ranking with top-5 comparison table"
+   "affiliate CTA buttons",
+   "Claim bonus buttons",
+   "Methodology page"
   ]
  }
 }

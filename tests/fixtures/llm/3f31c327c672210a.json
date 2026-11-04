@@ -1,19 +1,19 @@
 {
  "url": "https://www.sportsgamblingpodcast.com/2026/09/11/best-no-deposit-bonus-casinos-canada-free-spins-promo-codes-for-canadians/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:33+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:22+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7646,
-  "output_tokens": 485,
-  "cost_usd": 0.020142
+  "input_tokens": 7994,
+  "output_tokens": 431,
+  "cost_usd": 0.0203
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.8,
-  "reason": "Сторінка є афілійованим списком «найкращих казино» з no deposit бонусами для Канади, з промокодами та кнопками «CLAIM BONUS» — це типове місце для розміщення казино. У футері є посилання Advertise та Contact, що вказує на продаж реклами.",
+  "confidence": 0.9,
+  "reason": "Сторінка на подкаст-сайті — комерційний рейтинг казино з no deposit бонусами для Канади з промокодами та CTA-кнопками «CLAIM BONUS», тобто афілейт-контент. У футері є посилання «Advertise», що вказує на продаж рекламних розміщень.",
   "brands_mentioned": [
    {
     "name": "Bitstarz",
@@ -21,13 +21,13 @@
     "context": ""
    },
    {
-    "name": "7Bit Casino",
-    "normalized": "7Bit Casino",
+    "name": "7Bit",
+    "normalized": "7Bit",
     "context": ""
    },
    {
-    "name": "MIRAX Casino",
-    "normalized": "MIRAX Casino",
+    "name": "MIRAX",
+    "normalized": "MIRAX",
     "context": ""
    },
    {
@@ -40,14 +40,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є пункти меню Advertise і Contact, але URL не вказано",
-   "form": false
+   "form": false,
+   "other": "Footer links: Advertise, Contact"
   },
   "placement_signals": [
    "Advertise (footer link)",
-   "Contact (footer link)",
-   "CLAIM BONUS affiliate buttons",
-   "Casino ranking/shortlist"
+   "CLAIM BONUS affiliate CTA buttons",
+   "Contact (footer link)"
   ]
  }
 }

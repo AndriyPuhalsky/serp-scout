@@ -161,6 +161,10 @@ button { font: inherit; color: inherit; }
 .status[data-status="budget_exceeded"]::before { background: var(--warn); }
 .status[data-status="failed"]::before { background: var(--neg); }
 
+/* Посилання в шапці: методичка і презентація поруч із перемикачем теми. */
+.head-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: var(--s2) var(--s3); flex: 0 0 auto; }
+.head-link { font-size: 14px; white-space: nowrap; }
+
 .theme {
   flex: 0 0 auto;
   width: 36px; height: 36px;
@@ -424,6 +428,8 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   h1 { font-size: 24px; }
   .masthead { padding-top: var(--s4); }
+  .masthead-row { flex-wrap: wrap; }
+  .head-actions { order: -1; width: 100%; }
   .kpi { grid-template-columns: repeat(auto-fit, minmax(136px, 1fr)); gap: var(--s3) var(--s4); }
   .kpi-value { font-size: 24px; }
   main > section { padding: var(--s5) 0; }
@@ -438,7 +444,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 }
 
 @media print {
-  .theme, .filters, .table-bar, .skip, .scroll-hint { display: none !important; }
+  .theme, .head-link, .filters, .table-bar, .skip, .scroll-hint { display: none !important; }
   .sheet { overflow: visible; border: 0; background: none; }
   html.js .reveal { opacity: 1; transform: none; }
 }

@@ -1,128 +1,27 @@
 {
  "url": "https://bookies.com/ca/online-casinos/100-free-spins",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:55+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:29:10+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 8374,
-  "output_tokens": 964,
-  "cost_usd": 0.026387999999999998
+  "input_tokens": 3258,
+  "output_tokens": 188,
+  "cost_usd": 0.0084
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.85,
-  "reason": "Сторінка — афілійований огляд і порівняння бонусів із 100 безкоштовними спінами для канадських казино, з кнопками «Visit Site» і перевіреними пропозиціями. Це типовий майданчик для купівлі розміщення казино.",
-  "brands_mentioned": [
-   {
-    "name": "Vegas Now Casino",
-    "normalized": "Vegas Now Casino",
-    "context": ""
-   },
-   {
-    "name": "Spinjo Casino",
-    "normalized": "Spinjo Casino",
-    "context": ""
-   },
-   {
-    "name": "SlotsGem Casino",
-    "normalized": "SlotsGem Casino",
-    "context": ""
-   },
-   {
-    "name": "Sapphirebet Casino",
-    "normalized": "Sapphirebet Casino",
-    "context": ""
-   },
-   {
-    "name": "Casino Days",
-    "normalized": "Casino Days",
-    "context": ""
-   },
-   {
-    "name": "Betya Casino",
-    "normalized": "Betya Casino",
-    "context": ""
-   },
-   {
-    "name": "HellSpin Casino",
-    "normalized": "HellSpin Casino",
-    "context": ""
-   },
-   {
-    "name": "BluffBet Casino",
-    "normalized": "BluffBet Casino",
-    "context": ""
-   },
-   {
-    "name": "Beazt Casino",
-    "normalized": "Beazt Casino",
-    "context": ""
-   },
-   {
-    "name": "Imperial Wins Casino",
-    "normalized": "Imperial Wins Casino",
-    "context": ""
-   },
-   {
-    "name": "Dolfwin Casino",
-    "normalized": "Dolfwin Casino",
-    "context": ""
-   },
-   {
-    "name": "SafeCasino",
-    "normalized": "SafeCasino",
-    "context": ""
-   },
-   {
-    "name": "44Aces Casino",
-    "normalized": "44Aces Casino",
-    "context": ""
-   },
-   {
-    "name": "BetVictor Casino",
-    "normalized": "BetVictor Casino",
-    "context": ""
-   },
-   {
-    "name": "Caesars",
-    "normalized": "Caesars",
-    "context": ""
-   },
-   {
-    "name": "BetMGM",
-    "normalized": "BetMGM",
-    "context": ""
-   },
-   {
-    "name": "DraftKings",
-    "normalized": "DraftKings",
-    "context": ""
-   },
-   {
-    "name": "FanDuel",
-    "normalized": "FanDuel",
-    "context": ""
-   },
-   {
-    "name": "Party Casino",
-    "normalized": "Party Casino",
-    "context": ""
-   }
-  ],
+  "confidence": 0.5,
+  "reason": "Доступний лише сніпет Google: сторінка bookies.com — це порівняння бонусів із 100 безкоштовними спінами для Канади, типовий афілейт-рейтинг казино. Контактів і сигналів продажу розміщень у сніпеті немає.",
+  "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
-  "placement_signals": [
-   "Visit Site",
-   "Offers Verified",
-   "Casino Bonus Code",
-   "Casino Reviews"
-  ]
+  "placement_signals": []
  }
 }

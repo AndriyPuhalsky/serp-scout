@@ -1,35 +1,20 @@
 {
  "url": "https://en.wikipedia.org/wiki/Casino",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:52:06+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:24:56+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7272,
-  "output_tokens": 327,
-  "cost_usd": 0.017814
+  "input_tokens": 7690,
+  "output_tokens": 165,
+  "cost_usd": 0.01703
  },
  "label": {
   "site_type": "encyclopedia",
   "relevant_for_placement": false,
-  "confidence": 0.97,
-  "reason": "Це стаття Вікіпедії про казино як заклади для азартних ігор, тобто довідковий матеріал. Купити тут розміщення казино-бренду неможливо.",
+  "confidence": 0.98,
+  "reason": "Це стаття Вікіпедії про казино як заклад — довідковий енциклопедичний матеріал без рейтингів чи бонусів. Купити розміщення казино-бренду тут неможливо.",
   "brands_mentioned": [
-   {
-    "name": "Caesars Palace",
-    "normalized": "Caesars Palace",
-    "context": ""
-   },
-   {
-    "name": "Monte Carlo Casino",
-    "normalized": "Monte Carlo Casino",
-    "context": ""
-   },
-   {
-    "name": "The Venetian Macao",
-    "normalized": "The Venetian Macao",
-    "context": ""
-   },
    {
     "name": "Caesars",
     "normalized": "Caesars",
@@ -40,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

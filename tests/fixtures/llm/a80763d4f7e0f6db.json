@@ -1,23 +1,103 @@
 {
  "url": "https://www.thespike.gg/online-casinos/canada",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:49+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:38+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 0,
-  "output_tokens": 0,
-  "cost_usd": 0
+  "input_tokens": 7339,
+  "output_tokens": 1615,
+  "cost_usd": 0.03083
  },
  "label": {
-  "site_type": "other",
-  "relevant_for_placement": false,
-  "confidence": 0.0,
-  "reason": "Модель повернула відповідь не за схемою: 1 validation error for PageLabel\n  Invalid JSON: EOF while parsing a string at line 1 column 2661 [type=json_invalid, in",
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.85,
+  "reason": "Сторінка на esports-сайті з позначкою \"Contains commercial content\" містить великий рейтинг онлайн-казино для Канади з афілійованими кнопками \"Open ...\". Це комерційний рейтинг, тож розміщення тут імовірно можна купити.",
   "brands_mentioned": [
+   {
+    "name": "BC.Game",
+    "normalized": "BC.Game",
+    "context": ""
+   },
+   {
+    "name": "BetPanda",
+    "normalized": "BetPanda",
+    "context": ""
+   },
+   {
+    "name": "Roobet",
+    "normalized": "Roobet",
+    "context": ""
+   },
+   {
+    "name": "Punkz",
+    "normalized": "Punkz",
+    "context": ""
+   },
+   {
+    "name": "Winna",
+    "normalized": "Winna",
+    "context": ""
+   },
+   {
+    "name": "FS.",
+    "normalized": "FS.",
+    "context": ""
+   },
+   {
+    "name": "FieryPlay",
+    "normalized": "FieryPlay",
+    "context": ""
+   },
+   {
+    "name": "Acebet",
+    "normalized": "Acebet",
+    "context": ""
+   },
+   {
+    "name": "Metawin",
+    "normalized": "Metawin",
+    "context": ""
+   },
    {
     "name": "bet365",
     "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "BetFury",
+    "normalized": "BetFury",
+    "context": ""
+   },
+   {
+    "name": "Moonwin",
+    "normalized": "Moonwin",
+    "context": ""
+   },
+   {
+    "name": "Legendz",
+    "normalized": "Legendz",
+    "context": ""
+   },
+   {
+    "name": "Vega.bet",
+    "normalized": "Vega.bet",
+    "context": ""
+   },
+   {
+    "name": "Wintari",
+    "normalized": "Wintari",
+    "context": ""
+   },
+   {
+    "name": "22Bet",
+    "normalized": "22Bet",
+    "context": ""
+   },
+   {
+    "name": "Vave",
+    "normalized": "Vave",
     "context": ""
    },
    {
@@ -26,8 +106,118 @@
     "context": ""
    },
    {
+    "name": "5bet",
+    "normalized": "5bet",
+    "context": ""
+   },
+   {
+    "name": "Whale.io",
+    "normalized": "Whale.io",
+    "context": ""
+   },
+   {
+    "name": "WSM",
+    "normalized": "WSM",
+    "context": ""
+   },
+   {
     "name": "Betway",
     "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "Bwin",
+    "normalized": "Bwin",
+    "context": ""
+   },
+   {
+    "name": "Winz.io",
+    "normalized": "Winz.io",
+    "context": ""
+   },
+   {
+    "name": "Duelbits",
+    "normalized": "Duelbits",
+    "context": ""
+   },
+   {
+    "name": "Parimatch",
+    "normalized": "Parimatch",
+    "context": ""
+   },
+   {
+    "name": "1Red",
+    "normalized": "1Red",
+    "context": ""
+   },
+   {
+    "name": "20Bet",
+    "normalized": "20Bet",
+    "context": ""
+   },
+   {
+    "name": "Duel",
+    "normalized": "Duel",
+    "context": ""
+   },
+   {
+    "name": "JB.com",
+    "normalized": "JB.com",
+    "context": ""
+   },
+   {
+    "name": "ICE",
+    "normalized": "ICE",
+    "context": ""
+   },
+   {
+    "name": "Playbet.io",
+    "normalized": "Playbet.io",
+    "context": ""
+   },
+   {
+    "name": "Fairspin",
+    "normalized": "Fairspin",
+    "context": ""
+   },
+   {
+    "name": "BillyBets",
+    "normalized": "BillyBets",
+    "context": ""
+   },
+   {
+    "name": "JustCasino",
+    "normalized": "JustCasino",
+    "context": ""
+   },
+   {
+    "name": "Cloudbet",
+    "normalized": "Cloudbet",
+    "context": ""
+   },
+   {
+    "name": "Fast Slots",
+    "normalized": "Fast Slots",
+    "context": ""
+   },
+   {
+    "name": "Metaspins",
+    "normalized": "Metaspins",
+    "context": ""
+   },
+   {
+    "name": "V.Vegas",
+    "normalized": "V.Vegas",
+    "context": ""
+   },
+   {
+    "name": "Polestar",
+    "normalized": "Polestar",
+    "context": ""
+   },
+   {
+    "name": "Rollino",
+    "normalized": "Rollino",
     "context": ""
    }
   ],
@@ -35,9 +225,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Contains commercial content",
+   "affiliate CTA buttons (Open ...)",
+   "T&Cs apply"
+  ]
  }
 }

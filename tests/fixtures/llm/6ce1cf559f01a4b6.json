@@ -1,23 +1,23 @@
 {
  "url": "https://www.livescore.com/en-ca/online-casinos/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:33+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:26+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 6775,
-  "output_tokens": 559,
-  "cost_usd": 0.01914
+  "input_tokens": 7123,
+  "output_tokens": 539,
+  "cost_usd": 0.01964
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Сторінка LiveScore — афілійований рейтинг «найкращих онлайн-казино Канади» з оглядами, бонусами та порівнянням операторів. Є посилання на рекламну сторінку, тож розміщення, ймовірно, можна купити.",
+  "confidence": 0.85,
+  "reason": "Сторінка на спортивному медіасайті LiveScore є комерційним рейтингом найкращих онлайн-казино Канади з оглядами, бонусами та порівнянням, тобто афіліатним контентом. На сайті є посилання на рекламу (Advertise), тож розміщення можливе.",
   "brands_mentioned": [
    {
-    "name": "Lucky Vibe Casino",
-    "normalized": "Lucky Vibe Casino",
+    "name": "Lucky Vibe",
+    "normalized": "Lucky Vibe",
     "context": ""
    },
    {
@@ -26,13 +26,18 @@
     "context": ""
    },
    {
-    "name": "7Bit Casino",
-    "normalized": "7Bit Casino",
+    "name": "7Bit",
+    "normalized": "7Bit",
     "context": ""
    },
    {
-    "name": "Robocat Casino",
-    "normalized": "Robocat Casino",
+    "name": "Casumo",
+    "normalized": "Casumo",
+    "context": ""
+   },
+   {
+    "name": "Robocat",
+    "normalized": "Robocat",
     "context": ""
    },
    {
@@ -41,21 +46,32 @@
     "context": ""
    },
    {
-    "name": "Casumo",
-    "normalized": "Casumo",
+    "name": "LeoVegas",
+    "normalized": "LeoVegas",
+    "context": ""
+   },
+   {
+    "name": "North Casino",
+    "normalized": "North Casino",
+    "context": ""
+   },
+   {
+    "name": "JackpotCity",
+    "normalized": "JackpotCity",
     "context": ""
    }
   ],
   "contact": {
    "email": null,
-   "contact_page": "https://www.livescore.com/en/contact",
+   "contact_page": "https://livescoregroup.com/advertise/",
    "telegram": null,
-   "other": "Рекламна сторінка: https://livescoregroup.com/advertise/",
-   "form": false
+   "form": false,
+   "other": "Contact: https://www.livescore.com/en/contact"
   },
   "placement_signals": [
-   "Advertise: https://livescoregroup.com/advertise/",
-   "афілійований формат «best casinos» з бонусами операторів"
+   "Advertise link (livescoregroup.com/advertise)",
+   "commercial casino ranking on media site",
+   "casino promotions disclaimer"
   ]
  }
 }

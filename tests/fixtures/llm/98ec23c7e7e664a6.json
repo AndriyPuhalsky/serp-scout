@@ -1,19 +1,19 @@
 {
  "url": "https://www.bonus.ca/no-deposit-bonus",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:07+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:53+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7179,
-  "output_tokens": 898,
-  "cost_usd": 0.023337999999999998
+  "input_tokens": 7527,
+  "output_tokens": 770,
+  "cost_usd": 0.02275
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.93,
-  "reason": "Це афілейтна сторінка з рейтингом казино та порівнянням no deposit бонусів для Канади, з партнерськими кнопками та розкриттям реклами. Тут цілком реально купити розміщення казино.",
+  "reason": "Це афілійована сторінка з рейтингом казино з no deposit бонусами для Канади, з таблицею бонусів, оглядами та розкриттям реклами. Підходить для купівлі розміщення.",
   "brands_mentioned": [
    {
     "name": "Galactic Wins",
@@ -21,13 +21,13 @@
     "context": ""
    },
    {
-    "name": "Boo Casino",
-    "normalized": "Boo Casino",
+    "name": "Boo",
+    "normalized": "Boo",
     "context": ""
    },
    {
-    "name": "Barz Casino",
-    "normalized": "Barz Casino",
+    "name": "Barz",
+    "normalized": "Barz",
     "context": ""
    },
    {
@@ -36,13 +36,13 @@
     "context": ""
    },
    {
-    "name": "Casimba Casino",
-    "normalized": "Casimba Casino",
+    "name": "Casimba",
+    "normalized": "Casimba",
     "context": ""
    },
    {
-    "name": "Temple Nile Casino",
-    "normalized": "Temple Nile Casino",
+    "name": "Temple Nile",
+    "normalized": "Temple Nile",
     "context": ""
    },
    {
@@ -61,8 +61,8 @@
     "context": ""
    },
    {
-    "name": "Rollino Casino",
-    "normalized": "Rollino Casino",
+    "name": "Rollino",
+    "normalized": "Rollino",
     "context": ""
    },
    {
@@ -71,8 +71,8 @@
     "context": ""
    },
    {
-    "name": "SpinYoo",
-    "normalized": "SpinYoo",
+    "name": "Spinyoo",
+    "normalized": "Spinyoo",
     "context": ""
    },
    {
@@ -95,14 +95,13 @@
    "email": null,
    "contact_page": "https://www.bonus.ca/about-us/contact-us",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
-   "Affiliate Disclosure",
    "Ad Disclosure",
-   "BonusFinder partner casino list",
-   "green claim buttons"
+   "Affiliate Disclosure",
+   "editorial policy"
   ]
  }
 }

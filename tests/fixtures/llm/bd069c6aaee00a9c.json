@@ -1,26 +1,26 @@
 {
  "url": "https://casinority.com/ca/fast-payout-online-casinos/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:28+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:18+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 2922,
-  "output_tokens": 174,
-  "cost_usd": 0.0075840000000000005
+  "input_tokens": 3270,
+  "output_tokens": 168,
+  "cost_usd": 0.00822
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.5,
-  "reason": "За заголовком і сніпетом це афілійована сторінка з рейтингом казино з швидкими виплатами для Канади, тож вона підходить для розміщення. Доступний лише сніпет, тому впевненість обмежена.",
+  "reason": "Лише сніпет: заголовок вказує на рейтинг казино зі швидкими виплатами в Канаді, типова афілійована сторінка-огляд. Контактів і брендів у сніпеті немає.",
   "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

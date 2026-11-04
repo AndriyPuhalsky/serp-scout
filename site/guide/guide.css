@@ -1,0 +1,198 @@
+/* serp-scout — методичка для маркетолога (docs/07, розділ «Методичка»).
+   Токени, шрифти, чипи, таблиці й перемикач теми — зі звіту; тут лише кроки й макет читання. */
+@import url("../styles.css");
+
+/* ── Шапка ────────────────────────────────────────────────────────────────── */
+
+
+
+
+.brief {
+  margin: var(--s5) 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s3) var(--s5);
+  font-size: 14px;
+}
+.brief div { min-width: 0; }
+.brief dt { color: var(--muted); }
+.brief dd { margin: 2px 0 0; }
+
+/* ── Макет: одна колонка ≤ 760 px; на ≥ 1024 px — липкий зміст ліворуч ─────── */
+
+.guide-layout { padding-top: var(--s5); padding-bottom: var(--s6); }
+.guide main { max-width: 760px; min-width: 0; }
+
+.toc { font-size: 14px; margin-bottom: var(--s5); padding-bottom: var(--s4); border-bottom: 1px solid var(--line); }
+.toc h2 { font-size: 16px; margin-bottom: var(--s2); }
+.toc ol { list-style: none; margin: 0; padding: 0; columns: 2 220px; column-gap: var(--s5); }
+.toc li { break-inside: avoid; padding: 2px 0; }
+.toc a { text-decoration: none; display: inline-flex; gap: var(--s2); align-items: baseline; }
+.toc a:hover { text-decoration: underline; }
+.toc-n { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--accent); min-width: 2ch; text-align: right; }
+.toc-kt a, .toc-end a { padding-left: calc(2ch + var(--s2)); color: var(--muted); }
+
+@media (min-width: 1024px) {
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 760px);
+    gap: var(--s6);
+    justify-content: start;
+  }
+  .toc {
+    position: sticky; top: var(--s4);
+    align-self: start;
+    max-height: calc(100vh - 2 * var(--s4));
+    overflow-y: auto;
+    border-bottom: 0; margin-bottom: 0; padding-bottom: 0;
+  }
+  .toc ol { columns: auto; }
+}
+
+.note { font-size: 14px; color: var(--muted); margin: 0 0 var(--s5); }
+
+/* ── Крок ─────────────────────────────────────────────────────────────────── */
+
+.guide main > section.step,
+.guide main > section.tail {
+  padding: var(--s6) 0 0;
+  border-top: 0;
+  scroll-margin-top: var(--s4);
+}
+.guide main > section.step:first-of-type { padding-top: 0; }
+
+.step h2 {
+  display: flex; align-items: center; gap: var(--s3);
+  font-size: 20px; line-height: 1.3;
+  margin-bottom: var(--s3);
+}
+.step-num {
+  flex: 0 0 auto;
+  display: inline-grid; place-items: center;
+  width: 32px; height: 32px;
+  border: 1.5px solid var(--accent); border-radius: 50%;
+  color: var(--accent);
+  font: 14px/1 var(--mono); font-variant-numeric: tabular-nums;
+}
+.step > p, .tail > p { margin: 0 0 var(--s3); max-width: 68ch; }
+.step .action { font-weight: 600; }
+.step .action a { font-weight: 600; }
+
+/* «Має бути так» — рамка --line, скріншот у рамці 1 px, підпис із датою знімка. */
+.expect {
+  margin: var(--s4) 0;
+  padding: var(--s4);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+}
+.expect > p { margin: var(--s2) 0 0; }
+.expect > p.expect-title { margin: 0 0 var(--s2); font-family: var(--serif); font-size: 16px; color: var(--accent); }
+
+.shot { margin: 0 0 var(--s3); }
+.shot img {
+  display: block; max-width: 100%; height: auto;
+  padding: var(--s2);
+  border: 1px solid var(--line); border-radius: 2px;
+  background: #faf8f3; /* у темній темі — та сама світла картинка в рамці */
+}
+.shot figcaption { margin-top: var(--s1); font-size: 12px; color: var(--muted); }
+
+.kpi-explain { margin: var(--s3) 0 0; font-size: 14px; }
+.kpi-explain div { padding: var(--s1) 0; }
+.kpi-explain dt { display: inline; font-weight: 600; }
+.kpi-explain dt::after { content: " — "; font-weight: 400; }
+.kpi-explain dd { display: inline; margin: 0; }
+
+/* «Якщо не так →» — --warn, якір на крок 12. */
+.ifnot {
+  font-size: 14px;
+  padding-left: var(--s3);
+  border-left: 3px solid var(--warn);
+}
+.ifnot a { color: var(--ink); font-weight: 600; text-decoration-color: var(--warn); }
+
+/* Контрольна точка — картка з ✅ і числом, яке має зійтися. */
+.checkpoint {
+  margin: var(--s5) 0 0;
+  padding: var(--s4);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  scroll-margin-top: var(--s4);
+}
+.checkpoint h3 { font-size: 18px; margin-bottom: var(--s2); }
+.checkpoint p { margin: var(--s2) 0 0; font-size: 15px; }
+
+/* Схема кроку 0. */
+.flow-fig { margin: var(--s4) 0; }
+.flow {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: stretch; gap: var(--s2);
+}
+.flow li:not(.flow-arrow) {
+  flex: 1 1 130px; min-width: 0;
+  display: flex; flex-direction: column; gap: 2px;
+  padding: var(--s3);
+  border: 1px solid var(--line); border-radius: 4px;
+  font-size: 14px;
+}
+.flow strong { font-family: var(--serif); font-weight: 400; font-size: 16px; }
+.flow span { color: var(--muted); }
+.flow-arrow { display: flex; align-items: center; color: var(--accent); }
+.flow-fig figcaption { font-size: 12px; margin-top: var(--s1); }
+
+@media (max-width: 640px) {
+  .flow { flex-direction: column; }
+  .flow-arrow { justify-content: center; transform: rotate(90deg); }
+}
+
+/* Таблиці методички — стилі звіту, прокрутка всередині картки. */
+.step .sheet { margin: var(--s3) 0 var(--s4); }
+.types td:nth-child(2), .types td:first-child { white-space: nowrap; }
+.types td:nth-child(n+3) { min-width: 180px; }
+.template caption { text-align: left; padding: var(--s2) var(--s3); font-family: var(--serif); font-size: 16px; }
+.template td { height: 36px; min-width: 90px; }
+.template td:first-child { min-width: 0; width: 2ch; color: var(--muted); }
+.trouble td:first-child { font-weight: 600; min-width: 150px; }
+.trouble td { min-width: 160px; }
+
+/* <pre> з переносом: на 360 px сторінка не прокручується вбік. */
+.wrap-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.wrap-pre code { font-size: inherit; }
+.term { font-size: 12px; line-height: 1.35; }
+@media (min-width: 641px) { .term { white-space: pre; overflow-x: auto; } }
+
+.hints { margin: var(--s4) 0 0; }
+.hints details { border-top: 1px solid var(--line); padding: var(--s2) 0; }
+.hints details:last-child { border-bottom: 1px solid var(--line); }
+.hints summary { cursor: pointer; font-size: 15px; }
+.hints ol, .hints p { margin: var(--s2) 0 0; font-size: 14px; }
+.hints ol { padding-left: var(--s5); }
+
+.files { margin: var(--s3) 0 var(--s4); font-size: 14px; }
+.files div { padding: var(--s2) 0; border-top: 1px solid var(--line); }
+.files dd { margin: var(--s1) 0 0; }
+
+/* Хвіст: що вмієте, глосарій, що далі. */
+.tail h2 { font-size: 20px; margin-bottom: var(--s3); }
+.tail ul { margin: 0 0 var(--s3); padding-left: var(--s5); max-width: 68ch; }
+.tail li { margin-bottom: var(--s1); }
+.glossary { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--s2) var(--s5); font-size: 14px; }
+.glossary dt { font-weight: 600; }
+.glossary dd { margin: 2px 0 0; color: var(--muted); }
+
+/* ── Друк: без змісту й перемикача, розрив сторінки перед кожним кроком ─── */
+
+@media print {
+  .toc, .theme, .head-link, .skip { display: none !important; }
+  .guide-layout { display: block; padding-top: var(--s4); }
+  .guide main { max-width: none; }
+  .guide main > section.step { break-before: page; padding-top: 0; }
+  .guide main > section.step:first-of-type { break-before: auto; }
+  .shot img { max-width: 100%; break-inside: avoid; }
+  .expect, .checkpoint, .shot { break-inside: avoid; }
+  .hints details { display: block; }
+  .hints details > *:not(summary) { display: block; }
+  .term { white-space: pre-wrap; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 12px; color: var(--muted); }
+}

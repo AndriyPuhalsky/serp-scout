@@ -1,19 +1,19 @@
 {
  "url": "https://www.betiton.com/en-on/casino/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:27+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:52+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7283,
-  "output_tokens": 441,
-  "cost_usd": 0.018976
+  "input_tokens": 7631,
+  "output_tokens": 428,
+  "cost_usd": 0.01954
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Онтаріо та розкриттям партнерських комісій. Казино подані як партнери, тож тут цілком реально купити або домовитися про розміщення.",
+  "confidence": 0.9,
+  "reason": "Це афілійована сторінка з рейтингом «найкращих онлайн-казино Онтаріо» з оглядами, перевагами й недоліками та розкриттям афілійованих партнерств. Тут цілком можна купувати розміщення казино.",
   "brands_mentioned": [
    {
     "name": "Tooniebet",
@@ -39,19 +39,24 @@
     "name": "SlotsMagic",
     "normalized": "SlotsMagic",
     "context": ""
+   },
+   {
+    "name": "Royal Vegas",
+    "normalized": "Royal Vegas",
+    "context": ""
    }
   ],
   "contact": {
    "email": null,
    "contact_page": "https://www.betiton.com/en-on/contact-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
-   "affiliate partners",
-   "Betiton may earn a commission when you register through our links",
-   "affiliate disclosure"
+   "affiliate disclosure",
+   "casinos listed are our affiliate partners",
+   "may earn a commission"
   ]
  }
 }

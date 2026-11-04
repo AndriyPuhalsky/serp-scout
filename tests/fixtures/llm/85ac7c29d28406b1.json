@@ -1,26 +1,26 @@
 {
  "url": "https://bonuscasinocanada.org/fast-payout-casinos/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:14+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:41+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 5969,
-  "output_tokens": 210,
-  "cost_usd": 0.014038
+  "input_tokens": 6317,
+  "output_tokens": 235,
+  "cost_usd": 0.01498
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.85,
-  "reason": "Це афілійована сторінка зі списком казино з швидкими виплатами для канадських гравців на сайті bonuscasinocanada.org. Є посилання «Write for us», що вказує на можливість розміщення; конкретних брендів у наданому тексті немає.",
+  "confidence": 0.8,
+  "reason": "Сторінка є афілійованим оглядом швидких виплат в онлайн-казино Канади на сайті бонусів і казино-рейтингів. У наданому тексті немає таблиці брендів, але є посилання «Write for us», що вказує на продаж розміщень.",
   "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": "https://bonuscasinocanada.org/write-for-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "About Us: https://bonuscasinocanada.org/about-us/"
   },
   "placement_signals": [
    "Write for us"

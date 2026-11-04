@@ -1,19 +1,19 @@
 {
  "url": "https://www.timescolonist.com/spotlight/best-ontario-online-casinos-8642952",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:17+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:02+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7327,
-  "output_tokens": 741,
-  "cost_usd": 0.022064
+  "input_tokens": 7675,
+  "output_tokens": 695,
+  "cost_usd": 0.0223
  },
  "label": {
-  "site_type": "news_media",
+  "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це спонсорована стаття «Best online casinos in Ontario» на сайті газети Times Colonist, оплачена спонсором Lean Back Player, тож розміщення тут продаються. На сайті є сторінки Sponsored, Advertise та Sponsorships.",
+  "confidence": 0.95,
+  "reason": "Сторінка в розділі Spotlight Times Colonist — спонсорований рейтинг найкращих онлайн-казино Онтаріо, оплачений спонсором Lean Back Player. Це підтверджує, що медіа продає розміщення такого типу.",
   "brands_mentioned": [
    {
     "name": "JackpotCity",
@@ -68,17 +68,16 @@
   ],
   "contact": {
    "email": "dobee@timescolonist.com",
-   "contact_page": "https://www.timescolonist.com/other/contact-us",
+   "contact_page": "https://thetcedge.com/",
    "telegram": null,
-   "other": "Advertise: https://thetcedge.com/; Sponsorships PDF: https://www.vmcdn.ca/files/victoriatimescolonist/files/tcsponsorship.pdf",
-   "form": false
+   "form": false,
+   "other": "Sponsorships PDF: https://www.vmcdn.ca/files/victoriatimescolonist/files/tcsponsorship.pdf; Sponsored: https://www.timescolonist.com/sponsored"
   },
   "placement_signals": [
    "This sponsored content has been paid for by our sponsor, Lean Back Player",
-   "Sponsored page link",
-   "Advertise link (thetcedge.com)",
-   "Sponsorships PDF (tcsponsorship)",
-   "/spotlight/ section"
+   "Sponsored",
+   "Advertise",
+   "Sponsorships"
   ]
  }
 }

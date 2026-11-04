@@ -1,19 +1,19 @@
 {
  "url": "https://www.realmoneycasinoonline.ca/fastest-withdrawal-online-casino/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:42+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:13+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 6925,
-  "output_tokens": 589,
-  "cost_usd": 0.01974
+  "input_tokens": 7273,
+  "output_tokens": 549,
+  "cost_usd": 0.02004
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Сторінка є афілійованим оглядом казино з швидкими виплатами в Канаді: рейтинги, таблиця термінів виведення, посилання на огляди й бонуси. Це типовий майданчик для купівлі розміщення казино.",
+  "confidence": 0.85,
+  "reason": "Сторінка є афілійованим рейтингом казино зі швидкими виплатами в Канаді з таблицею оглядів і посиланнями на огляди казино. Це типовий review/affiliate-майданчик, де можна купити розміщення.",
   "brands_mentioned": [
    {
     "name": "JackpotCity",
@@ -26,13 +26,18 @@
     "context": ""
    },
    {
-    "name": "Golden Star Casino",
-    "normalized": "Golden Star Casino",
+    "name": "Golden Star",
+    "normalized": "Golden Star",
     "context": ""
    },
    {
-    "name": "Gaming Club Casino",
-    "normalized": "Gaming Club Casino",
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
+    "context": ""
+   },
+   {
+    "name": "Casino Moons",
+    "normalized": "Casino Moons",
     "context": ""
    },
    {
@@ -46,13 +51,8 @@
     "context": ""
    },
    {
-    "name": "Ruby Fortune",
-    "normalized": "Ruby Fortune",
-    "context": ""
-   },
-   {
-    "name": "Casino Moons",
-    "normalized": "Casino Moons",
+    "name": "Gaming Club",
+    "normalized": "Gaming Club",
     "context": ""
    }
   ],
@@ -60,8 +60,8 @@
    "email": null,
    "contact_page": "https://www.realmoneycasinoonline.ca/contact/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

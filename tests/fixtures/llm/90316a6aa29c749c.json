@@ -1,19 +1,19 @@
 {
  "url": "https://www.casinos.com/ca",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:01+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:38+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 5476,
-  "output_tokens": 421,
-  "cost_usd": 0.015162
+  "input_tokens": 5824,
+  "output_tokens": 397,
+  "cost_usd": 0.01562
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.85,
-  "reason": "Сторінка casinos.com/ca — рейтинг найкращих онлайн-казино Канади з порівнянням бонусів, вимог до відіграшу та посиланнями на огляди. Це типовий афіліатний сайт, де можливе розміщення казино.",
+  "confidence": 0.8,
+  "reason": "Сторінка casinos.com/ca — рейтинг найкращих онлайн-казино Канади з бонусами, вимогами до вейджера та посиланнями на огляди, тобто типовий афіліатний ресурс. Назви брендів у тексті сторінки не вказані, лише у сніпеті.",
   "brands_mentioned": [
    {
     "name": "Vegas Now",
@@ -45,8 +45,8 @@
    "email": null,
    "contact_page": "https://www.casinos.com/about-us#getintouch",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

@@ -1,19 +1,19 @@
 {
  "url": "https://www.playnow.com/casino/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:42+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:29+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 2911,
-  "output_tokens": 238,
-  "cost_usd": 0.008202000000000001
+  "input_tokens": 5407,
+  "output_tokens": 237,
+  "cost_usd": 0.01318
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
-  "confidence": 0.5,
-  "reason": "Це офіційна сторінка казино PlayNow, яким володіє BCLC і яке працює в Британській Колумбії. Це сайт самого оператора, тому купити розміщення тут неможливо. Доступний лише сніпет із Google.",
+  "confidence": 0.97,
+  "reason": "Це офіційний сайт оператора PlayNow (BCLC) з іграми, реєстрацією та бонусом для гравців Британської Колумбії. Це не сторонній ресурс, тому купити розміщення тут неможливо.",
   "brands_mentioned": [
    {
     "name": "PlayNow",
@@ -25,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "Live Chat; phone 1-877-706-6789; Contact us link"
   },
   "placement_signals": []
  }

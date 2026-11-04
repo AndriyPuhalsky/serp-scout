@@ -19,6 +19,11 @@ _GOOGLE_HOST_RE = re.compile(r"(^|\.)google\.[a-z.]{2,6}$")
 _GOOGLE_REDIRECT_PATHS = {"/goto", "/url"}
 
 
+def is_google_host(host: str) -> bool:
+    """True для `google.ca`, `www.google.com`, `google.co.uk` тощо."""
+    return bool(_GOOGLE_HOST_RE.search(host.lower()))
+
+
 def unwrap_google_redirect(url: str) -> str:
     """`google.*/goto?url=…`, `google.*/url?q=…`, `google.*/url?url=…` → цільова адреса (інакше як є)."""
     parts = urlsplit(url.strip())

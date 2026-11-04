@@ -1,19 +1,19 @@
 {
  "url": "https://casinobonusca.com/free-spins/100-spins-no-deposit/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:12+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:58+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7384,
-  "output_tokens": 560,
-  "cost_usd": 0.020368
+  "input_tokens": 7732,
+  "output_tokens": 529,
+  "cost_usd": 0.02075
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.95,
-  "reason": "Сторінка є афілійованим переліком бонусів із 100 безкоштовними спінами з партнерськими промокодами та посиланнями «Claim now» на казино. На сайті є сторінка «Advertise With Us», тож розміщення, імовірно, можна купити.",
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з добіркою бонусів на 100 безкоштовних спінів для канадських гравців, з промокодами та CTA-кнопками. На сайті є сторінка «Advertise With Us», тож розміщення, імовірно, продаються.",
   "brands_mentioned": [
    {
     "name": "CipherWins",
@@ -36,8 +36,8 @@
     "context": ""
    },
    {
-    "name": "Stupid Casino",
-    "normalized": "Stupid Casino",
+    "name": "Stupid",
+    "normalized": "Stupid",
     "context": ""
    },
    {
@@ -48,15 +48,15 @@
   ],
   "contact": {
    "email": null,
-   "contact_page": "https://casinobonusca.com/contact/",
+   "contact_page": "https://casinobonusca.com/advertise-with-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "Contact page: https://casinobonusca.com/contact/"
   },
   "placement_signals": [
    "Advertise With Us",
-   "https://casinobonusca.com/advertise-with-us/",
-   "affiliate links with exclusive bonus codes"
+   "affiliate CTA \"Claim now\"",
+   "exclusive promo codes"
   ]
  }
 }

@@ -1,19 +1,19 @@
 {
  "url": "https://www.betiton.com/en-ca/casino/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:58+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:27+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7501,
-  "output_tokens": 490,
-  "cost_usd": 0.019902
+  "input_tokens": 7849,
+  "output_tokens": 431,
+  "cost_usd": 0.02001
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка — афілійований рейтинг «best online casinos Canada» з оглядами, порівнянням бонусів і розкриттям партнерських комісій. Це типовий майданчик для купівлі розміщення казино.",
+  "reason": "Сторінка — афілійований рейтинг онлайн-казино для Канади з бонусами, таблицями ліцензій та розкриттям партнерських комісій. Це типовий review_affiliate, на якому можна купувати розміщення.",
   "brands_mentioned": [
    {
     "name": "Glorion",
@@ -39,19 +39,59 @@
     "name": "Beazt",
     "normalized": "Beazt",
     "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "Betway",
+    "normalized": "Betway",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
+    "context": ""
+   },
+   {
+    "name": "DraftKings",
+    "normalized": "DraftKings",
+    "context": ""
+   },
+   {
+    "name": "FanDuel",
+    "normalized": "FanDuel",
+    "context": ""
+   },
+   {
+    "name": "Caesars",
+    "normalized": "Caesars",
+    "context": ""
+   },
+   {
+    "name": "Bet99",
+    "normalized": "Bet99",
+    "context": ""
    }
   ],
   "contact": {
    "email": null,
    "contact_page": "https://www.betiton.com/en-ca/contact-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
+   "affiliate disclosure",
    "Some of the online casinos on this page are our affiliate partners",
-   "We may earn a commission when you sign up through our links",
-   "affiliate disclosure"
+   "We may earn a commission"
   ]
  }
 }

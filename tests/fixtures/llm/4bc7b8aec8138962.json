@@ -1,43 +1,43 @@
 {
  "url": "https://chipy.com/ca/bonus-blog/no-deposit-sign-up-bonus",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T06:00:17+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:29:29+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7899,
-  "output_tokens": 1183,
-  "cost_usd": 0.027628
+  "input_tokens": 8246,
+  "output_tokens": 1100,
+  "cost_usd": 0.02749
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Це афілійована сторінка Chipy з рейтингом казино та бонусів без депозиту для Канади, з партнерським розкриттям і бонус-кодами. У футері є посилання «Write for us», «Work with us» та «Advertiser disclosure», тож розміщення, імовірно, продаються.",
+  "reason": "Це афілійована сторінка з рейтингом бонусів без депозиту для Канади, з партнерськими посиланнями та Affiliate Disclosure. У футері є «Write for us», «Work with us» та «Advertiser disclosure», тож розміщення, імовірно, продаються.",
   "brands_mentioned": [
    {
-    "name": "Wagerwhale Casino",
-    "normalized": "Wagerwhale Casino",
+    "name": "Wagerwhale",
+    "normalized": "Wagerwhale",
     "context": ""
    },
    {
-    "name": "LunaLoots Casino",
-    "normalized": "LunaLoots Casino",
+    "name": "LunaLoots",
+    "normalized": "LunaLoots",
     "context": ""
    },
    {
-    "name": "Lemon Casino",
-    "normalized": "Lemon Casino",
+    "name": "Lemon",
+    "normalized": "Lemon",
     "context": ""
    },
    {
-    "name": "Magicianbet Casino",
-    "normalized": "Magicianbet Casino",
+    "name": "Magicianbet",
+    "normalized": "Magicianbet",
     "context": ""
    },
    {
-    "name": "Cherry Jackpot Casino",
-    "normalized": "Cherry Jackpot Casino",
+    "name": "Cherry Jackpot",
+    "normalized": "Cherry Jackpot",
     "context": ""
    },
    {
@@ -46,28 +46,28 @@
     "context": ""
    },
    {
-    "name": "Loonie Gold Casino",
-    "normalized": "Loonie Gold Casino",
+    "name": "Loonie Gold",
+    "normalized": "Loonie Gold",
     "context": ""
    },
    {
-    "name": "Voodoo Casino",
-    "normalized": "Voodoo Casino",
+    "name": "Voodoo",
+    "normalized": "Voodoo",
     "context": ""
    },
    {
-    "name": "Frogbet Casino",
-    "normalized": "Frogbet Casino",
+    "name": "Frogbet",
+    "normalized": "Frogbet",
     "context": ""
    },
    {
-    "name": "LuckyCapone Casino",
-    "normalized": "LuckyCapone Casino",
+    "name": "LuckyCapone",
+    "normalized": "LuckyCapone",
     "context": ""
    },
    {
-    "name": "Gambloria Casino",
-    "normalized": "Gambloria Casino",
+    "name": "Gambloria",
+    "normalized": "Gambloria",
     "context": ""
    },
    {
@@ -76,38 +76,38 @@
     "context": ""
    },
    {
-    "name": "FreakyBillion Casino",
-    "normalized": "FreakyBillion Casino",
+    "name": "FreakyBillion",
+    "normalized": "FreakyBillion",
     "context": ""
    },
    {
-    "name": "Wild Dice Casino",
-    "normalized": "Wild Dice Casino",
+    "name": "Wild Dice",
+    "normalized": "Wild Dice",
     "context": ""
    },
    {
-    "name": "RockstarWin Casino",
-    "normalized": "RockstarWin Casino",
+    "name": "RockstarWin",
+    "normalized": "RockstarWin",
     "context": ""
    },
    {
-    "name": "Sun Palace Casino",
-    "normalized": "Sun Palace Casino",
+    "name": "Sun Palace",
+    "normalized": "Sun Palace",
     "context": ""
    },
    {
-    "name": "Orca Spins Casino",
-    "normalized": "Orca Spins Casino",
+    "name": "Orca Spins",
+    "normalized": "Orca Spins",
     "context": ""
    },
    {
-    "name": "UpTown Pokies Casino",
-    "normalized": "UpTown Pokies Casino",
+    "name": "UpTown Pokies",
+    "normalized": "UpTown Pokies",
     "context": ""
    },
    {
-    "name": "Slotastic Casino",
-    "normalized": "Slotastic Casino",
+    "name": "Slotastic",
+    "normalized": "Slotastic",
     "context": ""
    }
   ],
@@ -115,15 +115,15 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання Contact Us, Write for us, Work with us та Telegram-канал, але URL не вказано",
-   "form": false
+   "form": false,
+   "other": "Footer links: Write for us, Work with us, Contact us, Advertiser disclosure"
   },
   "placement_signals": [
-   "WRITE FOR US",
-   "WORK WITH US",
-   "ADVERTISER DISCLOSURE",
+   "Write for us",
+   "Work with us",
+   "Advertiser disclosure",
    "Affiliate Disclosure",
-   "EDITORIAL GUIDELINES"
+   "Exclusive bonuses via chipy.com"
   ]
  }
 }

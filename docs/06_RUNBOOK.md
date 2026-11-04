@@ -33,6 +33,10 @@ Workflow `daily.yml`: cron 09:00 Київ (+ запасний 10:30), `workflow_
 
 Netlify → Add new site → Import from Git → репозиторій `serp-scout` → publish dir `site`, build command порожня (є `netlify.toml`). URL сайту: — (заповнити після І4). Деплой — автоматично на push у `main`.
 
+## Домен `google.*` у звіті
+
+Якщо в таблиці з'явився домен `google.ca` (goto-редирект з мобільної видачі): `uv run serp-scout resolve-redirects && make export site` (3 живі GET без LLM, повторний запуск — «Нерозгорнутих редиректів Google немає.»). У щоденному прогоні це робиться автоматично при завантаженні сторінки.
+
 ## Інциденти
 
 | Симптом | Причина | Дія |
@@ -45,3 +49,15 @@ Netlify → Add new site → Import from Git → репозиторій `serp-sc
 | Сайт не оновився | Netlify не побачив push або збірка впала | Netlify → Deploys; перевірити `site/data/report.json` у `main` |
 | Telegram мовчить | токен/chat_id або `TG_DEV=0` | `make notify-test`; перевірити Secrets |
 | Ключ дає < 10 органічних результатів (напр. «interac casino» — 2) | Google на mobile прибирає результати (`dmca_messages`), `num=20` не допомагає (перевірено 2026-11-04) | це факт видачі, не збій; у звіті ключ має менше рядків |
+
+## Скріншоти для методички (`make guide-shots`, І8)
+
+- `make guide-shots` читає `site/guide/shots.json` і пише `site/guide/img/*.png` з https://serp-scout.netlify.app через headless Chrome і CDP (`tools/guide_shots.mjs`; Node ≥ 22, без npm-залежностей). Шлях до Chrome — `CHROME_BIN`, типово `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`. Локально: `make serve`, потім `make guide-shots ARGS="--base http://127.0.0.1:8765"`. Один знімок: `ARGS="--only 05-"`.
+- Запис у `shots.json`: `{out, url, selector?, click?, wait?, scale?, maxHeight?}`; `click` викликає `.click()` у DOM (для `<select>` не підходить), світла тема і `prefers-reduced-motion` емулюються.
+- Код виходу 1 — якийсь знімок пропущено (рядок «ПРОПУЩЕНО» з причиною), 2 — немає Chrome або конфігу. PNG понад 200 КБ: менший `maxHeight` або `scale: 0.75`.
+- Відома вада: при кліпі по рядку таблиці (`tr`, `td.positions`) після кліку рамка зсувається вниз на ≈ 35–40 px (знімок захоплює сусідній рядок); обхід — брати секцію або окрему комірку (`td.why`, `.sheet` з `maxHeight`). На живому Netlify у знімок потрапляє бейдж «Powered…» (інжектується хостингом, у коді сайту його немає) — знімати з локального `--base http://127.0.0.1:8765`.
+- Якщо Chrome лишився після аварійного завершення: `pgrep -fl remote-debugging-port`, потім `pkill -f serp-scout-shots-`. Secrets не потрібні; в Actions не запускається (припущення: лише macOS, перевірено з Node 25 і Chrome 156).
+
+## Після зміни `prompt_version` (касети для `make demo`)
+
+1. Живий прогін з `--relabel` (вартість ≈ $1.4 на 77 URL). 2. `uv run python -m tests.refresh_cassettes` → «Касет записано: 77 (prompt_version=vN)». 3. `make demo ARGS="--refetch --relabel"` — демо-БД кешує мітки за `(url, version, text_hash)`, без прапорців візьме старі з кешу. Потім `uv run pytest -q` (тест версії касет) і порівняти `site/data/report.demo.json` з `report.json`.

@@ -1,19 +1,19 @@
 {
  "url": "https://www.onlinegambling.ca/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:09+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:36+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7351,
-  "output_tokens": 682,
-  "cost_usd": 0.021522
+  "input_tokens": 7699,
+  "output_tokens": 579,
+  "cost_usd": 0.02119
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Це афілійована сторінка з рейтингом і оглядами казино для Канади, з порівнянням бонусів та оцінками. Типовий review_affiliate-сайт, де можна купувати розміщення, але прямих сигналів продажу реклами на сторінці немає.",
+  "confidence": 0.85,
+  "reason": "Це афіліатний сайт з рейтингом найкращих онлайн-казино Канади, бонусами та оглядами кожного оператора. Підходить для купівлі розміщення, але прямих контактів для реклами на сторінці немає.",
   "brands_mentioned": [
    {
     "name": "JackpotCity",
@@ -36,13 +36,18 @@
     "context": ""
    },
    {
-    "name": "Starda Casino",
-    "normalized": "Starda Casino",
+    "name": "Starda",
+    "normalized": "Starda",
     "context": ""
    },
    {
     "name": "Wildz",
     "normalized": "Wildz",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
     "context": ""
    },
    {
@@ -61,17 +66,32 @@
     "context": ""
    },
    {
-    "name": "Tonybet",
-    "normalized": "Tonybet",
+    "name": "North Casino",
+    "normalized": "North Casino",
+    "context": ""
+   },
+   {
+    "name": "Stake",
+    "normalized": "Stake",
+    "context": ""
+   },
+   {
+    "name": "Zodiac Casino",
+    "normalized": "Zodiac Casino",
+    "context": ""
+   },
+   {
+    "name": "Captain Cooks",
+    "normalized": "Captain Cooks",
     "context": ""
    }
   ],
   "contact": {
    "email": null,
-   "contact_page": null,
+   "contact_page": "https://www.onlinegambling.ca/about.php",
    "telegram": null,
-   "other": "Є сторінка About us: https://www.onlinegambling.ca/about.php; виявлені email належать казино, а не сайту",
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

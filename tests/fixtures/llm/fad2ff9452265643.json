@@ -1,19 +1,19 @@
 {
  "url": "https://www.pokertube.com/ca/article/online-casinos",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:52:03+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:24:54+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7412,
-  "output_tokens": 497,
-  "cost_usd": 0.019794
+  "input_tokens": 7760,
+  "output_tokens": 397,
+  "cost_usd": 0.01949
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.85,
-  "reason": "Сторінка — рейтинг «15 найкращих онлайн-казино Канади» з оглядами, бонусами та кнопками переходу («Claim up to C$1,600»), що є типовим афілейтним оглядовим контентом. Це відповідний майданчик для розміщення казино-бренду.",
+  "reason": "Сторінка на медіасайті про покер — комерційний рейтинг «15 найкращих онлайн-казино Канади» з оглядами, бонусами та CTA-кнопками (афілійований контент), тож розміщення тут релевантне.",
   "brands_mentioned": [
    {
     "name": "JackpotCity",
@@ -31,8 +31,13 @@
     "context": ""
    },
    {
-    "name": "Mad Casino",
-    "normalized": "Mad Casino",
+    "name": "Mad",
+    "normalized": "Mad",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
     "context": ""
    }
   ],
@@ -40,9 +45,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання «Contact us» (URL не вказано) та згадка Telegram-каналу без хендла",
-   "form": false
+   "form": false,
+   "other": "Посилання «Contact us» у футері сайту"
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Contact us",
+   "GameCo Network",
+   "affiliate CTA buttons (Claim up to C$1,600)"
+  ]
  }
 }

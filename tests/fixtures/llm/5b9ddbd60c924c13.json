@@ -1,19 +1,19 @@
 {
  "url": "https://betterbonus.com/currency/cad/100-no-deposit/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:20+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:14+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 8133,
-  "output_tokens": 576,
-  "cost_usd": 0.022026
+  "input_tokens": 8481,
+  "output_tokens": 509,
+  "cost_usd": 0.02205
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Це афілієйтна сторінка з добіркою no-deposit бонусів і фріспінів для канадських гравців з промокодами та умовами відіграшу різних казино. Типовий майданчик для розміщення казино-брендів.",
+  "confidence": 0.85,
+  "reason": "Це афілійована сторінка з добіркою бонусів без депозиту для Канади: кодові бонуси, фріспіни та умови відіграшу, є Advertiser Disclosure. Підходить для купівлі розміщення.",
   "brands_mentioned": [
    {
     "name": "bCasino",
@@ -21,33 +21,38 @@
     "context": ""
    },
    {
-    "name": "Imperial Wins Casino",
-    "normalized": "Imperial Wins Casino",
+    "name": "Imperial Wins",
+    "normalized": "Imperial Wins",
     "context": ""
    },
    {
-    "name": "Stupid Casino",
-    "normalized": "Stupid Casino",
+    "name": "Stupid",
+    "normalized": "Stupid",
     "context": ""
    },
    {
-    "name": "FastOne Casino",
-    "normalized": "FastOne Casino",
+    "name": "FastOne",
+    "normalized": "FastOne",
     "context": ""
    },
    {
-    "name": "MrBet Casino",
-    "normalized": "MrBet Casino",
+    "name": "MrBet",
+    "normalized": "MrBet",
     "context": ""
    },
    {
-    "name": "Wolfy Casino",
-    "normalized": "Wolfy Casino",
+    "name": "Wolfy",
+    "normalized": "Wolfy",
     "context": ""
    },
    {
-    "name": "CrocoSlots Casino",
-    "normalized": "CrocoSlots Casino",
+    "name": "CrocoSlots",
+    "normalized": "CrocoSlots",
+    "context": ""
+   },
+   {
+    "name": "Bitstarz",
+    "normalized": "Bitstarz",
     "context": ""
    }
   ],
@@ -55,13 +60,12 @@
    "email": null,
    "contact_page": "https://betterbonus.com/contact/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
    "Advertiser Disclosure",
-   "exclusive bonus through our promotional link",
-   "Email Casino Bonus"
+   "exclusive bonus through our promotional link"
   ]
  }
 }

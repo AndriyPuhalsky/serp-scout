@@ -1,19 +1,19 @@
 {
  "url": "https://www.casino.com/ca/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:39+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:19+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7836,
-  "output_tokens": 1089,
-  "cost_usd": 0.026562
+  "input_tokens": 8219,
+  "output_tokens": 793,
+  "cost_usd": 0.02437
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка є афілійованим рейтингом «найкращих казино Канади» з бонусами та посиланнями «Play Now», а також розкриттям партнерських комісій. Є посилання «Get Listed», що вказує на можливість платного розміщення.",
+  "reason": "Сторінка є афілійованим рейтингом найкращих онлайн-казино Канади з бонусами, кнопками «Play Now» та афілійованим розкриттям. Футер містить посилання «Get Listed», що вказує на можливість платного розміщення.",
   "brands_mentioned": [
    {
     "name": "PowerPlay",
@@ -56,8 +56,8 @@
     "context": ""
    },
    {
-    "name": "SpinAway Casino",
-    "normalized": "SpinAway Casino",
+    "name": "SpinAway",
+    "normalized": "SpinAway",
     "context": ""
    },
    {
@@ -76,38 +76,18 @@
     "context": ""
    },
    {
-    "name": "Sia Casino",
-    "normalized": "Sia Casino",
-    "context": ""
-   },
-   {
-    "name": "Royal Ace Casino",
-    "normalized": "Royal Ace Casino",
-    "context": ""
-   },
-   {
-    "name": "Captain Jack Casino",
-    "normalized": "Captain Jack Casino",
-    "context": ""
-   },
-   {
-    "name": "21 Dukes Casino",
-    "normalized": "21 Dukes Casino",
-    "context": ""
-   },
-   {
-    "name": "Stake",
-    "normalized": "Stake",
-    "context": ""
-   },
-   {
-    "name": "BetMGM",
-    "normalized": "BetMGM",
+    "name": "Sia",
+    "normalized": "Sia",
     "context": ""
    },
    {
     "name": "theScore Bet",
     "normalized": "theScore Bet",
+    "context": ""
+   },
+   {
+    "name": "BetMGM",
+    "normalized": "BetMGM",
     "context": ""
    },
    {
@@ -125,13 +105,14 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання «Get Listed» (URL не вказано)",
-   "form": false
+   "form": false,
+   "other": "Посилання «Get Listed» у футері"
   },
   "placement_signals": [
    "Get Listed",
-   "Affiliate Disclosure: partner with trusted online casinos",
-   "affiliate links and commissions from partner casinos"
+   "Affiliate Disclosure",
+   "partner with trusted online casinos",
+   "affiliate links and may receive commissions"
   ]
  }
 }

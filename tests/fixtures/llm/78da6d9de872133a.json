@@ -1,26 +1,26 @@
 {
  "url": "https://www.squawka.com/ca/online-casinos/free-spins/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:23+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:48+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7151,
-  "output_tokens": 211,
-  "cost_usd": 0.016412
+  "input_tokens": 7499,
+  "output_tokens": 187,
+  "cost_usd": 0.01687
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.8,
-  "reason": "Сторінка Squawka Canada — афілійований гайд про безкоштовні спіни без депозиту для канадських гравців, з порівняннями бонусів і посиланнями на огляди казино. Це типовий review/affiliate-ресурс, де можливе розміщення казино-брендів, але конкретних казино на сторінці не названо.",
+  "reason": "Сторінка Squawka — це комерційний гайд про безкоштовні спіни в Канаді в рамках афілійованого розділу казино на спортивному медіасайті. Конкретних брендів казино в тексті немає, контактів для реклами теж не знайдено.",
   "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

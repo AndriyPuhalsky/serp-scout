@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Як користуватись serp-scout — методичка для маркетолога</title>
+  <meta name="description" content="Покрокова методичка: як за 15–20 хвилин дібрати зі звіту serp-scout п'ять сайтів для розміщення з контактом і причиною.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%231f6f4a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./guide.css">
+  <script>
+    // Тема до першого кадру (без блимання): збережена або системна. Той самий ключ localStorage, що у звіті.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "dark" && t !== "light") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body class="guide">
+  <a class="skip" href="#step-0">До першого кроку</a>
+
+  <header class="masthead wrap">
+    <div class="masthead-row">
+      <div>
+        <h1>Як користуватись serp-scout</h1>
+        <p class="lede">Методичка для маркетолога й афіліат-менеджера. Пройдемо звіт разом, крок за кроком, і наприкінці ви складете власний список сайтів для розміщення на сьогодні.</p>
+      </div>
+      <div class="head-actions">
+        <a class="head-link" href="../">До звіту</a>
+        <button id="theme-toggle" class="theme" type="button" aria-label="Перемкнути тему" title="Тема">
+          <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <dl class="brief">
+      <div><dt>Для кого</dt><dd>Ви працюєте в Chrome і Excel, терміналу не відкривали, слово «SERP» чули.</dd></div>
+      <div><dt>Що вмітимете</dt><dd>Самі за 10 хвилин дібрати зі свіжого звіту 5 сайтів для розміщення з контактом і причиною, пояснити колезі, чому саме вони, і перевірити, що звіт сьогоднішній.</dd></div>
+      <div><dt>Скільки часу</dt><dd>15–20 хвилин на кроки 0–12. Крок 13 для охочих, ще 10 хвилин.</dd></div>
+      <div><dt>Що потрібно</dt><dd>Chrome, відкрита вкладка зі звітом <a href="https://serp-scout.netlify.app">serp-scout.netlify.app</a>, Excel або Google Таблиці.</dd></div>
+    </dl>
+  </header>
+
+  <div class="wrap guide-layout">
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Зміст</h2>
+      <ol>
+        <li><a href="#step-0"><span class="toc-n">0</span>Що serp-scout робить за вас</a></li>
+        <li><a href="#step-1"><span class="toc-n">1</span>Перевірте, що звіт свіжий</a></li>
+        <li><a href="#step-2"><span class="toc-n">2</span>Прочитайте підсумок</a></li>
+        <li><a href="#step-3"><span class="toc-n">3</span>Залиште лише релевантні сайти</a></li>
+        <li class="toc-kt"><a href="#kt1">Контрольна точка 1</a></li>
+        <li><a href="#step-4"><span class="toc-n">4</span>Зрозумійте тип сайту</a></li>
+        <li><a href="#step-5"><span class="toc-n">5</span>Прочитайте, чому модель так вирішила</a></li>
+        <li><a href="#step-6"><span class="toc-n">6</span>Знайдіть контакт</a></li>
+        <li class="toc-kt"><a href="#kt2">Контрольна точка 2</a></li>
+        <li><a href="#step-7"><span class="toc-n">7</span>Подивіться, за якими ключами сайт у топі</a></li>
+        <li><a href="#step-8"><span class="toc-n">8</span>Перевірте конкурентів</a></li>
+        <li><a href="#step-9"><span class="toc-n">9</span>Складіть список на сьогодні</a></li>
+        <li class="toc-kt"><a href="#kt3">Контрольна точка 3</a></li>
+        <li><a href="#step-10"><span class="toc-n">10</span>Заберіть дані в Excel</a></li>
+        <li><a href="#step-11"><span class="toc-n">11</span>Як звіт оновлюється сам</a></li>
+        <li><a href="#step-12"><span class="toc-n">12</span>Якщо щось не так</a></li>
+        <li><a href="#step-13"><span class="toc-n">13</span>Для просунутих: запустіть самі</a></li>
+        <li class="toc-end"><a href="#done">Що вмієте тепер</a></li>
+        <li class="toc-end"><a href="#glossary">Глосарій</a></li>
+        <li class="toc-end"><a href="#next">Що далі</a></li>
+      </ol>
+    </nav>
+
+    <main id="main">
+      <p class="note">Знімки екрана в методичці зроблено 2026-11-04. Звіт оновлюється щодня, тож числа у вас будуть інші, а кнопки, колонки й фільтри — на тих самих місцях. Якщо ви повертаєтесь до методички завтра, почніть з кроку 1, а потім переходьте до останньої пройденої контрольної точки.</p>
+
+      <!-- Крок 0 -->
+      <section class="step" id="step-0" aria-labelledby="step-0-title">
+        <h2 id="step-0-title"><span class="step-num"><span class="sr-only">Крок </span>0</span>Що serp-scout робить за вас</h2>
+        <p>Щоранку serp-scout робить те, на що у вас пішов би день: шукає в Google десять запитів казино-ніші так, як їх бачить людина з телефона в Канаді, бере перші десять результатів за кожним і читає кожну сторінку. Для кожної сторінки модель Claude вирішує, чи можна там розмістити бренд, які казино там уже згадано і кому писати.</p>
+        <figure class="flow-fig">
+          <ol class="flow" aria-label="Як працює serp-scout">
+            <li><strong>Google</strong><span>топ-10 за кожним ключем, мобільна видача, Канада</span></li>
+            <li aria-hidden="true" class="flow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            <li><strong>Таблиця</strong><span>ключ, позиція, адреса сторінки, домен, дата</span></li>
+            <li aria-hidden="true" class="flow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            <li><strong>Claude</strong><span>читає сторінку: тип сайту, чи підходить для розміщення, бренди, контакт</span></li>
+            <li aria-hidden="true" class="flow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            <li><strong>Звіт</strong><span>сайт, який ви відкриваєте; оновлюється щодня</span></li>
+          </ol>
+          <figcaption class="muted">Шлях даних: від пошуку в Google до звіту.</figcaption>
+        </figure>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <p>Ви можете переказати колезі одним реченням: «serp-scout щодня бере топ-10 мобільного Google по Канаді за нашими ключами і показує, на яких із цих сайтів можна розміститись і кому писати».</p>
+        </div>
+      </section>
+
+      <!-- Крок 1 -->
+      <section class="step" id="step-1" aria-labelledby="step-1-title">
+        <h2 id="step-1-title"><span class="step-num"><span class="sr-only">Крок </span>1</span>Відкрийте звіт і перевірте, що він свіжий</h2>
+        <p>Список, складений за вчорашньою видачею, може вже не збігатися з Google. Тому щоразу ми починаємо з дати.</p>
+        <p class="action">Спершу відкрийте в Chrome <a href="https://serp-scout.netlify.app">serp-scout.netlify.app</a>. Тепер прочитайте рядок під заголовком: «Останній прогін …, статус …, вартість …».</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/01-header.png" alt="Шапка звіту: заголовок «serp-scout — куди йти з розміщенням», під ним рядок «Останній прогін», дата, статус «ок» із зеленою крапкою і вартість у доларах" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Шапка звіту.</figcaption>
+          </figure>
+          <p>Після слів «Останній прогін» стоїть сьогоднішня дата, статус «ок» із зеленою крапкою. Вартість — скільки коштувала сьогоднішня перевірка; для вашої роботи вона не важлива.</p>
+        </div>
+        <p class="ifnot"><a href="#step-12">Якщо не так →</a> дата вчорашня, статус «частково», «бюджет вичерпано» або «збій».</p>
+      </section>
+
+      <!-- Крок 2 -->
+      <section class="step" id="step-2" aria-labelledby="step-2-title">
+        <h2 id="step-2-title"><span class="step-num"><span class="sr-only">Крок </span>2</span>Прочитайте підсумок</h2>
+        <p>П'ять чисел під шапкою кажуть, скільки роботи на сьогодні. Числа «добігають» до свого значення за пів секунди — дочекайтесь, поки вони зупиняться.</p>
+        <p class="action">Тепер прочитайте п'ять плиток зліва направо.</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/02-kpi.png" alt="Рядок із п'яти плиток: ключів, унікальних URL, релевантних для розміщення з відсотком поруч, брендів у видачі, сторінок із контактом" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Плитки підсумку.</figcaption>
+          </figure>
+          <dl class="kpi-explain">
+            <div><dt>ключів</dt><dd>скільки пошукових запитів serp-scout перевіряє щодня.</dd></div>
+            <div><dt>унікальних URL</dt><dd>скільки різних сторінок знайшлось у топ-10 за всіма ключами разом; сторінка, що стоїть за двома ключами, рахується один раз.</dd></div>
+            <div><dt>релевантних для розміщення</dt><dd>скільки з цих сторінок підходять, щоб розмістити бренд; відсоток поруч — їхня частка від усіх сторінок. Це число знадобиться в кроці 3.</dd></div>
+            <div><dt>брендів у видачі</dt><dd>скільки різних казино-брендів згадано на цих сторінках.</dd></div>
+            <div><dt>сторінок із контактом</dt><dd>де модель знайшла спосіб зв'язатися: email, сторінку контакту, Telegram або форму.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Крок 3 -->
+      <section class="step" id="step-3" aria-labelledby="step-3-title">
+        <h2 id="step-3-title"><span class="step-num"><span class="sr-only">Крок </span>3</span>Залиште лише релевантні сайти</h2>
+        <p>Головна таблиця «Куди йти з розміщенням» уміє показувати всі сторінки з топ-10 або лише ті, де можна розміститись. Нам потрібні другі.</p>
+        <p class="action">Прокрутіть до таблиці «Куди йти з розміщенням». Над нею, у рядку фільтрів, знайдіть галочку «лише релевантні» — вона ввімкнена щоразу, коли ви відкриваєте звіт. Тепер прочитайте рядок над таблицею: «Показано … із … URL».</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/03-filter.png" alt="Блок «Куди йти з розміщенням»: фільтри кластер, ключ, тип сторінки, бренд, поле пошуку по домену, увімкнена галочка «лише релевантні», рядок «Показано … із … URL» і перші рядки таблиці" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Фільтри і початок таблиці.</figcaption>
+          </figure>
+          <p>Галочка «лише релевантні» стоїть, поруч із «Показано» видно сіру плашку «лише релевантні». Перше число в «Показано … із … URL» — скільки сторінок у таблиці зараз, друге — скільки їх усього.</p>
+        </div>
+        <p>Зверніть увагу на поле «пошук по домену»: якщо ввести туди частину адреси, наприклад <code>casino</code>, у таблиці лишаться лише домени з цим словом. Спробуйте, а потім зітріть текст — контрольна точка рахується без пошуку. Якщо змінили кілька фільтрів і заплутались, натисніть «Скинути фільтри» над таблицею. Ця кнопка з'являється лише тоді, коли змінено хоч один фільтр або введено текст у пошук; у звичайному стані її немає.</p>
+        <p class="ifnot"><a href="#step-12">Якщо не так →</a> замість таблиці напис «Даних поки немає».</p>
+      </section>
+
+      <aside class="checkpoint" id="kt1" aria-labelledby="kt1-title">
+        <h3 id="kt1-title"><span aria-hidden="true">✅</span> Контрольна точка 1</h3>
+        <p><strong>Дія.</strong> Порівняйте перше число в «Показано … із … URL» із плиткою «релевантних для розміщення».</p>
+        <p><strong>Має зійтися.</strong> Числа однакові, а друге число в «Показано … із … URL» дорівнює плитці «унікальних URL».</p>
+        <p><strong>Якщо не сходиться.</strong> Ймовірно, увімкнено ще якийсь фільтр або в полі пошуку лишився текст. Тоді над таблицею видно кнопку «Скинути фільтри» — натисніть її і порівняйте знову.</p>
+      </aside>
+
+      <!-- Крок 4 -->
+      <section class="step" id="step-4" aria-labelledby="step-4-title">
+        <h2 id="step-4-title"><span class="step-num"><span class="sr-only">Крок </span>4</span>Зрозумійте тип сайту</h2>
+        <p>Колонка «Тип» показує, що це за сайт. Від типу залежить, чи писати туди взагалі.</p>
+        <div class="sheet">
+          <table class="types">
+            <caption class="sr-only">Типи сайтів у звіті і що з ними робити</caption>
+            <thead>
+              <tr><th scope="col">Чип у звіті</th><th scope="col">Код у CSV</th><th scope="col">Що це</th><th scope="col">Що робити</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="chip">оглядач/афіліат</span></td><td><code>review_affiliate</code></td><td>рейтинги й огляди казино, добірки бонусів; заробляють на партнерських посиланнях</td><td>головна ціль: пишіть про розміщення</td></tr>
+              <tr><td><span class="chip">медіа</span></td><td><code>news_media</code></td><td>новинний сайт або журнал, іноді зі спонсорськими добірками</td><td>пишіть, якщо в «чому» є Sponsored або Advertise</td></tr>
+              <tr><td><span class="chip">оператор казино</span></td><td><code>casino_operator</code></td><td>сайт самого казино</td><td>пропускайте: це конкурент, а не майданчик</td></tr>
+              <tr><td><span class="chip">енциклопедія</span></td><td><code>encyclopedia</code></td><td>Вікіпедія та подібні довідники</td><td>пропускайте</td></tr>
+              <tr><td><span class="chip">регулятор</span></td><td><code>regulator_gov</code></td><td>державний або ліцензійний орган</td><td>пропускайте</td></tr>
+              <tr><td><span class="chip">магазин застосунків</span></td><td><code>app_store</code></td><td>App Store, Google Play</td><td>пропускайте</td></tr>
+              <tr><td><span class="chip">форум</span></td><td><code>forum_community</code></td><td>форуми й спільноти</td><td>пропускайте</td></tr>
+              <tr><td><span class="chip">інше</span></td><td><code>other</code></td><td>не вписалось у жоден тип</td><td>відкрийте «чому» (крок 5) і вирішіть самі</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="action">Тепер відкрийте список «тип сторінки» над таблицею і виберіть «оглядач/афіліат». Подивіться, як змінилось «Показано … із … URL», а потім поверніть «усі типи».</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/04-types.png" alt="Перший рядок таблиці: домен, чип типу сайту, зелена крапка релевантності з відсотком, чипи брендів, контакт, позиції і кнопка «чому»" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Рядок таблиці з чипом типу.</figcaption>
+          </figure>
+          <p>У списку «тип сторінки» лише ті типи, що трапились у сьогоднішній видачі. Прикрийте таблицю вище долонею і назвіть два типи, які ви пропускаєте. Перевірте себе за колонкою «Що робити».</p>
+        </div>
+      </section>
+
+      <!-- Крок 5 -->
+      <section class="step" id="step-5" aria-labelledby="step-5-title">
+        <h2 id="step-5-title"><span class="step-num"><span class="sr-only">Крок </span>5</span>Прочитайте, чому модель так вирішила</h2>
+        <p>Перш ніж писати сайту, варто знати, на чому тримається рішення моделі. Пояснення сховане за кнопкою «чому».</p>
+        <p class="action">У першому рядку таблиці натисніть «чому» в останній колонці.</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/05-reason.png" alt="Розгорнуте «чому» першого рядка таблиці: пояснення українською, під ним заголовок сторінки, впевненість, джерело тексту, сигнали розміщення і краща позиція" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Розгорнуте «чому».</figcaption>
+          </figure>
+          <p>Під кнопкою з'явилось пояснення українською, а під ним — «заголовок», «впевненість», «джерело тексту», «сигнали розміщення» і «краща позиція». Знайдіть у «сигналах розміщення» фразу зі сторінки, яка підказує, що розміщення продаються: Advertise, Sponsored, Write for us або згадку про комісію.</p>
+        </div>
+        <p>Зверніть увагу на колонку «Релевантність»: зелена крапка — сайт підходить, червона — ні, жовта — модель не впевнена, порожнє коло — сторінку ще не розмічено. Якщо впевненість нижче 60 %, біля домену стоїть позначка «перевірити»: такий сайт відкрийте й оцініть самі.</p>
+        <p class="ifnot"><a href="#step-12">Якщо не так →</a> у «чому» написано, що сторінка ще не пройшла розмітку.</p>
+      </section>
+
+      <!-- Крок 6 -->
+      <section class="step" id="step-6" aria-labelledby="step-6-title">
+        <h2 id="step-6-title"><span class="step-num"><span class="sr-only">Крок </span>6</span>Знайдіть контакт</h2>
+        <p>Колонка «Контакт» показує, куди писати. Там буває email (відкриває лист), слово «сторінка» (відкриває сторінку зв'язку або Advertise), @ім'я в Telegram, «форма на сайті» або «—», якщо модель контакту не знайшла. Іноді там стоїть звичайний текст без посилання, наприклад «Footer link: Get Listed»: модель побачила контакт у тексті сторінки, але прямого посилання немає. Тоді відкрийте домен і знайдіть цей пункт у меню або футері сайту.</p>
+        <p class="action">Знайдіть у колонці «Контакт» перший рядок, де стоїть підкреслене посилання — email або слово «сторінка», — і натисніть на нього.</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/06-contact.png" alt="Верх таблиці розміщення: у колонці «Контакт» видно адреси email, посилання «сторінка» і прочерки там, де контакт не знайдено" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Колонка «Контакт».</figcaption>
+          </figure>
+          <p>Email відкриває новий лист у вашій пошті з адресою в полі «Кому». «Сторінка» відкриває сайт у новій вкладці. Звіт лишається на місці.</p>
+        </div>
+        <p>Якщо в рядку «—», натисніть на домен у першій колонці, прокрутіть сторінку сайту донизу і шукайте Advertise, Contact або Write for us — найчастіше вони у футері.</p>
+      </section>
+
+      <aside class="checkpoint" id="kt2" aria-labelledby="kt2-title">
+        <h3 id="kt2-title"><span aria-hidden="true">✅</span> Контрольна точка 2</h3>
+        <p><strong>Дія.</strong> Подивіться, що відкрилось після кліку на контакт.</p>
+        <p><strong>Має зійтися.</strong> Відкрито новий лист з адресою сайту в полі «Кому» або вкладку зі сторінкою зв'язку чи Advertise того самого домену.</p>
+        <p><strong>Якщо не сходиться.</strong> Якщо email нічого не відкрив, у Chrome не налаштовано поштову програму. Клацніть на адресі правою кнопкою, виберіть «Копіювати електронну адресу» і вставте її в пошту вручну.</p>
+      </aside>
+
+      <!-- Крок 7 -->
+      <section class="step" id="step-7" aria-labelledby="step-7-title">
+        <h2 id="step-7-title"><span class="step-num"><span class="sr-only">Крок </span>7</span>Подивіться, за якими ключами сайт у топі</h2>
+        <p>Сайт, що стоїть високо за кількома ключами, бачить більше людей. Колонка «Позиції» показує це для кожного ключа: <code>#3: 2</code> означає «за ключем номер 3 сайт сьогодні на другому місці». Лінія поруч — спарклайн, історія позиції за днями: перше місце вгорі, сьогоднішня точка підсвічена зеленим. Поки днів мало, замість лінії буде одна точка.</p>
+        <p class="action">Розгорніть «Ключі» над таблицею і знайдіть, який запит ховається за першим номером у колонці «Позиції» першого рядка.</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/07-positions.png" alt="Блок «Історія позицій»: для кожного ключа три релевантні домени і їхні позиції в колонках за датами прогонів" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Блок «Історія позицій».</figcaption>
+          </figure>
+          <p>Ви знайшли запит у списку «Ключі»; поруч у дужках — його кластер, групу схожих запитів (її можна вибрати у фільтрі «кластер»). Якщо навести мишу на номер ключа в таблиці, запит з'явиться підказкою.</p>
+          <p>Тепер прокрутіть до блоку «Історія позицій» під брендами. Там для кожного ключа — три найвищі релевантні домени і їхня позиція в кожен день прогону; коли днів стане більше, з'явиться колонка «Зміна».</p>
+          <p>Перевірте себе: вчора сайт був третім, сьогодні другий. Це покращення — менше число означає вище в Google, і на спарклайні в таблиці лінія йде вгору.</p>
+        </div>
+      </section>
+
+      <!-- Крок 8 -->
+      <section class="step" id="step-8" aria-labelledby="step-8-title">
+        <h2 id="step-8-title"><span class="step-num"><span class="sr-only">Крок </span>8</span>Перевірте конкурентів</h2>
+        <p>Сайт, що вже рекламує казино-конкурентів, найімовірніше продасть місце і вам. Блок «Бренди в топ-10» показує, кого згадують найчастіше: довжина бару — кількість сторінок, де є бренд.</p>
+        <p class="action">Прокрутіть до «Бренди в топ-10», запам'ятайте верхній бренд і виберіть його у фільтрі «бренд» над таблицею.</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/08-brands.png" alt="Блок «Бренди в топ-10»: горизонтальні бари брендів, праворуч від кожного число сторінок" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Бренди в топ-10.</figcaption>
+          </figure>
+          <p>Ви можете назвати три верхні бренди. Після вибору у фільтрі «бренд» у таблиці лишились тільки сторінки, де цей бренд згадано, а над таблицею з'явилась плашка «бренд: …».</p>
+        </div>
+        <p>Наостанок натисніть «Скинути фільтри», щоб повернути таблицю до звичайного вигляду.</p>
+      </section>
+
+      <!-- Крок 9 -->
+      <section class="step" id="step-9" aria-labelledby="step-9-title">
+        <h2 id="step-9-title"><span class="step-num"><span class="sr-only">Крок </span>9</span>Складіть список на сьогодні</h2>
+        <p>Тепер ви все це робите самі. Завдання: виберіть із сьогоднішнього звіту 5 сайтів для розміщення і заповніть таблицю нижче.</p>
+        <p class="action">Скопіюйте шапку таблиці в Excel або Google Таблиці і заповніть п'ять рядків. Кожен сайт має бути релевантним, мати контакт (не «—») і причину з «чому».</p>
+        <div class="sheet">
+          <table class="template">
+            <caption>П'ять сайтів на сьогодні</caption>
+            <thead>
+              <tr><th scope="col">#</th><th scope="col">Домен</th><th scope="col">Тип</th><th scope="col">Контакт</th><th scope="col">Бренди-конкуренти</th><th scope="col">Чому</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">1</td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td class="mono">2</td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td class="mono">3</td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td class="mono">4</td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td class="mono">5</td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Шапка для вставки в Excel (табуляцією між колонками):</p>
+        <pre class="wrap-pre"><code>Домен	Тип	Контакт	Бренди-конкуренти	Чому</code></pre>
+        <div class="hints">
+          <details>
+            <summary>Підказка 1: де що шукати</summary>
+            <p>Релевантність — крок 3, тип — крок 4, причина — крок 5, контакт — крок 6, бренди — крок 8.</p>
+          </details>
+          <details>
+            <summary>Підказка 2: порядок дій з пропусками</summary>
+            <ol>
+              <li>Перевірте дату в шапці.</li>
+              <li>Переконайтесь, що стоїть галочка «…».</li>
+              <li>У фільтрі «тип сторінки» виберіть «…».</li>
+              <li>Ідіть по рядках згори вниз: пропускайте ті, де в колонці «Контакт» стоїть «…» або біля домену є позначка «…».</li>
+              <li>Для кожного рядка, що лишився, відкрийте «…» і перекажіть причину одним реченням.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Підказка 3: повний порядок дій</summary>
+            <ol>
+              <li>Перевірте, що після «Останній прогін» стоїть сьогоднішня дата і статус «ок».</li>
+              <li>Переконайтесь, що стоїть галочка «лише релевантні».</li>
+              <li>У фільтрі «тип сторінки» виберіть «оглядач/афіліат».</li>
+              <li>Ідіть по рядках згори вниз — таблиця вже впорядкована за кращою позицією. Пропускайте рядки з «—» у «Контакт» і з позначкою «перевірити».</li>
+              <li>Для кожного рядка, що лишився, натисніть «чому» і перекажіть причину одним реченням.</li>
+              <li>Перепишіть у таблицю домен, тип, контакт і 2–3 бренди з чипів у колонці «Бренди».</li>
+              <li>Зупиніться на п'ятому рядку.</li>
+            </ol>
+          </details>
+        </div>
+      </section>
+
+      <aside class="checkpoint" id="kt3" aria-labelledby="kt3-title">
+        <h3 id="kt3-title"><span aria-hidden="true">✅</span> Контрольна точка 3</h3>
+        <p><strong>Дія.</strong> Для кожного домену з вашої таблиці введіть його в «пошук по домену» при ввімкненій галочці «лише релевантні».</p>
+        <p><strong>Має зійтися.</strong> 5 рядків; кожен домен знаходиться в таблиці з зеленою крапкою; у кожного є контакт і заповнена колонка «Чому».</p>
+        <p><strong>Якщо не сходиться.</strong> Домен, який не знайшовся, замініть наступним рядком таблиці. Якщо не вистачає сайтів з контактом, візьміть рядок з «—» і знайдіть контакт на самому сайті, як у кроці 6.</p>
+        <p class="muted">Готово: це і є результат методички. Покажіть таблицю колезі й поясніть кожен рядок словами з «чому».</p>
+      </aside>
+
+      <!-- Крок 10 -->
+      <section class="step" id="step-10" aria-labelledby="step-10-title">
+        <h2 id="step-10-title"><span class="step-num"><span class="sr-only">Крок </span>10</span>Заберіть дані в Excel</h2>
+        <p>Усе, що є у звіті, щодня зберігається ще й у CSV-файлах — їх можна відкрити в Excel, відсортувати і відфільтрувати по-своєму.</p>
+        <dl class="files">
+          <div><dt><code>labels.csv</code></dt><dd>одна сторінка — один рядок: <code>url</code>, <code>domain</code>, <code>site_type</code> (коди з таблиці кроку 4), <code>relevant</code> (1 — так, 0 — ні), <code>confidence</code> (впевненість від 0 до 1), <code>brands</code> (через «;»), <code>contact_email</code>, <code>contact_page</code>, <code>reason</code> (те саме, що в «чому»), <code>needs_review</code> (1 — «перевірити»), <code>placement_signals</code>.</dd></div>
+          <div><dt><code>serp_&lt;дата&gt;.csv</code></dt><dd>видача за день: <code>keyword</code>, <code>position</code>, <code>url</code>, <code>domain</code>, <code>run_date</code>.</dd></div>
+          <div><dt><code>history.csv</code></dt><dd>позиції за всі дні: <code>keyword</code>, <code>url</code>, <code>run_date</code>, <code>position</code>.</dd></div>
+        </dl>
+        <p class="action">Відкрийте <a href="https://github.com/AndriyPuhalsky/serp-scout/tree/main/data/export">теку data/export на GitHub</a>, натисніть <code>labels.csv</code> і завантажте його кнопкою зі стрілкою вниз (Download raw file) праворуч над вмістом. В Excel відкрийте файл через «Файл → Імпорт», тип «CSV», кодування «Unicode (UTF-8)».</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/09-github-export.png" alt="Сторінка GitHub з текою data/export: файли history.csv, labels.csv, serp з датою в назві і summary.txt" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Тека data/export на GitHub.</figcaption>
+          </figure>
+          <p>В Excel файл розкладено по колонках, текст у колонці <code>reason</code> читається українською.</p>
+        </div>
+        <p class="ifnot"><a href="#step-12">Якщо не так →</a> замість українських літер у <code>reason</code> незрозумілі символи.</p>
+      </section>
+
+      <!-- Крок 11 -->
+      <section class="step" id="step-11" aria-labelledby="step-11-title">
+        <h2 id="step-11-title"><span class="step-num"><span class="sr-only">Крок </span>11</span>Як звіт оновлюється сам</h2>
+        <p>Щодня о 09:00 за Києвом GitHub Actions (сервіс, який запускає програми за розкладом) робить новий прогін: збирає видачу, розмічає нові сторінки, зберігає дані в репозиторій. За кілька хвилин Netlify публікує оновлений звіт, а в Telegram приходить зведення.</p>
+        <p class="action">Відкрийте <a href="https://github.com/AndriyPuhalsky/serp-scout/actions">сторінку Actions</a> і подивіться на верхній запуск «Щоденний прогін».</p>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <figure class="shot">
+            <img src="img/10-actions.png" alt="Сторінка GitHub Actions: список запусків «Щоденний прогін» із зеленою галочкою, гілкою main і часом запуску" loading="lazy">
+            <figcaption>Знімок 2026-11-04. Запуски GitHub Actions.</figcaption>
+          </figure>
+          <p>У верхнього запуску «Щоденний прогін» зелена галочка, а праворуч — Today (сьогодні) і час запуску. Зведення в Telegram має такий вигляд:</p>
+          <pre class="wrap-pre tg"><code>✅ serp-scout: прогін за &lt;дата&gt; завершено
+serp-scout · прогін &lt;дата&gt; · статус: ok
+SERP-виклики: … · URL: … (нових …)
+Релевантних для розміщення: … з … (…%) · брендів: …
+LLM-виклики: … · вартість прогону: $…
+Помилок: …
+Сайт: https://serp-scout.netlify.app
+Run: &lt;посилання на запуск&gt;</code></pre>
+        </div>
+        <p class="ifnot"><a href="#step-12">Якщо не так →</a> червоний хрестик у запуску або зведення не прийшло.</p>
+      </section>
+
+      <!-- Крок 12 -->
+      <section class="step" id="step-12" aria-labelledby="step-12-title">
+        <h2 id="step-12-title"><span class="step-num"><span class="sr-only">Крок </span>12</span>Якщо щось не так</h2>
+        <p>Знайдіть свій симптом у лівій колонці. Коли пишете власнику звіту, додайте знімок екрана і посилання на запуск в Actions.</p>
+        <div class="sheet">
+          <table class="trouble">
+            <caption class="sr-only">Симптом, що робити і кому писати</caption>
+            <thead>
+              <tr><th scope="col">Симптом</th><th scope="col">Що робити</th><th scope="col">Кому писати</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Дата в шапці вчорашня</td><td>До 09:00 за Києвом це нормально: сьогоднішній прогін ще не відбувся. Після 11:00 відкрийте Actions (крок 11) і подивіться верхній запуск.</td><td>Власнику звіту, якщо після 11:00 дата так і не змінилась.</td></tr>
+              <tr><td>Статус «частково» або «бюджет вичерпано»</td><td>Частина сторінок не розмічена. Працюйте з рядками, що мають крапку в «Релевантність»; рядки «не розмічено» потраплять у наступний прогін. Деталі — під шапкою, у «Помилки прогону».</td><td>Власнику звіту, якщо так два дні поспіль.</td></tr>
+              <tr><td>Статус «збій» або червоний хрестик в Actions</td><td>Сьогоднішній прогін не завершився, дані можуть бути неповними. Поки його не перезапустили, звіряйте дату в шапці і складайте список обережно.</td><td>Власнику звіту одразу.</td></tr>
+              <tr><td>Напис «Даних поки немає»</td><td>Звіт саме оновлюється. Зачекайте дві хвилини й оновіть сторінку.</td><td>Власнику звіту, якщо напис лишився через 10 хвилин.</td></tr>
+              <tr><td>Зведення в Telegram не прийшло</td><td>Перевірте дату в шапці звіту. Якщо вона сьогоднішня, звіт оновився — загубилось лише повідомлення.</td><td>Власнику звіту, щоб перевірив бота.</td></tr>
+              <tr><td>Біля домену позначка «перевірити», крапка жовта</td><td>Модель не впевнена. Відкрийте «чому» і сам сайт, вирішіть самі. До списку беріть лише після перевірки.</td><td>Нікому: це очікувана поведінка.</td></tr>
+              <tr><td>Сайт за Cloudflare: у «чому» джерело тексту <code>snippet</code>, сигналів мало</td><td>Модель бачила лише короткий опис із Google. Відкрийте сайт у Chrome і шукайте Advertise або Contact у футері.</td><td>Нікому: такі сайти не пускають роботів.</td></tr>
+              <tr><td>У «Контакт» стоїть «—»</td><td>Відкрийте домен і шукайте Advertise, Contact або Write for us унизу сторінки.</td><td>Нікому.</td></tr>
+              <tr><td>Email у «Контакт» нічого не відкриває</td><td>Клацніть правою кнопкою і виберіть «Копіювати електронну адресу».</td><td>Нікому.</td></tr>
+              <tr><td>У CSV незрозумілі символи замість українських літер</td><td>Відкрийте файл через «Файл → Імпорт» з кодуванням «Unicode (UTF-8)», а не подвійним кліком.</td><td>Нікому.</td></tr>
+              <tr><td>Числа на знімках у методичці інші, ніж у звіті</td><td>Так і має бути: звіт оновлюється щодня. Звіряйте розташування кнопок і колонок, а не числа.</td><td>Нікому.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Крок 13 -->
+      <section class="step" id="step-13" aria-labelledby="step-13-title">
+        <h2 id="step-13-title"><span class="step-num"><span class="sr-only">Крок </span>13</span>Для просунутих: запустіть serp-scout самі</h2>
+        <p>Цей крок необов'язковий. Ви запустите serp-scout на своєму Mac у демо-режимі: без ключів, без інтернету для пошуку і безкоштовно — на збережених прикладах видачі й відповідей моделі.</p>
+        <p>Знадобляться Термінал (Програми → Утиліти → Термінал), <code>git</code> і <code>uv</code>. Перевірте, що вони є: команди <code>git --version</code> і <code>uv --version</code> мають надрукувати номер версії. Якщо <code>uv</code> немає, встановіть його за <a href="https://docs.astral.sh/uv/getting-started/installation/">інструкцією uv</a>.</p>
+        <p class="action">Скопіюйте в Термінал по черзі:</p>
+        <pre class="wrap-pre"><code>git clone https://github.com/AndriyPuhalsky/serp-scout.git
+cd serp-scout
+make install
+make demo</code></pre>
+        <div class="expect">
+          <p class="expect-title">Має бути так</p>
+          <p>Наприкінці <code>make demo</code> друкує підсумок прогону. Реальний вивід першого запуску на свіжій копії, 2026-11-04:</p>
+          <pre class="wrap-pre term"><code>uv run serp-scout run --offline
+SERP «online casino canada»: 10 результатів
+SERP «real money online casino canada»: 10 результатів
+SERP «best online casino canada»: 10 результатів
+SERP «top 10 online casinos canada»: 10 результатів
+SERP «new online casinos canada»: 9 результатів
+SERP «interac casino»: 2 результатів
+SERP «fast payout casino canada»: 9 результатів
+SERP «no deposit bonus canada»: 10 результатів
+SERP «free spins no deposit canada»: 10 результатів
+SERP «online casino ontario»: 10 результатів
+Сторінки: 77 оброблено, 10 без тексту/зі збоєм
+Розмітка: 77 нових, 0 з кешу, $0.0000
+            Прогін 2026-11-04 (offline)
+┌─────────────────────────────────┬────────────────┐
+│ SERP-виклики                    │             10 │
+│ URL усього / нових              │        77 / 77 │
+│ Сторінок оброблено / без тексту │        77 / 10 │
+│ LLM-викликів нових / з кешу     │         77 / 0 │
+│ Токени вхід / вихід             │ 505515 / 38697 │
+│ Вартість прогону                │        $0.0000 │
+│ Помилок                         │              0 │
+│ Статус                          │             ok │
+└─────────────────────────────────┴────────────────┘
+report.json → …/serp-scout/site/data/report.demo.json
+Перегляд демо: make serve → http://127.0.0.1:8765/?data=data/report.demo.json</code></pre>
+          <p>Рядок «Вартість прогону» показує <code>$0.0000</code>, «Статус» — <code>ok</code>. Демо-дані пишуться окремо і не чіпають справжній звіт. Якщо запустити <code>make demo</code> вдруге, розмітка візьметься з кешу: «0 нових, 77 з кешу». Щоб подивитись їх у браузері, виконайте <code>make serve</code> і відкрийте адресу з останнього рядка.</p>
+        </div>
+        <p>Справжній прогін — <code>make run</code>. Він ходить у Google через SerpApi і в Claude, тому потребує ключів <code>SERPAPI_KEY</code> і <code>ANTHROPIC_API_KEY</code> у файлі <code>.env</code> і коштує грошей. Межу витрат на модель за прогін задає <code>LLM_BUDGET_USD</code>: коли її досягнуто, прогін зупиняє розмітку зі статусом «бюджет вичерпано». Ключі видає власник звіту; без них <code>make run</code> не запускайте.</p>
+      </section>
+
+      <section class="tail" id="done" aria-labelledby="done-title">
+        <h2 id="done-title">Що вмієте тепер</h2>
+        <ul>
+          <li>Перевіряти, що звіт сьогоднішній, і знати, де подивитись, чи пройшов прогін.</li>
+          <li>Залишати в таблиці лише релевантні сайти й відсіювати непотрібні типи.</li>
+          <li>Читати пояснення моделі й сигнали розміщення, знаходити контакт.</li>
+          <li>Оцінювати сайт за позиціями і брендами конкурентів.</li>
+          <li>За 10 хвилин складати список «5 сайтів на сьогодні» і забирати дані в Excel.</li>
+        </ul>
+        <p>Перевірте себе на іншому завданні, без підказок: складіть список із трьох сайтів, де згадано другий за частотою бренд з «Бренди в топ-10», і в кожного є email.</p>
+      </section>
+
+      <section class="tail" id="glossary" aria-labelledby="glossary-title">
+        <h2 id="glossary-title">Глосарій</h2>
+        <dl class="glossary">
+          <div><dt>SERP</dt><dd>сторінка результатів пошуку Google.</dd></div>
+          <div><dt>Топ-10</dt><dd>перші десять звичайних (не рекламних) результатів за запитом.</dd></div>
+          <div><dt>Ключ</dt><dd>пошуковий запит, за яким перевіряємо видачу, наприклад «online casino canada».</dd></div>
+          <div><dt>Кластер</dt><dd>група схожих ключів; фільтр «кластер» показує їх разом.</dd></div>
+          <div><dt>Позиція</dt><dd>місце сторінки у видачі; 1 — найвище.</dd></div>
+          <div><dt>Релевантний</dt><dd>сайт, на якому можна розмістити бренд: оглядач, рейтинг, спонсорська добірка.</dd></div>
+          <div><dt>Афіліат</dt><dd>сайт, що заробляє на партнерських посиланнях на казино.</dd></div>
+          <div><dt>Оператор</dt><dd>саме казино; для розміщення не підходить.</dd></div>
+          <div><dt>Сигнали розміщення</dt><dd>фрази зі сторінки, які кажуть, що реклама продається: Advertise, Sponsored, Write for us.</dd></div>
+          <div><dt>Впевненість</dt><dd>наскільки модель певна свого рішення; нижче 60 % — позначка «перевірити».</dd></div>
+          <div><dt>Спарклайн</dt><dd>маленька лінія історії позиції за днями; перше місце вгорі.</dd></div>
+          <div><dt>Прогін</dt><dd>один щоденний запуск serp-scout.</dd></div>
+          <div><dt>CSV</dt><dd>таблиця в текстовому файлі; відкривається в Excel.</dd></div>
+          <div><dt>GitHub Actions</dt><dd>сервіс, що запускає serp-scout щодня за розкладом.</dd></div>
+          <div><dt>Netlify</dt><dd>хостинг, на якому живе звіт.</dd></div>
+        </dl>
+      </section>
+
+      <section class="tail" id="next" aria-labelledby="next-title">
+        <h2 id="next-title">Що далі</h2>
+        <ul>
+          <li><a href="../">Відкрийте звіт</a> і складіть список на сьогодні вже без методички.</li>
+          <li>Як рахується релевантність і скільки коштує прогін — блок «Методика і вартість» унизу звіту.</li>
+          <li>Як усе влаштовано всередині — <a href="https://github.com/AndriyPuhalsky/serp-scout#readme">README репозиторію</a>.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="wrap foot">
+    <p>serp-scout — методичка для маркетолога. Знімки екрана зроблено 2026-11-04.</p>
+  </footer>
+
+  <script>
+    // Перемикач теми: той самий ключ localStorage "theme", що й у звіті.
+    (function () {
+      var btn = document.getElementById("theme-toggle");
+      if (!btn) return;
+      function apply(t, persist) {
+        document.documentElement.setAttribute("data-theme", t);
+        btn.setAttribute("aria-label", t === "dark" ? "Увімкнути світлу тему" : "Увімкнути темну тему");
+        btn.setAttribute("title", t === "dark" ? "Світла тема" : "Темна тема");
+        if (persist) { try { localStorage.setItem("theme", t); } catch (e) {} }
+      }
+      apply(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light", false);
+      btn.addEventListener("click", function () {
+        apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+      });
+    })();
+  </script>
+</body>
+</html>

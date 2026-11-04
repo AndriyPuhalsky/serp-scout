@@ -1,19 +1,19 @@
 {
  "url": "https://www.betvictor.com/en-ca/casino",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:18+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:52+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 2860,
-  "output_tokens": 221,
-  "cost_usd": 0.00793
+  "input_tokens": 3208,
+  "output_tokens": 200,
+  "cost_usd": 0.00842
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
-  "confidence": 0.45,
-  "reason": "Це сторінка казино на офіційному сайті оператора BetVictor із вітальним бонусом, а не незалежний огляд. Доступний лише сніпет, тому розміщення тут купити не можна.",
+  "confidence": 0.5,
+  "reason": "Це власна сторінка оператора BetVictor з вітальною пропозицією та іграми казино, а не сайт третьої сторони. Розмістити тут рекламу для афіліатів неможливо.",
   "brands_mentioned": [
    {
     "name": "BetVictor",
@@ -25,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

@@ -1,124 +1,27 @@
 {
  "url": "https://www.askgamblers.com/online-casinos/countries/ca",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:39+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:59+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7702,
-  "output_tokens": 1124,
-  "cost_usd": 0.026644
+  "input_tokens": 3259,
+  "output_tokens": 190,
+  "cost_usd": 0.00842
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афіліатний рейтинг онлайн-казино для Канади з алгоритмом CasinoRank, посиланнями на огляди та кнопками «Visit casino», є розкриття афіліатної інформації. У футері є розділ «Partnership», тож розміщення бренду тут реально купити.",
-  "brands_mentioned": [
-   {
-    "name": "Zula Casino",
-    "normalized": "Zula Casino",
-    "context": ""
-   },
-   {
-    "name": "Sportzino Casino",
-    "normalized": "Sportzino Casino",
-    "context": ""
-   },
-   {
-    "name": "Fortune Wins Casino",
-    "normalized": "Fortune Wins Casino",
-    "context": ""
-   },
-   {
-    "name": "High 5 Casino",
-    "normalized": "High 5 Casino",
-    "context": ""
-   },
-   {
-    "name": "WOW Vegas Casino",
-    "normalized": "WOW Vegas Casino",
-    "context": ""
-   },
-   {
-    "name": "Yay Casino",
-    "normalized": "Yay Casino",
-    "context": ""
-   },
-   {
-    "name": "Punt.com Casino",
-    "normalized": "Punt.com Casino",
-    "context": ""
-   },
-   {
-    "name": "Bitstarz",
-    "normalized": "Bitstarz",
-    "context": ""
-   },
-   {
-    "name": "Run4Win",
-    "normalized": "Run4Win",
-    "context": ""
-   },
-   {
-    "name": "24Casino",
-    "normalized": "24Casino",
-    "context": ""
-   },
-   {
-    "name": "Impressario",
-    "normalized": "Impressario",
-    "context": ""
-   },
-   {
-    "name": "Slot Hunter",
-    "normalized": "Slot Hunter",
-    "context": ""
-   },
-   {
-    "name": "N1 Casino",
-    "normalized": "N1 Casino",
-    "context": ""
-   },
-   {
-    "name": "Bizzo",
-    "normalized": "Bizzo",
-    "context": ""
-   },
-   {
-    "name": "Campeonbet",
-    "normalized": "Campeonbet",
-    "context": ""
-   },
-   {
-    "name": "Stake",
-    "normalized": "Stake",
-    "context": ""
-   },
-   {
-    "name": "RocketPlay",
-    "normalized": "RocketPlay",
-    "context": ""
-   },
-   {
-    "name": "Jackpota",
-    "normalized": "Jackpota",
-    "context": ""
-   }
-  ],
+  "confidence": 0.5,
+  "reason": "Лише сніпет Google: заголовок і опис вказують на рейтинг казино для Канади з порівнянням бонусів, способів оплати та ігор, тому це схоже на афілійований огляд. Контактів і сигналів продажу розміщень у сніпеті немає.",
+  "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання на сторінки Partnership та Contact (URL не вказано)",
-   "form": false
+   "form": false,
+   "other": null
   },
-  "placement_signals": [
-   "Partnership",
-   "Affiliate disclosure",
-   "Visit casino",
-   "Recommended This Month",
-   "Best Casino Affiliate awards"
-  ]
+  "placement_signals": []
  }
 }

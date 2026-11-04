@@ -1,19 +1,19 @@
 {
  "url": "https://www.bonus.com/ca/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:29+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:28:02+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7643,
-  "output_tokens": 732,
-  "cost_usd": 0.022606
+  "input_tokens": 7991,
+  "output_tokens": 619,
+  "cost_usd": 0.02217
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.85,
-  "reason": "Сторінка є афілійованим гайдом з рейтингом казино Альберти, оглядами та кнопками «VISIT NOW», а також зі статтями про легальність по провінціях. Це типовий review/affiliate-майданчик, де можливе розміщення казино-брендів.",
+  "reason": "Сторінка bonus.com — афілійований гід з рейтингом казино для Альберти з кнопками «VISIT NOW», оглядами та бонусами. Це комерційний рейтинг казино, тож розміщення тут доречне.",
   "brands_mentioned": [
    {
     "name": "BetMGM",
@@ -41,8 +41,8 @@
     "context": ""
    },
    {
-    "name": "Hollywood Casino",
-    "normalized": "Hollywood Casino",
+    "name": "Hollywood",
+    "normalized": "Hollywood",
     "context": ""
    },
    {
@@ -59,25 +59,19 @@
     "name": "theScore Bet",
     "normalized": "theScore Bet",
     "context": ""
-   },
-   {
-    "name": "PointsBet",
-    "normalized": "PointsBet",
-    "context": ""
    }
   ],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
-   "FAQ: How does Bonus.com make money?",
-   "партнерські кнопки VISIT NOW",
-   "BONUS-офери в рейтингу",
-   "розділ Editorial Policy / How We Rank"
+   "VISIT NOW affiliate CTA buttons",
+   "How Bonus.com makes money FAQ",
+   "How We Rank"
   ]
  }
 }

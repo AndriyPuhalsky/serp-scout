@@ -1,19 +1,19 @@
 {
  "url": "https://gamblizard.ca/no-deposit-bonuses/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:01+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:51+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7297,
-  "output_tokens": 817,
-  "cost_usd": 0.022764
+  "input_tokens": 7645,
+  "output_tokens": 670,
+  "cost_usd": 0.02199
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афілійована сторінка з добіркою бонусів без депозиту для Канади, з промокодами, партнерськими посиланнями та рейтингами казино. На сайті є сторінка «Advertise with us», тож розміщення, імовірно, продаються.",
+  "confidence": 0.85,
+  "reason": "Сторінка — афілійована добірка бонусів без депозиту з промокодами та рейтингами казино від Gamblizard. На сайті є розділ «Advertise with us», тож розміщення, імовірно, продаються.",
   "brands_mentioned": [
    {
     "name": "BitKingz",
@@ -21,8 +21,8 @@
     "context": ""
    },
    {
-    "name": "Ice Casino",
-    "normalized": "Ice Casino",
+    "name": "Ice",
+    "normalized": "Ice",
     "context": ""
    },
    {
@@ -31,13 +31,13 @@
     "context": ""
    },
    {
-    "name": "Casea Casino",
-    "normalized": "Casea Casino",
+    "name": "Casea",
+    "normalized": "Casea",
     "context": ""
    },
    {
-    "name": "Spirit Casino",
-    "normalized": "Spirit Casino",
+    "name": "Spirit",
+    "normalized": "Spirit",
     "context": ""
    },
    {
@@ -56,28 +56,28 @@
     "context": ""
    },
    {
-    "name": "Slot Owl Casino",
-    "normalized": "Slot Owl Casino",
+    "name": "Slot Owl",
+    "normalized": "Slot Owl",
     "context": ""
    },
    {
-    "name": "Iris Casino",
-    "normalized": "Iris Casino",
+    "name": "Iris",
+    "normalized": "Iris",
     "context": ""
    }
   ],
   "contact": {
    "email": null,
-   "contact_page": "https://gamblizard.ca/contact-us/",
+   "contact_page": "https://gamblizard.ca/advertise-with-us/",
    "telegram": null,
-   "other": "Рекламна сторінка: https://gamblizard.ca/advertise-with-us/",
-   "form": false
+   "form": false,
+   "other": "https://gamblizard.ca/contact-us/ (Contact us)"
   },
   "placement_signals": [
-   "Advertise with us page",
-   "exclusive bonuses via our link",
+   "Advertise with us",
+   "exclusive bonuses",
    "promo code GAMBLIZARD",
-   "Follow our link to claim your exclusive no deposit bonus"
+   "follow our link to claim"
   ]
  }
 }

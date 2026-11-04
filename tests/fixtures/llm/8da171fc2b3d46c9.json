@@ -1,19 +1,19 @@
 {
  "url": "https://www.casinocanada.me/fast-payout-casinos-canada/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:59:44+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:29:04+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 4732,
-  "output_tokens": 365,
-  "cost_usd": 0.013114
+  "input_tokens": 5080,
+  "output_tokens": 315,
+  "cost_usd": 0.01331
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.9,
-  "reason": "Сторінка є афілійованим рейтингом казино зі швидкими виплатами в Канаді з бонусами та порівнянням способів оплати. Це типовий майданчик для розміщення казино-брендів.",
+  "confidence": 0.8,
+  "reason": "Сторінка є афілійованим рейтингом казино зі швидкими виплатами для Канади з бонусами та CTA-блоками. Це типовий майданчик для купівлі розміщення; контакт лише info@ та сторінка About us.",
   "brands_mentioned": [
    {
     "name": "Rizk",
@@ -26,8 +26,8 @@
     "context": ""
    },
    {
-    "name": "Genesis Casino",
-    "normalized": "Genesis Casino",
+    "name": "Genesis",
+    "normalized": "Genesis",
     "context": ""
    }
   ],
@@ -35,8 +35,8 @@
    "email": "info@casinocanada.me",
    "contact_page": "https://www.casinocanada.me/about-us/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

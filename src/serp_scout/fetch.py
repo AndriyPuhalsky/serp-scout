@@ -31,6 +31,7 @@ class FetchResult:
     html_or_text: str
     error: str | None = None
     text: str | None = None  # текст, уже витягнутий під час перевірки (щоб не парсити двічі)
+    final_url: str | None = None  # кінцева адреса після редиректів httpx (навіть якщо там 403)
 
     @property
     def is_html(self) -> bool:
@@ -73,12 +74,13 @@ class PageFetcher:
         if wait > 0:
             self._sleep(wait)
 
-    def _get_limited(self, url: str) -> tuple[int, str]:
-        """GET зі стрімом; читання обривається після `max_bytes` (решта відкидається)."""
+    def _get_limited(self, url: str) -> tuple[int, str, str]:
+        """GET зі стрімом; читання обривається після `max_bytes`; повертає й кінцеву адресу."""
         chunks: list[bytes] = []
         total = 0
         with self._client.stream("GET", url) as response:
             status = response.status_code
+            final_url = str(response.url)
             for chunk in response.iter_bytes():
                 chunks.append(chunk)
                 total += len(chunk)
@@ -86,9 +88,9 @@ class PageFetcher:
                     break
             encoding = response.encoding or "utf-8"
         body = b"".join(chunks)[: self.settings.max_bytes]
-        return status, body.decode(encoding, errors="replace")
+        return status, body.decode(encoding, errors="replace"), final_url
 
-    def _get_with_retries(self, url: str) -> tuple[int, str]:
+    def _get_with_retries(self, url: str) -> tuple[int, str, str]:
         """До `retries` повторів на таймаут/мережевий збій з бекофом 1, 2 с."""
         last_exc: Exception | None = None
         for attempt in range(self.settings.retries + 1):
@@ -120,12 +122,13 @@ class PageFetcher:
         """Повертає найкращий доступний результат; ніколи не кидає виняток."""
         errors: list[str] = []
         status: int | None = None
+        final_url: str | None = None
         try:
-            status, html = self._get_with_retries(url)
+            status, html, final_url = self._get_with_retries(url)
             if status < 400 and not self._looks_blocked(status, html):
                 text = html_to_text(html)
                 if len(text) >= self.settings.min_text_chars:
-                    return FetchResult("httpx", status, html, None, text)
+                    return FetchResult("httpx", status, html, None, text, final_url)
                 errors.append(f"httpx {status}: текст {len(text)} символів")
             else:
                 errors.append(f"httpx {status}: заблоковано або помилка")
@@ -136,14 +139,19 @@ class PageFetcher:
             reader_status, text = self._reader(url)
             if reader_status == 200 and len(text.strip()) >= self.settings.min_text_chars:
                 return FetchResult(
-                    "reader", reader_status, text.strip(), mask_secrets("; ".join(errors)), text.strip()
+                    "reader",
+                    reader_status,
+                    text.strip(),
+                    mask_secrets("; ".join(errors)),
+                    text.strip(),
+                    final_url,
                 )
             errors.append(f"reader {reader_status}: текст {len(text.strip())} символів")
         except Exception as exc:  # noqa: BLE001
             errors.append(f"reader: {type(exc).__name__}")
 
         fallback = "\n\n".join(part for part in (title.strip(), snippet.strip()) if part)
-        return FetchResult("snippet", status, fallback, mask_secrets("; ".join(errors)), fallback)
+        return FetchResult("snippet", status, fallback, mask_secrets("; ".join(errors)), fallback, final_url)
 
     def fetch_many(self, items: list[tuple[str, str, str]]) -> dict[str, FetchResult]:
         """Паралельно (`concurrency` потоків) завантажує `(url, title, snippet)`; ключ — url."""
@@ -153,3 +161,12 @@ class PageFetcher:
             for future, url in futures.items():
                 results[url] = future.result()
         return results
+
+
+def resolve_final_url(client: httpx.Client, url: str) -> str | None:
+    """Кінцева адреса після HTTP-редиректів (тіло не читається); None при мережевому збої."""
+    try:
+        with client.stream("GET", url) as response:
+            return str(response.url)
+    except httpx.HTTPError:
+        return None

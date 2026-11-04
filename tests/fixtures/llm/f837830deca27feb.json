@@ -1,23 +1,23 @@
 {
  "url": "https://bojoko.ca/casino/bonus/free-spins/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:15+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:10+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 8131,
-  "output_tokens": 1051,
-  "cost_usd": 0.026771999999999997
+  "input_tokens": 8479,
+  "output_tokens": 982,
+  "cost_usd": 0.02678
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.95,
-  "reason": "Це афілейтна сторінка з оглядами та порівнянням бонусів без депозиту й безкоштовних спінів для канадських казино, з промокодами та партнерськими кнопками «Play here». Є контакт для партнерів (partners@bojoko.com) і розділ «List your casino».",
+  "confidence": 0.93,
+  "reason": "Це афілійована сторінка з рейтингом казино та бонусів без депозиту/фріспінів для Канади з промокодами Bojoko і кнопками «Play here». На сайті є розділ «List your casino» та email partners@bojoko.com для партнерств.",
   "brands_mentioned": [
    {
-    "name": "Goldex Casino",
-    "normalized": "Goldex Casino",
+    "name": "Goldex",
+    "normalized": "Goldex",
     "context": ""
    },
    {
@@ -36,13 +36,13 @@
     "context": ""
    },
    {
-    "name": "National Casino",
-    "normalized": "National Casino",
+    "name": "National",
+    "normalized": "National",
     "context": ""
    },
    {
-    "name": "Merlin Casino",
-    "normalized": "Merlin Casino",
+    "name": "Merlin",
+    "normalized": "Merlin",
     "context": ""
    },
    {
@@ -51,8 +51,8 @@
     "context": ""
    },
    {
-    "name": "Boho Casino",
-    "normalized": "Boho Casino",
+    "name": "Boho",
+    "normalized": "Boho",
     "context": ""
    },
    {
@@ -61,8 +61,8 @@
     "context": ""
    },
    {
-    "name": "Boo Casino",
-    "normalized": "Boo Casino",
+    "name": "Boo",
+    "normalized": "Boo",
     "context": ""
    },
    {
@@ -86,8 +86,8 @@
     "context": ""
    },
    {
-    "name": "Vegaz Casino",
-    "normalized": "Vegaz Casino",
+    "name": "Vegaz",
+    "normalized": "Vegaz",
     "context": ""
    },
    {
@@ -108,14 +108,13 @@
   ],
   "contact": {
    "email": "partners@bojoko.com",
-   "contact_page": "https://bojoko.ca/feedback/",
+   "contact_page": "https://bojoko.ca/about-us/#list-casino",
    "telegram": null,
-   "other": "Розділ «List your casino»: https://bojoko.ca/about-us/#list-casino",
-   "form": false
+   "form": false,
+   "other": "https://bojoko.ca/feedback/ (Contact us); feedback@bojoko.com"
   },
   "placement_signals": [
    "List your casino",
-   "List your game supplier",
    "partners@bojoko.com",
    "exclusive bonuses for Bojoko readers",
    "promo codes Bojoko"

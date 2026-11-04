@@ -1,26 +1,32 @@
 {
  "url": "https://mr-gamble.com/ca/online-casino/top/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:43+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:37+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7805,
-  "output_tokens": 214,
-  "cost_usd": 0.017750000000000002
+  "input_tokens": 8153,
+  "output_tokens": 207,
+  "cost_usd": 0.01838
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.85,
-  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Канади, порівнянням бонусів, ліцензій і платіжних методів та категоріями переможців. Тип сайту типовий для купівлі розміщень, є контактна сторінка та email.",
-  "brands_mentioned": [],
+  "reason": "Сторінка — афілійований рейтинг «найкращих онлайн-казино Канади» з порівнянням бонусів, ліцензій і платіжних методів та CTA-блоками. Це типовий review_affiliate, де можна купити розміщення.",
+  "brands_mentioned": [
+   {
+    "name": "PokerStars",
+    "normalized": "PokerStars",
+    "context": ""
+   }
+  ],
   "contact": {
    "email": "info@mr-gamble.com",
    "contact_page": "https://mr-gamble.com/ca/contact/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

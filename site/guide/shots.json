@@ -1,0 +1,12 @@
+[
+  {"out": "img/01-header.png", "url": "https://serp-scout.netlify.app/", "selector": "header.masthead", "wait": 800},
+  {"out": "img/02-kpi.png", "url": "https://serp-scout.netlify.app/", "selector": ".kpi-section", "wait": 1200},
+  {"out": "img/03-filter.png", "url": "https://serp-scout.netlify.app/", "selector": "#placements-section", "wait": 800, "maxHeight": 900},
+  {"out": "img/04-types.png", "url": "https://serp-scout.netlify.app/", "selector": "#placements tbody tr:first-child", "wait": 800},
+  {"out": "img/05-reason.png", "url": "https://serp-scout.netlify.app/", "selector": "#placements tbody tr:first-child td.why", "click": "#placements tbody tr:first-child td.why summary", "wait": 800},
+  {"out": "img/06-contact.png", "url": "https://serp-scout.netlify.app/", "selector": "#placements-section .sheet", "wait": 800, "maxHeight": 560},
+  {"out": "img/07-positions.png", "url": "https://serp-scout.netlify.app/", "selector": "section[aria-labelledby=\"history-title\"]", "wait": 800, "maxHeight": 600},
+  {"out": "img/08-brands.png", "url": "https://serp-scout.netlify.app/", "selector": "section[aria-labelledby=\"brands-title\"]", "wait": 800, "maxHeight": 700},
+  {"out": "img/09-github-export.png", "url": "https://github.com/AndriyPuhalsky/serp-scout/tree/main/data/export", "wait": 1500},
+  {"out": "img/10-actions.png", "url": "https://github.com/AndriyPuhalsky/serp-scout/actions", "wait": 1500}
+]

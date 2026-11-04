@@ -1,19 +1,19 @@
 {
  "url": "https://www.rotowire.com/ca/casinos/ontario",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:26+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:20+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7560,
-  "output_tokens": 1041,
-  "cost_usd": 0.02553
+  "input_tokens": 7908,
+  "output_tokens": 897,
+  "cost_usd": 0.02479
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Онтаріо, оглядами операторів і розкриттям комісійної винагороди за реєстрації. Є посилання на сторінку Advertise, тож розміщення, імовірно, можна придбати.",
+  "confidence": 0.95,
+  "reason": "Сторінка RotoWire — комерційний рейтинг ліцензованих онтарійських казино з афіліатними посиланнями та розкриттям комісії. Є посилання на сторінку Advertise, тож розміщення на сайті ймовірні.",
   "brands_mentioned": [
    {
     "name": "Casino Days",
@@ -21,8 +21,8 @@
     "context": ""
    },
    {
-    "name": "Horseshoe Online Casino",
-    "normalized": "Horseshoe Online Casino",
+    "name": "Horseshoe",
+    "normalized": "Horseshoe",
     "context": ""
    },
    {
@@ -31,8 +31,8 @@
     "context": ""
    },
    {
-    "name": "Caesars Palace Online Casino",
-    "normalized": "Caesars Palace Online Casino",
+    "name": "Caesars Palace",
+    "normalized": "Caesars Palace",
     "context": ""
    },
    {
@@ -46,8 +46,8 @@
     "context": ""
    },
    {
-    "name": "Golden Nugget Online Casino",
-    "normalized": "Golden Nugget Online Casino",
+    "name": "Golden Nugget",
+    "normalized": "Golden Nugget",
     "context": ""
    },
    {
@@ -56,8 +56,8 @@
     "context": ""
    },
    {
-    "name": "Stardust Casino",
-    "normalized": "Stardust Casino",
+    "name": "Stardust",
+    "normalized": "Stardust",
     "context": ""
    },
    {
@@ -96,11 +96,6 @@
     "context": ""
    },
    {
-    "name": "Fanatics Casino",
-    "normalized": "Fanatics Casino",
-    "context": ""
-   },
-   {
     "name": "Caesars",
     "normalized": "Caesars",
     "context": ""
@@ -109,18 +104,28 @@
     "name": "Casumo",
     "normalized": "Casumo",
     "context": ""
+   },
+   {
+    "name": "bet365",
+    "normalized": "bet365",
+    "context": ""
+   },
+   {
+    "name": "PokerStars",
+    "normalized": "PokerStars",
+    "context": ""
    }
   ],
   "contact": {
    "email": null,
-   "contact_page": "https://www.rotowire.com/contact.php",
+   "contact_page": "https://www.rotowire.com/advertise/",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "https://www.rotowire.com/contact.php (Contact Us)"
   },
   "placement_signals": [
-   "RotoWire earns a commission when you sign up through some links",
-   "Advertise page link: https://www.rotowire.com/advertise/"
+   "Advertise",
+   "RotoWire earns a commission when you sign up through some links"
   ]
  }
 }

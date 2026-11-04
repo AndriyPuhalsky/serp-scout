@@ -57,7 +57,8 @@ CREATE TABLE IF NOT EXISTS pages (
     text_path          TEXT,
     emails_json        TEXT,
     contact_links_json TEXT,
-    error              TEXT
+    error              TEXT,
+    final_url          TEXT           -- кінцева адреса після редиректів (goto Google → сайт)
 );
 
 CREATE TABLE IF NOT EXISTS labels (

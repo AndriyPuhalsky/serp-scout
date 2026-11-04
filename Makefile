@@ -1,5 +1,5 @@
 # Команди проєкту serp-scout. Усі запуски — через uv (залежності з uv.lock).
-.PHONY: install run demo export site serve test lint labels stats notify-test
+.PHONY: install run demo export site serve test lint labels stats notify-test guide-shots
 
 install:        ## встановити залежності
 	uv sync --frozen
@@ -31,3 +31,6 @@ stats:          ## підсумок прогонів і вартість
 
 notify-test:    ## перевірка Telegram
 	python3 tools/notify_telegram.py --dev "Тест сповіщення serp-scout"
+
+guide-shots:    ## скріншоти для методички (site/guide/shots.json → site/guide/img/*.png)
+	node tools/guide_shots.mjs $(ARGS)

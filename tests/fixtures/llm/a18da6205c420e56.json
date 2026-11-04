@@ -1,19 +1,19 @@
 {
  "url": "https://www.bonus.ca/online-casinos/ontario",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T06:00:23+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:29:34+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 7639,
-  "output_tokens": 863,
-  "cost_usd": 0.023908
+  "input_tokens": 7987,
+  "output_tokens": 790,
+  "cost_usd": 0.02387
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Сторінка bonus.ca — афілійований огляд і рейтинг онтарійських онлайн-казино з таблицями виплат і оцінками, тож це типовий майданчик для розміщення казино-бренду. Є сторінка Contact Us та розкриття афілійної інформації.",
+  "reason": "Це афілійований рейтинг та огляди ліцензованих казино Онтаріо (bonus.ca) з таблицями брендів і рейтингами, є розкриття афілійованості. Сторінка придатна для купівлі розміщення.",
   "brands_mentioned": [
    {
     "name": "BetMGM",
@@ -41,8 +41,8 @@
     "context": ""
    },
    {
-    "name": "Stardust Casino",
-    "normalized": "Stardust Casino",
+    "name": "Stardust",
+    "normalized": "Stardust",
     "context": ""
    },
    {
@@ -86,11 +86,6 @@
     "context": ""
    },
    {
-    "name": "GGPoker",
-    "normalized": "GGPoker",
-    "context": ""
-   },
-   {
     "name": "Caesars",
     "normalized": "Caesars",
     "context": ""
@@ -100,13 +95,12 @@
    "email": null,
    "contact_page": "https://www.bonus.ca/about-us/contact-us",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": [
    "Affiliate Disclosure",
-   "editorial policy",
-   "Contact Us"
+   "Ad Disclosure"
   ]
  }
 }

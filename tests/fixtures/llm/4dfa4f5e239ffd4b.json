@@ -1,27 +1,158 @@
 {
  "url": "https://bojoko.ca/casino/bonus/no-deposit/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:08+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:58+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 0,
-  "output_tokens": 0,
-  "cost_usd": 0
+  "input_tokens": 8596,
+  "output_tokens": 1195,
+  "cost_usd": 0.02914
  },
  "label": {
-  "site_type": "other",
-  "relevant_for_placement": false,
-  "confidence": 0.0,
-  "reason": "Модель повернула відповідь не за схемою: 1 validation error for PageLabel\n  Invalid JSON: EOF while parsing a string at line 1 column 2740 [type=json_invalid, in",
-  "brands_mentioned": [],
+  "site_type": "review_affiliate",
+  "relevant_for_placement": true,
+  "confidence": 0.93,
+  "reason": "Сторінка є афілійованим рейтингом казино з no-deposit бонусами, з партнерськими бонус-кодами та посиланнями на огляди. Є партнерський email і сторінка «List your casino», тож розміщення можливе.",
+  "brands_mentioned": [
+   {
+    "name": "SpinYoo",
+    "normalized": "SpinYoo",
+    "context": ""
+   },
+   {
+    "name": "Bonanza Game",
+    "normalized": "Bonanza Game",
+    "context": ""
+   },
+   {
+    "name": "Boo",
+    "normalized": "Boo",
+    "context": ""
+   },
+   {
+    "name": "Stakemania",
+    "normalized": "Stakemania",
+    "context": ""
+   },
+   {
+    "name": "Goldex",
+    "normalized": "Goldex",
+    "context": ""
+   },
+   {
+    "name": "21",
+    "normalized": "21",
+    "context": ""
+   },
+   {
+    "name": "SpinBetter",
+    "normalized": "SpinBetter",
+    "context": ""
+   },
+   {
+    "name": "CristalPoker",
+    "normalized": "CristalPoker",
+    "context": ""
+   },
+   {
+    "name": "Slots Gallery",
+    "normalized": "Slots Gallery",
+    "context": ""
+   },
+   {
+    "name": "Horus",
+    "normalized": "Horus",
+    "context": ""
+   },
+   {
+    "name": "Magic365",
+    "normalized": "Magic365",
+    "context": ""
+   },
+   {
+    "name": "Oxibet",
+    "normalized": "Oxibet",
+    "context": ""
+   },
+   {
+    "name": "SafeCasino",
+    "normalized": "SafeCasino",
+    "context": ""
+   },
+   {
+    "name": "Skycrown",
+    "normalized": "Skycrown",
+    "context": ""
+   },
+   {
+    "name": "National",
+    "normalized": "National",
+    "context": ""
+   },
+   {
+    "name": "Rexbet",
+    "normalized": "Rexbet",
+    "context": ""
+   },
+   {
+    "name": "Bluffbet",
+    "normalized": "Bluffbet",
+    "context": ""
+   },
+   {
+    "name": "SlotLounge",
+    "normalized": "SlotLounge",
+    "context": ""
+   },
+   {
+    "name": "22bet",
+    "normalized": "22bet",
+    "context": ""
+   },
+   {
+    "name": "Vegaz",
+    "normalized": "Vegaz",
+    "context": ""
+   },
+   {
+    "name": "Casinado",
+    "normalized": "Casinado",
+    "context": ""
+   },
+   {
+    "name": "Galactic Wins",
+    "normalized": "Galactic Wins",
+    "context": ""
+   },
+   {
+    "name": "Casino Joy",
+    "normalized": "Casino Joy",
+    "context": ""
+   },
+   {
+    "name": "Stupid",
+    "normalized": "Stupid",
+    "context": ""
+   },
+   {
+    "name": "Merlin",
+    "normalized": "Merlin",
+    "context": ""
+   }
+  ],
   "contact": {
-   "email": null,
-   "contact_page": null,
+   "email": "partners@bojoko.com",
+   "contact_page": "https://bojoko.ca/about-us/#list-casino",
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": "feedback@bojoko.com; https://bojoko.ca/feedback/"
   },
-  "placement_signals": []
+  "placement_signals": [
+   "List your casino",
+   "partners@bojoko.com",
+   "Play here affiliate links",
+   "bonus codes BOJOKO"
+  ]
  }
 }

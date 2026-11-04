@@ -1,53 +1,73 @@
 {
  "url": "https://casinocanada.com/casino-bonuses/free-spins/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:58:16+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:50+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 8498,
-  "output_tokens": 819,
-  "cost_usd": 0.025186
+  "input_tokens": 8846,
+  "output_tokens": 574,
+  "cost_usd": 0.02343
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
   "confidence": 0.9,
-  "reason": "Це афіліатна сторінка з добіркою бонусів free spins no deposit для Канади, з трекінговими кнопками Claim, рекламним розкриттям (Ad Disclosure) та рейтингом казино. У футері є посилання «Advertisement», що вказує на продаж розміщень.",
+  "reason": "Це афілійована сторінка з добіркою бонусів free spins без депозиту, з позначкою Ad Disclosure та кнопками Claim. У футері є розділ «Advertisement», що вказує на продаж розміщень.",
   "brands_mentioned": [
    {
-    "name": "LevelUP Casino",
-    "normalized": "LevelUP Casino",
+    "name": "LevelUP",
+    "normalized": "LevelUP",
     "context": ""
    },
    {
-    "name": "Spinaconda Casino",
-    "normalized": "Spinaconda Casino",
+    "name": "Spinaconda",
+    "normalized": "Spinaconda",
     "context": ""
    },
    {
-    "name": "Lemon Casino",
-    "normalized": "Lemon Casino",
+    "name": "Lemon",
+    "normalized": "Lemon",
     "context": ""
    },
    {
-    "name": "Gamblezen Casino",
-    "normalized": "Gamblezen Casino",
+    "name": "Gamblezen",
+    "normalized": "Gamblezen",
     "context": ""
    },
    {
-    "name": "BonanzaGame Casino",
-    "normalized": "BonanzaGame Casino",
+    "name": "BonanzaGame",
+    "normalized": "BonanzaGame",
     "context": ""
    },
    {
-    "name": "Melbet Casino",
-    "normalized": "Melbet Casino",
+    "name": "Melbet",
+    "normalized": "Melbet",
     "context": ""
    },
    {
     "name": "Lucky7even",
     "normalized": "Lucky7even",
+    "context": ""
+   },
+   {
+    "name": "888casino",
+    "normalized": "888casino",
+    "context": ""
+   },
+   {
+    "name": "Lucky Days",
+    "normalized": "Lucky Days",
+    "context": ""
+   },
+   {
+    "name": "Tonybet",
+    "normalized": "Tonybet",
+    "context": ""
+   },
+   {
+    "name": "Ruby Fortune",
+    "normalized": "Ruby Fortune",
     "context": ""
    },
    {
@@ -61,18 +81,8 @@
     "context": ""
    },
    {
-    "name": "All Slots Casino",
-    "normalized": "All Slots Casino",
-    "context": ""
-   },
-   {
-    "name": "888casino",
-    "normalized": "888casino",
-    "context": ""
-   },
-   {
-    "name": "Lucky Days",
-    "normalized": "Lucky Days",
+    "name": "Casino Days",
+    "normalized": "Casino Days",
     "context": ""
    }
   ],
@@ -80,15 +90,14 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання «Advertisement» та «About us», але URL не визначено",
-   "form": false
+   "form": false,
+   "other": "Footer link: Advertisement"
   },
   "placement_signals": [
-   "Advertisement (футер)",
+   "Advertisement",
    "Ad Disclosure",
-   "Exclusive bonus",
-   "Get Bonus / Claim affiliate buttons",
-   "Featured on"
+   "Exclusive CasinoCanada bonus",
+   "Exclusive bonuses"
   ]
  }
 }

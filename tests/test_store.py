@@ -115,3 +115,24 @@ def test_google_redirect_and_direct_url_share_one_urls_row(conn) -> None:
     )
     assert store.count(conn, "urls") == 1
     assert conn.execute("SELECT domain FROM urls").fetchone()["domain"] == "casino.ca"
+
+
+def test_goto_url_domain_from_final_url_key_unchanged(conn) -> None:
+    goto = "https://www.google.ca/goto?url=CAESmwEB6zsw"
+    store.upsert_snapshot(conn, "2026-11-04", 1, [SerpHit(3, goto, "t", "s")])
+    row = conn.execute("SELECT id, url, domain FROM urls").fetchone()
+    assert row["domain"] == "google.ca"  # непрозорий goto офлайн не розгортається
+    store.upsert_page(conn, row["id"], {"method": "httpx", "text_hash": "h", "text_len": 1})
+    final = "https://www.durhampost.ca/top-online-casino-sites-in-canada"
+    assert store.apply_final_url(conn, row["id"], final)
+    after = conn.execute("SELECT url, domain FROM urls WHERE id = ?", (row["id"],)).fetchone()
+    assert after["domain"] == "durhampost.ca"
+    assert after["url"] == row["url"] and url_key(after["url"]) == url_key(goto)
+    page = store.get_page(conn, row["id"])
+    assert page["final_url"] == final
+    assert store.google_redirect_urls(conn) == []
+    # повтор і звичайний (не Google) URL — без змін
+    assert not store.apply_final_url(conn, row["id"], final)
+    store.upsert_snapshot(conn, "2026-11-04", 2, [SerpHit(1, "https://casino.ca/", "t", "s")])
+    plain = conn.execute("SELECT id FROM urls WHERE url = 'https://casino.ca/'").fetchone()["id"]
+    assert not store.apply_final_url(conn, plain, "https://other.ca/")

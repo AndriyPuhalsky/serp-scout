@@ -1,26 +1,26 @@
 {
  "url": "https://www.tripadvisor.ca/Attractions-g294480-Activities-c53-Panama_City_Panama_Province.html",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:57:41+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:27:22+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 2918,
-  "output_tokens": 178,
-  "cost_usd": 0.0076159999999999995
+  "input_tokens": 3266,
+  "output_tokens": 168,
+  "cost_usd": 0.00821
  },
  "label": {
   "site_type": "other",
   "relevant_for_placement": false,
   "confidence": 0.4,
-  "reason": "Це сторінка Tripadvisor зі списком фізичних казино в Панама-Сіті, а не огляд онлайн-казино для Канади. Доступний лише сніпет, тож розміщення реклами онлайн-казино тут нерелевантне.",
+  "reason": "Це сторінка Tripadvisor зі списком фізичних казино в Панама-Сіті, а не рейтинг онлайн-казино для Канади. Доступний лише сніпет, місця для платного розміщення не видно.",
   "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

@@ -1,19 +1,19 @@
 {
  "url": "https://www.google.ca/goto?url=CAESWQHrOzAVkrzLZd611doqD8h4-1iITqk2gD9OSR1x3WEA0xbWzqh6JMdHs-63AeZdGZZCs3O3vTxuNDBBxhqY_osb3po7h-PomqNaOMlN7Js0ygGNw7PEboVf",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:55:39+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:25:35+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 8273,
-  "output_tokens": 877,
-  "cost_usd": 0.025316
+  "input_tokens": 8621,
+  "output_tokens": 1445,
+  "cost_usd": 0.03169
  },
  "label": {
   "site_type": "review_affiliate",
   "relevant_for_placement": true,
-  "confidence": 0.93,
-  "reason": "Це афілійована сторінка з рейтингом і оглядами 120+ канадських онлайн-казино (Casino.ca) з бонусами та кнопками «Visit casino». Тип ідеально підходить для купівлі розміщення, хоча явних сигналів продажу на сторінці немає.",
+  "confidence": 0.9,
+  "reason": "Сторінка Casino.ca — афілійований рейтинг із понад 120 оглядами казино, бонусами та кнопками «Visit casino», тож тут можна купувати розміщення. Окремого advertise-контакту немає, лише посилання «Contact us» в підвалі.",
   "brands_mentioned": [
    {
     "name": "Vegas Now",
@@ -36,8 +36,8 @@
     "context": ""
    },
    {
-    "name": "The Clubhouse Casino",
-    "normalized": "The Clubhouse Casino",
+    "name": "The Clubhouse",
+    "normalized": "The Clubhouse",
     "context": ""
    },
    {
@@ -56,8 +56,8 @@
     "context": ""
    },
    {
-    "name": "All Slots Casino",
-    "normalized": "All Slots Casino",
+    "name": "All Slots",
+    "normalized": "All Slots",
     "context": ""
    },
    {
@@ -66,8 +66,53 @@
     "context": ""
    },
    {
+    "name": "Casinova",
+    "normalized": "Casinova",
+    "context": ""
+   },
+   {
+    "name": "Dragonia",
+    "normalized": "Dragonia",
+    "context": ""
+   },
+   {
+    "name": "JustCasino",
+    "normalized": "JustCasino",
+    "context": ""
+   },
+   {
+    "name": "Lemon",
+    "normalized": "Lemon",
+    "context": ""
+   },
+   {
+    "name": "Lex",
+    "normalized": "Lex",
+    "context": ""
+   },
+   {
+    "name": "Martin",
+    "normalized": "Martin",
+    "context": ""
+   },
+   {
+    "name": "Monro",
+    "normalized": "Monro",
+    "context": ""
+   },
+   {
     "name": "Party Casino",
     "normalized": "Party Casino",
+    "context": ""
+   },
+   {
+    "name": "WildTornado",
+    "normalized": "WildTornado",
+    "context": ""
+   },
+   {
+    "name": "Rainbet",
+    "normalized": "Rainbet",
     "context": ""
    },
    {
@@ -76,23 +121,53 @@
     "context": ""
    },
    {
+    "name": "Golisimo",
+    "normalized": "Golisimo",
+    "context": ""
+   },
+   {
     "name": "BetVictor",
     "normalized": "BetVictor",
     "context": ""
    },
    {
-    "name": "Bovada",
-    "normalized": "Bovada",
+    "name": "Casinia",
+    "normalized": "Casinia",
     "context": ""
    },
    {
-    "name": "Bodog",
-    "normalized": "Bodog",
+    "name": "Grizzly's Quest",
+    "normalized": "Grizzly's Quest",
     "context": ""
    },
    {
     "name": "Lucky Ones",
     "normalized": "Lucky Ones",
+    "context": ""
+   },
+   {
+    "name": "Starda",
+    "normalized": "Starda",
+    "context": ""
+   },
+   {
+    "name": "Betpanda",
+    "normalized": "Betpanda",
+    "context": ""
+   },
+   {
+    "name": "Bluffbet",
+    "normalized": "Bluffbet",
+    "context": ""
+   },
+   {
+    "name": "Casoola",
+    "normalized": "Casoola",
+    "context": ""
+   },
+   {
+    "name": "Bodog",
+    "normalized": "Bodog",
     "context": ""
    },
    {
@@ -110,9 +185,13 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "У футері є посилання «Contact us» та поштова адреса: One Dundas Street West, Toronto, M5G 1Z3",
-   "form": false
+   "form": false,
+   "other": "Посилання «Contact us» у футері (href не визначено)"
   },
-  "placement_signals": []
+  "placement_signals": [
+   "Visit casino CTA",
+   "affiliate-style ranking",
+   "Do casinos pay you to review them? (FAQ)"
+  ]
  }
 }

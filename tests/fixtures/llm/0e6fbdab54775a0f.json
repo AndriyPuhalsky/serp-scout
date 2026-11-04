@@ -1,28 +1,28 @@
 {
  "url": "https://www.casinosofwinnipeg.com/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:26+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:15+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 2902,
-  "output_tokens": 290,
-  "cost_usd": 0.008704
+  "input_tokens": 3250,
+  "output_tokens": 265,
+  "cost_usd": 0.00915
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
   "confidence": 0.45,
-  "reason": "Це офіційний сайт наземних казино Winnipeg (Club Regent Casino та McPhillips), тобто оператор, а не афіліат чи медіа. Доступний лише сніпет, тому розміщення реклами тут неможливе.",
+  "reason": "Це офіційний сайт наземних казино Вінніпега (Club Regent Casino та McPhillips), тобто оператора, а не афіліатного чи медіаресурсу. Розмістити платну рекламу тут неможливо; є лише сніпет Google.",
   "brands_mentioned": [
    {
-    "name": "Club Regent Casino",
-    "normalized": "Club Regent Casino",
+    "name": "Club Regent",
+    "normalized": "Club Regent",
     "context": ""
    },
    {
-    "name": "McPhillips Station Casino",
-    "normalized": "McPhillips Station Casino",
+    "name": "McPhillips Station",
+    "normalized": "McPhillips Station",
     "context": ""
    }
   ],
@@ -30,8 +30,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

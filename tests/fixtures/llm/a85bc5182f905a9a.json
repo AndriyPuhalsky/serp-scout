@@ -1,37 +1,26 @@
 {
  "url": "https://www.moulinlalorraine.ca/free-spins-no-deposit-bonus-codes-canada-active-now/",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:56:36+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:26:24+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 3790,
-  "output_tokens": 296,
-  "cost_usd": 0.01054
+  "input_tokens": 4138,
+  "output_tokens": 191,
+  "cost_usd": 0.01019
  },
  "label": {
   "site_type": "other",
   "relevant_for_placement": false,
-  "confidence": 0.8,
-  "reason": "Сторінка на домені moulinlalorraine.ca містить автоматично згенерований SEO-текст про безкоштовні спіни без явних рекомендацій казино, рейтингів чи пропозицій розміщення. Схоже на спамну сторінку, купувати розміщення тут недоцільно.",
-  "brands_mentioned": [
-   {
-    "name": "Eucasino",
-    "normalized": "Eucasino",
-    "context": ""
-   },
-   {
-    "name": "MrQ",
-    "normalized": "MrQ",
-    "context": ""
-   }
-  ],
+  "confidence": 0.7,
+  "reason": "Сторінка на домені moulinlalorraine.ca містить безглуздий SEO-спам текст про безкоштовні спіни без реального рейтингу чи таблиці бонусів. Немає ознак продажу розміщень чи контактів, тому для закупівлі розміщення не підходить.",
+  "brands_mentioned": [],
   "contact": {
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": null,
-   "form": false
+   "form": false,
+   "other": null
   },
   "placement_signals": []
  }

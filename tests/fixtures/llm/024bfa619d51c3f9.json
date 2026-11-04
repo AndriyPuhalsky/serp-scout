@@ -1,19 +1,19 @@
 {
  "url": "https://www.northstarbets.ca/casino",
  "model": "claude-sonnet-5-5",
- "prompt_version": "v1",
- "labeled_at": "2026-11-04T05:51:44+00:00",
- "note": "Реальна розмітка живого прогону 2026-11-04; в офлайн-режимі вартість не нараховується",
+ "prompt_version": "v2",
+ "labeled_at": "2026-11-04T06:24:32+00:00",
+ "note": "Реальна розмітка живого прогону; в офлайн-режимі вартість не нараховується",
  "usage": {
-  "input_tokens": 5963,
-  "output_tokens": 264,
-  "cost_usd": 0.014566
+  "input_tokens": 6558,
+  "output_tokens": 254,
+  "cost_usd": 0.01566
  },
  "label": {
   "site_type": "casino_operator",
   "relevant_for_placement": false,
   "confidence": 0.95,
-  "reason": "Це власний сайт оператора NorthStar Bets, ліцензований AGCO, з іграми, реєстрацією та акціями. Це не сторонній ресурс, тому купувати розміщення тут неможливо.",
+  "reason": "Це власний сайт онлайн-казино NorthStar Bets для гравців Онтаріо (ліцензія AGCO) з іграми, реєстрацією та бонусами оператора. Це не сторонній ресурс, тому розміщення тут купити неможливо.",
   "brands_mentioned": [
    {
     "name": "NorthStar Bets",
@@ -25,8 +25,8 @@
    "email": null,
    "contact_page": null,
    "telegram": null,
-   "other": "Customer service by phone, email or live chat 24/7 (no details on page)",
-   "form": false
+   "form": false,
+   "other": "Footer links: Contact Us, Affiliate Program"
   },
   "placement_signals": [
    "Affiliate Program"
