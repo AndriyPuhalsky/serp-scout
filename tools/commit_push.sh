@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Коміт і push результатів щоденного прогону: data/serp.sqlite, data/export, site/data.
+# Коміт і push результатів щоденного прогону: data/serp.sqlite, data/costs.jsonl, data/export, site/data.
 # Викликається з .github/workflows/daily.yml; працює й локально (тоді ідентичність git не чіпаємо).
 #
 # Змінні оточення (усі необов'язкові):
@@ -25,14 +25,16 @@ if [ "${GITHUB_ACTIONS:-}" = "true" ]; then
 fi
 
 # Додаємо лише ті шляхи, що існують (на першому прогоні export чи site/data можуть бути ще порожні).
+# data/costs.jsonl — у git з 3807fb4, прогін дописує в нього рядки: без нього тут лишалась незастейджена
+# зміна і `git pull --rebase` відмовлявся (інцидент run 41829818030).
 TO_ADD=()
-for path in data/serp.sqlite data/export site/data; do
+for path in data/serp.sqlite data/costs.jsonl data/export site/data; do
   if [ -e "$path" ]; then
     TO_ADD+=("$path")
   fi
 done
 if [ "${#TO_ADD[@]}" -eq 0 ]; then
-  echo "Нічого комітити: жодного з шляхів data/serp.sqlite, data/export, site/data не існує"
+  echo "Нічого комітити: жодного з шляхів data/serp.sqlite, data/costs.jsonl, data/export, site/data не існує"
   exit 0
 fi
 git add -- "${TO_ADD[@]}"
@@ -48,9 +50,11 @@ echo "Коміт: $MESSAGE"
 
 # Push із rebase: поки прогін тривав, у main міг з'явитися ручний коміт — підтягуємо його й пробуємо ще.
 # Rebase потребує повної історії (у daily.yml checkout з fetch-depth: 0).
+# --autostash: будь-який незакомічений залишок (новий файл, що його прогін почав змінювати, а TO_ADD ще не знає)
+# ховається на час rebase і повертається після, замість «cannot pull with rebase: You have unstaged changes».
 for attempt in $(seq 1 "$ATTEMPTS"); do
   echo "Push у $BRANCH, спроба $attempt/$ATTEMPTS"
-  if git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
+  if git pull --rebase --autostash origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
     echo "Запушено в $BRANCH"
     exit 0
   fi

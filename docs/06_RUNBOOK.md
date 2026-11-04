@@ -50,6 +50,8 @@ Netlify → Add new site → Import from Git → репозиторій `serp-sc
 | Telegram мовчить | токен/chat_id або `TG_DEV=0` | `make notify-test`; перевірити Secrets |
 | Ключ дає < 10 органічних результатів (напр. «interac casino» — 2) | Google на mobile прибирає результати (`dmca_messages`), `num=20` не допомагає (перевірено 2026-11-04) | це факт видачі, не збій; у звіті ключ має менше рядків |
 
+- **2026-11-04, run 41829818030 (`force=true`):** прогін ok (79 URL, 30 нових, $0.48), коміт бота `98aa5c4` створено, але 3 спроби `git pull --rebase` впали з «cannot pull with rebase: You have unstaged changes». Причина: `data/costs.jsonl` став tracked (коміт 3807fb4), прогін дописує в нього, а `tools/commit_push.sh` його не стейджив. Виправлення: файл додано в `TO_ADD`, `git pull --rebase --autostash`. Симптом у Telegram — ❌ з посиланням на run; діагноз — `gh run view <id> --log-failed`. Дані такого прогону лишаються на раннері (артефакт `raw-<дата>` зберігається 7 днів, мітки — ні), тож після фіксу потрібен повторний прогін.
+
 ## Скріншоти для методички (`make guide-shots`, І8)
 
 - `make guide-shots` читає `site/guide/shots.json` і пише `site/guide/img/*.png` з https://serp-scout.netlify.app через headless Chrome і CDP (`tools/guide_shots.mjs`; Node ≥ 22, без npm-залежностей). Шлях до Chrome — `CHROME_BIN`, типово `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`. Локально: `make serve`, потім `make guide-shots ARGS="--base http://127.0.0.1:8765"`. Один знімок: `ARGS="--only 05-"`.
