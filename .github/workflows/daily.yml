@@ -4,11 +4,14 @@ name: Щоденний прогін
 
 on:
   schedule:
-    # Cron у GitHub Actions — лише UTC. 09:00 Київ = 06:00 UTC (зима, EET) або 07:00 UTC (літо, EEST);
-    # беремо обидва, зайвий запуск зупинить сторож «снапшот за сьогодні вже є».
+    # Cron у GitHub Actions — лише UTC. Мета — перший реальний прогін о 09:00 Київ у будь-який сезон:
+    #   0 6 UTC = 09:00 Київ улітку (EEST, UTC+3) / 08:00 узимку (EET, UTC+2) — узимку пропускає сторож «ще не 09:00»;
+    #   0 7 UTC = 09:00 Київ узимку / 10:00 улітку — улітку пропускає сторож «снапшот за сьогодні вже є».
     - cron: "0 6 * * *"
     - cron: "0 7 * * *"
-    # Запасний запуск 10:30 Київ — якщо ранковий впав (квота SerpApi, збій мережі), добираємо вдруге.
+    # Запасний 10:30 Київ — якщо ранковий впав (квота SerpApi, збій мережі), добираємо вдруге:
+    #   30 7 UTC = 10:30 улітку / 09:30 узимку; 30 8 UTC = 10:30 узимку / 11:30 улітку.
+    #   Обидва пропускаються лише за умовою «снапшот є», тож після збою добір іде о 09:30/10:30 — це нормально.
     - cron: "30 7 * * *"
     - cron: "30 8 * * *"
   workflow_dispatch:
@@ -63,6 +66,7 @@ jobs:
         id: guard
         env:
           FORCE: ${{ inputs.force }}
+          EVENT: ${{ github.event_name }}
         run: |
           TODAY="$(date -u +%F)"
           echo "today=$TODAY" >> "$GITHUB_OUTPUT"
@@ -70,6 +74,20 @@ jobs:
             echo "force=true — сторож пропущено, прогін примусовий"
             echo "skip=false" >> "$GITHUB_OUTPUT"
             exit 0
+          fi
+          # Лише для cron: узимку 0 6 UTC = 08:00 Київ — рано, чекаємо крону 0 7 (09:00).
+          # Невідома зона в `date` мовчки дає UTC (і тоді узимку пропускалися б усі крони), тому спершу перевіряємо файл зони.
+          if [ "$EVENT" = "schedule" ]; then
+            if [ -e /usr/share/zoneinfo/Europe/Kyiv ]; then
+              KYIV_HOUR="$(TZ=Europe/Kyiv date +%H)"
+              if [ "$((10#$KYIV_HOUR))" -lt 9 ]; then
+                echo "Ще не 09:00 за Києвом (зараз $KYIV_HOUR:xx) — чекаємо наступного крону"
+                echo "skip=true" >> "$GITHUB_OUTPUT"
+                exit 0
+              fi
+            else
+              echo "::warning::Немає зони Europe/Kyiv у tzdata — перевірку «ще не 09:00» пропущено"
+            fi
           fi
           SKIP="$(uv run python - "$TODAY" <<'PY'
           import sqlite3, sys

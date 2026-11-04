@@ -29,6 +29,10 @@ make test && make lint
 
 Workflow `daily.yml`: cron 09:00 Київ (+ запасний 10:30), `workflow_dispatch` (`force`, `limit`). Secrets: `SERPAPI_KEY`, `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`; Variable: `LLM_BUDGET_USD`. Задати: `gh secret set NAME` (значення з stdin), `gh variable set LLM_BUDGET_USD --body 3`. Ручний запуск: `gh workflow run daily.yml -f force=true`. Логи: `gh run list --workflow daily.yml`, `gh run view <id> --log-failed`.
 
+## Розклад (09:00 Київ узимку і влітку)
+
+Крони в `daily.yml` — UTC: `0 6`, `0 7` і запасні `30 7`, `30 8`. Сторож для подій `schedule` пропускає запуск, якщо `TZ=Europe/Kyiv date +%H` < 9 («Ще не 09:00 за Києвом»), далі — звичайна перевірка «снапшот за сьогодні є». Узимку (EET) реальний прогін іде з крону `0 7` (09:00), `0 6` (08:00) пропускається навмисно; улітку (EEST) — з `0 6` (09:00). Якщо ранковий упав, запасні 09:30/10:30 (зима) або 10:30/11:30 (літо) добирають. `workflow_dispatch` сторож години не чіпає; `force=true` пропускає весь сторож. Запобіжник: без `/usr/share/zoneinfo/Europe/Kyiv` крок пише `::warning::` і перевірку години не робить (припущення: tzdata на ubuntu-latest є). Перевірка першого зимового ранку: `gh run list --workflow daily.yml --limit 5` — run о 06:00 UTC у лозі сторожа «Ще не 09:00 за Києвом», о 07:00 UTC — справжній прогін.
+
 ## Netlify
 
 Netlify → Add new site → Import from Git → репозиторій `serp-scout` → publish dir `site`, build command порожня (є `netlify.toml`). URL сайту: — (заповнити після І4). Деплой — автоматично на push у `main`.
