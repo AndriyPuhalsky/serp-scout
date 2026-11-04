@@ -1,28 +1,28 @@
 {
- "generated_at": "2026-11-04T11:14:56+00:00",
+ "generated_at": "2026-11-04T12:53:33+00:00",
  "run_dates": [
   "2026-11-04"
  ],
  "latest_run": {
   "date": "2026-11-04",
   "status": "ok",
-  "cost_usd": 1.398,
+  "cost_usd": 0.5093,
   "serp_calls": 10,
-  "urls_total": 77,
-  "urls_new": 0,
-  "labels_new": 77,
+  "urls_total": 79,
+  "urls_new": 30,
+  "labels_new": 30,
   "errors": [],
   "errors_count": 0
  },
  "kpi": {
   "keywords": 10,
-  "urls": 77,
-  "relevant": 54,
-  "relevant_pct": 70.1,
-  "brands": 303,
-  "contacts": 36,
-  "needs_review": 15,
-  "cost_total_usd": 2.7434
+  "urls": 79,
+  "relevant": 60,
+  "relevant_pct": 75.9,
+  "brands": 252,
+  "contacts": 45,
+  "needs_review": 13,
+  "cost_total_usd": 3.2527
  },
  "keywords": [
   {
@@ -78,173 +78,161 @@
  ],
  "rows": [
   {
-   "url": "https://www.rotowire.com/ca/casinos/ontario",
-   "domain": "rotowire.com",
-   "title": "Best Ontario Online Casinos 2026: Review Top Rated Casinos, Apps, & More",
+   "url": "https://www.casino.org/canada/ontario/",
+   "domain": "casino.org",
+   "title": "Top Ontario Online Casinos in 2026 | Compare 70+ Sites 🏅",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.95,
-   "reason": "Сторінка RotoWire — комерційний рейтинг ліцензованих онтарійських казино з афіліатними посиланнями та розкриттям комісії. Є посилання на сторінку Advertise, тож розміщення на сайті ймовірні.",
+   "reason": "Сторінка — афіліатний рейтинг найкращих онлайн-казино Онтаріо з таблицями порівняння, оглядами та CTA-кнопками «Visit Site». Є розкриття рекламної інформації та посилання «Get listed», тож розміщення, імовірно, продаються.",
    "brands": [
     "Casino Days",
-    "Horseshoe",
-    "BetMGM",
-    "Caesars Palace",
-    "Bally Bet",
-    "FanDuel",
-    "Golden Nugget",
-    "DraftKings",
-    "Stardust",
-    "Casino Time",
-    "PointsBet",
-    "Lucky Days",
-    "Bet99",
-    "theScore Bet",
+    "Tooniebet",
+    "Betinia",
     "Hard Rock Bet",
-    "DAZN Bet",
-    "Caesars",
-    "Casumo",
+    "Toppz",
+    "BetMGM",
+    "FanDuel",
+    "Sports Interaction",
+    "JackpotCity",
+    "Knightslots",
+    "888casino",
     "bet365",
-    "PokerStars"
+    "Bet99",
+    "Betano",
+    "Betway",
+    "Caesars",
+    "Captain Cooks",
+    "DraftKings",
+    "Grand Mondial",
+    "LeoVegas",
+    "Lucky Days",
+    "Luxury Casino",
+    "NorthStar Bets",
+    "Party Casino",
+    "PlayOJO",
+    "PowerPlay",
+    "Royal Panda",
+    "Royal Vegas",
+    "Ruby Fortune",
+    "Spin Casino",
+    "theScore Bet",
+    "Tonybet",
+    "Yukon Gold",
+    "Zodiac Casino",
+    "PokerStars",
+    "Wildz"
    ],
    "contact": {
     "email": null,
-    "contact_page": "https://www.rotowire.com/advertise/",
+    "contact_page": null,
     "telegram": null,
     "form": false,
-    "other": "https://www.rotowire.com/contact.php (Contact Us)"
+    "other": "Footer links: «Contact us», «Get listed»"
    },
    "placement_signals": [
-    "Advertise",
-    "RotoWire earns a commission when you sign up through some links"
+    "Get listed",
+    "Advertising disclosure",
+    "affiliate fee via links",
+    "Contact us"
    ],
    "positions": {
     "10": [
      {
       "date": "2026-11-04",
-      "position": 1
+      "position": 3
      }
     ]
    },
-   "best_position": 1,
+   "best_position": 3,
    "needs_review": false,
-   "method": "httpx",
+   "method": "reader",
    "model": "claude-sonnet-5-5",
-   "page_error": null
+   "page_error": "httpx 403: заблоковано або помилка"
   },
   {
-   "url": "https://www.timescolonist.com/spotlight/best-ontario-online-casinos-8642952",
-   "domain": "timescolonist.com",
-   "title": "Best online casinos in Ontario: Top 10 ON casino sites for real money [2024 update]",
+   "url": "https://casinocanada.com/casino-bonuses/new-no-deposit-bonuses/",
+   "domain": "casinocanada.com",
+   "title": "New Casino No-Deposit Bonuses in Canada - October 2026",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.95,
-   "reason": "Сторінка в розділі Spotlight Times Colonist — спонсорований рейтинг найкращих онлайн-казино Онтаріо, оплачений спонсором Lean Back Player. Це підтверджує, що медіа продає розміщення такого типу.",
+   "reason": "Це афілійована сторінка з рейтингом казино з бездепозитними бонусами, промокодами та реферальними посиланнями. На сайті є сторінка реклами, тож розміщення можна купити.",
    "brands": [
-    "JackpotCity",
-    "PlayOJO",
-    "Tonybet",
-    "Spin Casino",
-    "Slots Magic",
-    "Royal Vegas",
-    "Ruby Fortune",
-    "DreamVegas",
-    "Sports Interaction",
-    "GGPoker"
+    "Gamblezen",
+    "Pan",
+    "Trino",
+    "Rooli",
+    "Hexabet"
    ],
    "contact": {
-    "email": "dobee@timescolonist.com",
-    "contact_page": "https://thetcedge.com/",
+    "email": "gerdagrinova@casinocanada.com",
+    "contact_page": "https://casinocanada.com/advertising-page/",
     "telegram": null,
     "form": false,
-    "other": "Sponsorships PDF: https://www.vmcdn.ca/files/victoriatimescolonist/files/tcsponsorship.pdf; Sponsored: https://www.timescolonist.com/sponsored"
+    "other": null
    },
    "placement_signals": [
-    "This sponsored content has been paid for by our sponsor, Lean Back Player",
-    "Sponsored",
-    "Advertise",
-    "Sponsorships"
+    "Advertisement page link",
+    "unique link (affiliate)",
+    "Diamond sponsor of AffPapa iGaming Awards"
    ],
    "positions": {
-    "10": [
+    "9": [
      {
       "date": "2026-11-04",
-      "position": 4
+      "position": 9
      }
     ]
    },
-   "best_position": 4,
+   "best_position": 9,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
   },
   {
-   "url": "https://www.rotowire.com/ca/casinos",
-   "domain": "rotowire.com",
-   "title": "Best Canada Online Casinos 2026: Review Top Sites, Apps, & More",
+   "url": "https://globalnews.ca/content/11654441/best-online-casinos-in-canada/",
+   "domain": "globalnews.ca",
+   "title": "Best online casinos in Canada - National",
    "site_type": "review_affiliate",
    "relevant": true,
-   "confidence": 0.93,
-   "reason": "Сторінка RotoWire — комерційний рейтинг найкращих онлайн-казино Канади з партнерськими посиланнями та розкриттям комісії. Є посилання на сторінку Advertise, тож розміщення ймовірно продаються.",
+   "confidence": 0.95,
+   "reason": "Сторінка на Global News — спонсорована стаття від Online-Casinos.com з рейтингом найкращих казино Канади та CTA «Play at». Це комерційний рейтинг на медіасайті, тому підходить для розміщення.",
    "brands": [
-    "Lucky Ones",
-    "SlotRave",
-    "SlotsGem",
-    "IWild",
-    "Tonybet",
-    "HellSpin",
-    "BetRepublic",
-    "Bet99",
-    "JackpotCity",
-    "Kingmaker",
+    "Casino Days",
     "888casino",
-    "BetMGM",
-    "Bally",
-    "Golden Nugget",
-    "Caesars",
-    "DraftKings",
-    "Pinnacle",
-    "PlayOJO",
-    "SlotsMagic",
-    "Lucky Days",
-    "Wildz",
-    "SpinAway",
-    "Blackjack Ballroom",
-    "Casino Action",
-    "Casino Classic",
-    "Grand Mondial",
-    "Golden Tiger",
-    "Luxury Casino",
-    "Quatro",
-    "Yukon Gold",
-    "Captain Cooks",
-    "Zodiac Casino",
-    "Grand Hotel",
-    "UK Casino Club",
-    "theScore Bet"
+    "JackpotCity",
+    "LeoVegas",
+    "FireVegas",
+    "ToonieBet",
+    "Royal Vegas",
+    "Tonybet",
+    "Spin Casino",
+    "Toppz"
    ],
    "contact": {
     "email": null,
-    "contact_page": "https://www.rotowire.com/advertise/",
+    "contact_page": "https://globalnews.ca/branded-content/",
     "telegram": null,
     "form": false,
-    "other": "https://www.rotowire.com/contact.php (Contact Us)"
+    "other": "https://www.corusent.com/advertising/ (Corus Advertise)"
    },
    "placement_signals": [
-    "Advertise",
-    "RotoWire earns a commission",
-    "affiliate links"
+    "This article is sponsored by Online-Casinos.com",
+    "promotional purposes only",
+    "branded-content",
+    "Advertise (Corus Entertainment)"
    ],
    "positions": {
     "3": [
      {
       "date": "2026-11-04",
-      "position": 1
+      "position": 10
      }
     ]
    },
-   "best_position": 1,
+   "best_position": 10,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -408,11 +396,11 @@
     "8": [
      {
       "date": "2026-11-04",
-      "position": 4
+      "position": 3
      }
     ]
    },
-   "best_position": 4,
+   "best_position": 3,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -450,7 +438,7 @@
     "9": [
      {
       "date": "2026-11-04",
-      "position": 4
+      "position": 5
      }
     ]
    },
@@ -461,77 +449,48 @@
    "page_error": null
   },
   {
-   "url": "https://www.covers.com/casino/canada",
-   "domain": "covers.com",
-   "title": "Best Online Casino Canada: Top Real Money Sites 2026",
+   "url": "https://nationalpost.com/sponsored/safe-online-casinos-canada/",
+   "domain": "nationalpost.com",
+   "title": "Safest online casinos in Canada",
    "site_type": "review_affiliate",
    "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка Covers.com — комерційний рейтинг «найкращих онлайн-казино Канади» з бонусами, оглядами та CTA, тобто афілійований огляд-рейтинг, де можливе розміщення казино. Є сторінка контактів.",
+   "confidence": 0.93,
+   "reason": "Це спонсорована стаття на National Post (/sponsored/) з рейтингом безпечних казино та кнопками «Visit site», підготовлена BestOntarioCasinoSites.ca в комерційних цілях. Сторінка продає розміщення казино, а є окрема сторінка «Advertise With Us».",
    "brands": [
-    "WinBerry",
-    "Boho",
-    "Wagibet",
-    "Vegas Now",
-    "Lucky Ones",
-    "LetsLucky",
-    "PowerPlay",
-    "MyEmpire",
-    "Stake",
-    "Therospin",
-    "JackpotCity",
-    "Rainbet",
-    "Rolling Slots",
-    "Sports Interaction",
-    "LeoVegas",
-    "National",
-    "WestAce",
-    "Casoola",
-    "Tonybet",
-    "Betico",
-    "SlotsGem",
+    "Casino Days",
     "888casino",
-    "Posido",
-    "Frumzi",
-    "AmunRa",
-    "Robocat",
-    "Legiano",
-    "Kingmaker",
-    "Betway",
-    "Wheelz",
-    "Wazamba",
-    "North Casino",
-    "Casumo",
-    "Spin Casino",
-    "FatPanda",
-    "SpinYoo",
-    "Party Casino",
-    "PlayOJO",
-    "bet365",
-    "Ruby Fortune",
-    "DraftKings",
-    "Caesars",
-    "FanDuel",
-    "BetMGM",
-    "Bet99"
+    "FireVegas",
+    "DAZN Bet",
+    "LeoVegas",
+    "Tooniebet",
+    "Sports Interaction",
+    "Tonybet",
+    "Betinia",
+    "Toppz"
    ],
    "contact": {
     "email": null,
-    "contact_page": "https://www.covers.com/contact",
+    "contact_page": "https://nationalpost.com/advertising/",
     "telegram": null,
     "form": false,
-    "other": null
+    "other": "https://nationalpost.com/contact/ (Contact Us)"
    },
-   "placement_signals": [],
+   "placement_signals": [
+    "sponsored",
+    "Advertise With Us",
+    "provided by BestOntarioCasinoSites.ca for commercial purposes",
+    "/sponsored/ category",
+    "Visit site affiliate links"
+   ],
    "positions": {
-    "2": [
+    "3": [
      {
       "date": "2026-11-04",
-      "position": 1
+      "position": 6
      }
     ]
    },
-   "best_position": 1,
+   "best_position": 6,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -570,7 +529,7 @@
     "6": [
      {
       "date": "2026-11-04",
-      "position": 1
+      "position": 2
      }
     ]
    },
@@ -581,62 +540,34 @@
    "page_error": null
   },
   {
-   "url": "https://www.google.ca/goto?url=CAESWQHrOzAVkrzLZd611doqD8h4-1iITqk2gD9OSR1x3WEA0xbWzqh6JMdHs-63AeZdGZZCs3O3vTxuNDBBxhqY_osb3po7h-PomqNaOMlN7Js0ygGNw7PEboVf",
-   "domain": "casino.ca",
-   "title": "Online Casino Reviews Canada (2026) | Trusted Reviews",
+   "url": "https://www.dimers.com/online-casinos/ca/new",
+   "domain": "dimers.com",
+   "title": "New Online Casinos in Canada 2026: Updated List for November",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.9,
-   "reason": "Сторінка Casino.ca — афілійований рейтинг із понад 120 оглядами казино, бонусами та кнопками «Visit casino», тож тут можна купувати розміщення. Окремого advertise-контакту немає, лише посилання «Contact us» в підвалі.",
+   "reason": "Сторінка Dimers — партнерський рейтинг нових онлайн-казино Канади з оглядами брендів і реферальними посиланнями (розкриття комерційних угод). Це придатний майданчик для купівлі розміщення.",
    "brands": [
-    "Vegas Now",
-    "JackpotCity",
-    "Spin Palace",
-    "Betsio",
-    "The Clubhouse",
-    "Gizbo",
-    "OnlyWin",
-    "Pistolo",
-    "All Slots",
-    "BetPlays",
-    "Casinova",
-    "Dragonia",
-    "JustCasino",
-    "Lemon",
-    "Lex",
-    "Martin",
-    "Monro",
-    "Party Casino",
-    "WildTornado",
-    "Rainbet",
-    "Roobet",
-    "Golisimo",
-    "BetVictor",
-    "Casinia",
-    "Grizzly's Quest",
-    "Lucky Ones",
-    "Starda",
-    "Betpanda",
-    "Bluffbet",
-    "Casoola",
-    "Bodog",
-    "PlayOJO",
-    "888casino"
+    "BetMGM",
+    "Sports Interaction",
+    "Tooniebet",
+    "Betsafe",
+    "Betway"
    ],
    "contact": {
-    "email": null,
-    "contact_page": null,
+    "email": "damien@ciphersports.io",
+    "contact_page": "https://www.dimers.com/contact-us",
     "telegram": null,
     "form": false,
-    "other": "Посилання «Contact us» у футері (href не визначено)"
+    "other": null
    },
    "placement_signals": [
-    "Visit casino CTA",
-    "affiliate-style ranking",
-    "Do casinos pay you to review them? (FAQ)"
+    "referral fees",
+    "commercial arrangement with third-party sites",
+    "sign up by clicking banners"
    ],
    "positions": {
-    "3": [
+    "5": [
      {
       "date": "2026-11-04",
       "position": 2
@@ -645,9 +576,9 @@
    },
    "best_position": 2,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": null
   },
   {
    "url": "https://www.casino.com/ca/fastest-payout-casinos/",
@@ -689,6 +620,46 @@
    "method": "reader",
    "model": "claude-sonnet-5-5",
    "page_error": "httpx 406: заблоковано або помилка"
+  },
+  {
+   "url": "https://www.sportsgamblingpodcast.com/2026/09/11/best-no-deposit-bonus-casinos-canada-free-spins-promo-codes-for-canadians/",
+   "domain": "sportsgamblingpodcast.com",
+   "title": "Best No Deposit Bonus Casinos Canada - Free Spins & Promo Codes For Canadians",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка на подкаст-сайті — комерційний рейтинг казино з no deposit бонусами для Канади з промокодами та CTA-кнопками «CLAIM BONUS», тобто афілейт-контент. У футері є посилання «Advertise», що вказує на продаж рекламних розміщень.",
+   "brands": [
+    "Bitstarz",
+    "7Bit",
+    "MIRAX",
+    "KatsuBet"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": null,
+    "telegram": null,
+    "form": false,
+    "other": "Footer links: Advertise, Contact"
+   },
+   "placement_signals": [
+    "Advertise (footer link)",
+    "CLAIM BONUS affiliate CTA buttons",
+    "Contact (footer link)"
+   ],
+   "positions": {
+    "8": [
+     {
+      "date": "2026-11-04",
+      "position": 2
+     }
+    ]
+   },
+   "best_position": 2,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка"
   },
   {
    "url": "https://www.gambling.com/ca/online-casinos",
@@ -740,13 +711,13 @@
     "1": [
      {
       "date": "2026-11-04",
-      "position": 3
+      "position": 7
      }
     ],
-    "10": [
+    "7": [
      {
       "date": "2026-11-04",
-      "position": 5
+      "position": 3
      }
     ]
    },
@@ -755,95 +726,6 @@
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
-  },
-  {
-   "url": "https://www.sportsgamblingpodcast.com/2026/09/11/best-no-deposit-bonus-casinos-canada-free-spins-promo-codes-for-canadians/",
-   "domain": "sportsgamblingpodcast.com",
-   "title": "Best No Deposit Bonus Casinos Canada - Free Spins & Promo Codes For Canadians",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка на подкаст-сайті — комерційний рейтинг казино з no deposit бонусами для Канади з промокодами та CTA-кнопками «CLAIM BONUS», тобто афілейт-контент. У футері є посилання «Advertise», що вказує на продаж рекламних розміщень.",
-   "brands": [
-    "Bitstarz",
-    "7Bit",
-    "MIRAX",
-    "KatsuBet"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Footer links: Advertise, Contact"
-   },
-   "placement_signals": [
-    "Advertise (footer link)",
-    "CLAIM BONUS affiliate CTA buttons",
-    "Contact (footer link)"
-   ],
-   "positions": {
-    "8": [
-     {
-      "date": "2026-11-04",
-      "position": 3
-     }
-    ]
-   },
-   "best_position": 3,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
-  },
-  {
-   "url": "https://www.google.ca/goto?url=CAESdQHrOzAVP-zIWa6tWnam7oJGzT0X5lM7aYylwucgkDujuFfYAcb3JdX5jGe8hTRx43E-KCpxZZHynzTr7otpyLLBsH4vOGcrZmpvWskGApmIqFE3bNdgZEqwqNWhMl0nFAai4eBAtPmWd3b7xzGmepPnNZ6MEg",
-   "domain": "casinomeister.com",
-   "title": "Best Online Casinos in Canada [November, 2026 ] | Real Money Casinos",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка Casinomeister — рейтинг канадських онлайн-казино з оцінками, бонусами, кнопками Visit та афілійованим disclosure. Це типовий афілійований оглядовий сайт, де можливе розміщення казино.",
-   "brands": [
-    "Thrill",
-    "Aerobet",
-    "BiggerZ",
-    "GoKong",
-    "Slotoro",
-    "Jackpotter",
-    "BetPRIMEIRO",
-    "BeonBet",
-    "SlotsGem",
-    "Spinrise",
-    "bet365",
-    "JackpotCity",
-    "Casumo"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Посилання Contact у футері (href не визначено)"
-   },
-   "placement_signals": [
-    "Affiliate Disclosure",
-    "Contact",
-    "Casinomeister Awards"
-   ],
-   "positions": {
-    "2": [
-     {
-      "date": "2026-11-04",
-      "position": 5
-     }
-    ]
-   },
-   "best_position": 5,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
   },
   {
    "url": "https://www.casino.com/ca/",
@@ -886,12 +768,6 @@
     "affiliate links and may receive commissions"
    ],
    "positions": {
-    "3": [
-     {
-      "date": "2026-11-04",
-      "position": 5
-     }
-    ],
     "4": [
      {
       "date": "2026-11-04",
@@ -906,38 +782,44 @@
    "page_error": "httpx 406: заблоковано або помилка"
   },
   {
-   "url": "https://casinocanada.com/casino-bonuses/50-free-spins/",
+   "url": "https://casinocanada.com/casino-bonuses/free-spins/",
    "domain": "casinocanada.com",
-   "title": "Best 50 Free Spins No Deposit Casinos in Canada 2026",
+   "title": "Free Spins No Deposit Bonuses in Canada 2026",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.9,
-   "reason": "Сторінка є афілійованим рейтингом казино з 50 безкоштовними спінами без депозиту, з кнопками Claim та Ad Disclosure. У футері є розділ «Advertisement», тож розміщення, імовірно, продаються.",
+   "reason": "Це афілійована сторінка з добіркою бонусів free spins без депозиту, з позначкою Ad Disclosure та кнопками Claim. У футері є розділ «Advertisement», що вказує на продаж розміщень.",
    "brands": [
-    "Boo",
-    "Interwetten",
-    "Energy",
-    "ICE",
-    "BetPrimeiro",
-    "Katsubet",
+    "LevelUP",
+    "Spinaconda",
+    "Lemon",
+    "Gamblezen",
+    "BonanzaGame",
+    "Melbet",
+    "Lucky7even",
+    "888casino",
+    "Lucky Days",
+    "Tonybet",
+    "Ruby Fortune",
     "JackpotCity",
-    "Spin Casino"
+    "Spin Casino",
+    "Casino Days"
    ],
    "contact": {
     "email": null,
     "contact_page": null,
     "telegram": null,
     "form": false,
-    "other": "Footer links: Advertisement, About us, Contacts (author block)"
+    "other": "Footer link: Advertisement"
    },
    "placement_signals": [
     "Advertisement",
     "Ad Disclosure",
-    "Claim buttons",
-    "affiliate casino listings"
+    "Exclusive CasinoCanada bonus",
+    "Exclusive bonuses"
    ],
    "positions": {
-    "9": [
+    "8": [
      {
       "date": "2026-11-04",
       "position": 5
@@ -945,6 +827,57 @@
     ]
    },
    "best_position": 5,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка"
+  },
+  {
+   "url": "https://www.casino.ca/no-deposit/",
+   "domain": "casino.ca",
+   "title": "No Deposit Bonus Casinos Canada 2026 - Claim 100 FS",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка — афілійований рейтинг казино з бонусами без депозиту, з CTA-кнопками «Claim bonus» та застереженням про партнерські посилання. Підходить для купівлі розміщення.",
+   "brands": [
+    "Mirax",
+    "Lemon",
+    "Slotrave",
+    "Cristal Poker",
+    "KatsuBet",
+    "SlotsGem",
+    "Bluffbet",
+    "Impressario",
+    "7Bit",
+    "JackpotCity",
+    "Spin Casino",
+    "Royal Vegas",
+    "PlayOJO",
+    "888casino",
+    "Lucky Ones"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": null,
+    "telegram": null,
+    "form": false,
+    "other": "Посилання «Contact us» у футері"
+   },
+   "placement_signals": [
+    "This website contains affiliate links",
+    "Claim bonus CTA",
+    "Contact us"
+   ],
+   "positions": {
+    "2": [
+     {
+      "date": "2026-11-04",
+      "position": 6
+     }
+    ]
+   },
+   "best_position": 6,
    "needs_review": false,
    "method": "reader",
    "model": "claude-sonnet-5-5",
@@ -991,41 +924,33 @@
    "page_error": null
   },
   {
-   "url": "https://casinocanada.com/casino-bonuses/free-spins/",
-   "domain": "casinocanada.com",
-   "title": "Free Spins No Deposit Bonuses in Canada 2026",
+   "url": "https://www.slotozilla.com/ca/no-deposit-bonus/100-free-chip",
+   "domain": "slotozilla.com",
+   "title": "$100 No Deposit Bonus & Codes 🎖️ Canada 2026's List",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.9,
-   "reason": "Це афілійована сторінка з добіркою бонусів free spins без депозиту, з позначкою Ad Disclosure та кнопками Claim. У футері є розділ «Advertisement», що вказує на продаж розміщень.",
+   "reason": "Сторінка — афілійована добірка бонусів без депозиту з кнопками GET BONUS і таблицею казино з оглядами. У футері є посилання Partnership і Contact Us, тож розміщення ймовірно можливе.",
    "brands": [
-    "LevelUP",
-    "Spinaconda",
-    "Lemon",
-    "Gamblezen",
-    "BonanzaGame",
-    "Melbet",
-    "Lucky7even",
-    "888casino",
-    "Lucky Days",
-    "Tonybet",
-    "Ruby Fortune",
-    "JackpotCity",
-    "Spin Casino",
-    "Casino Days"
+    "National",
+    "Voodoo Dreams",
+    "Hot.Bet",
+    "Verde",
+    "Ice",
+    "Vulkan Vegas",
+    "Slots Heaven"
    ],
    "contact": {
     "email": null,
     "contact_page": null,
     "telegram": null,
     "form": false,
-    "other": "Footer link: Advertisement"
+    "other": "Footer links: Partnership, Contact Us"
    },
    "placement_signals": [
-    "Advertisement",
-    "Ad Disclosure",
-    "Exclusive CasinoCanada bonus",
-    "Exclusive bonuses"
+    "Partnership",
+    "Contact Us",
+    "GET BONUS affiliate CTA buttons"
    ],
    "positions": {
     "8": [
@@ -1039,7 +964,127 @@
    "needs_review": false,
    "method": "reader",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": "httpx: ConnectError"
+  },
+  {
+   "url": "https://www.slotozilla.com/ca/free-spins/150-free-spins",
+   "domain": "slotozilla.com",
+   "title": "150 Free Spins No Deposit Bonus in Canada (2026)",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка — афілійована добірка казино з 150 безкоштовними спінами для Канади з таблицями бонусів і кнопками Claim. У футері є посилання Partnership та Contact Us, що вказує на можливість розміщення.",
+   "brands": [
+    "Slotman",
+    "Casino Midas",
+    "Grand Mondial",
+    "Hell Spin",
+    "Oxi",
+    "DuxCasino",
+    "Wild Tokyo",
+    "National",
+    "FortuneJack",
+    "Ruby Fortune",
+    "Lucky Nugget",
+    "Gaming Club",
+    "Jonny Jackpot",
+    "Captain Cooks",
+    "Yukon Gold",
+    "FastPay"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": null,
+    "telegram": null,
+    "form": false,
+    "other": "Footer links: Partnership, Contact Us"
+   },
+   "placement_signals": [
+    "Partnership",
+    "Contact Us",
+    "affiliate CTA Claim buttons",
+    "Exclusive Casino Bonuses"
+   ],
+   "positions": {
+    "9": [
+     {
+      "date": "2026-11-04",
+      "position": 6
+     }
+    ]
+   },
+   "best_position": 6,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx: ConnectError"
+  },
+  {
+   "url": "https://rg.org/en-ca/casinos/provinces/ontario",
+   "domain": "rg.org",
+   "title": "Best Online Casinos in Ontario November 2026 – Licensed Casino Sites",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка є афілійованим рейтингом і оглядами ліцензованих онлайн-казино Онтаріо з CTA-кнопками «Click to Sign Up». Це типовий review-сайт, де можливе розміщення казино-брендів.",
+   "brands": [
+    "Tonybet",
+    "Bet99",
+    "BetVictor",
+    "Sports Interaction",
+    "LeoVegas",
+    "888casino",
+    "bet365",
+    "Casino Days",
+    "Betano",
+    "BetMGM",
+    "Betway",
+    "Caesars",
+    "Captain Cooks",
+    "Casumo",
+    "DraftKings",
+    "FanDuel",
+    "Grand Mondial",
+    "JackpotCity",
+    "Lucky Days",
+    "Luxury Casino",
+    "NorthStar Bets",
+    "Party Casino",
+    "PlayOJO",
+    "PokerStars",
+    "PowerPlay",
+    "Royal Panda",
+    "Royal Vegas",
+    "Ruby Fortune",
+    "Spin Casino",
+    "theScore Bet",
+    "Yukon Gold",
+    "Zodiac Casino"
+   ],
+   "contact": {
+    "email": "support@rg.org",
+    "contact_page": "https://rg.org/en-ca/contacts",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [
+    "Click to Sign Up affiliate CTA buttons",
+    "independent information service with casino rankings"
+   ],
+   "positions": {
+    "10": [
+     {
+      "date": "2026-11-04",
+      "position": 6
+     }
+    ]
+   },
+   "best_position": 6,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
   },
   {
    "url": "https://www.sportsbookreview.com/casino/canada/",
@@ -1082,8 +1127,49 @@
       "date": "2026-11-04",
       "position": 10
      }
-    ],
-    "3": [
+    ]
+   },
+   "best_position": 7,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://nowtoronto.com/lifestyle/best-online-casinos-canada/",
+   "domain": "nowtoronto.com",
+   "title": "Best online casinos Canada (2024) – Top 10 real money Canadian ...",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка на медійному сайті Now Toronto — це гостьовий (guest post) рейтинг «найкращих онлайн-казино Канади» з афілійованими CTA-кнопками, тож це комерційний рейтинг, де можливе розміщення. У меню сайту є пункт ADVERTISE, а схожі матеріали позначені як «Sponsored content».",
+   "brands": [
+    "Casino Infinity",
+    "Crownplay",
+    "Lucky7even",
+    "Neospin",
+    "Spinch",
+    "Kingmaker",
+    "Qbet",
+    "Skycrown",
+    "Roosterbet",
+    "SlotsPalace"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": null,
+    "telegram": null,
+    "form": false,
+    "other": "Пункти меню ADVERTISE та CONTACT (без href)"
+   },
+   "placement_signals": [
+    "GUEST POST",
+    "SPONSORED CONTENT",
+    "ADVERTISE",
+    "affiliate CTA buttons"
+   ],
+   "positions": {
+    "2": [
      {
       "date": "2026-11-04",
       "position": 7
@@ -1092,9 +1178,9 @@
    },
    "best_position": 7,
    "needs_review": false,
-   "method": "httpx",
+   "method": "reader",
    "model": "claude-sonnet-5-5",
-   "page_error": null
+   "page_error": "httpx 403: заблоковано або помилка"
   },
   {
    "url": "https://www.thesarniajournal.ca/spotlight/best-online-casinos-canada-2025-top-canadian-casino-sites-ranked-by-experts-10034500",
@@ -1131,6 +1217,93 @@
    ],
    "positions": {
     "4": [
+     {
+      "date": "2026-11-04",
+      "position": 7
+     }
+    ]
+   },
+   "best_position": 7,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://www.casinoreviews.net/ca/",
+   "domain": "casinoreviews.net",
+   "title": "Best Online Casinos Canada 2026 - Casino Reviews",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка є афілійованим рейтингом і оглядами казино для Канади з таблицею бонусів та CTA-кнопками «Visit review». Це типовий майданчик для купівлі розміщення казино.",
+   "brands": [
+    "888casino",
+    "Tonybet",
+    "22Bet",
+    "Wazamba",
+    "PlayAmo",
+    "1xBet",
+    "MELbet",
+    "Betamo",
+    "Cookie"
+   ],
+   "contact": {
+    "email": "joseph.skelker@casinoreviews.net",
+    "contact_page": "https://www.casinoreviews.net/contact-us/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [],
+   "positions": {
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 7
+     }
+    ]
+   },
+   "best_position": 7,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://www.bonus.ca/free-spins-no-deposit/100-free-spins",
+   "domain": "bonus.ca",
+   "title": "100 Free Spins No Deposit Canada (November 2026)",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка — афілійований рейтинг бонусів із 100 безкоштовних спінів для Канади з оглядами казино та CTA, є розкриття афілійованого зв'язку. Це типовий майданчик для купівлі розміщення.",
+   "brands": [
+    "Arcanebet",
+    "CasinoDays",
+    "Johnny Jackpot",
+    "Lucky Days",
+    "888casino",
+    "GambleZen",
+    "LeoVegas",
+    "PlayGrand",
+    "Casino Days"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://www.bonus.ca/about-us/contact-us",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [
+    "Ad Disclosure",
+    "Affiliate Disclosure",
+    "Exclusive bonus on this page",
+    "Editor's Tip"
+   ],
+   "positions": {
+    "8": [
      {
       "date": "2026-11-04",
       "position": 7
@@ -1187,7 +1360,7 @@
     "8": [
      {
       "date": "2026-11-04",
-      "position": 7
+      "position": 8
      }
     ]
    },
@@ -1196,59 +1369,6 @@
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
-  },
-  {
-   "url": "https://www.slotozilla.com/ca/free-spins/150-free-spins",
-   "domain": "slotozilla.com",
-   "title": "150 Free Spins No Deposit Bonus in Canada (2026)",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка — афілійована добірка казино з 150 безкоштовними спінами для Канади з таблицями бонусів і кнопками Claim. У футері є посилання Partnership та Contact Us, що вказує на можливість розміщення.",
-   "brands": [
-    "Slotman",
-    "Casino Midas",
-    "Grand Mondial",
-    "Hell Spin",
-    "Oxi",
-    "DuxCasino",
-    "Wild Tokyo",
-    "National",
-    "FortuneJack",
-    "Ruby Fortune",
-    "Lucky Nugget",
-    "Gaming Club",
-    "Jonny Jackpot",
-    "Captain Cooks",
-    "Yukon Gold",
-    "FastPay"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Footer links: Partnership, Contact Us"
-   },
-   "placement_signals": [
-    "Partnership",
-    "Contact Us",
-    "affiliate CTA Claim buttons",
-    "Exclusive Casino Bonuses"
-   ],
-   "positions": {
-    "9": [
-     {
-      "date": "2026-11-04",
-      "position": 7
-     }
-    ]
-   },
-   "best_position": 7,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx: ConnectError"
   },
   {
    "url": "https://www.betiton.com/en-ca/casino/",
@@ -1289,7 +1409,7 @@
     "1": [
      {
       "date": "2026-11-04",
-      "position": 8
+      "position": 9
      }
     ]
    },
@@ -1300,176 +1420,36 @@
    "page_error": null
   },
   {
-   "url": "https://www.casino.ca/no-deposit/",
+   "url": "https://www.casino.ca/",
    "domain": "casino.ca",
-   "title": "No Deposit Bonus Casinos Canada 2026 - Claim 100 FS",
+   "title": "Online Casino Canada | Top 15 Real Money Casinos 2026",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.9,
-   "reason": "Сторінка — афілійований рейтинг казино з бонусами без депозиту, з CTA-кнопками «Claim bonus» та застереженням про партнерські посилання. Підходить для купівлі розміщення.",
+   "reason": "Сторінка є афілійованим рейтингом топ-15 казино Канади з оглядами, бонусами та афілійованими посиланнями. Це типовий майданчик для купівлі розміщення казино.",
    "brands": [
-    "Mirax",
-    "Lemon",
-    "Slotrave",
-    "Cristal Poker",
-    "KatsuBet",
-    "SlotsGem",
-    "Bluffbet",
-    "Impressario",
-    "7Bit",
     "JackpotCity",
-    "Spin Casino",
-    "Royal Vegas",
-    "PlayOJO",
-    "888casino",
-    "Lucky Ones"
+    "Spin Palace",
+    "Lucky Ones",
+    "BetWest",
+    "Snatch",
+    "JustCasino",
+    "Boho",
+    "Slotrave"
    ],
    "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Посилання «Contact us» у футері"
-   },
-   "placement_signals": [
-    "This website contains affiliate links",
-    "Claim bonus CTA",
-    "Contact us"
-   ],
-   "positions": {
-    "2": [
-     {
-      "date": "2026-11-04",
-      "position": 8
-     }
-    ]
-   },
-   "best_position": 8,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
-  },
-  {
-   "url": "https://www.slotozilla.com/ca/no-deposit-bonus/100-free-chip",
-   "domain": "slotozilla.com",
-   "title": "$100 No Deposit Bonus & Codes 🎖️ Canada 2026's List",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка — афілійована добірка бонусів без депозиту з кнопками GET BONUS і таблицею казино з оглядами. У футері є посилання Partnership і Contact Us, тож розміщення ймовірно можливе.",
-   "brands": [
-    "National",
-    "Voodoo Dreams",
-    "Hot.Bet",
-    "Verde",
-    "Ice",
-    "Vulkan Vegas",
-    "Slots Heaven"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Footer links: Partnership, Contact Us"
-   },
-   "placement_signals": [
-    "Partnership",
-    "Contact Us",
-    "GET BONUS affiliate CTA buttons"
-   ],
-   "positions": {
-    "8": [
-     {
-      "date": "2026-11-04",
-      "position": 8
-     }
-    ]
-   },
-   "best_position": 8,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx: ConnectError"
-  },
-  {
-   "url": "https://www.betiton.com/en-on/casino/",
-   "domain": "betiton.com",
-   "title": "Best Online Casinos in Ontario 2026 🍁 (Top 5 Legal Sites)",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Це афілійована сторінка з рейтингом «найкращих онлайн-казино Онтаріо» з оглядами, перевагами й недоліками та розкриттям афілійованих партнерств. Тут цілком можна купувати розміщення казино.",
-   "brands": [
-    "Tooniebet",
-    "LeoVegas",
-    "JackpotCity",
-    "Spin Casino",
-    "SlotsMagic",
-    "Royal Vegas"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": "https://www.betiton.com/en-on/contact-us/",
+    "email": "contact@casino.ca",
+    "contact_page": "https://www.casino.ca/contact/",
     "telegram": null,
     "form": false,
     "other": null
    },
    "placement_signals": [
-    "affiliate disclosure",
-    "casinos listed are our affiliate partners",
-    "may earn a commission"
+    "This website contains affiliate links",
+    "affiliate commission disclosure"
    ],
    "positions": {
-    "10": [
-     {
-      "date": "2026-11-04",
-      "position": 8
-     }
-    ]
-   },
-   "best_position": 8,
-   "needs_review": false,
-   "method": "httpx",
-   "model": "claude-sonnet-5-5",
-   "page_error": null
-  },
-  {
-   "url": "https://nowtoronto.com/lifestyle/best-online-casinos-canada/",
-   "domain": "nowtoronto.com",
-   "title": "Best online casinos Canada (2024) – Top 10 real money Canadian casino sites",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.9,
-   "reason": "Сторінка на медійному сайті Now Toronto — це гостьовий (guest post) рейтинг «найкращих онлайн-казино Канади» з афілійованими CTA-кнопками, тож це комерційний рейтинг, де можливе розміщення. У меню сайту є пункт ADVERTISE, а схожі матеріали позначені як «Sponsored content».",
-   "brands": [
-    "Casino Infinity",
-    "Crownplay",
-    "Lucky7even",
-    "Neospin",
-    "Spinch",
-    "Kingmaker",
-    "Qbet",
-    "Skycrown",
-    "Roosterbet",
-    "SlotsPalace"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Пункти меню ADVERTISE та CONTACT (без href)"
-   },
-   "placement_signals": [
-    "GUEST POST",
-    "SPONSORED CONTENT",
-    "ADVERTISE",
-    "affiliate CTA buttons"
-   ],
-   "positions": {
-    "2": [
+    "3": [
      {
       "date": "2026-11-04",
       "position": 9
@@ -1478,52 +1458,83 @@
    },
    "best_position": 9,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": null
   },
   {
-   "url": "https://chipy.com/ca/bonus-blog/no-deposit-sign-up-bonus",
-   "domain": "chipy.com",
-   "title": "Free Sign-up Bonuses with No Deposit Required Canada 2026",
+   "url": "https://www.livescore.com/en-ca/online-casinos/no-deposit-casinos/",
+   "domain": "livescore.com",
+   "title": "No Deposit Bonus Casinos Canada 2026",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.9,
-   "reason": "Це афілійована сторінка з рейтингом бонусів без депозиту для Канади, з партнерськими посиланнями та Affiliate Disclosure. У футері є «Write for us», «Work with us» та «Advertiser disclosure», тож розміщення, імовірно, продаються.",
+   "reason": "Сторінка LiveScore — комерційний рейтинг казино з no deposit бонусами для Канади з афілійованими посиланнями на реєстрацію. Є посилання на рекламу (livescoregroup.com/advertise), тому розміщення можливе.",
    "brands": [
-    "Wagerwhale",
-    "LunaLoots",
-    "Lemon",
-    "Magicianbet",
-    "Cherry Jackpot",
-    "CasinoMax",
-    "Loonie Gold",
-    "Voodoo",
-    "Frogbet",
-    "LuckyCapone",
-    "Gambloria",
-    "VipCasino",
-    "FreakyBillion",
-    "Wild Dice",
-    "RockstarWin",
-    "Sun Palace",
-    "Orca Spins",
-    "UpTown Pokies",
-    "Slotastic"
+    "7Bit",
+    "Tonybet",
+    "Katsubet",
+    "Mirax"
    ],
    "contact": {
     "email": null,
-    "contact_page": null,
+    "contact_page": "https://livescoregroup.com/advertise/",
     "telegram": null,
     "form": false,
-    "other": "Footer links: Write for us, Work with us, Contact us, Advertiser disclosure"
+    "other": "https://www.livescore.com/en/contact (Contact)"
    },
    "placement_signals": [
-    "Write for us",
-    "Work with us",
-    "Advertiser disclosure",
-    "Affiliate Disclosure",
-    "Exclusive bonuses via chipy.com"
+    "Advertise link: livescoregroup.com/advertise",
+    "affiliate sign-up links",
+    "casino promotions listing"
+   ],
+   "positions": {
+    "8": [
+     {
+      "date": "2026-11-04",
+      "position": 9
+     }
+    ]
+   },
+   "best_position": 9,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://www.gambling.com/ca/online-casinos/no-deposit-bonus",
+   "domain": "gambling.com",
+   "title": "Best No Deposit Bonus Casinos in Canada for 2026",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.9,
+   "reason": "Сторінка — афілійований рейтинг казино з бонусами без депозиту для Канади з таблицею порівняння, бонус-кодами та CTA-посиланнями. Це типовий review_affiliate, де можливе розміщення казино.",
+   "brands": [
+    "BluffBet",
+    "Magicianbet",
+    "Stake",
+    "Rollino",
+    "JackpotCity",
+    "Lucky Nugget",
+    "Spin Casino",
+    "21Casino",
+    "Lucky Days",
+    "7Bit",
+    "Spinmama",
+    "888casino"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://www.gdcgroup.com/contact",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [
+    "exclusive offer via our link",
+    "affiliate CTA buttons",
+    "bonus codes exclusive to Gambling.com"
    ],
    "positions": {
     "9": [
@@ -1535,55 +1546,50 @@
    },
    "best_position": 10,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx: ConnectError"
+   "page_error": null
   },
   {
-   "url": "https://www.bonus.ca/online-casinos/ontario",
-   "domain": "bonus.ca",
-   "title": "Best Ontario Online Casinos 2026: iGO-Contracted Sites",
+   "url": "https://www.livescore.com/en-ca/online-casinos/",
+   "domain": "livescore.com",
+   "title": "Best Online Casino Sites in Canada November 2026",
    "site_type": "review_affiliate",
    "relevant": true,
-   "confidence": 0.9,
-   "reason": "Це афілійований рейтинг та огляди ліцензованих казино Онтаріо (bonus.ca) з таблицями брендів і рейтингами, є розкриття афілійованості. Сторінка придатна для купівлі розміщення.",
+   "confidence": 0.85,
+   "reason": "Сторінка на спортивному медіасайті LiveScore є комерційним рейтингом найкращих онлайн-казино Канади з оглядами, бонусами та порівнянням, тобто афіліатним контентом. На сайті є посилання на рекламу (Advertise), тож розміщення можливе.",
    "brands": [
-    "BetMGM",
-    "BetRivers",
-    "PointsBet",
-    "Bally Bet",
-    "ComeOn",
-    "Stardust",
-    "Amazon Slots",
-    "Slots Magic",
-    "Party Casino",
-    "Betway",
-    "Zodiac Casino",
+    "Lucky Vibe",
+    "Tonybet",
+    "7Bit",
+    "Casumo",
+    "Robocat",
+    "Roobet",
     "LeoVegas",
-    "Royal Panda",
-    "NorthStar Bets",
-    "Caesars"
+    "North Casino",
+    "JackpotCity"
    ],
    "contact": {
     "email": null,
-    "contact_page": "https://www.bonus.ca/about-us/contact-us",
+    "contact_page": "https://livescoregroup.com/advertise/",
     "telegram": null,
     "form": false,
-    "other": null
+    "other": "Contact: https://www.livescore.com/en/contact"
    },
    "placement_signals": [
-    "Affiliate Disclosure",
-    "Ad Disclosure"
+    "Advertise link (livescoregroup.com/advertise)",
+    "commercial casino ranking on media site",
+    "casino promotions disclaimer"
    ],
    "positions": {
-    "10": [
+    "2": [
      {
       "date": "2026-11-04",
-      "position": 10
+      "position": 1
      }
     ]
    },
-   "best_position": 10,
+   "best_position": 1,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -1617,10 +1623,10 @@
     "affiliate CTA buttons (Claim up to C$1,600)"
    ],
    "positions": {
-    "3": [
+    "2": [
      {
       "date": "2026-11-04",
-      "position": 3
+      "position": 8
      }
     ],
     "4": [
@@ -1680,38 +1686,32 @@
    "page_error": null
   },
   {
-   "url": "https://www.livescore.com/en-ca/online-casinos/",
-   "domain": "livescore.com",
-   "title": "Best Online Casino Sites in Canada November 2026",
+   "url": "https://www.bonus.com/ca/",
+   "domain": "bonus.com",
+   "title": "Online Casino Canada: Legal Guide by Province",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.85,
-   "reason": "Сторінка на спортивному медіасайті LiveScore є комерційним рейтингом найкращих онлайн-казино Канади з оглядами, бонусами та порівнянням, тобто афіліатним контентом. На сайті є посилання на рекламу (Advertise), тож розміщення можливе.",
+   "reason": "Сторінка bonus.com — афілійований гід з рейтингом казино для Альберти з кнопками «VISIT NOW», оглядами та бонусами. Це комерційний рейтинг казино, тож розміщення тут доречне.",
    "brands": [
-    "Lucky Vibe",
-    "Tonybet",
-    "7Bit",
-    "Casumo",
-    "Robocat",
-    "Roobet",
-    "LeoVegas",
-    "North Casino",
-    "JackpotCity"
+    "BetMGM",
+    "DraftKings",
+    "Golden Nugget",
+    "BetRivers",
+    "bet365",
+    "Hollywood",
+    "PlayOJO",
+    "SlotsMagic",
+    "theScore Bet"
    ],
-   "contact": {
-    "email": null,
-    "contact_page": "https://livescoregroup.com/advertise/",
-    "telegram": null,
-    "form": false,
-    "other": "Contact: https://www.livescore.com/en/contact"
-   },
+   "contact": null,
    "placement_signals": [
-    "Advertise link (livescoregroup.com/advertise)",
-    "commercial casino ranking on media site",
-    "casino promotions disclaimer"
+    "VISIT NOW affiliate CTA buttons",
+    "How Bonus.com makes money FAQ",
+    "How We Rank"
    ],
    "positions": {
-    "2": [
+    "1": [
      {
       "date": "2026-11-04",
       "position": 2
@@ -1720,9 +1720,70 @@
    },
    "best_position": 2,
    "needs_review": false,
-   "method": "httpx",
+   "method": "reader",
    "model": "claude-sonnet-5-5",
-   "page_error": null
+   "page_error": "httpx 403: заблоковано або помилка"
+  },
+  {
+   "url": "https://www.casinomeister.com/online-casinos/countries/ca/",
+   "domain": "casinomeister.com",
+   "title": "Best Online Casinos in Canada [November, 2026 ] | Real Money Casinos",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.85,
+   "reason": "Сторінка — афіліатний рейтинг канадських онлайн-казино з оцінками, бонусами, кнопками «Visit» та Affiliate Disclosure. Контактів для реклами на сторінці немає, лише посилання Contact у футері без href.",
+   "brands": [
+    "Thrill",
+    "Aerobet",
+    "BiggerZ",
+    "GoKong",
+    "Slotoro",
+    "Jackpotter",
+    "BetPRIMEIRO",
+    "BeonBet",
+    "SlotsGem",
+    "Spinrise",
+    "bet365",
+    "JackpotCity",
+    "Casumo"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": null,
+    "telegram": null,
+    "form": false,
+    "other": "Посилання «Contact» у футері сайту"
+   },
+   "placement_signals": [
+    "Affiliate Disclosure",
+    "affiliate links",
+    "commission if you sign up"
+   ],
+   "positions": {
+    "1": [
+     {
+      "date": "2026-11-04",
+      "position": 5
+     }
+    ],
+    "2": [
+     {
+      "date": "2026-11-04",
+      "position": 2
+     }
+    ],
+    "4": [
+     {
+      "date": "2026-11-04",
+      "position": 5
+     }
+    ]
+   },
+   "best_position": 2,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка"
   },
   {
    "url": "https://mr-gamble.com/ca/online-casino/top/",
@@ -1744,60 +1805,7 @@
    },
    "placement_signals": [],
    "positions": {
-    "3": [
-     {
-      "date": "2026-11-04",
-      "position": 10
-     }
-    ],
     "4": [
-     {
-      "date": "2026-11-04",
-      "position": 2
-     }
-    ]
-   },
-   "best_position": 2,
-   "needs_review": false,
-   "method": "httpx",
-   "model": "claude-sonnet-5-5",
-   "page_error": null
-  },
-  {
-   "url": "https://gamblizard.ca/no-deposit-bonuses/",
-   "domain": "gamblizard.ca",
-   "title": "No Deposit Bonus Casino Canada 2026",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.85,
-   "reason": "Сторінка — афілійована добірка бонусів без депозиту з промокодами та рейтингами казино від Gamblizard. На сайті є розділ «Advertise with us», тож розміщення, імовірно, продаються.",
-   "brands": [
-    "BitKingz",
-    "Ice",
-    "Rainbet",
-    "Casea",
-    "Spirit",
-    "Winberry",
-    "Intellectbet",
-    "SpinEmpire",
-    "Slot Owl",
-    "Iris"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": "https://gamblizard.ca/advertise-with-us/",
-    "telegram": null,
-    "form": false,
-    "other": "https://gamblizard.ca/contact-us/ (Contact us)"
-   },
-   "placement_signals": [
-    "Advertise with us",
-    "exclusive bonuses",
-    "promo code GAMBLIZARD",
-    "follow our link to claim"
-   ],
-   "positions": {
-    "8": [
      {
       "date": "2026-11-04",
       "position": 2
@@ -1854,77 +1862,34 @@
    "page_error": null
   },
   {
-   "url": "https://www.thespike.gg/online-casinos/canada",
-   "domain": "thespike.gg",
-   "title": "Online Casino Canada 2026 | Best Canadian Casinos List (+ Guide)",
+   "url": "https://www.thelines.com/ca/online-casinos/",
+   "domain": "thelines.com",
+   "title": "Best Online Casinos in Canada 2026: Top 20+ Casino Sites",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.85,
-   "reason": "Сторінка на esports-сайті з позначкою \"Contains commercial content\" містить великий рейтинг онлайн-казино для Канади з афілійованими кнопками \"Open ...\". Це комерційний рейтинг, тож розміщення тут імовірно можна купити.",
+   "reason": "Сторінка thelines.com — комерційний рейтинг \"best online casinos in Canada\" з оглядами, бонусами та CTA-посиланнями, тобто афілійований огляд на спортивному медіа. Придатна для розміщення казино.",
    "brands": [
-    "BC.Game",
-    "BetPanda",
-    "Roobet",
-    "Punkz",
-    "Winna",
-    "FS.",
-    "FieryPlay",
-    "Acebet",
-    "Metawin",
     "bet365",
-    "BetFury",
-    "Moonwin",
-    "Legendz",
-    "Vega.bet",
-    "Wintari",
-    "22Bet",
-    "Vave",
-    "Betano",
-    "5bet",
-    "Whale.io",
-    "WSM",
-    "Betway",
-    "Bwin",
-    "Winz.io",
-    "Duelbits",
-    "Parimatch",
-    "1Red",
-    "20Bet",
-    "Duel",
-    "JB.com",
-    "ICE",
-    "Playbet.io",
-    "Fairspin",
-    "BillyBets",
-    "JustCasino",
-    "Cloudbet",
-    "Fast Slots",
-    "Metaspins",
-    "V.Vegas",
-    "Polestar",
-    "Rollino"
+    "BetMGM",
+    "DraftKings",
+    "BC.Game",
+    "LeoVegas",
+    "Casumo",
+    "1xBet",
+    "Wildz"
    ],
    "contact": null,
-   "placement_signals": [
-    "Contains commercial content",
-    "affiliate CTA buttons (Open ...)",
-    "T&Cs apply"
-   ],
+   "placement_signals": [],
    "positions": {
-    "1": [
+    "5": [
      {
       "date": "2026-11-04",
-      "position": 9
-     }
-    ],
-    "3": [
-     {
-      "date": "2026-11-04",
-      "position": 4
+      "position": 3
      }
     ]
    },
-   "best_position": 4,
+   "best_position": 3,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -2010,61 +1975,6 @@
    "page_error": null
   },
   {
-   "url": "https://www.casinomeister.com/online-casinos/countries/ca/",
-   "domain": "casinomeister.com",
-   "title": "Best Online Casinos in Canada [November, 2026 ] | Real Money Casinos",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.85,
-   "reason": "Сторінка — афіліатний рейтинг канадських онлайн-казино з оцінками, бонусами, кнопками «Visit» та Affiliate Disclosure. Контактів для реклами на сторінці немає, лише посилання Contact у футері без href.",
-   "brands": [
-    "Thrill",
-    "Aerobet",
-    "BiggerZ",
-    "GoKong",
-    "Slotoro",
-    "Jackpotter",
-    "BetPRIMEIRO",
-    "BeonBet",
-    "SlotsGem",
-    "Spinrise",
-    "bet365",
-    "JackpotCity",
-    "Casumo"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Посилання «Contact» у футері сайту"
-   },
-   "placement_signals": [
-    "Affiliate Disclosure",
-    "affiliate links",
-    "commission if you sign up"
-   ],
-   "positions": {
-    "1": [
-     {
-      "date": "2026-11-04",
-      "position": 6
-     }
-    ],
-    "4": [
-     {
-      "date": "2026-11-04",
-      "position": 5
-     }
-    ]
-   },
-   "best_position": 5,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
-  },
-  {
    "url": "https://esports.gg/ca/guides/betting/online-casinos/",
    "domain": "esports.gg",
    "title": "Best Online Casinos in Canada 2026 – Top 20 Casino Sites",
@@ -2095,50 +2005,11 @@
     "2": [
      {
       "date": "2026-11-04",
-      "position": 6
+      "position": 5
      }
     ]
    },
-   "best_position": 6,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
-  },
-  {
-   "url": "https://www.bonus.com/ca/",
-   "domain": "bonus.com",
-   "title": "Online Casino Canada: Legal Guide by Province",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.85,
-   "reason": "Сторінка bonus.com — афілійований гід з рейтингом казино для Альберти з кнопками «VISIT NOW», оглядами та бонусами. Це комерційний рейтинг казино, тож розміщення тут доречне.",
-   "brands": [
-    "BetMGM",
-    "DraftKings",
-    "Golden Nugget",
-    "BetRivers",
-    "bet365",
-    "Hollywood",
-    "PlayOJO",
-    "SlotsMagic",
-    "theScore Bet"
-   ],
-   "contact": null,
-   "placement_signals": [
-    "VISIT NOW affiliate CTA buttons",
-    "How Bonus.com makes money FAQ",
-    "How We Rank"
-   ],
-   "positions": {
-    "2": [
-     {
-      "date": "2026-11-04",
-      "position": 7
-     }
-    ]
-   },
-   "best_position": 7,
+   "best_position": 5,
    "needs_review": false,
    "method": "reader",
    "model": "claude-sonnet-5-5",
@@ -2217,12 +2088,6 @@
    },
    "placement_signals": [],
    "positions": {
-    "3": [
-     {
-      "date": "2026-11-04",
-      "position": 8
-     }
-    ],
     "4": [
      {
       "date": "2026-11-04",
@@ -2275,24 +2140,113 @@
    "page_error": null
   },
   {
-   "url": "https://casinocanada.io/fast-payout-casinos/",
-   "domain": "casinocanada.io",
-   "title": "Fast Payout Casinos Canada » A Complete Overview & Toplist",
+   "url": "https://gamblingsage.org/casinos-canada/",
+   "domain": "gamblingsage.org",
+   "title": "Top Online Casinos Canada in 2026 for Real Money Gambling",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.85,
+   "reason": "Це афілійована сторінка з рейтингом найкращих онлайн-казино Канади, бонусами, мінімальними депозитами та термінами виплат. Є сторінка з розкриттям реклами, тому розміщення казино тут цілком імовірне.",
+   "brands": [
+    "Roby",
+    "MelBet",
+    "Ricky",
+    "Ozoon",
+    "BeOnBet",
+    "DundeeSlots",
+    "1Red",
+    "Casinonic",
+    "North Casino",
+    "Bodog",
+    "Queenspins",
+    "Casino Infinity",
+    "ThunderPick"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://gamblingsage.org/contact-us/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [
+    "advertising-disclosure page",
+    "affiliate casino ranking with offers"
+   ],
+   "positions": {
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 10
+     }
+    ]
+   },
+   "best_position": 10,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://rg.org/en-ca/casinos",
+   "domain": "rg.org",
+   "title": "Best Canada Online Casinos 2026 - Trusted & Legal Casino Sites for Canadians",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.8,
-   "reason": "Сторінка — афілейтний гайд з топ-5 казино зі швидкими виплатами для канадських гравців, з порівнянням критеріїв і бонусів. Назви брендів у наданому тексті не видно (список відсутній), але формат комерційний, тож розміщення можливе.",
-   "brands": [],
+   "reason": "Сторінка rg.org є афілійованим рейтингом найкращих онлайн-казино Канади з бонусами, фактами та CTA-кнопками. Це типовий review_affiliate, де можна купувати розміщення.",
+   "brands": [
+    "1xBet",
+    "Wildz"
+   ],
    "contact": {
-    "email": null,
-    "contact_page": "https://casinocanada.io/contact-us/",
+    "email": "support@rg.org",
+    "contact_page": "https://rg.org/en-ca/contacts",
     "telegram": null,
     "form": false,
     "other": null
    },
    "placement_signals": [],
    "positions": {
-    "7": [
+    "3": [
+     {
+      "date": "2026-11-04",
+      "position": 2
+     }
+    ]
+   },
+   "best_position": 2,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://nostrabet.com/ca/online-casinos-canada/",
+   "domain": "nostrabet.com",
+   "title": "Top Real Money Online Casinos Canada (2026)",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.8,
+   "reason": "Це афілійована сторінка з рейтингом казино Канади (Nostrabet) з перевагами, бонусами та методологією оцінки, тож на ній можна купити розміщення. Таблиця брендів у тексті майже не збереглася, тому наведено лише згадані бренди.",
+   "brands": [
+    "Captain Cooks",
+    "Zodiac Casino",
+    "Spin Casino",
+    "Jeetcity",
+    "Rainbet",
+    "Casino OJO"
+   ],
+   "contact": {
+    "email": "support@nostrabet.com",
+    "contact_page": "https://nostrabet.com/ca/contact/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [],
+   "positions": {
+    "5": [
      {
       "date": "2026-11-04",
       "position": 5
@@ -2306,37 +2260,65 @@
    "page_error": null
   },
   {
-   "url": "https://www.casinos.com/ca",
-   "domain": "casinos.com",
-   "title": "Best Online Casino Sites in Canada for Real Money 2026",
+   "url": "https://www.squawka.com/ca/online-casinos/free-spins/",
+   "domain": "squawka.com",
+   "title": "Free Spins No Deposit in Canada",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.8,
-   "reason": "Сторінка casinos.com/ca — рейтинг найкращих онлайн-казино Канади з бонусами, вимогами до вейджера та посиланнями на огляди, тобто типовий афіліатний ресурс. Назви брендів у тексті сторінки не вказані, лише у сніпеті.",
-   "brands": [
-    "Vegas Now",
-    "Spinjo",
-    "SlotsGem",
-    "SapphireBet",
-    "Casino Days"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": "https://www.casinos.com/about-us#getintouch",
-    "telegram": null,
-    "form": false,
-    "other": null
-   },
+   "reason": "Сторінка Squawka — це комерційний гайд про безкоштовні спіни в Канаді в рамках афілійованого розділу казино на спортивному медіасайті. Конкретних брендів казино в тексті немає, контактів для реклами теж не знайдено.",
+   "brands": [],
+   "contact": null,
    "placement_signals": [],
    "positions": {
-    "3": [
+    "9": [
      {
       "date": "2026-11-04",
-      "position": 6
+      "position": 7
      }
     ]
    },
-   "best_position": 6,
+   "best_position": 7,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка"
+  },
+  {
+   "url": "https://wizardofodds.com/online-casinos/best-for-players-from-canada",
+   "domain": "wizardofodds.com",
+   "title": "Best Online Casinos for Canadian Players",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.8,
+   "reason": "Сторінка Wizard of Odds — це гайд і рейтинг найкращих онлайн-казино для канадців з бонусами, оцінками виплат і партнерськими посиланнями. Сайт прямо зазначає, що заробляє на рефералах, тому це релевантний affiliate-майданчик, а є сторінка Advertising Policy.",
+   "brands": [
+    "Gamblezen",
+    "Lussurio",
+    "CasinoJEFE",
+    "Parklane"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://wizardofodds.com/site/contact/",
+    "telegram": null,
+    "form": false,
+    "other": "Advertising Policy: https://wizardofodds.com/advertising/policy/"
+   },
+   "placement_signals": [
+    "Advertising Policy",
+    "they all make money by referring you to play at their sites (that goes for this casino as well)",
+    "Trusted Portals"
+   ],
+   "positions": {
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 8
+     }
+    ]
+   },
+   "best_position": 8,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -2376,29 +2358,42 @@
    "page_error": null
   },
   {
-   "url": "https://www.squawka.com/ca/online-casinos/free-spins/",
-   "domain": "squawka.com",
-   "title": "Free Spins No Deposit in Canada",
+   "url": "https://socioscasino.com/en-ca/online-casinos/",
+   "domain": "socioscasino.com",
+   "title": "Discover Canada's Top 2025 Online Casinos: Real Money Fun Await! - SociosCasino.com",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.8,
-   "reason": "Сторінка Squawka — це комерційний гайд про безкоштовні спіни в Канаді в рамках афілійованого розділу казино на спортивному медіасайті. Конкретних брендів казино в тексті немає, контактів для реклами теж не знайдено.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
+   "reason": "Сторінка є афіліатним рейтингом онлайн-казино Канади з бонусами, фріспінами та вейджером; сайт сам заявляє, що є афіліатним. Назви брендів у таблиці не відображені в тексті, тому список брендів неповний.",
+   "brands": [
+    "Betway",
+    "JackpotCity",
+    "PlayOJO"
+   ],
+   "contact": {
+    "email": "support@socioscasino.com",
+    "contact_page": "https://socioscasino.com/en-ca/about-us/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [
+    "affiliate website",
+    "we may earn commissions"
+   ],
    "positions": {
-    "9": [
+    "5": [
      {
       "date": "2026-11-04",
-      "position": 8
+      "position": 9
      }
     ]
    },
-   "best_position": 8,
+   "best_position": 9,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": null
   },
   {
    "url": "https://www.casinocanada.me/fast-payout-casinos-canada/",
@@ -2436,6 +2431,75 @@
    "page_error": null
   },
   {
+   "url": "https://realcasinos.ca/",
+   "domain": "realcasinos.ca",
+   "title": "Top Real Money Online Casinos Canada 2026 🎖️ Play & Win",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.8,
+   "reason": "Це афілейт-сайт з рейтингом \"Top 10 Real Money Online Casinos\", оглядами, бонусами та банківськими методами для канадців. Назви брендів у топ-списку не видно, лише JackpotCity у FAQ; є сторінка контактів.",
+   "brands": [
+    "JackpotCity"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://realcasinos.ca/contact-us/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [],
+   "positions": {
+    "2": [
+     {
+      "date": "2026-11-04",
+      "position": 10
+     }
+    ]
+   },
+   "best_position": 10,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
+   "url": "https://ekstrapoint.com/online-casino/new/",
+   "domain": "ekstrapoint.com",
+   "title": "New Online Casinos - The Best Offers For Canadians in 2026",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.75,
+   "reason": "Сторінка ekstrapoint.com — афілійований порівняльний сайт з гайдом про нові онлайн-казино для канадців; ймовірно, містить рейтинг казино. У наданому тексті немає конкретних брендів, але формат комерційний, тому сторінка релевантна для розміщення.",
+   "brands": [
+    "JackpotCity",
+    "bet365",
+    "888casino",
+    "Casino Days"
+   ],
+   "contact": {
+    "email": null,
+    "contact_page": "https://ekstrapoint.com/contact-us/",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [],
+   "positions": {
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 6
+     }
+    ]
+   },
+   "best_position": 6,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
+  },
+  {
    "url": "https://www.allfreechips.com/no-deposit-casinos",
    "domain": "allfreechips.com",
    "title": "Free Chip No Deposit Bonus Codes November 2026",
@@ -2463,7 +2527,7 @@
     "8": [
      {
       "date": "2026-11-04",
-      "position": 9
+      "position": 10
      }
     ]
    },
@@ -2472,6 +2536,31 @@
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
+  },
+  {
+   "url": "https://www.casino.org/canada/fr/interac-online/",
+   "domain": "casino.org",
+   "title": "Meilleurs casinos en ligne acceptant Interac | Top de 2026 💰",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.5,
+   "reason": "Заголовок і сніпет показують рейтинг із 13 онлайн-казино з Interac у Канаді, тобто це афіліатний огляд-рейтинг. Доступний лише сніпет, тому впевненість обмежена.",
+   "brands": [],
+   "contact": null,
+   "placement_signals": [],
+   "positions": {
+    "6": [
+     {
+      "date": "2026-11-04",
+      "position": 1
+     }
+    ]
+   },
+   "best_position": 1,
+   "needs_review": true,
+   "method": "snippet",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 37 символів"
   },
   {
    "url": "https://casinority.com/ca/fast-payout-online-casinos/",
@@ -2488,7 +2577,7 @@
     "7": [
      {
       "date": "2026-11-04",
-      "position": 3
+      "position": 5
      }
     ]
    },
@@ -2499,35 +2588,31 @@
    "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 262 символів"
   },
   {
-   "url": "https://www.askgamblers.com/online-casinos/countries/ca",
-   "domain": "askgamblers.com",
-   "title": "Top-Rated Online Casinos for Canadian Players November 2026",
+   "url": "https://www.casino.org/canada/",
+   "domain": "casino.org",
+   "title": "Best Online Casinos Canada 2026 | Top 15 Real Money Sites - Casino.org",
    "site_type": "review_affiliate",
    "relevant": true,
    "confidence": 0.5,
-   "reason": "Лише сніпет Google: заголовок і опис вказують на рейтинг казино для Канади з порівнянням бонусів, способів оплати та ігор, тому це схоже на афілійований огляд. Контактів і сигналів продажу розміщень у сніпеті немає.",
-   "brands": [],
+   "reason": "Заголовок і сніпет вказують на рейтинг «Top 15» найкращих онлайн-казино Канади з оглядами та вітальними бонусами, тобто це афілійована review-сторінка. Доступний лише сніпет, тому впевненість обмежена.",
+   "brands": [
+    "JackpotCity"
+   ],
    "contact": null,
    "placement_signals": [],
    "positions": {
     "3": [
      {
       "date": "2026-11-04",
-      "position": 9
-     }
-    ],
-    "4": [
-     {
-      "date": "2026-11-04",
-      "position": 9
+      "position": 5
      }
     ]
    },
-   "best_position": 9,
+   "best_position": 5,
    "needs_review": true,
    "method": "snippet",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx: ConnectError; reader 429: текст 51 символів"
+   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 37 символів"
   },
   {
    "url": "https://bookies.com/ca/online-casinos/100-free-spins",
@@ -2544,6 +2629,31 @@
     "9": [
      {
       "date": "2026-11-04",
+      "position": 8
+     }
+    ]
+   },
+   "best_position": 8,
+   "needs_review": true,
+   "method": "snippet",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка; reader 429: текст 51 символів"
+  },
+  {
+   "url": "https://www.askgamblers.com/online-casinos/countries/ca",
+   "domain": "askgamblers.com",
+   "title": "Top-Rated Online Casinos for Canadian Players November 2026",
+   "site_type": "review_affiliate",
+   "relevant": true,
+   "confidence": 0.5,
+   "reason": "Лише сніпет Google: заголовок і опис вказують на рейтинг казино для Канади з порівнянням бонусів, способів оплати та ігор, тому це схоже на афілійований огляд. Контактів і сигналів продажу розміщень у сніпеті немає.",
+   "brands": [],
+   "contact": null,
+   "placement_signals": [],
+   "positions": {
+    "4": [
+     {
+      "date": "2026-11-04",
       "position": 9
      }
     ]
@@ -2552,59 +2662,7 @@
    "needs_review": true,
    "method": "snippet",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader 429: текст 51 символів"
-  },
-  {
-   "url": "https://www.nodepositbonus.cc/no-deposit-bonus-canada/",
-   "domain": "nodepositbonus.cc",
-   "title": "No Deposit Bonus Codes for Canada | NDB",
-   "site_type": "review_affiliate",
-   "relevant": true,
-   "confidence": 0.5,
-   "reason": "Доступний лише сніпет Google: сторінка порівнює бонуси без депозиту та фриспіни для Канади, що вказує на афіліатний список бонусів. Контактів і брендів у сніпеті немає.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "8": [
-     {
-      "date": "2026-11-04",
-      "position": 10
-     }
-    ]
-   },
-   "best_position": 10,
-   "needs_review": true,
-   "method": "snippet",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader 429: текст 51 символів"
-  },
-  {
-   "url": "https://en.wikipedia.org/wiki/Casino",
-   "domain": "en.wikipedia.org",
-   "title": "Casino",
-   "site_type": "encyclopedia",
-   "relevant": false,
-   "confidence": 0.98,
-   "reason": "Це стаття Вікіпедії про казино як заклад — довідковий енциклопедичний матеріал без рейтингів чи бонусів. Купити розміщення казино-бренду тут неможливо.",
-   "brands": [
-    "Caesars"
-   ],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 1
-     }
-    ]
-   },
-   "best_position": 1,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": "httpx: ConnectError; reader 429: текст 51 символів"
   },
   {
    "url": "https://ca.888casino.com/",
@@ -2626,6 +2684,12 @@
    },
    "placement_signals": [],
    "positions": {
+    "3": [
+     {
+      "date": "2026-11-04",
+      "position": 3
+     }
+    ],
     "7": [
      {
       "date": "2026-11-04",
@@ -2638,6 +2702,37 @@
    "method": "reader",
    "model": "claude-sonnet-5-5",
    "page_error": "httpx: ConnectError"
+  },
+  {
+   "url": "http://www.igamingontario.ca/en",
+   "domain": "igamingontario.ca",
+   "title": "iGaming Ontario",
+   "site_type": "regulator_gov",
+   "relevant": false,
+   "confidence": 0.97,
+   "reason": "Це офіційний сайт регулятора iGaming Ontario з інформацією для гравців та операторів і каталогом ліцензованих сайтів. Платних розміщень тут немає.",
+   "brands": [],
+   "contact": {
+    "email": null,
+    "contact_page": "http://www.igamingontario.ca/en/contact-us",
+    "telegram": null,
+    "form": false,
+    "other": null
+   },
+   "placement_signals": [],
+   "positions": {
+    "10": [
+     {
+      "date": "2026-11-04",
+      "position": 1
+     }
+    ]
+   },
+   "best_position": 1,
+   "needs_review": false,
+   "method": "httpx",
+   "model": "claude-sonnet-5-5",
+   "page_error": null
   },
   {
    "url": "https://www.playnow.com/casino/",
@@ -2679,62 +2774,6 @@
    "page_error": "httpx 403: заблоковано або помилка"
   },
   {
-   "url": "https://fintrac-canafe.canada.ca/re-ed/casinos-eng",
-   "domain": "fintrac-canafe.canada.ca",
-   "title": "Casinos - fintrac/canafe - Canada.ca",
-   "site_type": "regulator_gov",
-   "relevant": false,
-   "confidence": 0.97,
-   "reason": "Це офіційна сторінка уряду Канади (FINTRAC) про обов'язки казино за законом PCMLTFA щодо протидії відмиванню коштів. Це не оглядовий чи рекламний майданчик, тому розміщення тут купити неможливо.",
-   "brands": [],
-   "contact": {
-    "email": null,
-    "contact_page": "https://fintrac-canafe.canada.ca/contact-contactez/1-eng",
-    "telegram": null,
-    "form": false,
-    "other": null
-   },
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 4
-     }
-    ]
-   },
-   "best_position": 4,
-   "needs_review": false,
-   "method": "httpx",
-   "model": "claude-sonnet-5-5",
-   "page_error": null
-  },
-  {
-   "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20398/index.do",
-   "domain": "decisions.scc-csc.ca",
-   "title": "Société des casinos du Québec inc. v. Association des cadres de la Société des casinos du Québec",
-   "site_type": "regulator_gov",
-   "relevant": false,
-   "confidence": 0.97,
-   "reason": "Це рішення Верховного суду Канади щодо свободи об'єднань менеджерів Société des casinos du Québec, а не огляд чи рейтинг казино. Урядовий/судовий ресурс, розміщення реклами неможливе.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 7
-     }
-    ]
-   },
-   "best_position": 7,
-   "needs_review": false,
-   "method": "httpx",
-   "model": "claude-sonnet-5-5",
-   "page_error": null
-  },
-  {
    "url": "https://www.northstarbets.ca/casino",
    "domain": "northstarbets.ca",
    "title": "Ontario Online Casino - Play Casino Games at NorthStar Bets",
@@ -2761,6 +2800,12 @@
       "date": "2026-11-04",
       "position": 1
      }
+    ],
+    "10": [
+     {
+      "date": "2026-11-04",
+      "position": 7
+     }
     ]
    },
    "best_position": 1,
@@ -2786,7 +2831,7 @@
     "1": [
      {
       "date": "2026-11-04",
-      "position": 2
+      "position": 3
      }
     ]
    },
@@ -2797,25 +2842,25 @@
    "page_error": "httpx 200: текст 171 символів"
   },
   {
-   "url": "https://www.olg.ca/en/casino/slots.html",
+   "url": "https://www.olg.ca/en/online-casino.html",
    "domain": "olg.ca",
-   "title": "Play Online Slots in Ontario – 1000+ Games",
+   "title": "Online Casino Canada | Best Ontario Casino App 2026 | OLG",
    "site_type": "casino_operator",
    "relevant": false,
    "confidence": 0.95,
-   "reason": "Це офіційна сторінка слотів OLG.ca — власний сайт державного оператора, де можна грати онлайн. Платних розміщень для афілейтів тут немає.",
+   "reason": "Це офіційний сайт OLG — провінційного оператора онлайн-казино в Онтаріо, сторінка пропонує власні ігри та FAQ. Платні розміщення тут неможливі.",
    "brands": [
     "OLG"
    ],
-   "contact": {
-    "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Contact Us, Live chat (footer links)"
-   },
+   "contact": null,
    "placement_signals": [],
    "positions": {
+    "3": [
+     {
+      "date": "2026-11-04",
+      "position": 7
+     }
+    ],
     "10": [
      {
       "date": "2026-11-04",
@@ -2825,42 +2870,48 @@
    },
    "best_position": 2,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": null
   },
   {
-   "url": "https://powerplay.com/",
-   "domain": "powerplay.com",
-   "title": "PowerPlay Casino & Sports Betting | Ontario | Alberta | Canada",
+   "url": "https://www.partycasino.com/en-ca/blog/free-spins/",
+   "domain": "partycasino.com",
+   "title": "100 Free Spins - Canada Casino Bonus",
    "site_type": "casino_operator",
    "relevant": false,
    "confidence": 0.95,
-   "reason": "Це офіційний сайт казино та беттингу PowerPlay з власними бонусами та реєстрацією. Це оператор, а не сторонній майданчик для розміщень.",
+   "reason": "Це блог на офіційному сайті казино PartyCasino з описом власного бонусу 100 free spins, тож це сторінка оператора, а не майданчик для купівлі розміщення.",
    "brands": [
-    "PowerPlay"
+    "Party Casino"
    ],
    "contact": {
     "email": null,
-    "contact_page": null,
+    "contact_page": "https://www.partycasino.com/en-ca/mobileportal/contact",
     "telegram": null,
     "form": false,
-    "other": "Footer links: Contact Us, Affiliates"
+    "other": null
    },
    "placement_signals": [],
    "positions": {
-    "10": [
+    "8": [
      {
       "date": "2026-11-04",
-      "position": 3
+      "position": 4
+     }
+    ],
+    "9": [
+     {
+      "date": "2026-11-04",
+      "position": 4
      }
     ]
    },
-   "best_position": 3,
+   "best_position": 4,
    "needs_review": false,
-   "method": "reader",
+   "method": "httpx",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка"
+   "page_error": null
   },
   {
    "url": "https://luckycasino.ca/",
@@ -2887,13 +2938,7 @@
     "1": [
      {
       "date": "2026-11-04",
-      "position": 5
-     }
-    ],
-    "10": [
-     {
-      "date": "2026-11-04",
-      "position": 7
+      "position": 6
      }
     ]
    },
@@ -2904,166 +2949,128 @@
    "page_error": "httpx 403: заблоковано або помилка"
   },
   {
-   "url": "https://www.partycasino.com/en-ca/blog/free-spins/",
-   "domain": "partycasino.com",
-   "title": "100 Free Spins - Canada Casino Bonus",
-   "site_type": "casino_operator",
+   "url": "https://igamingontario.ca/en/player/regulated-igaming-market",
+   "domain": "igamingontario.ca",
+   "title": "Regulated iGaming Market",
+   "site_type": "regulator_gov",
    "relevant": false,
    "confidence": 0.95,
-   "reason": "Це блог на офіційному сайті казино PartyCasino з описом власного бонусу 100 free spins, тож це сторінка оператора, а не майданчик для купівлі розміщення.",
-   "brands": [
-    "Party Casino"
-   ],
+   "reason": "Це офіційна сторінка регулятора iGaming Ontario з поясненням регульованого ринку та каталогом ліцензованих операторів. Платних розміщень тут немає, тому сторінка не підходить для закупівлі розміщень.",
+   "brands": [],
    "contact": {
     "email": null,
-    "contact_page": "https://www.partycasino.com/en-ca/mobileportal/contact",
+    "contact_page": "https://igamingontario.ca/en/contact-us",
     "telegram": null,
     "form": false,
     "other": null
    },
    "placement_signals": [],
    "positions": {
-    "8": [
+    "10": [
      {
       "date": "2026-11-04",
-      "position": 5
-     }
-    ],
-    "9": [
-     {
-      "date": "2026-11-04",
-      "position": 6
+      "position": 8
      }
     ]
    },
-   "best_position": 5,
+   "best_position": 8,
    "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
   },
   {
-   "url": "https://senecacasinos.com/",
-   "domain": "senecacasinos.com",
-   "title": "Nothing Else Comes Close - Seneca Resorts & Casinos - Western New York",
-   "site_type": "casino_operator",
+   "url": "https://www.agco.ca/en/lottery-and-gaming/list-registered-internet-gaming-operators",
+   "domain": "agco.ca",
+   "title": "List of Registered Internet Gaming Operators",
+   "site_type": "regulator_gov",
    "relevant": false,
    "confidence": 0.95,
-   "reason": "Це офіційний сайт Seneca Resorts & Casinos (фізичні казино у штаті Нью-Йорк), а не афілійований огляд чи медіа. Розміщення казино-брендів тут купити не можна.",
+   "reason": "Це офіційна сторінка регулятора AGCO (Онтаріо) зі списком зареєстрованих iGaming-операторів. Розміщення казино тут купити неможливо, сторінка не комерційна.",
    "brands": [],
    "contact": {
     "email": null,
-    "contact_page": null,
-    "telegram": null,
-    "form": false,
-    "other": "Phone 1-877-8-SENECA; link \"Contact Us\"; \"Media Buys/Insertion Orders\""
-   },
-   "placement_signals": [
-    "Media Buys/Insertion Orders"
-   ],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 6
-     }
-    ]
-   },
-   "best_position": 6,
-   "needs_review": false,
-   "method": "reader",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 200: текст 253 символів"
-  },
-  {
-   "url": "https://www.visitlasvegas.com/hotels-casinos/",
-   "domain": "visitlasvegas.com",
-   "title": "Las Vegas Hotels, Casinos & Resorts",
-   "site_type": "other",
-   "relevant": false,
-   "confidence": 0.9,
-   "reason": "Це офіційний туристичний сайт Лас-Вегаса (LVCVA) зі сторінкою про готелі та курорти, а не про онлайн-казино в Канаді. Рейтингів онлайн-казино чи ознак продажу розміщень немає.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 9
-     }
-    ]
-   },
-   "best_position": 9,
-   "needs_review": true,
-   "method": "httpx",
-   "model": "claude-sonnet-5-5",
-   "page_error": null
-  },
-  {
-   "url": "https://www.niagarafallstourism.com/play/casinos/",
-   "domain": "niagarafallstourism.com",
-   "title": "Niagara Falls Casinos",
-   "site_type": "other",
-   "relevant": false,
-   "confidence": 0.85,
-   "reason": "Це туристичний сайт Ніагарського водоспаду зі сторінкою про фізичні казино регіону, а не рейтинг онлайн-казино. Немає бонусів, списків чи ознак продажу розміщень.",
-   "brands": [
-    "Casino Niagara",
-    "Niagara Fallsview Casino Resort"
-   ],
-   "contact": {
-    "email": null,
-    "contact_page": "https://www.niagarafallstourism.com/media-kit",
+    "contact_page": "https://www.agco.ca/en/general/contact-agco",
     "telegram": null,
     "form": false,
     "other": null
    },
-   "placement_signals": [
-    "media kit"
-   ],
+   "placement_signals": [],
    "positions": {
-    "5": [
+    "10": [
      {
       "date": "2026-11-04",
-      "position": 2
+      "position": 10
      }
     ]
    },
-   "best_position": 2,
-   "needs_review": true,
+   "best_position": 10,
+   "needs_review": false,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
    "page_error": null
   },
   {
-   "url": "https://theklcinc.com/2024/08/12/best-casino-sites-that-accept-interac/",
-   "domain": "theklcinc.com",
-   "title": "Best Casino Sites That Accept Interac - The Kingdom Life Center Inc",
+   "url": "https://ca.trustpilot.com/categories/casino",
+   "domain": "ca.trustpilot.com",
+   "title": "Best in Casino Canada",
    "site_type": "other",
    "relevant": false,
    "confidence": 0.8,
-   "reason": "Це сторінка церковного сайту із SEO-спамом (безглуздий згенерований текст про казино Interac) без реального рейтингу чи бонусної таблиці. Ознак продажу розміщень немає, тому для розміщення не підходить.",
+   "reason": "Це категорійна сторінка Trustpilot з рейтингами користувацьких відгуків про казино, а не редакційний огляд чи платний список. Розміщення тут купити не можна, лише власники бізнесу можуть керувати профілями.",
    "brands": [
-    "PokerStars"
+    "Betty",
+    "PickWin",
+    "JackpotCity",
+    "Yukon Gold",
+    "Zodiac Casino",
+    "Captain Cooks",
+    "Luxury Casino",
+    "Grand Mondial",
+    "Spin Casino",
+    "Casino Classic",
+    "Casino Days",
+    "Golden Tiger",
+    "Lucky Days",
+    "Tonybet",
+    "SpinGenie",
+    "Quatro",
+    "Moonwin",
+    "Villento",
+    "PowerPlay",
+    "Holyluck",
+    "Minebit",
+    "WishKing",
+    "Grailbet",
+    "BetMGM",
+    "TitanPlay",
+    "Pure",
+    "Pledoo",
+    "SlotsMines"
    ],
    "contact": {
     "email": null,
     "contact_page": null,
     "telegram": null,
     "form": false,
-    "other": "Меню містить пункт Contact Us без URL"
+    "other": "Contact (footer link), Trustpilot Business"
    },
    "placement_signals": [],
    "positions": {
-    "6": [
+    "3": [
      {
       "date": "2026-11-04",
-      "position": 2
+      "position": 8
+     }
+    ],
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 1
      }
     ]
    },
-   "best_position": 2,
+   "best_position": 1,
    "needs_review": true,
    "method": "reader",
    "model": "claude-sonnet-5-5",
@@ -3098,11 +3105,11 @@
     "2": [
      {
       "date": "2026-11-04",
-      "position": 10
+      "position": 9
      }
     ]
    },
-   "best_position": 10,
+   "best_position": 9,
    "needs_review": true,
    "method": "httpx",
    "model": "claude-sonnet-5-5",
@@ -3134,6 +3141,67 @@
    "page_error": null
   },
   {
+   "url": "https://blog.rocketplay.com/",
+   "domain": "blog.rocketplay.com",
+   "title": "Best Online Casino in Canada 2026 | Top Rated Casino Sites & Reviews",
+   "site_type": "review_affiliate",
+   "relevant": false,
+   "confidence": 0.6,
+   "reason": "Це блог самого оператора Rocketplay із рейтингом казино, у якому Rocketplay стоїть на першому місці, тобто сторінка є власним контентом оператора. Ознак продажу розміщень немає, тому купити розміщення тут навряд чи можна.",
+   "brands": [
+    "Rocketplay",
+    "WinSpirit",
+    "LuckyHills",
+    "Inwin",
+    "iNetBet",
+    "Gizbo",
+    "Slotland",
+    "Spinfinity"
+   ],
+   "contact": null,
+   "placement_signals": [],
+   "positions": {
+    "5": [
+     {
+      "date": "2026-11-04",
+      "position": 4
+     }
+    ]
+   },
+   "best_position": 4,
+   "needs_review": false,
+   "method": "reader",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 200: заблоковано або помилка"
+  },
+  {
+   "url": "https://www.betvictor.com/en-ca/casino",
+   "domain": "betvictor.com",
+   "title": "Play Online Casino Games at BetVictor Canada",
+   "site_type": "casino_operator",
+   "relevant": false,
+   "confidence": 0.5,
+   "reason": "Це власна сторінка оператора BetVictor з вітальною пропозицією та іграми казино, а не сайт третьої сторони. Розмістити тут рекламу для афіліатів неможливо.",
+   "brands": [
+    "BetVictor"
+   ],
+   "contact": null,
+   "placement_signals": [],
+   "positions": {
+    "3": [
+     {
+      "date": "2026-11-04",
+      "position": 1
+     }
+    ]
+   },
+   "best_position": 1,
+   "needs_review": true,
+   "method": "snippet",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 451: заблоковано або помилка; reader 200: текст 318 символів"
+  },
+  {
    "url": "https://www.spincasino.com/ca/",
    "domain": "spincasino.com",
    "title": "Online Casino Canada - $1000 Welcome Bonus + 10 Daily Spins",
@@ -3150,7 +3218,7 @@
     "1": [
      {
       "date": "2026-11-04",
-      "position": 7
+      "position": 8
      }
     ],
     "2": [
@@ -3167,15 +3235,48 @@
    "page_error": "httpx: ConnectError; reader 200: текст 181 символів"
   },
   {
-   "url": "https://www.betvictor.com/en-ca/casino",
-   "domain": "betvictor.com",
-   "title": "Online casino games",
+   "url": "https://www.betmgm.ca/en/casino",
+   "domain": "betmgm.ca",
+   "title": "Play the Most Exciting Online Casino Games",
    "site_type": "casino_operator",
    "relevant": false,
    "confidence": 0.5,
-   "reason": "Це власна сторінка оператора BetVictor з вітальною пропозицією та іграми казино, а не сайт третьої сторони. Розмістити тут рекламу для афіліатів неможливо.",
+   "reason": "Це власний сайт оператора BetMGM Canada із закликом зареєструватися та грати, а не сторонній ресурс. Розмістити тут рекламу казино неможливо.",
    "brands": [
-    "BetVictor"
+    "BetMGM"
+   ],
+   "contact": null,
+   "placement_signals": [],
+   "positions": {
+    "3": [
+     {
+      "date": "2026-11-04",
+      "position": 4
+     }
+    ],
+    "10": [
+     {
+      "date": "2026-11-04",
+      "position": 4
+     }
+    ]
+   },
+   "best_position": 4,
+   "needs_review": true,
+   "method": "snippet",
+   "model": "claude-sonnet-5-5",
+   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 45 символів"
+  },
+  {
+   "url": "https://www.comeon.com/on/casino/explore",
+   "domain": "comeon.com",
+   "title": "Online Casino: Slots, Jackpots & More | ComeOn! Ontario",
+   "site_type": "casino_operator",
+   "relevant": false,
+   "confidence": 0.5,
+   "reason": "Це власний сайт оператора ComeOn Casino Ontario із закликом грати на реальні гроші та зареєструватися. Це не третя сторона, тому розміщення тут купити неможливо.",
+   "brands": [
+    "ComeOn"
    ],
    "contact": null,
    "placement_signals": [],
@@ -3183,51 +3284,26 @@
     "10": [
      {
       "date": "2026-11-04",
-      "position": 6
+      "position": 5
      }
     ]
    },
-   "best_position": 6,
+   "best_position": 5,
    "needs_review": true,
    "method": "snippet",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 451: заблоковано або помилка; reader 200: текст 318 символів"
+   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 413 символів"
   },
   {
-   "url": "https://pubmed.ncbi.nlm.nih.gov/11071670/",
-   "domain": "pubmed.ncbi.nlm.nih.gov",
-   "title": "Outcomes of rapid defibrillation by security officers after cardiac arrest in casinos",
-   "site_type": "encyclopedia",
-   "relevant": false,
-   "confidence": 0.5,
-   "reason": "Це сторінка PubMed з медичним дослідженням про дефібриляцію в казино, тобто довідковий науковий ресурс. Вона не стосується оглядів казино і не продає розміщення.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 8
-     }
-    ]
-   },
-   "best_position": 8,
-   "needs_review": true,
-   "method": "snippet",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader: ReadTimeout"
-  },
-  {
-   "url": "https://www.jackpotcity.ca/ontario/",
-   "domain": "jackpotcity.ca",
-   "title": "Online Casino Ontario - Play for Real Money at Jackpot City",
+   "url": "https://www.powerplay.com/casino/",
+   "domain": "powerplay.com",
+   "title": "Online Casino - Play Casino Games, Claim up to CA$200 Bonus - PowerPlay.com",
    "site_type": "casino_operator",
    "relevant": false,
-   "confidence": 0.5,
-   "reason": "Це власна сторінка оператора Jackpot City для гравців з Онтаріо (реєстрація, промо), а не сторонній огляд. Розмістити тут рекламу казино неможливо.",
+   "confidence": 0.45,
+   "reason": "Це сторінка власного казино PowerPlay.com з реальними іграми та бонусом до CA$200 і закликом приєднатися. Доступний лише сніпет, тому це оператор, а не партнерський огляд, і купувати розміщення тут не можна.",
    "brands": [
-    "JackpotCity"
+    "PowerPlay"
    ],
    "contact": null,
    "placement_signals": [],
@@ -3243,93 +3319,48 @@
    "needs_review": true,
    "method": "snippet",
    "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 181 символів"
-  },
-  {
-   "url": "https://www.casinosofwinnipeg.com/",
-   "domain": "casinosofwinnipeg.com",
-   "title": "Casinos of Winnipeg",
-   "site_type": "casino_operator",
-   "relevant": false,
-   "confidence": 0.45,
-   "reason": "Це офіційний сайт наземних казино Вінніпега (Club Regent Casino та McPhillips), тобто оператора, а не афіліатного чи медіаресурсу. Розмістити платну рекламу тут неможливо; є лише сніпет Google.",
-   "brands": [
-    "Club Regent",
-    "McPhillips Station"
-   ],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 3
-     }
-    ]
-   },
-   "best_position": 3,
-   "needs_review": true,
-   "method": "snippet",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 37 символів"
-  },
-  {
-   "url": "https://www.tripadvisor.ca/Attractions-g294480-Activities-c53-Panama_City_Panama_Province.html",
-   "domain": "tripadvisor.ca",
-   "title": "THE 10 BEST Panama City Casinos (2026)",
-   "site_type": "other",
-   "relevant": false,
-   "confidence": 0.4,
-   "reason": "Це сторінка Tripadvisor зі списком фізичних казино в Панама-Сіті, а не рейтинг онлайн-казино для Канади. Доступний лише сніпет, місця для платного розміщення не видно.",
-   "brands": [],
-   "contact": null,
-   "placement_signals": [],
-   "positions": {
-    "5": [
-     {
-      "date": "2026-11-04",
-      "position": 5
-     }
-    ]
-   },
-   "best_position": 5,
-   "needs_review": true,
-   "method": "snippet",
-   "model": "claude-sonnet-5-5",
-   "page_error": "httpx 403: заблоковано або помилка; reader: ReadTimeout"
+   "page_error": "httpx 403: заблоковано або помилка; reader 200: текст 0 символів"
   }
  ],
  "brands_top": [
   {
    "brand": "JackpotCity",
-   "pages": 24
+   "pages": 26
   },
   {
    "brand": "Spin Casino",
-   "pages": 18
+   "pages": 20
+  },
+  {
+   "brand": "888casino",
+   "pages": 15
+  },
+  {
+   "brand": "LeoVegas",
+   "pages": 13
   },
   {
    "brand": "PlayOJO",
-   "pages": 14
+   "pages": 13
+  },
+  {
+   "brand": "Tonybet",
+   "pages": 12
+  },
+  {
+   "brand": "BetMGM",
+   "pages": 12
+  },
+  {
+   "brand": "Casino Days",
+   "pages": 11
   },
   {
    "brand": "bet365",
    "pages": 10
   },
   {
-   "brand": "Casumo",
-   "pages": 10
-  },
-  {
-   "brand": "BetMGM",
-   "pages": 10
-  },
-  {
-   "brand": "888casino",
-   "pages": 10
-  },
-  {
-   "brand": "LeoVegas",
+   "brand": "Betway",
    "pages": 10
   },
   {
@@ -3337,23 +3368,35 @@
    "pages": 9
   },
   {
-   "brand": "Betway",
+   "brand": "Zodiac Casino",
    "pages": 9
   },
   {
-   "brand": "Tonybet",
+   "brand": "Casumo",
+   "pages": 9
+  },
+  {
+   "brand": "Wildz",
    "pages": 8
   },
   {
    "brand": "Royal Vegas",
+   "pages": 8
+  },
+  {
+   "brand": "Captain Cooks",
    "pages": 7
   },
   {
-   "brand": "Zodiac Casino",
+   "brand": "Tooniebet",
    "pages": 7
   },
   {
-   "brand": "Party Casino",
+   "brand": "Lucky Days",
+   "pages": 7
+  },
+  {
+   "brand": "Sports Interaction",
    "pages": 7
   },
   {
@@ -3361,23 +3404,19 @@
    "pages": 6
   },
   {
-   "brand": "Caesars",
+   "brand": "Party Casino",
    "pages": 6
   },
   {
-   "brand": "Casino Days",
+   "brand": "Yukon Gold",
    "pages": 6
   },
   {
-   "brand": "Lucky Ones",
+   "brand": "Luxury Casino",
    "pages": 6
   },
   {
-   "brand": "Wildz",
-   "pages": 6
-  },
-  {
-   "brand": "SlotsGem",
+   "brand": "PowerPlay",
    "pages": 6
   },
   {
@@ -3385,11 +3424,7 @@
    "pages": 5
   },
   {
-   "brand": "Sports Interaction",
-   "pages": 5
-  },
-  {
-   "brand": "National",
+   "brand": "Grand Mondial",
    "pages": 5
   },
   {
@@ -3397,27 +3432,15 @@
    "pages": 5
   },
   {
-   "brand": "Rainbet",
+   "brand": "7Bit",
    "pages": 5
-  },
-  {
-   "brand": "JustCasino",
-   "pages": 5
-  },
-  {
-   "brand": "ICE",
-   "pages": 5
-  },
-  {
-   "brand": "Lucky Days",
-   "pages": 4
   },
   {
    "brand": "theScore Bet",
    "pages": 4
   },
   {
-   "brand": "PokerStars",
+   "brand": "NorthStar Bets",
    "pages": 4
   }
  ],
@@ -3461,6 +3484,16 @@
    "labels_new": 77,
    "serp_calls": 10,
    "pages_failed": 10
+  },
+  {
+   "date": "2026-11-04",
+   "status": "ok",
+   "cost_usd": 0.5093,
+   "urls_total": 79,
+   "urls_new": 30,
+   "labels_new": 30,
+   "serp_calls": 10,
+   "pages_failed": 5
   }
  ]
 }
