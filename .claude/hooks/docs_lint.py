@@ -12,7 +12,9 @@ import subprocess
 import sys
 
 HEREDOC_RE = re.compile(r"<<-?\s*['\"]?(\w+)['\"]?.*?^\1\s*$", re.S | re.M)
-COMMIT_RE = re.compile(r"(?:^|[;&|]\s*|\$\(\s*)git\s+commit\b", re.M)
+# Той самий вираз, що в guard_secrets: шлях до git, глобальні опції (-C ., -c k=v), `command git`
+COMMIT_RE = re.compile(
+    r"(?:^|[;&|]\s*|\$\(\s*|\bcommand\s+)(?:\S*/)?git(?:\s+-[^\s]+(?:\s+\S+)?)*\s+commit\b", re.M)
 
 
 def is_git_commit(command):

@@ -4,8 +4,8 @@
 Дозволено: файли під коренем (CLAUDE_PROJECT_DIR або cwd), тимчасові файли сесії
 (/private/tmp/claude-501, /tmp/claude*, /private/tmp/claude*) і пам'ять Claude Code
 (~/.claude/projects/). Усе інше, а також будь-що в .git/, відхиляється.
-Шляхи порівнюються після NFC-нормалізації і realpath, щоб символьні посилання
-(/tmp → /private/tmp) і різні форми Unicode не обходили перевірку.
+Рішення приймається ЛИШЕ за realpath після NFC-нормалізації: символьне посилання
+проєкт/x → ~/.ssh чи → .git розв'язується і не проходить; .git порівнюється без регістру.
 Будь-який невалідний вхід → вихід 0 (хук не має блокувати сесію сам по собі).
 """
 import json
@@ -26,7 +26,7 @@ def nfc(s):
 
 
 def canon(path):
-    """Абсолютний шлях з NFC і розв'язаними символьними посиланнями."""
+    """Абсолютний шлях з NFC і розв'язаними символьними посиланнями (realpath)."""
     return os.path.realpath(os.path.abspath(nfc(path)))
 
 
@@ -44,6 +44,15 @@ def allowed_outside(path):
         if under(path, pfx) or under(path, canon(pfx) + tail):
             return True
     return False
+
+
+def in_git_dir(path, root):
+    """Шлях у .git/ кореня: за realpath самого .git або за відносним шляхом без урахування регістру."""
+    git_dir = canon(os.path.join(root, ".git"))
+    if path == git_dir or path.startswith(git_dir + os.sep):
+        return True
+    rel = os.path.relpath(path, root).replace(os.sep, "/").lower()
+    return rel == ".git" or rel.startswith(".git/")
 
 
 def deny(reason):
@@ -66,19 +75,17 @@ def main():
         return 0
     cwd = data.get("cwd") or os.getcwd()
     root = canon(os.environ.get("CLAUDE_PROJECT_DIR") or cwd)
-    # Відносний шлях рахуємо від cwd сесії, як це робить сам інструмент
-    absolute = nfc(raw) if os.path.isabs(raw) else os.path.join(cwd, nfc(raw))
-    candidates = {os.path.normpath(absolute), canon(absolute)}
+    # Відносний шлях рахуємо від cwd сесії, як це робить сам інструмент; далі — лише realpath
+    path = canon(nfc(raw) if os.path.isabs(raw) else os.path.join(cwd, nfc(raw)))
 
-    for p in candidates:
-        if under(p, root + os.sep):
-            rel = os.path.relpath(p, root)
-            if rel == ".git" or rel.startswith(".git" + os.sep):
-                deny(f"Запис у .git/ заборонено ({rel}). Git-метадані змінюються лише командами git.")
-            return 0
-    if any(allowed_outside(p) for p in candidates):
+    if under(path, root + os.sep):
+        if in_git_dir(path, root):
+            deny(f"Запис у .git/ заборонено ({os.path.relpath(path, root)}). "
+                 "Git-метадані змінюються лише командами git.")
         return 0
-    deny(f"Запис поза коренем проєкту заборонено: {raw}. Дозволено лише файли в {root}, "
+    if allowed_outside(path):
+        return 0
+    deny(f"Запис поза коренем проєкту заборонено: {raw} → {path}. Дозволено лише файли в {root}, "
          "тимчасові файли сесії (/private/tmp/claude-501) і пам'ять у ~/.claude/projects/.")
     return 0
 

@@ -22,8 +22,8 @@ fetch:
 
 llm:
   model: claude-sonnet-5-5
-  prompt_version: v1
-  max_tokens: 1200
+  prompt_version: v2
+  max_tokens: 3000
   price_input_per_mtok_usd: 2.0
   price_output_per_mtok_usd: 10.0
   budget_usd_default: 3.0         # перекривається змінною LLM_BUDGET_USD

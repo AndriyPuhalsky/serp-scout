@@ -28,11 +28,15 @@ HEX64_CONTEXT = ("serpapi", "api_key")
 HEX64_EXCLUDE = ("sha256",)
 
 ALLOWED_FILES = {".env", ".env.local", ".env.example"}
-# Файли, чиї додані рядки в diff не перевіряються
-DIFF_IGNORE_RE = re.compile(r"(^|/)uv\.lock$|\.sqlite$|^data/")
+# Файли, чиї додані рядки в diff не перевіряються: lock-файл, бази, сирі відповіді SerpApi і демо-фікстури.
+# data/export/ НЕ ігнорується — CSV/JSON експорту можуть містити секрет зі сторінки.
+DIFF_IGNORE_RE = re.compile(r"(^|/)uv\.lock$|\.sqlite$|^data/raw/|^data/demo/")
 
 HEREDOC_RE = re.compile(r"<<-?\s*['\"]?(\w+)['\"]?.*?^\1\s*$", re.S | re.M)
-COMMIT_RE = re.compile(r"(?:^|[;&|]\s*|\$\(\s*)git\s+commit\b", re.M)
+# git commit на початку команди або після ; & | $( чи `command`, з будь-яким шляхом до git
+# (/usr/bin/git) і глобальними опціями між git і commit (-C ., -c k=v, --no-pager)
+COMMIT_RE = re.compile(
+    r"(?:^|[;&|]\s*|\$\(\s*|\bcommand\s+)(?:\S*/)?git(?:\s+-[^\s]+(?:\s+\S+)?)*\s+commit\b", re.M)
 
 
 def is_git_commit(command):

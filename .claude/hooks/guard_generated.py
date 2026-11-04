@@ -35,9 +35,10 @@ def main():
     if not path:
         return 0
     cwd = data.get("cwd") or os.getcwd()
-    root = os.path.abspath(nfc(os.environ.get("CLAUDE_PROJECT_DIR") or cwd))
+    # realpath, а не abspath: символьне посилання на згенерований файл теж не правимо
+    root = os.path.realpath(nfc(os.environ.get("CLAUDE_PROJECT_DIR") or cwd))
     absolute = nfc(path) if os.path.isabs(path) else os.path.join(cwd, nfc(path))
-    rel = os.path.relpath(os.path.abspath(absolute), root).replace(os.sep, "/")
+    rel = os.path.relpath(os.path.realpath(absolute), root).replace(os.sep, "/")
     for rx, generator in GENERATED:
         if re.search(rx, rel):
             print(json.dumps({"hookSpecificOutput": {

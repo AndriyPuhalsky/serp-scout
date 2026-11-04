@@ -237,6 +237,28 @@ class TestGuardSecrets:
         assert r.decision["permissionDecision"] == "deny"
         assert "Anthropic" in r.decision["permissionDecisionReason"]
         assert run_hook("guard_secrets.py", bash_payload(proj, "git status"), proj).decision is None
+        assert run_hook("guard_secrets.py", bash_payload(proj, "git -C . status"), proj).decision is None
+
+    @pytest.mark.parametrize("command", ["git -C . commit -m x", "git -c user.name=t commit -m x",
+                                         "/usr/bin/git commit -m x", "command git commit -m x",
+                                         "uv run pytest -q && git --no-pager commit -m x"])
+    def test_git_commit_variants_are_recognized(self, proj, command):
+        subprocess.run(["git", "init", "-q"], cwd=proj, check=True)
+        write(proj, "notes.md", f"ключ: {ANTHROPIC_KEY}\n")
+        subprocess.run(["git", "add", "notes.md"], cwd=proj, check=True)
+        r = run_hook("guard_secrets.py", bash_payload(proj, command), proj)
+        assert r.decision is not None and r.decision["permissionDecision"] == "deny", command
+
+    def test_git_commit_checks_export_but_ignores_raw_and_demo(self, proj):
+        subprocess.run(["git", "init", "-q"], cwd=proj, check=True)
+        write(proj, "data/raw/2026-11-04/serp.json", f'{{"key": "{ANTHROPIC_KEY}"}}\n')
+        write(proj, "data/demo/serp.json", f'{{"key": "{ANTHROPIC_KEY}"}}\n')
+        subprocess.run(["git", "add", "-f", "data"], cwd=proj, check=True)
+        assert run_hook("guard_secrets.py", bash_payload(proj, "git commit -m x"), proj).decision is None
+        write(proj, "data/export/positions.csv", f"url,contact\nhttps://x.ca,{ANTHROPIC_KEY}\n")
+        subprocess.run(["git", "add", "data/export"], cwd=proj, check=True)
+        r = run_hook("guard_secrets.py", bash_payload(proj, "git commit -m x"), proj)
+        assert r.decision["permissionDecision"] == "deny"
 
 
 # --- guard_generated ----------------------------------------------------------------------------------
@@ -302,6 +324,23 @@ class TestGuardOutside:
         r = run_hook("guard_outside.py", write_payload(proj, ".git/config"), proj)
         assert r.decision["permissionDecision"] == "deny"
         assert ".git" in r.decision["permissionDecisionReason"]
+        r = run_hook("guard_outside.py", write_payload(proj, ".Git/config"), proj)
+        assert r.decision["permissionDecision"] == "deny"
+
+    def test_symlinks_are_resolved_before_decision(self, proj):
+        outside = os.path.join(os.path.dirname(proj), os.path.basename(proj) + "_outside")
+        os.makedirs(outside, exist_ok=True)
+        os.symlink(outside, os.path.join(proj, "link_out"))
+        r = run_hook("guard_outside.py", write_payload(proj, "link_out/id_rsa"), proj)
+        assert r.decision["permissionDecision"] == "deny"
+        assert "поза коренем" in r.decision["permissionDecisionReason"]
+        os.makedirs(os.path.join(proj, ".git"))
+        os.symlink(os.path.join(proj, ".git"), os.path.join(proj, "link_git"))
+        r = run_hook("guard_outside.py", write_payload(proj, "link_git/config"), proj)
+        assert r.decision["permissionDecision"] == "deny"
+        assert ".git" in r.decision["permissionDecisionReason"]
+        os.symlink(os.path.join(proj, "docs"), os.path.join(proj, "link_docs"))
+        assert run_hook("guard_outside.py", write_payload(proj, "link_docs/новий.md"), proj).decision is None
 
 
 # --- journal_reminder ---------------------------------------------------------------------------------
@@ -464,6 +503,8 @@ class TestDocsLintHook:
         assert r.code == 0
         assert r.decision["permissionDecision"] == "deny"
         assert "І5" in r.decision["permissionDecisionReason"]
+        for command in ("git -C . commit -m x", "/usr/bin/git -c k=v commit", "command git commit"):
+            assert run_hook("docs_lint.py", bash_payload(proj, command), proj).decision is not None, command
 
     def test_passes_clean_docs_and_ignores_other_commands(self, proj):
         assert run_hook("docs_lint.py", bash_payload(proj, "git commit -m x"), proj).decision is None
