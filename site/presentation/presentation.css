@@ -29,7 +29,7 @@ html.is-deck .slide {
 }
 html.is-deck .slide.is-active { opacity: 1; visibility: visible; transition: opacity 260ms ease; }
 html.is-deck .p-inner { width: 100%; margin: auto; }
-.p-deck-only { display: none; }
+html:not(.is-deck) .p-deck-only { display: none; } /* специфічніше за .p-btn: стрілки лише в режимі слайдів */
 html.is-deck .p-deck-only { display: inline-flex; }
 html.is-deck .p-count { display: inline-block; }
 
@@ -175,7 +175,8 @@ strong, b { font-weight: 600; }
 
 /* ── Навігація ───────────────────────────────────────────────────────────── */
 .p-nav {
-  position: fixed; right: 16px; bottom: 16px; z-index: 5;
+  /* ліворуч: правий нижній кут займає бейдж Netlify, який хостинг інжектує поверх сторінки */
+  position: fixed; left: 16px; right: auto; bottom: 16px; z-index: 5;
   display: flex; align-items: center; gap: 6px;
   background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px;
 }
@@ -187,6 +188,21 @@ strong, b { font-weight: 600; }
 .p-btn:hover { border-color: var(--line); }
 .p-btn:disabled { opacity: .35; cursor: default; }
 .p-count { font: 14px var(--mono); font-variant-numeric: tabular-nums; padding: 0 6px; color: var(--muted); }
+/* Невидимі клік-зони по краях: ліва — назад, права — вперед. Ширина — поле поза контентом
+   (≤ 12vw), щоб не перекривати текст і посилання; права зона знизу і справа відступає
+   від бейджа Netlify і смуги прокрутки слайда. */
+.p-zone {
+  position: fixed; top: 0; bottom: 80px; z-index: 4;
+  width: clamp(var(--p-pad), calc((100vw - 1120px) / 2), 12vw);
+  padding: 0; margin: 0; background: transparent; border: 0; border-radius: 0; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.p-zone-prev { left: 0; }
+.p-zone-next { right: 12px; }
+.p-zone:focus { outline: none; }
+.p-zone:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+.p-zone:disabled { cursor: default; }
+html.is-deck .p-zone.p-deck-only { display: block; }
 #theme-toggle .icon-sun { display: none; }
 [data-theme="dark"] #theme-toggle .icon-sun { display: block; }
 [data-theme="dark"] #theme-toggle .icon-moon { display: none; }
@@ -203,7 +219,7 @@ strong, b { font-weight: 600; }
   .p-flow-list li + li { margin-top: 28px; }
   .p-flow-list li + li::before { content: "↓"; position: absolute; top: -26px; left: 20px; color: var(--muted); }
   .p-flow-list b { display: block; font-family: var(--serif); font-weight: 400; font-size: 19px; }
-  .p-nav { right: 10px; bottom: 10px; }
+  .p-nav { left: 10px; right: auto; bottom: 10px; }
 }
 @media (max-width: 520px) {
   .p-card-grid { grid-template-columns: 1fr; }
@@ -228,7 +244,7 @@ strong, b { font-weight: 600; }
     padding: 0; border: 0; break-after: page; page-break-after: always; transition: none;
   }
   .slide:last-child { break-after: auto; page-break-after: auto; }
-  .p-nav, .p-hint { display: none !important; }
+  .p-nav, .p-hint, .p-zone { display: none !important; }
   .slide .p-inner::before { top: -8mm; }
   a { text-decoration: none; }
 }

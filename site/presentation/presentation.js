@@ -7,6 +7,8 @@ const total = slides.length;
 const cur = document.getElementById("p-cur");
 const prevBtn = document.querySelector('[data-go="prev"]');
 const nextBtn = document.querySelector('[data-go="next"]');
+const prevZone = document.querySelector('[data-zone="prev"]');
+const nextZone = document.querySelector('[data-zone="next"]');
 document.getElementById("p-total").textContent = String(total);
 
 const deckQuery = window.matchMedia("(min-width: 900px) and (min-height: 560px)");
@@ -29,6 +31,8 @@ function show(i, { updateHash = true } = {}) {
   cur.textContent = String(index + 1);
   prevBtn.disabled = index === 0;
   nextBtn.disabled = index === total - 1;
+  prevZone.disabled = prevBtn.disabled;
+  nextZone.disabled = nextBtn.disabled;
   if (updateHash && location.hash !== `#${index + 1}`) history.replaceState(null, "", `#${index + 1}`);
   if (root.classList.contains("is-deck")) slides[index].scrollTop = 0;
 }
@@ -42,6 +46,14 @@ function applyMode() {
 
 prevBtn.addEventListener("click", () => show(index - 1));
 nextBtn.addEventListener("click", () => show(index + 1));
+// Клік-зони по краях: ті самі переходи. Після кліку мишею фокус знімаємо, щоб пробіл
+// гортав уперед, а не повторно «натискав» ліву зону.
+for (const [zone, step] of [[prevZone, -1], [nextZone, 1]]) {
+  zone.addEventListener("click", (ev) => {
+    show(index + step);
+    if (ev.detail > 0) zone.blur();
+  });
+}
 
 document.addEventListener("keydown", (ev) => {
   if (!root.classList.contains("is-deck") || ev.altKey || ev.ctrlKey || ev.metaKey) return;
