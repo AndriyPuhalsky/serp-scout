@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """SessionStart-хук: підтягує в контекст стан проєкту на момент старту сесії.
 
-Виводить: таймер дедлайну, поточну ітерацію (CLAUDE.md) з чеклістом із docs/05,
+Виводить: статус проєкту (здано, режим супроводу), поточну ітерацію (CLAUDE.md) з чеклістом із docs/05,
 заголовки останніх записів журналу й останній запис, наявність ключів у .env
 (ЛИШЕ назви змінних — значення ніколи не друкуються), чи є сьогоднішній снапшот
 SERP (data/raw/<дата>/ або рядок у runs) і сумарні витрати LLM (data/costs.jsonl).
@@ -14,7 +14,7 @@ import re
 import sqlite3
 import sys
 
-DEADLINE = (2026, 11, 4, 12, 0)
+SUBMITTED = "2026-11-04"  # тестове здано; дедлайну більше немає — режим супроводу
 TZ = "Europe/Kyiv"
 EXPECTED_ENV = ("SERPAPI_KEY", "ANTHROPIC_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID",
                 "LLM_BUDGET_USD")
@@ -37,15 +37,11 @@ def now_kyiv():
         return dt.datetime.now()
 
 
-def deadline_line(now):
-    deadline = dt.datetime(*DEADLINE, tzinfo=now.tzinfo)
-    delta = deadline - now
-    total = int(abs(delta.total_seconds()) // 60)
-    hours, minutes = divmod(total, 60)
-    stamp = f"{DEADLINE[0]}-{DEADLINE[1]:02d}-{DEADLINE[2]:02d} {DEADLINE[3]:02d}:{DEADLINE[4]:02d}"
-    if delta.total_seconds() < 0:
-        return f"Дедлайн {stamp} минув ({hours} год {minutes} хв тому)."
-    return f"Дедлайн: до {stamp} лишилось {hours} год {minutes} хв."
+def status_line(now):
+    """Здано, далі супровід: скільки днів проєкт на підтримці (без таймера дедлайну)."""
+    submitted = dt.date.fromisoformat(SUBMITTED)
+    days = (now.date() - submitted).days
+    return f"Здано {SUBMITTED}, режим супроводу ({days} дн.), дедлайну немає."
 
 
 def current_iteration(root):
@@ -145,7 +141,7 @@ def llm_costs(root):
 def build_context(root):
     now = now_kyiv()
     today = now.strftime("%Y-%m-%d")
-    blocks = [f"Проєкт serp-scout. Зараз {now.strftime('%Y-%m-%d %H:%M')} (Київ). {deadline_line(now)}"]
+    blocks = [f"Проєкт serp-scout. Зараз {now.strftime('%Y-%m-%d %H:%M')} (Київ). {status_line(now)}"]
 
     line, _ = current_iteration(root)
     blocks.append(f"Поточна ітерація (CLAUDE.md): {line}")
