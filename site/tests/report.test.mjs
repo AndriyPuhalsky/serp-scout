@@ -15,7 +15,7 @@ import {
   sparklineGeometry, sparklinePath, sparklineLabel,
   filterRows, isDefaultFilters, DEFAULT_FILTERS,
   sortRows, nextSort,
-  historyMatrix, fmtDelta, sumCost, sortRunsDesc, errorText, relevantPct, resolveDataPath,
+  historyMatrix, fmtDelta, fmtChange, changeKind, changeClass, sumCost, sortRunsDesc, errorText, relevantPct, resolveDataPath,
   barShare, domainParts, partsAfter,
 } from "../js/report.mjs";
 
@@ -220,14 +220,45 @@ test("historyMatrix: топ-3 релевантних на ключ, позиці
   assert.equal(fmtDelta(1), "▲1");
   assert.equal(fmtDelta(-2), "▼2");
   assert.equal(fmtDelta(0), "=");
-  assert.equal(fmtDelta(null), "нова");
+  assert.equal(fmtDelta(null), "—");
   const kw4 = m.find((g) => g.keyword.id === 4);
   const fresh = kw4.items.find((it) => it.domain === "casinoreviews.net");
   assert.deepEqual(fresh.byDate, [null, 2]);
   assert.equal(fresh.delta, null);
+  assert.equal(fresh.prev, null);
+  assert.equal(fresh.cur, 2);
+  assert.equal(fmtChange(fresh), "нова");
+  assert.equal(fmtChange(cc), "▲1");
   // Одна дата — дельт немає, матриця з однією колонкою.
   const single = historyMatrix(rows, keywords, ["2026-11-04"], 3);
   assert.ok(single.every((g) => g.items.every((it) => it.byDate.length === 1 && it.delta === null)));
+});
+
+test("fmtChange/changeClass: нова, зникла, «—», ▲/▼/=", () => {
+  const cases = [
+    [{ prev: null, cur: 1 }, "new", "нова", "muted"],      // з'явилась
+    [{ prev: 6, cur: null }, "gone", "зникла", "down"],    // випала з топ-10
+    [{ prev: null, cur: null }, "none", "—", "muted"],     // була лише в давніших датах
+    [{ prev: 5, cur: 2 }, "up", "▲3", "up"],
+    [{ prev: 2, cur: 7 }, "down", "▼5", "down"],
+    [{ prev: 4, cur: 4 }, "same", "=", ""],
+  ];
+  for (const [it, kind, text, cls] of cases) {
+    assert.equal(changeKind(it), kind);
+    assert.equal(fmtChange(it), text);
+    assert.equal(changeClass(it), cls);
+  }
+  // Три дати: URL був лише в першій — дві останні порожні → «—».
+  const rows3 = [{ domain: "old.ca", url: "https://old.ca/", relevant: true,
+    positions: { "1": [{ date: "2026-11-01", position: 4 }] } },
+  { domain: "gone.ca", url: "https://gone.ca/", relevant: true,
+    positions: { "1": [{ date: "2026-11-01", position: 3 }, { date: "2026-11-02", position: 6 }] } }];
+  const m3 = historyMatrix(rows3, [{ id: 1, keyword: "k" }], ["2026-11-01", "2026-11-02", "2026-11-03"], 3);
+  const byDom = Object.fromEntries(m3[0].items.map((it) => [it.domain, it]));
+  assert.deepEqual(byDom["old.ca"].byDate, [4, null, null]);
+  assert.equal(fmtChange(byDom["old.ca"]), "—");
+  assert.deepEqual(byDom["gone.ca"].byDate, [3, 6, null]);
+  assert.equal(fmtChange(byDom["gone.ca"]), "зникла");
 });
 
 test("прогони: сума вартості, порядок, помилки, відсоток релевантних", () => {

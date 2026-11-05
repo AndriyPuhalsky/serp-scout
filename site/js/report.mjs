@@ -382,7 +382,7 @@ export function historyMatrix(rows, keywords, runDates, topN = 3) {
       const prev = dates.length > 1 ? positionOn(pts, dates[dates.length - 2]) : null;
       const cur = positionOn(pts, dates[dates.length - 1]);
       const delta = isNum(prev) && isNum(cur) ? prev - cur : null; // >0 — піднявся
-      items.push({ domain: r.domain, url: r.url, byDate, latest, delta });
+      items.push({ domain: r.domain, url: r.url, byDate, latest, prev, cur, delta });
     }
     items.sort((a, b) => cmpNumNullLast(a.latest, b.latest, 1) || cmpStr(a.domain, b.domain));
     out.push({ keyword: k, items: items.slice(0, topN) });
@@ -390,11 +390,41 @@ export function historyMatrix(rows, keywords, runDates, topN = 3) {
   return out;
 }
 
-// Дельта позиції → текст: +2 (піднявся на 2), −1, 0 → "=", null → "нова".
+// Дельта позиції → текст: +2 → "▲2" (піднявся на 2), −1 → "▼1", 0 → "=", не число → "—".
 export function fmtDelta(delta) {
-  if (!isNum(delta)) return "нова";
+  if (!isNum(delta)) return EMPTY;
   if (delta === 0) return "=";
   return (delta > 0 ? "▲" : "▼") + Math.abs(delta);
+}
+
+// Вид зміни між двома останніми датами: up | down | same | new (з'явилась) | gone (зникла) | none (обох немає).
+export function changeKind(item) {
+  const p = isNum(item?.prev), c = isNum(item?.cur);
+  if (p && c) {
+    const d = item.prev - item.cur;
+    return d > 0 ? "up" : d < 0 ? "down" : "same";
+  }
+  if (c) return "new";
+  if (p) return "gone";
+  return "none";
+}
+
+// Текст колонки «Зміна» для рядка historyMatrix.
+export function fmtChange(item) {
+  const kind = changeKind(item);
+  if (kind === "new") return "нова";
+  if (kind === "gone") return "зникла";
+  if (kind === "none") return EMPTY;
+  return fmtDelta(item.prev - item.cur);
+}
+
+// CSS-клас колонки «Зміна»: зникла — втрата позиції (down), нова і «—» — приглушені.
+export function changeClass(item) {
+  const kind = changeKind(item);
+  if (kind === "up") return "up";
+  if (kind === "down" || kind === "gone") return "down";
+  if (kind === "same") return "";
+  return "muted";
 }
 
 // ── Підсумки ─────────────────────────────────────────────────────────────────

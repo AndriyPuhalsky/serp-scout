@@ -389,7 +389,7 @@ function renderHistory(report) {
       ? `Поки є одна дата (${dates[0]}): історія накопичується з наступних прогонів.`
       : "Дат прогонів немає — історія з'явиться після першого прогону.";
   } else {
-    note.textContent = `${R.fmtInt(dates.length)} ${R.pluralUk(dates.length, ["дата", "дати", "дат"])} (${dates[0]} … ${dates[dates.length - 1]}); топ-3 релевантних URL на ключ за останньою позицією.`;
+    note.textContent = `${R.fmtInt(dates.length)} ${R.pluralUk(dates.length, ["дата", "дати", "дат"])} (${dates[0]} … ${dates[dates.length - 1]}); топ-3 релевантних URL на ключ за останньою позицією. «Зміна»: ▲/▼ — зміна проти попереднього прогону, = — без змін, нова — з'явилась у топ-10, зникла — випала з топ-10.`;
   }
 
   const head = h("tr", {}, h("th", { scope: "col" }, "Ключ"), h("th", { scope: "col" }, "Домен"));
@@ -413,8 +413,7 @@ function renderHistory(report) {
       tr.append(h("td", {}, href ? h("a", { class: "mono", href, target: "_blank", rel: "noopener noreferrer" }, it.domain) : h("span", { class: "mono" }, it.domain)));
       for (const p of it.byDate) tr.append(h("td", { class: "num mono" }, p == null ? R.EMPTY : String(p)));
       if (dates.length > 1) {
-        const cls = it.delta == null ? "muted" : it.delta > 0 ? "up" : it.delta < 0 ? "down" : "";
-        tr.append(h("td", { class: `num mono ${cls}` }, R.fmtDelta(it.delta)));
+        tr.append(h("td", { class: `num mono ${R.changeClass(it)}` }, R.fmtChange(it)));
       }
       tbody.append(tr);
     });
