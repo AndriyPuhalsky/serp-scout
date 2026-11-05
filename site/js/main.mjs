@@ -44,6 +44,11 @@ function append(el, children) {
   }
 }
 
+// Частини тексту → вузли з <wbr> між ними (перенос лише в цих місцях).
+function withWbr(parts) {
+  return parts.flatMap((p, i) => (i ? [h("wbr"), p] : [p]));
+}
+
 function clear(el) {
   while (el.firstChild) el.removeChild(el.firstChild);
 }
@@ -243,17 +248,19 @@ function renderRow(row, keywords) {
 
   // Домен — посилання на URL, моно; позначка «перевірити» (низька впевненість) або «не розмічено».
   const href = R.safeHref(row.url);
-  const domainText = R.orDash(row.domain);
+  // Між частинами домену — <wbr>: якщо місця замало, перенос лише після крапки, не посеред слова.
+  const domainText = R.domainParts(row.domain).length ? withWbr(R.domainParts(row.domain)) : R.orDash(row.domain);
   const domainEl = href
     ? h("a", { class: "mono domain", href, target: "_blank", rel: "noopener noreferrer", title: row.url }, domainText)
     : h("span", { class: "mono domain" }, domainText);
   let flag = null;
   if (!labeled) flag = h("span", { class: "flag flag-muted", title: "LLM ще не розмічала цю сторінку (ліміт або бюджет прогону)" }, R.UNLABELED);
   else if (row.needs_review) flag = h("span", { class: "flag", title: "Низька впевненість моделі — перевірити вручну" }, "перевірити");
-  tr.append(h("td", {}, domainEl, flag));
+  tr.append(h("td", { class: "domain-cell" }, domainEl, flag));
 
-  // Тип — чип.
-  tr.append(h("td", {}, h("span", { class: labeled ? "chip" : "chip chip-muted" }, R.siteTypeLabel(labeled ? row.site_type : null))));
+  // Тип — чип; «оглядач/афіліат» може перенестись після «/», щоб колонка була вужчою.
+  const typeLabel = R.siteTypeLabel(labeled ? row.site_type : null);
+  tr.append(h("td", {}, h("span", { class: labeled ? "chip chip-type" : "chip chip-type chip-muted" }, withWbr(R.partsAfter(typeLabel, "/")))));
 
   // Релевантність — ● + відсоток впевненості; не розмічено — порожнє коло і «—».
   const dot = !labeled ? "none" : row.needs_review ? "warn" : row.relevant ? "yes" : "no";
@@ -351,9 +358,11 @@ function renderBrands(report) {
     return;
   }
   const max = Math.max(...top.map((b) => b.pages), 1);
+  // Під число резервуємо місце за довжиною найдовшого підпису; бар = частка решти треку.
+  list.style.setProperty("--val-ch", String(Math.max(...top.map((b) => R.fmtInt(b.pages).length), 1)));
   for (const b of top) {
     const fill = h("span", { class: "bar-fill" });
-    fill.style.width = `${Math.max(1, (b.pages / max) * 100)}%`;
+    fill.style.setProperty("--share", String(R.barShare(b.pages, max)));
     list.append(h("li", {},
       h("span", { class: "bar-label" }, b.brand),
       h("span", { class: "bar-track" }, fill,

@@ -56,7 +56,9 @@ body {
   background: var(--bg);
   color: var(--ink);
   font: 16px/1.45 var(--sans);
-  overflow-wrap: anywhere;
+  /* Переносимо лише те, що інакше вилізе за край, і не зменшуємо min-content:
+     таблиці й гріди міряють колонки за цілими словами. «anywhere» — точково нижче. */
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3 {
@@ -182,6 +184,8 @@ button { font: inherit; color: inherit; }
 .errors { margin-top: var(--s3); font-size: 14px; }
 .errors summary { cursor: pointer; color: var(--neg); }
 .errors ul { margin: var(--s2) 0 0; padding-left: var(--s4); }
+/* Помилки й технічні деталі — довгі URL і шляхи без пробілів. */
+.errors li, #empty-detail { overflow-wrap: anywhere; }
 
 /* ── Порожній стан ────────────────────────────────────────────────────────── */
 
@@ -351,17 +355,24 @@ th.num, td.num { text-align: right; }
 th[aria-sort="ascending"] .sort::after { content: " ↑"; color: var(--muted); }
 th[aria-sort="descending"] .sort::after { content: " ↓"; color: var(--muted); }
 
+/* Вужчі поля комірок (8 px): сума мінімальних ширин 7 колонок має вміщатись у картку ≤ 1086 px. */
 #placements { min-width: 980px; }
+#placements th, #placements td { padding-left: var(--s2); padding-right: var(--s2); }
+/* Чипи типу й брендів у таблиці можуть перенестись по пробілу або «/», коли колонка на мінімумі. */
+#placements .chip-type, #placements td.brands .chip { white-space: normal; }
 #placements td.brands { max-width: 260px; }
 #placements td.brands .chip { margin: 0 var(--s1) var(--s1) 0; }
 #placements td.contact { max-width: 220px; overflow-wrap: normal; }
 .contact-link {
-  display: inline-block; max-width: 196px;
+  display: inline-block; max-width: 150px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   vertical-align: bottom;
 }
-#placements td.why { min-width: 200px; max-width: 360px; }
-#placements .domain { font-weight: 500; }
+/* width — підказка: «Чому» бере решту простору до 360 px, але не менше 200 px. */
+#placements td.why { width: 360px; min-width: 200px; overflow-wrap: break-word; }
+/* Домен: короткий вміщається цілим; довший переноситься лише після крапки (<wbr> у JS). */
+#placements td.domain-cell { min-width: calc(15ch + 2 * var(--s2)); }
+#placements .domain { font-weight: 500; overflow-wrap: break-word; }
 #placements .empty-row td { padding: var(--s5) var(--s3); color: var(--muted); }
 
 .positions { white-space: nowrap; }
@@ -377,9 +388,13 @@ th[aria-sort="descending"] .sort::after { content: " ↓"; color: var(--muted); 
 .why details summary { cursor: pointer; color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
 .why details[open] summary { color: var(--ink); margin-bottom: var(--s1); }
 .why p { margin: 0 0 var(--s2); white-space: normal; }
-.meta { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px var(--s2); font-size: 12px; color: var(--muted); }
+/* Стовпчиком: підпис (muted) над значенням. Одна колонка minmax(0, 1fr) не роздуває min-content комірки,
+   а довгі значення (URL, помилки) переносяться по словах у межах її ширини. */
+.meta { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); font-size: 12px; color: var(--muted); }
+.meta dt, .meta dd { min-width: 0; overflow-wrap: break-word; }
 .meta dt { font-weight: 500; }
-.meta dd { margin: 0; color: var(--ink); }
+.meta dd { margin: 0 0 var(--s1); color: var(--ink); }
+.meta dd:last-child { margin-bottom: 0; }
 
 /* Історія */
 .history th.kw { font-weight: 500; vertical-align: top; white-space: normal; min-width: 180px; }
@@ -399,14 +414,18 @@ th[aria-sort="descending"] .sort::after { content: " ↓"; color: var(--muted); 
   align-items: center; padding: 3px 0; font-size: 14px;
 }
 .bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.bar-track { display: flex; align-items: center; gap: var(--s2); min-width: 0; height: 16px; }
+/* Трек моно: 1ch = ширина цифри підпису. --val-ch (довжина найдовшого числа) задає JS на .bars. */
+.bar-track { display: flex; align-items: center; gap: var(--s2); min-width: 0; height: 16px; font-family: var(--mono); }
 .bar-fill {
   display: block; height: 12px;
   background: var(--ink); opacity: var(--bar-opacity);
   border-radius: 0 4px 4px 0;
-  flex: 0 0 auto;
+  /* --share (0..1) — частка треку без місця під число: максимум доходить до підпису, а не виштовхує його. */
+  width: calc((100% - var(--val-ch, 3) * 1ch - var(--s2)) * var(--share, 0));
+  min-width: 2px;
+  flex: 0 1 auto;
 }
-.bar-val { color: var(--ink); }
+.bar-val { flex: 0 0 auto; white-space: nowrap; color: var(--ink); }
 
 /* ── Підвал ───────────────────────────────────────────────────────────────── */
 

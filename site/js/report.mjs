@@ -436,3 +436,34 @@ export function resolveDataPath(search, fallback = "./data/report.json") {
   if (/^[a-z][a-z0-9+.-]*:/i.test(v) || v.startsWith("//") || v.includes("..")) return fallback;
   return v;
 }
+
+// ── Бари і домени ────────────────────────────────────────────────────────────
+
+// Частка бару 0..1 від максимуму; ненульове значення не буває тоншим за 1 %.
+// CSS множить її на ширину треку без місця під число, тож 100 % бар не виштовхує підпис.
+export function barShare(value, max) {
+  if (!isNum(value) || value <= 0) return 0;
+  const m = isNum(max) && max > 0 ? max : value;
+  return Math.min(1, Math.max(0.01, value / m));
+}
+
+// Домен → частини з крапкою в кінці: "www.askgamblers.com" → ["www.", "askgamblers.", "com"].
+// Між частинами DOM ставить <wbr>: довгий домен переноситься лише після крапки, не посеред слова.
+export function domainParts(domain) {
+  return partsAfter(domain, ".");
+}
+
+// Текст → частини, кожна (крім останньої) закінчується роздільником `sep`:
+// partsAfter("оглядач/афіліат", "/") → ["оглядач/", "афіліат"]. Між ними DOM ставить <wbr>.
+export function partsAfter(text, sep) {
+  const t = String(text ?? "");
+  if (!t) return [];
+  const out = [];
+  let start = 0;
+  for (let i = t.indexOf(sep); i !== -1; i = t.indexOf(sep, i + sep.length)) {
+    out.push(t.slice(start, i + sep.length));
+    start = i + sep.length;
+  }
+  if (start < t.length) out.push(t.slice(start));
+  return out;
+}

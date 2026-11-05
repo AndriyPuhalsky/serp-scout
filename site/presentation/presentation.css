@@ -3,7 +3,8 @@
 
 :root { --p-pad: clamp(20px, 4vw, 56px); }
 
-body { font-size: 17px; line-height: 1.5; }
+/* У styles.css на body тепер break-word; презентація лишає попередній «anywhere» (довгі шляхи й адреси в гріді). */
+body { font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
 
 .p-deck { counter-reset: slide; }
 

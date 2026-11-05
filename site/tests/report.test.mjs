@@ -16,6 +16,7 @@ import {
   filterRows, isDefaultFilters, DEFAULT_FILTERS,
   sortRows, nextSort,
   historyMatrix, fmtDelta, sumCost, sortRunsDesc, errorText, relevantPct, resolveDataPath,
+  barShare, domainParts, partsAfter,
 } from "../js/report.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -269,4 +270,30 @@ test("resolveDataPath: лише відносний шлях у межах сай
   assert.equal(resolveDataPath("?data=//evil.example/x.json"), "./data/report.json");
   assert.equal(resolveDataPath("?data=../../etc/passwd"), "./data/report.json");
   assert.equal(resolveDataPath("?data=javascript:alert(1)"), "./data/report.json");
+});
+
+test("barShare: частка від максимуму 0..1, ненульове не тонше 1 %", () => {
+  assert.equal(barShare(10, 10), 1);
+  assert.equal(barShare(9, 10), 0.9);
+  assert.equal(barShare(1, 1000), 0.01);
+  assert.equal(barShare(0, 10), 0);
+  assert.equal(barShare(null, 10), 0);
+  assert.equal(barShare(12, 10), 1);
+  assert.equal(barShare(5, 0), 1);
+});
+
+test("domainParts: частини домену з крапкою в кінці (для <wbr>)", () => {
+  assert.deepEqual(domainParts("www.askgamblers.com"), ["www.", "askgamblers.", "com"]);
+  assert.deepEqual(domainParts("bojoko.ca"), ["bojoko.", "ca"]);
+  assert.deepEqual(domainParts("localhost"), ["localhost"]);
+  assert.deepEqual(domainParts(""), []);
+  assert.deepEqual(domainParts(null), []);
+  assert.equal(domainParts("casino.guide.example.ca").join(""), "casino.guide.example.ca");
+});
+
+test("partsAfter: перенос лише після роздільника", () => {
+  assert.deepEqual(partsAfter("оглядач/афіліат", "/"), ["оглядач/", "афіліат"]);
+  assert.deepEqual(partsAfter("медіа", "/"), ["медіа"]);
+  assert.deepEqual(partsAfter("a/b/", "/"), ["a/", "b/"]);
+  assert.deepEqual(partsAfter("", "/"), []);
 });
